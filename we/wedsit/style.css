@@ -7,6 +7,9 @@ body {
   h1 {
     font-weight: bold;
   }
+  h2 {
+    font-weight: bold;
+  }
   a {
     color: hotpink;
   }
@@ -22,6 +25,3 @@ body {
   a:hover, a:active {
     background-color: red;
   }
-h2 {
-  font-weight: bold;
-}
