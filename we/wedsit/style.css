@@ -7,3 +7,6 @@ body {
   h1 {
     font-weight: bold;
   }
+  a {
+    color: hotpink;
+  }
