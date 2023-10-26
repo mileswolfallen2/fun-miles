@@ -14,7 +14,7 @@ body {
     color: hotpink;
   }
   a:link, a:visited {
-    background-color: #f44336;
+    background-color:  rgb(85, 255, 2);
     color: white;
     padding: 14px 25px;
     text-align: center;
@@ -23,5 +23,5 @@ body {
   }
   
   a:hover, a:active {
-    background-color: red;
+    background-color: rgb(85, 255, 0);
   }
