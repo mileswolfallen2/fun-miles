@@ -25,3 +25,9 @@ body {
   a:hover, a:active {
     background-color: red;
   }
+img{
+  border-color: rgb(54, 131, 255);
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 10px;
+}
