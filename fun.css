@@ -17,9 +17,7 @@ a {
     color:  #d7540e;
   }
   body {
-    background-image: url("logo\ \(1\).png");
-    background-position: 50% 50%;
-    background-repeat: repeat;
+    background-color: blue;
   }
   img{
     width: 450px;
