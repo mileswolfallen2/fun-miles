@@ -26,3 +26,11 @@ box-shadow: 0 0 40px rgba(0,0,0,0.2);
 border-radius: var(--border-radius);
 background: #ffffff;
 }
+
+
+.container,
+.form__input,
+.form__button {
+
+    font: 500 1rem 'Quicksand', sans-serif;
+}
