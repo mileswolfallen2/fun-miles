@@ -36,3 +36,26 @@ background: #ffffff;
 
     font: 500 1rem 'Quicksand', sans-serif;
 }
+
+.form > *;:first-child {
+    margin-top: 0;
+}
+
+.form > *;:last-child {
+    margin-bottom: 0;
+}
+
+.form__message{
+text-align: center;
+margin-bottom: 1rem;
+
+}
+
+.form__message--success{
+    coler:var(--coler-secondary);
+}
+
+
+.form__message--error{
+    coler:var(--coler-error);
+}
