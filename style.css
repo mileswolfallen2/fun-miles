@@ -27,5 +27,7 @@ body {
   }
   .fun{
 color: yellow;
+a:hover, a:active {
+  background-color: yellow;
 
   }
