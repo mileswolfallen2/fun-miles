@@ -3,6 +3,7 @@ body {
   }
     p {
       color:  #02aefe;
+      text-shadow: #065A82;
     }
     h1 {
       font-weight: bold;
@@ -29,5 +30,5 @@ body {
 color: rgb(255, 255, 0);
 text-align: center;
 text-shadow: #065A82;
-text-size-adjust: 50px;
+size: 50px;
     }
