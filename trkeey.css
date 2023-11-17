@@ -1,0 +1,28 @@
+body {
+    background: #ff6f09;
+  }
+    p {
+      color:  #feed02;
+    }
+    h1 {
+      font-weight: bold;
+    }
+    h2 {
+      font-weight: bold;
+    }
+    a {
+      color: rgb(252, 138, 195);
+    }
+    a:link, a:visited {
+      background-color:  rgb(255, 206, 90);
+      color: white;
+      padding: 14px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    a:hover, a:active {
+      background-color: rgb(255, 172, 6);
+    }
+  
