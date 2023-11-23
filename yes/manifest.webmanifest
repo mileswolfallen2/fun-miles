@@ -1,0 +1,12 @@
+{
+  "name": "Elastic River (Top down rpg)",
+  "short_name": "Elastic River (Top down rpg)",
+  "id": "com.example.topdownrpg",
+  "description": "A monster tamer style top down rpg game example. Including top down movement, scrolling text during chat, camera controls, and a simple battle sequence.",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}

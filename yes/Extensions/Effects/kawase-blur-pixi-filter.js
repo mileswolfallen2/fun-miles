@@ -1,0 +1,2 @@
+var gdjs;(function(l){l.PixiFiltersTools.registerFilterCreator("KawaseBlur",new class extends l.PixiFiltersTools.PixiFilterCreator{makePIXIFilter(t,e){return new PIXI.filters.KawaseBlurFilter}updatePreRender(t,e){}updateDoubleParameter(t,e,r){const i=t;e==="pixelizeX"?i.pixelSize[0]=r:e==="pixelizeY"?i.pixelSize[1]=r:e==="blur"?i.blur=r:e==="quality"&&(i.quality=r)}updateStringParameter(t,e,r){}updateBooleanParameter(t,e,r){}})})(gdjs||(gdjs={}));
+//# sourceMappingURL=kawase-blur-pixi-filter.js.map
