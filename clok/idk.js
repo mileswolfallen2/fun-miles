@@ -29,7 +29,7 @@ window.addEventListener("load", () => {
   
       //declaring a list of all months in  a year
       const monthList = [
-        "January",
+        "january",
         "February",
         "March",
         "April",
@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
         "August",
         "September",
         "October",
-        "November",
+        "unvember",
         "December"
       ];
   
