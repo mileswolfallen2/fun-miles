@@ -1,3 +1,0 @@
-<%
-String message = "Hello, world!";
-%>
