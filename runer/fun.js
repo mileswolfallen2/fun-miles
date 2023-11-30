@@ -1,0 +1,3 @@
+<%
+String message = "Hello, world!";
+%>
