@@ -3,5 +3,4 @@ function Hello() {
  }
  function EventHandler() {
     alert("you or gowind to a bifrint wed site");
-    window.location.href = ‘https://wondrous-jalebi-fb1e04.netlify.app/’;
  }
