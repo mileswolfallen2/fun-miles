@@ -31,7 +31,8 @@ color: #17dd09;
       }
 
       input{
-color:rgb(10, 131, 18);
+        background-color:rgb(10, 131, 18);
+        color: #17dd09 ;
       }
       input:hover input:active{
         background-color: rgb(106, 255, 89);
