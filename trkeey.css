@@ -29,3 +29,18 @@ body {
 color: #17dd09;
 
       }
+
+      input{
+color:rgb(10, 131, 18);
+      }
+      input:hover input:active{
+        background-color: rgb(106, 255, 89);
+      }
+      input:link, input:visited {
+        background-color:  rgb(10, 131, 18);
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
