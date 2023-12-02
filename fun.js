@@ -4,4 +4,3 @@ function Hello() {
  function EventHandler() {
     alert("to play go to https://wondrous-jalebi-fb1e04.netlify.app/");
  }
- <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta> this is for vewponts
