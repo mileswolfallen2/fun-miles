@@ -4,3 +4,6 @@ function Hello() {
  function EventHandler() {
     alert("to play go to https://wondrous-jalebi-fb1e04.netlify.app/");
  }
+ function getit() {
+alert("fun yesss")
+ }
