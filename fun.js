@@ -5,5 +5,5 @@ function Hello() {
     alert("to play go to https://wondrous-jalebi-fb1e04.netlify.app/");
  }
  function getit() {
-alert("fun yesss🎅🏼 you fawnd santa")
+alert("fun yesss🎅🏼 you fawnd santa congrats you won")
  }
