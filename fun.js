@@ -7,3 +7,6 @@ function Hello() {
  function getit() {
 alert("fun yesss🎅🏼 you fawnd santa congrats you won")
  }
+ function getinoroute(){
+   alert("fun-miles1.netlify.app is the new link if you or yoosing s old link it will not be updated ok by ps if you or on a git hud link you or still geting updats to got it you or fud")
+ }
