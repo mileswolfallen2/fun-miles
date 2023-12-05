@@ -33,6 +33,10 @@ color: #17dd09;
       input{
         background-color:rgb(10, 131, 18);
         color: #17dd09 ;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
       }
       input:hover input:active{
         background-color: rgb(106, 255, 89);
