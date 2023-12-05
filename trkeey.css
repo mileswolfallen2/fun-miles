@@ -29,6 +29,9 @@ body {
 color: #17dd09;
 
       }
+      .notaddingsoon{
+        color: #dd0909;
+      }
 
       input{
         background-color:rgb(10, 131, 18);
