@@ -2,8 +2,10 @@ function Hello() {
     alert("Hi will stop adding thin on desember 2 for two weeks and i will add things on november 16");
  }
  function EventHandler() {
-    alert("to play go to https://wondrous-jalebi-fb1e04.netlify.app/ 
-    window.location.replace(https://wondrous-jalebi-fb1e04.netlify.app/) ");
+    alert("to play go to https://wondrous-jalebi-fb1e04.netlify.app/ ");
+ }
+ function idk(){
+   window.location.replace(https://wondrous-jalebi-fb1e04.netlify.app/)
  }
  function getit() {
 alert("fun yesss🎅🏼 you found santa congrats you won")
