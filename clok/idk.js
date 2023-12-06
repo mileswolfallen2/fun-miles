@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
         "August",
         "September",
         "October",
-        "unvember",
+        "nevember",
         "December"
       ];
   
