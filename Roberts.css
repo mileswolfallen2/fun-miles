@@ -10,9 +10,6 @@ body {
     h2 {
       font-weight: bold;
     }
-    a {
-      color: hotpink;
-    }
     a:link, a:visited {
       background-color:  rgb(101, 90, 255);
       color: white;
