@@ -6,10 +6,6 @@ function Hello() {
     alert("to play go to https://wondrous-jalebi-fb1e04.netlify.app/ ");
  }
 
- function idk() {
-   window.location.replace (https://wondrous-jalebi-fb1e04.netlify.app/)
- }
-
  function getit() {
 alert("fun yesss🎅🏼 you found santa congrats you won")
  }
