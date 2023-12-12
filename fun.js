@@ -13,3 +13,6 @@ alert("fun yesss🎅🏼 you found santa congrats you won")
  function getinoroute(){
    alert("fun-miles1.netlify.app is the new link if you or useing the old link you will not be on the updated version if you are on a githud link you are still geting updates to it")
  }
+ function yourmom(){
+   alert("your mom still in testing")
+ }
