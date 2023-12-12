@@ -14,6 +14,11 @@ body {
         color: hotpink;
       }
       a:link, a:visited {
+          border-radius: 25px;
+          border: 2px solid #73AD21;
+          padding: 20px;
+          width: 200px;
+          height: 150px;
         background-color:  rgb(10, 131, 18);
         color: white;
         padding: 14px 25px;
@@ -23,6 +28,11 @@ body {
       }
       
       a:hover, a:active {
+          border-radius: 25px;
+          border: 2px solid #73AD21;
+          padding: 20px;
+          width: 200px;
+          height: 150px;
         background-color: rgb(106, 255, 89);
       }
       il{
