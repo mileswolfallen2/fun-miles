@@ -31,3 +31,18 @@ color: rgb(255, 255, 0);
 text-align: center;
 text-shadow: #065A82;
     }
+    input{
+      color: hotpink;
+    }
+    input:link, a:visited {
+      background-color:  rgb(101, 90, 255);
+      color: white;
+      padding: 14px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    input:hover, a:active {
+      background-color: rgb(89, 252, 255);
+    }
