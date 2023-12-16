@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Number Munchers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
+
+    <style>
+        .col{
+            position: relative;
+            overflow: hidden;
+            background-color: transparent;
+            max-width: 150px;
+            width: 150px;
+            font-size: 18px;
+            text-align: center;
+        }
+        .padding-0{
+            padding-right:0;
+            padding-left:0;
+        }
+        .row{
+            height: 150px;
+            max-height: 150px;
+        }
+        img{
+            position: relative;
+            height: 80px;
+            text-align: center;
+            margin: auto;
+            display: block;
+            overflow: hidden;
+        }
+        h3{
+            margin: auto;
+            vertical-align:middle;
+            text-align: center;
+        }
+        .container{
+            margin: auto;
+            text-align: center;
+        }
+        .flagClass{
+            background-size: contain;   
+            background-repeat: no-repeat;
+            background-position:center;
+        }
+        .buttonRow{
+            height: 60px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+    <h3 id="question">
+    </h3>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col" id="square1">
+            </div>
+            <div class="col" id="square2">
+            </div>
+            <div class="col" id="square3">
+            </div>
+            <div class="col" id="square4">
+            </div>
+            <div class="col" id="square5">
+            </div>
+            <div class="col" id="square6">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="square7">
+            </div>
+            <div class="col" id="square8">
+            </div>
+            <div class="col" id="square9">
+            </div>
+            <div class="col" id="square10">
+            </div>
+            <div class="col" id="square11">
+            </div>
+            <div class="col" id="square12">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="square13">
+            </div>
+            <div class="col" id="square14">
+            </div>
+            <div class="col" id="square15">
+            </div>
+            <div class="col" id="square16">
+            </div>
+            <div class="col" id="square17">
+            </div>
+            <div class="col" id="square18">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="square19">
+            </div>
+            <div class="col" id="square20">
+            </div>
+            <div class="col" id="square21">
+            </div>
+            <div class="col" id="square22">
+            </div>
+            <div class="col" id="square23">
+            </div>
+            <div class="col" id="square24">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="square25">
+            </div>
+            <div class="col" id="square26">
+            </div>
+            <div class="col" id="square27">
+            </div>
+            <div class="col" id="square28">
+            </div>
+            <div class="col" id="square29">
+            </div>
+            <div class="col" id="square30">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row buttonRow">
+            <!-- 1-5 are math, 6-8 states and cities, 9 state flags, 10-18 us geography, 19-26 world geography, 27-30 grammar -->
+            <div class="col-sm">
+                <button type="button" class="btn btn-dark" id="mathButton">Math</button>
+            </div>
+            <div class="col-sm">
+                <button type="button" class="btn btn-dark" id="statesCitiesButton">States & Cites</button>
+            </div>
+            <div class="col-sm">
+                <button type="button" class="btn btn-dark" id="stateFlagsButton">State Flags</button>
+            </div>
+            <div class="col-sm">
+                <button type="button" class="btn btn-dark" id="usGeographyButton">U.S. Geography</button>
+            </div>
+            <div class="col-sm">
+                <button type="button" class="btn btn-dark" id="worldGeographyButton">World Geography</button>
+            </div>
+            <div class="col-sm">
+                <button type="button" class="btn btn-dark" id="grammarButton">Grammar</button>
+            </div>
+            <div class="col-sm">
+                <button type="button" class="btn btn-dark" id="worldFlagsButton">World Flags</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <h3 id="round">
+            </h3>
+            <h3 id="score">
+            </h3>
+            <h3 id="remaining">
+            </h3>
+        </div>
+    </div>
+
+    <script>
+
+        //TODO fix equality and inequality.
+        
+        //Don't move window down when arrows pressed
+        window.addEventListener("keydown", function(e) {
+            // space and arrow keys
+            if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+
+        //initialize global variables and ready some important game stats
+        {
+        var topBounds = [1,2,3,4,5,6];
+        var leftBounds = [1,7,13,19,25];
+        var bottomBounds = [25,26,27,28,29,30];
+        var rightBounds = [6,12,18,24,30];
+        var border = [1,2,3,4,5,6,7,13,25,26,27,28,29,30,12,18,24];
+        var startingLocation = [8,9,10,11,14,15,16,17,20,21,22,23];
+        var primeNumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199];
+        var statesArray = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
+        var stateFlagsArray = [ 'alabama.png', 'alaska.png', 'arizona.png', 'arkansas.png', 'california.png', 'colorado.png', 'connecticut.png', 'delaware.png', 'florida.png', 'georgia.png', 'hawaii.png', 'idaho.png', 'illinois.png', 'indiana.png', 'iowa.png', 'kansas.png', 'kentucky.png', 'louisiana.png', 'maine.png', 'maryland.png', 'massachusetts.png', 'michigan.png', 'minnesota.png', 'mississippi.png', 'missouri.png', 'montana.png', 'nebraska.png', 'nevada.png', 'new-hampshire.png', 'new-jersey.png', 'new-mexico.png', 'new-york.png', 'north-carolina.png', 'north-dakota.png', 'ohio.png', 'oklahoma.png', 'oregon.png', 'pennsylvania.png', 'rhode-island.png', 'south-carolina.png', 'south-dakota.png', 'tennessee.png', 'texas.png', 'utah.png', 'vermont.png', 'virginia.png', 'washington.png', 'west-virginia.png', 'wisconsin.png', 'wyoming.png' ];
+        var worldFlagsArray = ["Afghanistan.png", "Albania.png", "Algeria.png", "American-Samoa.png", "Andorra.png", "Angola.png", "Anguilla.png", "Antigua-and-Barbuda.png", "Argentina.png", "Armenia.png", "Aruba.png", "Australia.png", "Austria.png", "Azerbaijan.png", "Bahamas.png", "Bahrain.png", "Bangladesh.png", "Barbados.png", "Belarus.png", "Belgium.png", "Belize.png", "Benin.png", "Bermuda.png", "Bhutan.png", "Bolivia.png", "Bosnia.png", "Botswana.png", "Brazil.png", "British-Virgin-Islands.png", "Brunei.png", "Bulgaria.png", "Burkina-Faso.png", "Burundi.png", "Cambodia.png", "Cameroon.png", "Canada.png", "Cape-Verde.png", "Cayman-Islands.png", "Central-African-Republic.png", "Chad.png", "Chile.png", "China.png", "Christmas-Island.png", "Colombia.png", "Comoros.png", "Cook-Islands.png", "Costa-Rica.png", "Croatia.png", "Cuba.png", "Cyprus.png", "Czech-Republic.png", "Democratic-Republic-of-the-Congo.png", "Denmark.png", "Djibouti.png", "Dominica.png", "Dominican-Republic.png", "Ecuador.png", "Egypt.png", "El-Salvador.png", "Equatorial-Guinea.png", "Eritrea.png", "Estonia.png", "Ethiopia.png", "Falkland-Islands.png", "Faroe-Islands.png", "Fiji.png", "Finland.png", "France.png", "French-Polynesia.png", "Gabon.png", "Gambia.png", "Georgia.png", "Germany.png", "Ghana.png", "Gibraltar.png", "Greece.png", "Greenland.png", "Grenada.png", "Guam.png", "Guatemala.png", "Guinea-Bissau.png", "Guinea.png", "Guyana.png", "Haiti.png", "Honduras.png", "Hong-Kong.png", "Hungary.png", "Iceland.png", "India.png", "Indonesia.png", "Iran.png", "Iraq.png", "Ireland.png", "Israel.png", "Italy.png", "Jamaica.png", "Japan.png", "Jordan.png", "Kazakhstan.png", "Kenya.png", "Kiribati.png", "Kuwait.png", "Kyrgyzstan.png", "Laos.png", "Latvia.png", "Lebanon.png", "Lesotho.png", "Liberia.png", "Libya.png", "Liechtenstein.png", "Lithuania.png", "Luxembourg.png", "Macao.png", "Macedonia.png", "Madagascar.png", "Malawi.png", "Malaysia.png", "Maldives.png", "Mali.png", "Malta.png", "Marshall-Islands.png", "Martinique.png", "Mauritania.png", "Mauritius.png", "Mexico.png", "Micronesia.png", "Moldova.png", "Monaco.png", "Mongolia.png", "Montserrat.png", "Morocco.png", "Mozambique.png", "Myanmar.png", "Namibia.png", "Nauru.png", "Nepal.png", "Netherlands-Antilles.png", "Netherlands.png", "New-Zealand.png", "Nicaragua.png", "Niger.png", "Nigeria.png", "Niue.png", "Norfolk-Island.png", "North-Korea.png", "Norway.png", "Oman.png", "Pakistan.png", "Palau.png", "Panama.png", "Papua-New-Guinea.png", "Paraguay.png", "Peru.png", "Philippines.png", "Pitcairn-Islands.png", "Poland.png", "Portugal.png", "Puerto-Rico.png", "Qatar.png", "Republic-of-the-Congo.png", "Romania.png", "Russian-Federation.png", "Rwanda.png", "Saint-Kitts-and-Nevis.png", "Saint-Lucia.png", "Saint-Pierre.png", "Saint-Vicent-and-the-Grenadines.png", "Samoa.png", "San-Marino.png", "Sao-Tomé-and-Príncipe.png", "Saudi-Arabia.png", "Senegal.png", "Serbia-and-Montenegro.png", "Seychelles.png", "Sierra-Leone.png", "Singapore.png", "Slovakia.png", "Slovenia.png", "Soloman-Islands.png", "Somalia.png", "South-Africa.png", "South-Georgia.png", "South-Korea.png", "Soviet-Union.png", "Spain.png", "Sri-Lanka.png", "Sudan.png", "Suriname.png", "Swaziland.png", "Sweden.png", "Switzerland.png", "Syria.png", "Taiwan.png", "Tajikistan.png", "Tanzania.png", "Thailand.png", "Tibet.png", "Timor-Leste.png", "Togo.png", "Tonga.png", "Trinidad-and-Tobago.png", "Tunisia.png", "Turkey.png", "Turkmenistan.png", "Turks-and-Caicos-Islands.png", "Tuvalu.png", "UAE.png", "Uganda.png", "Ukraine.png", "United-Kingdom.png", "United-States-of-America.png", "Uruguay.png", "US-Virgin-Islands.png", "Uzbekistan.png", "Vanuatu.png", "Vatican-City.png", "Venezuela.png", "Vietnam.png", "Wallis-and-Futuna.png", "Yemen.png", "Zambia.png", "Zimbabwe.png"];
+        var majorCities = ["Aberdeen", "Abilene", "Akron", "Albany", "Albuquerque", "Alexandria", "Allentown", "Amarillo", "Anaheim", "Anchorage", "Ann Arbor", "Antioch", "Apple Valley", "Appleton", "Arlington", "Arvada", "Asheville", "Athens", "Atlanta", "Atlantic City", "Augusta", "Aurora", "Austin", "Bakersfield", "Baltimore", "Barnstable", "Baton Rouge", "Beaumont", "Bel Air", "Bellevue", "Berkeley", "Bethlehem", "Billings", "Birmingham", "Bloomington", "Boise", "Boise City", "Bonita Springs", "Boston", "Boulder", "Bradenton", "Bremerton", "Bridgeport", "Brighton", "Brownsville", "Bryan", "Buffalo", "Burbank", "Burlington", "Cambridge", "Canton", "Cape Coral", "Carrollton", "Cary", "Cathedral City", "Cedar Rapids", "Champaign", "Chandler", "Charleston", "Charlotte", "Chattanooga", "Chesapeake", "Chicago", "Chula Vista", "Cincinnati", "Clarke County", "Clarksville", "Clearwater", "Cleveland", "College Station", "Colorado Springs", "Columbia", "Columbus", "Concord", "Coral Springs", "Corona", "Corpus Christi", "Costa Mesa", "Dallas", "Daly City", "Danbury", "Davenport", "Davidson County", "Dayton", "Daytona Beach", "Deltona", "Denton", "Denver", "Des Moines", "Detroit", "Downey", "Duluth", "Durham", "El Monte", "El Paso", "Elizabeth", "Elk Grove", "Elkhart", "Erie", "Escondido", "Eugene", "Evansville", "Fairfield", "Fargo", "Fayetteville", "Fitchburg", "Flint", "Fontana", "Fort Collins", "Fort Lauderdale", "Fort Smith", "Fort Walton Beach", "Fort Wayne", "Fort Worth", "Frederick", "Fremont", "Fresno", "Fullerton", "Gainesville", "Garden Grove", "Garland", "Gastonia", "Gilbert", "Glendale", "Grand Prairie", "Grand Rapids", "Grayslake", "Green Bay", "GreenBay", "Greensboro", "Greenville", "Gulfport-Biloxi", "Hagerstown", "Hampton", "Harlingen", "Harrisburg", "Hartford", "Havre de Grace", "Hayward", "Hemet", "Henderson", "Hesperia", "Hialeah", "Hickory", "High Point", "Hollywood", "Honolulu", "Houma", "Houston", "Howell", "Huntington", "Huntington Beach", "Huntsville", "Independence", "Indianapolis", "Inglewood", "Irvine", "Irving", "Jackson", "Jacksonville", "Jefferson", "Jersey City", "Johnson City", "Joliet", "Kailua", "Kalamazoo", "Kaneohe", "Kansas City", "Kennewick", "Kenosha", "Killeen", "Kissimmee", "Knoxville", "Lacey", "Lafayette", "Lake Charles", "Lakeland", "Lakewood", "Lancaster", "Lansing", "Laredo", "Las Cruces", "Las Vegas", "Layton", "Leominster", "Lewisville", "Lexington", "Lincoln", "Little Rock", "Long Beach", "Lorain", "Los Angeles", "Louisville", "Lowell", "Lubbock", "Macon", "Madison", "Manchester", "Marina", "Marysville", "McAllen", "McHenry", "Medford", "Melbourne", "Memphis", "Merced", "Mesa", "Mesquite", "Miami", "Milwaukee", "Minneapolis", "Miramar", "Mission Viejo", "Mobile", "Modesto", "Monroe", "Monterey", "Montgomery", "Moreno Valley", "Murfreesboro", "Murrieta", "Muskegon", "Myrtle Beach", "Naperville", "Naples", "Nashua", "Nashville", "New Bedford", "New Haven", "New London", "New Orleans", "New York", "New York City", "Newark", "Newburgh", "Newport News", "Norfolk", "Normal", "Norman", "North Charleston", "North Las Vegas", "North Port", "Norwalk", "Norwich", "Oakland", "Ocala", "Oceanside", "Odessa", "Ogden", "Oklahoma City", "Olathe", "Olympia", "Omaha", "Ontario", "Orange", "Orem", "Orlando", "Overland Park", "Oxnard", "Palm Bay", "Palm Springs", "Palmdale", "Panama City", "Pasadena", "Paterson", "Pembroke Pines", "Pensacola", "Peoria", "Philadelphia", "Phoenix", "Pittsburgh", "Plano", "Pomona", "Pompano Beach", "Port Arthur", "Port Orange", "Port Saint Lucie", "Port St. Lucie", "Portland", "Portsmouth", "Poughkeepsie", "Providence", "Provo", "Pueblo", "Punta Gorda", "Racine", "Raleigh", "Rancho Cucamonga", "Reading", "Redding", "Reno", "Richland", "Richmond", "Richmond County", "Riverside", "Roanoke", "Rochester", "Rockford", "Roseville", "Round Lake Beach", "Sacramento", "Saginaw", "Saint Louis", "Saint Paul", "Saint Petersburg", "Salem", "Salinas", "Salt Lake City", "San Antonio", "San Bernardino", "San Buenaventura", "San Diego", "San Francisco", "San Jose", "Santa Ana", "Santa Barbara", "Santa Clara", "Santa Clarita", "Santa Cruz", "Santa Maria", "Santa Rosa", "Sarasota", "Savannah", "Scottsdale", "Scranton", "Seaside", "Seattle", "Sebastian", "Shreveport", "Simi Valley", "Sioux City", "Sioux Falls", "South Bend", "South Lyon", "Spartanburg", "Spokane", "Springdale", "Springfield", "St. Louis", "St. Paul", "St. Petersburg", "Stamford", "Sterling Heights", "Stockton", "Sunnyvale", "Syracuse", "Tacoma", "Tallahassee", "Tampa", "Temecula", "Tempe", "Thornton", "Thousand Oaks", "Toledo", "Topeka", "Torrance", "Trenton", "Tucson", "Tulsa", "Tuscaloosa", "Tyler", "Utica", "Vallejo", "Vancouver", "Vero Beach", "Victorville", "Virginia Beach", "Visalia", "Waco", "Warren", "Washington", "Waterbury", "Waterloo", "West Covina", "West Valley City", "Westminster", "Wichita", "Wilmington", "Winston", "Winter Haven", "Worcester", "Yakima", "Yonkers", "York", "Youngstown"];
+        var stateCapitals = ["Montgomery", "Juneau", "Phoenix", "Little Rock", "Sacramento", "Denver", "Hartford", "Dover", "Tallahassee", "Atlanta", "Honolulu", "Boise", "Springfield", "Indianapolis", "Des Moines", "Topeka", "Frankfort", "Baton Rouge", "Augusta", "Annapolis", "Boston", "Lansing", "Saint Paul", "Jackson", "Jefferson City", "Helena", "Lincoln", "Carson City", "Concord", "Trenton", "Santa Fe", "Albany", "Raleigh", "Bismarck", "Columbus", "Oklahoma City", "Salem", "Harrisburg", "Providence", "Columbia", "Pierre", "Nashville", "Austin", "Salt Lake City", "Montpelier", "Richmond", "Olympia", "Charleston", "Madison", "Cheyenne"];
+        
+        //us gepgraphy
+        var pacificOceanStates = ["Washington", "Oregon", "California", "Alaska", "Hawaii"];
+        var atlanticOceanStates = ["Maine", "New Hampshire", "Massachusetts", "Rhode Island", "Connecticut", "New York", "New Jersey", "Delaware", "Maryland", "Virginia", "North Carolina", "South Carolina", "Georgia", "Florida"];
+        var gulfOfMexicoStates = ["Alabama", "Mississippi", "Louisiana", "Texas"];
+        var mexicoBorderStates = ["California", "Arizona", "New Mexico", "Texas"];
+        var canadaBorderStates = ["Alaska", "Idaho", "Maine", "Michigan", "Minnesota", "Montana", "New York", "New Hampshire", "North Dakota", "Ohio", "Pennsylvania", "Vermont", "Washington"];
+
+        //us history
+        var unionStates = ["Maine", "New York", "New Hampshire", "Vermont", "Massachusetts", "Connecticut", "Rhode Island", "Pennsylvania", "New Jersey", "Ohio", "Indiana", "Illinois", "Kansas", "Michigan", "Wisconsin", "Minnesota", "Iowa", "California", "Nevada", "Oregon"];
+        var civilWarBorderStates = ["Maryland", "Delaware", "West Virginia", "Kentucky", "Missouri"];
+        var confederateStates = ["North Carolina", "South Carolina", "Georgia", "Mississippi", "Louisiana", "Alabama", "Texas", "Florida", "Virginia", "Tennessee", "Arkansas"];
+        var originalColonies = ["Virginia", "Delaware", "Pennsylvania", "Georgia", "New Jersey", "Connecticut", "Massachusetts", "South Carolina", "New Hampshire", "Maryland", "New York", "Rhode Island", "North Carolina"];
+
+        //world geography
+        var europeanCountries = ["Albania", "Andorra", "Armenia", "Austria", "Azerbaijan", "Belarus", "Belgium", "Bosnia and Herzegovina", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Georgia", "Germany", "Greece", "Hungary", "Iceland", "Ireland", "Italy", "Kosovo", "Latvia", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Malta", "Moldova", "Monaco", "Montenegro", "The Netherlands", "Norway", "Poland", "Portugal", "Romania", "Russia", "San Marino", "Serbia", "Slovakia", "Slovenia", "Spain", "Sweden", "Switzerland", "Turkey", "Ukraine", "United Kingdom", "Vatican City"];
+        var asianCountries = ["Afghanistan", "Armenia", "Azerbaijan", "Bahrain", "Bangladesh", "Bhutan", "Brunei", "Cambodia", "China", "Cyprus", "Georgia", "India", "Indonesia", "Iran", "Iraq", "Israel", "Japan", "Jordan", "Kazakhstan", "Kuwait", "Kyrgyzstan", "Laos", "Lebanon", "Malaysia", "Maldives", "Mongolia", "Myanmar", "Nepal", "North Korea", "Oman", "Pakistan", "Palestine", "Philippines", "Qatar", "Russia", "Saudi Arabia", "Singapore", "South Korea", "Sri Lanka", "Syria", "Taiwan", "Tajikistan", "Thailand", "Timor-Leste", "Turkey", "Turkmenistan", "United Arab Emirates", "Uzbekistan", "Vietnam", "Yemen"];
+        var africanCountries = ["Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cabo Verde", "Cameroon", "Central African Republic", "Chad", "Comoros", "Democratic Republic of the Congo", "Republic of the Congo", "Djibouti", "Egypt", "Equatorial Guinea", "Eritrea", "Eswatini", "Ethiopia", "Gabon", "Gambia", "Ghana", "Guinea", "Guinea-Bissau", "Kenya", "Lesotho", "Liberia", "Libya", "Madagascar", "Malawi", "Mali", "Mauritania", "Mauritius", "Morocco", "Mozambique", "Namibia", "Niger", "Nigeria", "Rwanda", "Sao Tome and Principe", "Senegal", "Seychelles", "Sierra Leone", "Somalia", "South Africa", "South Sudan", "Sudan", "Swaziland", "Tanzania", "Togo", "Tunisia", "Uganda", "Zambia", "Zimbabwe"];
+        var naCountries = ["Antigua and Barbuda", "Bahamas", "Barbados", "Belize", "Canada", "Costa Rica", "Cuba", "Dominica", "Dominican Republic", "El Salvador", "Grenada", "Guatemala", "Haiti", "Honduras", "Jamaica", "Mexico", "Nicaragua", "Panama", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Trinidad and Tobago", "United States of America"];
+        var saCountries = ["Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador", "Guyana", "Paraguay", "Peru", "Suriname", "Uruguay", "Venezuela"];
+
+        //world history / trivia
+        var countriesInEU = ["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania ", "Slovakia", "Slovenia", "Spain", "Sweden", "United Kingdom"];
+        var nativeEnglishSpeaking = ["Antigua and Barbuda", "Australia", "The Bahamas", "Barbados", "Belize", "Canada*", "Dominica", "Grenada", "Guyana", "Ireland", "Jamaica", "New Zealand", "St Kitts and Nevis", "St Lucia", "St Vincent and the Grenadines", "Trinidad and Tobago", "United Kingdom", "United States of America"];
+        var ww1Countries = ["Andorra", "Belgium", "Brazil", "China", "Costa Rica", "Cuba", "Czechoslavak", "France", "Greece", "Guatemala", "Haiti", "Honduras", "Italy", "Japan", "Liberia", "Montenegro", "Nepal", "New Hebrides", "Nicaragau", "Panama", "Portugal", "Romania", "Russia", "Serbia", "Thailand", "United Kingdom", "Canada", "India", "Australia", "New Zealand", "Malta", "South Africa", "Rhodesia", "Sri Lanka", "United States of America", "Austria-Hungary", "Bulgaria", "Germany", "Ottoman Empire", "Belarus", "Lithuania", "Poland", "Ukraine"];
+
+        //grammar
+        var adjectives = ["aback","abaft","abandoned","abashed","aberrant","abhorrent","abiding","abject","ablaze","able","abnormal","aboard","aboriginal","abortive","abounding","abrasive","abrupt","absent","absorbed","absorbing","abstracted","absurd","abundant","abusive","acceptable","accessible","accidental","accurate","acid","acidic","acoustic","acrid","actually","ad","hoc","adamant","adaptable","addicted","adhesive","adjoining","adorable","adventurous","afraid","aggressive","agonizing","agreeable","ahead","ajar","alcoholic","alert","alike","alive","alleged","alluring","aloof","amazing","ambiguous","ambitious","amuck","amused","amusing","ancient","angry","animated","annoyed","annoying","anxious","apathetic","aquatic","aromatic","arrogant","ashamed","aspiring","assorted","astonishing","attractive","auspicious","automatic","available","average","awake","aware","awesome","awful","axiomatic","bad","barbarous","bashful","bawdy","beautiful","befitting","belligerent","beneficial","bent","berserk","best","better","bewildered","big","billowy","bite-sized","bitter","bizarre","black","black-and-white","bloody","blue","blue-eyed","blushing","boiling","boorish","bored","boring","bouncy","boundless","brainy","brash","brave","brawny","breakable","breezy","brief","bright","bright","broad","broken","brown","bumpy","burly","bustling","busy","cagey","calculating","callous","calm","capable","capricious","careful","careless","caring","cautious","ceaseless","certain","changeable","charming","cheap","cheerful","chemical","chief","childlike","chilly","chivalrous","chubby","chunky","clammy","classy","clean","clear","clever","cloistered","cloudy","closed","clumsy","cluttered","coherent","cold","colorful","colossal","combative","comfortable","common","complete","complex","concerned","condemned","confused","conscious","cooing","cool","cooperative","coordinated","courageous","cowardly","crabby","craven","crazy","creepy","crooked","crowded","cruel","cuddly","cultured","cumbersome","curious","curly","curved","curvy","cut","cute","cute","cynical","daffy","daily","damaged","damaging","damp","dangerous","dapper","dark","dashing","dazzling","dead","deadpan","deafening","dear","debonair","decisive","decorous","deep","deeply","defeated","defective","defiant","delicate","delicious","delightful","demonic","delirious","dependent","depressed","deranged","descriptive","deserted","detailed","determined","devilish","didactic","different","difficult","diligent","direful","dirty","disagreeable","disastrous","discreet","disgusted","disgusting","disillusioned","dispensable","distinct","disturbed","divergent","dizzy","domineering","doubtful","drab","draconian","dramatic","dreary","drunk","dry","dull","dusty","dynamic","dysfunctional","eager","early","earsplitting","earthy","easy","eatable","economic","educated","efficacious","efficient","eight","elastic","elated","elderly","electric","elegant","elfin","elite","embarrassed","eminent","empty","enchanted","enchanting","encouraging","endurable","energetic","enormous","entertaining","enthusiastic","envious","equable","equal","erect","erratic","ethereal","evanescent","evasive","even excellent excited","exciting exclusive","exotic","expensive","extra-large extra-small exuberant","exultant","fabulous","faded","faint fair","faithful","fallacious","false familiar famous","fanatical","fancy","fantastic","far"," far-flung"," fascinated","fast","fat faulty","fearful fearless","feeble feigned","female fertile","festive","few fierce","filthy","fine","finicky","first"," five"," fixed"," flagrant","flaky","flashy","flat","flawless","flimsy"," flippant","flowery","fluffy","fluttering"," foamy","foolish","foregoing","forgetful","fortunate","four frail","fragile","frantic","free"," freezing"," frequent"," fresh"," fretful","friendly","frightened frightening full fumbling functional","funny","furry furtive","future futuristic","fuzzy ","gabby","gainful","gamy","gaping","garrulous","gaudy","general gentle","giant","giddy","gifted","gigantic","glamorous","gleaming","glib","glistening glorious","glossy","godly","good","goofy","gorgeous","graceful","grandiose","grateful gratis","gray greasy great","greedy","green grey grieving","groovy","grotesque","grouchy","grubby gruesome","grumpy","guarded","guiltless","gullible gusty","guttural H habitual","half","hallowed","halting","handsome","handsomely","handy","hanging","hapless","happy","hard","hard-to-find","harmonious","harsh","hateful","heady","healthy","heartbreaking","heavenly heavy hellish","helpful","helpless","hesitant","hideous high","highfalutin","high-pitched","hilarious","hissing","historical","holistic","hollow","homeless","homely","honorable","horrible","hospitable","hot huge","hulking","humdrum","humorous","hungry","hurried","hurt","hushed","husky","hypnotic","hysterical","icky","icy","idiotic","ignorant","ill","illegal","ill-fated","ill-informed","illustrious","imaginary","immense","imminent","impartial","imperfect","impolite","important","imported","impossible","incandescent","incompetent","inconclusive","industrious","incredible","inexpensive","infamous","innate","innocent","inquisitive","insidious","instinctive","intelligent","interesting","internal","invincible","irate","irritating","itchy","jaded","jagged","jazzy","jealous","jittery","jobless","jolly","joyous","judicious","juicy","jumbled","jumpy","juvenile","kaput","keen","kind","kindhearted","kindly","knotty","knowing","knowledgeable","known","labored","lackadaisical","lacking","lame","lamentable","languid","large","last","late","laughable","lavish","lazy","lean","learned","left","legal","lethal","level","lewd","light","like","likeable","limping","literate","little","lively","lively","living","lonely","long","longing","long-term","loose","lopsided","loud","loutish","lovely","loving","low","lowly","lucky","ludicrous","lumpy","lush","luxuriant","lying","lyrical","macabre","macho","maddening","madly","magenta","magical","magnificent","majestic","makeshift","male","malicious","mammoth","maniacal","many","marked","massive","married","marvelous","material","materialistic","mature","mean","measly","meaty","medical","meek","mellow","melodic","melted","merciful","mere","messy","mighty","military","milky","mindless","miniature","minor","miscreant","misty","mixed","moaning","modern","moldy","momentous","motionless","mountainous","muddled","mundane","murky","mushy","mute","mysterious","naive","nappy","narrow","nasty","natural","naughty","nauseating","near","neat","nebulous","necessary","needless","needy","neighborly","nervous","new","next","nice","nifty","nimble","nine","nippy","noiseless","noisy","nonchalant","nondescript","nonstop","normal","nostalgic","nosy","noxious","null","numberless","numerous","nutritious","nutty","oafish","obedient","obeisant","obese","obnoxious","obscene","obsequious","observant","obsolete","obtainable","oceanic","odd","offbeat","old","old-fashioned","omniscient","one","onerous","open","opposite","optimal","orange","ordinary","organic","ossified","outgoing","outrageous","outstanding","oval","overconfident","overjoyed","overrated","overt","overwrought","painful","painstaking","pale","paltry","panicky","panoramic","parallel","parched","parsimonious","past","pastoral","pathetic","peaceful","penitent","perfect","periodic","permissible","perpetual","petite","petite","phobic","physical","picayune","pink","piquant","placid","plain","plant","plastic","plausible","pleasant","plucky","pointless","poised","polite","political","poor","possessive","possible","powerful","precious","premium","present","pretty","previous","pricey","prickly","private","probable","productive","profuse","protective","proud","psychedelic","psychotic","public","puffy","pumped","puny","purple","purring","pushy","puzzled","puzzling","quack","quaint","quarrelsome","questionable","quick","quickest","quiet","quirky","quixotic","quizzical","rabid","racial","ragged","rainy","rambunctious","rampant","rapid","rare","raspy","ratty","ready","real","rebel","receptive","recondite","red","redundant","reflective","regular","relieved","remarkable","reminiscent","repulsive","resolute","resonant","responsible","rhetorical","rich","right","righteous","rightful","rigid","ripe","ritzy","roasted","robust","romantic","roomy","rotten","rough","round","royal","ruddy","rude","rural","rustic","ruthless","sable","sad","safe","salty","same","sassy","satisfying","savory","scandalous","scarce","scared","scary","scattered","scientific","scintillating","scrawny","screeching","second","second-hand","secret","secretive","sedate","seemly","selective","selfish","separate","serious","shaggy","shaky","shallow","sharp","shiny","shivering","shocking","short","shrill","shut","shy","sick","silent","silent","silky","silly","simple","simplistic","sincere","six","skillful","skinny","sleepy","slim","slimy","slippery","sloppy","slow","small","smart","smelly","smiling","smoggy","smooth","sneaky","snobbish","snotty","soft","soggy","solid","somber","sophisticated","sordid","sore","sore","sour","sparkling","special","spectacular","spicy","spiffy","spiky","spiritual","spiteful","splendid","spooky","spotless","spotted","spotty","spurious","squalid","square","squealing","squeamish","staking","stale","standing","statuesque","steadfast","steady","steep","stereotyped","sticky","stiff","stimulating","stingy","stormy","straight","strange","striped","strong","stupendous","stupid","sturdy","subdued","subsequent","substantial","successful","succinct","sudden","sulky","super","superb","superficial","supreme","swanky","sweet","sweltering","swift","symptomatic","synonymous","taboo","tacit","tacky","talented","tall","tame","tan","tangible","tangy","tart","tasteful","tasteless","tasty","tawdry","tearful","tedious","teeny","teeny-tiny","telling","temporary","ten","tender tense","tense","tenuous","terrible","terrific","tested","testy","thankful","therapeutic","thick","thin","thinkable","third","thirsty","thoughtful","thoughtless","threatening","three","thundering","tidy","tight","tightfisted","tiny","tired","tiresome","toothsome","torpid","tough","towering","tranquil","trashy","tremendous","tricky","trite","troubled","truculent","true","truthful","two","typical","ubiquitous","ugliest","ugly","ultra","unable","unaccountable","unadvised","unarmed","unbecoming","unbiased","uncovered","understood","undesirable","unequal","unequaled","uneven","unhealthy","uninterested","unique","unkempt","unknown","unnatural","unruly","unsightly","unsuitable","untidy","unused","unusual","unwieldy","unwritten","upbeat","uppity","upset","uptight","used","useful","useless","utopian","utter","uttermost","vacuous","vagabond","vague","valuable","various","vast","vengeful","venomous","verdant","versed","victorious","vigorous","violent","violet","vivacious","voiceless","volatile","voracious","vulgar","wacky","waggish","waiting","","wakeful","wandering","wanting","warlike","warm","wary","wasteful","watery","weak","wealthy","weary","well-groomed","well-made","well-off","well-to-do","wet","whimsical","whispering","white","whole","wholesale","wicked","wide","wide-eyed","wiggly","wild","willing","windy","wiry","wise","wistful","witty","woebegone","womanly","wonderful","wooden","woozy","workable","worried","worthless","wrathful","wretched","wrong","wry","xenophobic","yellow","yielding","young","youthful","yummy","zany","zealous","zesty","zippy","zonked"];
+        var verbs = ["accept", "add", "admire", "admit", "advise", "afford", "agree", "alert", "allow", "amuse", "analyse", "announce", "annoy", "answer", "apologise", "appear", "applaud", "appreciate", "approve", "argue", "arrange", "arrest", "arrive", "ask", "attach", "attack", "attempt", "attend", "attract", "avoid", "back", "bake", "balance", "ban", "bang", "bare", "bat", "bathe", "battle", "beam", "beg", "behave", "belong", "bleach", "bless", "blind", "blink", "blot", "blush", "boast", "boil", "bolt", "bomb", "book", "bore", "borrow", "bounce", "bow", "box", "brake", "branch", "breathe", "bruise", "brush", "bubble", "bump", "burn", "bury", "buzz", "calculate", "call", "camp", "care", "carry", "carve", "cause", "challenge", "change", "charge", "chase", "cheat", "check", "cheer", "chew", "choke", "chop", "claim", "clap", "clean", "clear", "clip", "close", "coach", "coil", "collect", "colour", "comb", "command", "communicate", "compare", "compete", "complain", "complete", "concentrate", "concern", "confess", "confuse", "connect", "consider", "consist", "contain", "continue", "copy", "correct", "cough", "count", "cover", "crack", "crash", "crawl", "cross", "crush", "cry", "cure", "curl", "curve", "cycle", "dam", "damage", "dance", "dare", "decay", "deceive", "decide", "decorate", "delay", "delight", "deliver", "depend", "describe", "desert", "deserve", "destroy", "detect", "develop", "disagree", "disappear", "disapprove", "disarm", "discover", "dislike", "divide", "double", "doubt", "drag", "drain", "dream", "dress", "drip", "drop", "drown", "drum", "dry", "dust", "earn", "educate", "embarrass", "employ", "empty", "encourage", "end", "enjoy", "enter", "entertain", "escape", "examine", "excite", "excuse", "exercise", "exist", "expand", "expect", "explain", "explode", "extend", "face", "fade", "fail", "fancy", "fasten", "fax", "fear", "fence", "fetch", "file", "fill", "film", "fire", "fit", "fix", "flap", "flash", "float", "flood", "flow", "flower", "fold", "follow", "fool", "force", "form", "found", "frame", "frighten", "fry", "gather", "gaze", "glow", "glue", "grab", "grate", "grease", "greet", "grin", "grip", "groan", "guarantee", "guard", "guess", "guide", "hammer", "hand", "handle", "hang", "happen", "harass", "harm", "hate", "haunt", "head", "heal", "heap", "heat", "help", "hook", "hop", "hope", "hover", "hug", "hum", "hunt", "hurry", "identify", "ignore", "imagine", "impress", "improve", "include", "increase", "influence", "inform", "inject", "injure", "instruct", "intend", "interest", "interfere", "interrupt", "introduce", "invent", "invite", "irritate", "itch", "jail", "jam", "jog", "join", "joke", "judge", "juggle", "jump", "kick", "kill", "kiss", "kneel", "knit", "knock", "knot", "label", "land", "last", "laugh", "launch", "learn", "level", "license", "lick", "lie", "lighten", "like", "list", "listen", "live", "load", "lock", "long", "look", "love", "man", "manage", "march", "mark", "marry", "match", "mate", "matter", "measure", "meddle", "melt", "memorise", "mend", "mess up", "milk", "mine", "miss", "mix", "moan", "moor", "mourn", "move", "muddle", "mug", "multiply", "murder", "nail", "name", "need", "nest", "nod", "note", "notice", "number", "obey", "object", "observe", "obtain", "occur", "offend", "offer", "open", "order", "overflow", "owe", "own", "pack", "paddle", "paint", "park", "part", "pass", "paste", "pat", "pause", "peck", "pedal", "peel", "peep", "perform", "permit", "phone", "pick", "pinch", "pine", "place", "plan", "plant", "play", "please", "plug", "point", "poke", "polish", "pop", "possess", "post", "pour", "practise", "pray", "preach", "precede", "prefer", "prepare", "present", "preserve", "press", "pretend", "prevent", "prick", "print", "produce", "program", "promise", "protect", "provide", "pull", "pump", "punch", "puncture", "punish", "push", "question", "queue", "race", "radiate", "rain", "raise", "reach", "realise", "receive", "recognise", "record", "reduce", "reflect", "refuse", "regret", "reign", "reject", "rejoice", "relax", "release", "rely", "remain", "remember", "remind", "remove", "repair", "repeat", "replace", "reply", "report", "reproduce", "request", "rescue", "retire", "return", "rhyme", "rinse", "risk", "rob", "rock", "roll", "rot", "rub", "ruin", "rule", "rush", "sack", "sail", "satisfy", "save", "saw", "scare", "scatter", "scold", "scorch", "scrape", "scratch", "scream", "screw", "scribble", "scrub", "seal", "search", "separate", "serve", "settle", "shade", "share", "shave", "shelter", "shiver", "shock", "shop", "shrug", "sigh", "sign", "signal", "sin", "sip", "ski", "skip", "slap", "slip", "slow", "smash", "smell", "smile", "smoke", "snatch", "sneeze", "sniff", "snore", "snow", "soak", "soothe", "sound", "spare", "spark", "sparkle", "spell", "spill", "spoil", "spot", "spray", "sprout", "squash", "squeak", "squeal", "squeeze", "stain", "stamp", "stare", "start", "stay", "steer", "step", "stir", "stitch", "stop", "store", "strap", "strengthen", "stretch", "strip", "stroke", "stuff", "subtract", "succeed", "suck", "suffer", "suggest", "suit", "supply", "support", "suppose", "surprise", "surround", "suspect", "suspend", "switch", "talk", "tame", "tap", "taste", "tease", "telephone", "tempt", "terrify", "test", "thank", "thaw", "tick", "tickle", "tie", "time", "tip", "tire", "touch", "tour", "tow", "trace", "trade", "train", "transport", "trap", "travel", "treat", "tremble", "trick", "trip", "trot", "trouble", "trust", "try", "tug", "tumble", "turn", "twist", "type", "undress", "unfasten", "unite", "unlock", "unpack", "untidy", "use", "vanish", "visit", "wail", "wait", "walk", "wander", "want", "warm", "warn", "wash", "waste", "watch", "water", "wave", "weigh", "welcome", "whine", "whip", "whirl", "whisper", "whistle", "wink", "wipe", "wish", "wobble", "wonder", "work", "worry", "wrap", "wreck", "wrestle", "wriggle", "x-ray", "yawn", "yell", "zip", "zoom"];
+        var nouns = ["accelerator", "accordion", "account", "accountant", "acknowledgment", "acoustic", "acrylic", "act", "action", "active", "activity", "actor", "actress", "adapter", "addition", "address", "adjustment", "adult", "advantage", "advertisement", "advice", "afghanistan", "africa", "aftermath", "afternoon", "aftershave", "afterthought", "age", "agenda", "agreement", "air", "airbus", "airmail", "airplane", "airport", "airship", "alarm", "albatross", "alcohol", "algebra", "algeria", "alibi", "alley", "alligator", "alloy", "almanac", "alphabet", "alto", "aluminium", "aluminum", "ambulance", "america", "amount", "amusement", "anatomy", "anethesiologist", "anger", "angle", "angora", "animal", "anime", "ankle", "answer", "ant", "antarctica", "anteater", "antelope", "anthony", "anthropology", "apartment", "apology", "apparatus", "apparel", "appeal", "appendix", "apple", "appliance", "approval", "april", "aquarius", "arch", "archaeology", "archeology", "archer", "architecture", "area", "argentina", "argument", "aries", "arithmetic", "arm", "armadillo", "armchair", "armenian", "army", "arrow", "art", "ash", "ashtray", "asia", "asparagus", "asphalt", "asterisk", "astronomy", "athlete", "atm", "atom", "attack", "attempt", "attention", "attic", "attraction", "august", "aunt", "australia", "australian", "author", "authorisation", "authority", "authorization", "avenue", "babies", "baboon", "baby", "back", "backbone", "bacon", "badge", "badger", "bag", "bagel", "bagpipe", "bail", "bait", "baker", "bakery", "balance", "balinese", "ball", "balloon", "bamboo", "banana", "band", "bandana", "bangladesh", "bangle", "banjo", "bank", "bankbook", "banker", "bar", "barbara", "barber", "barge", "baritone", "barometer", "base", "baseball", "basement", "basin", "basket", "basketball", "bass", "bassoon", "bat", "bath", "bathroom", "bathtub", "battery", "battle", "bay", "beach", "bead", "beam", "bean", "bear", "beard", "beast", "beat", "beautician", "beauty", "beaver", "bed", "bedroom", "bee", "beech", "beef", "beer", "beet", "beetle", "beggar", "beginner", "begonia", "behavior", "belgian", "belief", "believe", "bell", "belt", "bench", "bengal", "beret", "berry", "bestseller", "betty", "bibliography", "bicycle", "bike", "bill", "billboard", "biology", "biplane", "birch", "bird", "birth", "birthday", "bit", "bite", "black", "bladder", "blade", "blanket", "blinker", "blizzard", "block", "blood", "blouse", "blow", "blowgun", "blue", "board", "boat", "bobcat", "body", "bolt", "bomb", "bomber", "bone", "bongo", "bonsai", "book", "bookcase", "booklet", "boot", "border", "botany", "bottle", "bottom", "boundary", "bow", "bowl", "bowling", "box", "boy", "bra", "brace", "bracket", "brain", "brake", "branch", "brand", "brandy", "brass", "brazil", "bread", "break", "breakfast", "breath", "brian", "brick", "bridge", "british", "broccoli", "brochure", "broker", "bronze", "brother", "brother-in-law", "brow", "brown", "brush", "bubble", "bucket", "budget", "buffer", "buffet", "bugle", "building", "bulb", "bull", "bulldozer", "bumper", "bun", "burglar", "burma", "burn", "burst", "bus", "bush", "business", "butane", "butcher", "butter", "button", "buzzard", "c-clamp", "cabbage", "cabinet", "cable", "cactus", "cafe", "cake", "calculator", "calculus", "calendar", "calf", "call", "camel", "camera", "camp", "can", "canada", "canadian", "cancer", "candle", "cannon", "canoe", "canvas", "cap", "capital", "cappelletti", "capricorn", "captain", "caption", "car", "caravan", "carbon", "card", "cardboard", "cardigan", "care", "carnation", "carol", "carp", "carpenter", "carriage", "carrot", "cart", "cartoon", "case", "cast", "castanet", "cat", "catamaran", "caterpillar", "cathedral", "catsup", "cattle", "cauliflower", "cause", "caution", "cave", "cd", "ceiling", "celery", "celeste", "cell", "cellar", "cello", "celsius", "cement", "cemetery", "cent", "centimeter", "century", "ceramic", "cereal", "certification", "chain", "chair", "chalk", "chance", "change", "channel", "character", "chard", "charles", "chauffeur", "check", "cheek", "cheese", "cheetah", "chef", "chemistry", "cheque", "cherries", "cherry", "chess", "chest", "chick", "chicken", "chicory", "chief", "child", "children", "chill", "chime", "chimpanzee", "chin", "china", "chinese", "chive", "chocolate", "chord", "christmas", "christopher", "chronometer", "church", "cicada", "cinema", "circle", "circulation", "cirrus", "citizenship", "city", "clam", "clarinet", "class", "claus", "clave", "clef", "clerk", "click", "client", "climb", "clipper", "cloakroom", "clock", "close", "closet", "cloth", "cloud", "cloudy", "clover", "club", "clutch", "coach", "coal", "coast", "coat", "cobweb", "cockroach", "cocktail", "cocoa", "cod", "coffee", "coil", "coin", "coke", "cold", "collar", "college", "collision", "colombia", "colon", "colony", "color", "colt", "column", "columnist", "comb", "comfort", "comic", "comma", "command", "commission", "committee", "community", "company", "comparison", "competition", "competitor", "composer", "composition", "computer", "condition", "condor", "cone", "confirmation", "conga", "congo", "conifer", "connection", "consonant", "continent", "control", "cook", "cooking", "copper", "copy", "copyright", "cord", "cork", "cormorant", "corn", "cornet", "correspondent", "cost", "cotton", "couch", "cougar", "cough", "country", "course", "court", "cousin", "cover", "cow", "cowbell", "crab", "crack", "cracker", "craftsman", "crate", "crawdad", "crayfish", "crayon", "cream", "creator", "creature", "credit", "creditor", "creek", "crib", "cricket", "crime", "criminal", "crocodile", "crocus", "croissant", "crook", "crop", "cross", "crow", "crowd", "crown", "crush", "cry", "cub", "cuban", "cucumber", "cultivator", "cup", "cupboard", "cupcake", "curler", "currency", "current", "curtain", "curve", "cushion", "custard", "customer", "cut", "cuticle", "cycle", "cyclone", "cylinder", "cymbal", "dad", "daffodil", "dahlia", "daisy", "damage", "dance", "dancer", "danger", "daniel", "dash", "dashboard", "database", "date", "daughter", "david", "day", "dead", "deadline", "deal", "death", "deborah", "debt", "debtor", "decade", "december", "decimal", "decision", "decrease", "dedication", "deer", "defense", "deficit", "degree", "delete", "delivery", "den", "denim", "dentist", "deodorant", "department", "deposit", "description", "desert", "design", "desire", "desk", "dessert", "destruction", "detail", "detective", "development", "dew", "diamond", "diaphragm", "dibble", "dictionary", "dietician", "difference", "digestion", "digger", "digital", "dill", "dime", "dimple", "dinghy", "dinner", "dinosaur", "diploma", "dipstick", "direction", "dirt", "disadvantage", "discovery", "discussion", "disease", "disgust", "dish", "distance", "distribution", "distributor", "diving", "division", "divorced", "dock", "doctor", "dog", "dogsled", "doll", "dollar", "dolphin", "domain", "donald", "donkey", "donna", "door", "dorothy", "double", "doubt", "downtown", "dragon", "dragonfly", "drain", "drake", "drama", "draw", "drawbridge", "drawer", "dream", "dredger", "dress", "dresser", "dressing", "drill", "drink", "drive", "driver", "driving", "drizzle", "drop", "drug", "drum", "dry", "dryer", "duck", "duckling", "dugout", "dungeon", "dust", "eagle", "ear", "earth", "earthquake", "ease", "east", "edge", "edger", "editor", "editorial", "education", "edward", "eel", "effect", "egg", "eggnog", "eggplant", "egypt", "eight", "elbow", "element", "elephant", "elizabeth", "ellipse", "emery", "employee", "employer", "encyclopedia", "end", "enemy", "energy", "engine", "engineer", "engineering", "english", "enquiry", "entrance", "environment", "epoch", "epoxy", "equinox", "equipment", "era", "error", "estimate", "ethernet", "ethiopia", "euphonium", "europe", "evening", "event", "ex-husband", "ex-wife", "examination", "example", "exchange", "exclamation", "exhaust", "existence", "expansion", "experience", "expert", "explanation", "eye", "eyebrow", "eyelash", "eyeliner", "face", "facilities", "fact", "factory", "fahrenheit", "fairies", "fall", "family", "fan", "fang", "farm", "farmer", "fat", "father", "father-in-law", "faucet", "fear", "feast", "feather", "feature", "february", "fedelini", "feedback", "feeling", "feet", "felony", "female", "fender", "ferry", "ferryboat", "fertilizer", "fiber", "fiberglass", "fibre", "fiction", "field", "fifth", "fight", "fighter", "file", "find", "fine", "finger", "fir", "fire", "fired", "fireman", "fireplace", "firewall", "fish", "fisherman", "flag", "flame", "flare", "flat", "flavor", "flax", "flesh", "flight", "flock", "flood", "floor", "flower", "flugelhorn", "flute", "fly", "foam", "fog", "fold", "font", "food", "foot", "football", "footnote", "force", "forecast", "forehead", "forest", "forgery", "fork", "form", "format", "fortnight", "foundation", "fountain", "fowl", "fox", "foxglove", "fragrance", "frame", "france", "freckle", "freeze", "freezer", "freighter", "french", "freon", "friction", "friday", "fridge", "friend", "frog", "front", "frost", "frown", "fruit", "fuel", "fur", "furniture", "galley", "gallon", "game", "gander", "garage", "garden", "garlic", "gas", "gasoline", "gate", "gateway", "gauge", "gazelle", "gear", "gearshift", "geese", "gemini", "gender", "geography", "geology", "geometry", "george", "geranium", "german", "germany", "ghana", "ghost", "giant", "giraffe", "girdle", "girl", "gladiolus", "glass", "glider", "gliding", "glockenspiel", "glove", "glue", "goal", "goat", "gold", "goldfish", "golf", "gondola", "gong", "good-bye", "goose", "gore-tex", "gorilla", "gosling", "government", "governor", "grade", "grain", "gram", "granddaughter", "grandfather", "grandmother", "grandson", "grape", "graphic", "grass", "grasshopper", "gray", "grease", "great-grandfather", "great-grandmother", "greece", "greek", "green", "grenade", "grey", "grill", "grip", "ground", "group", "grouse", "growth", "guarantee", "guatemalan", "guide", "guilty", "guitar", "gum", "gun", "gym", "gymnast", "hacksaw", "hail", "hair", "haircut", "half-brother", "half-sister", "halibut", "hall", "hallway", "hamburger", "hammer", "hamster", "hand", "handball", "handicap", "handle", "handsaw", "harbor", "hardboard", "hardcover", "hardhat", "hardware", "harmonica", "harmony", "harp", "hat", "hate", "hawk", "head", "headlight", "headline", "health", "hearing", "heart", "heat", "heaven", "hedge", "height", "helen", "helicopter", "helium", "hell", "helmet", "help", "hemp", "hen", "heron", "herring", "hexagon", "hill", "himalayan", "hip", "hippopotamus", "history", "hobbies", "hockey", "hoe", "hole", "holiday", "home", "honey", "hood", "hook", "hope", "horn", "horse", "hose", "hospital", "hot", "hour", "hourglass", "house", "hovercraft", "hub", "hubcap", "humidity", "humor", "hurricane", "hyacinth", "hydrant", "hydrofoil", "hydrogen", "hyena", "hygienic", "ice", "icebreaker", "icicle", "icon", "idea", "ikebana", "illegal", "imprisonment", "improvement", "impulse", "inch", "income", "increase", "index", "india", "indonesia", "industry", "ink", "innocent", "input", "insect", "instruction", "instrument", "insulation", "insurance", "interactive", "interest", "internet", "interviewer", "intestine", "invention", "inventory", "invoice", "iran", "iraq", "iris", "iron", "island", "israel", "italian", "italy", "jacket", "jaguar", "jail", "jam", "james", "january", "japan", "japanese", "jar", "jasmine", "jason", "jaw", "jeans", "jeep", "jeff", "jelly", "jellyfish", "jennifer", "jet", "jewel", "jogging", "john", "join", "joke", "joseph", "journey", "judge", "judo", "juice", "july", "jumbo", "jump", "jumper", "june", "jury", "justice", "jute", "kale", "kamikaze", "kangaroo", "karate", "karen", "kayak", "kendo", "kenneth", "kenya", "ketchup", "kettle", "kettledrum", "kevin", "key", "keyboard", "keyboarding", "kick", "kidney", "kilogram", "kilometer", "kimberly", "kiss", "kitchen", "kite", "kitten", "kitty", "knee", "knickers", "knife", "knight", "knot", "knowledge", "kohlrabi", "korean", "laborer", "lace", "ladybug", "lake", "lamb", "lamp", "lan", "land", "landmine", "language", "larch", "lasagna", "latency", "latex", "lathe", "laugh", "laundry", "laura", "law", "lawyer", "layer", "lead", "leaf", "learning", "leather", "leek", "leg", "legal", "lemonade", "lentil", "leo", "leopard", "letter", "lettuce", "level", "libra", "library", "license", "lier", "lift", "light", "lightning", "lilac", "lily", "limit", "linda", "line", "linen", "link", "lion", "lip", "lipstick", "liquid", "liquor", "lisa", "list", "literature", "litter", "liver", "lizard", "llama", "loaf", "loan", "lobster", "lock", "locket", "locust", "look", "loss", "lotion", "love", "low", "lumber", "lunch", "lunchroom", "lung", "lunge", "lute", "luttuce", "lycra", "lynx", "lyocell", "lyre", "lyric", "macaroni", "machine", "macrame", "magazine", "magic", "magician", "maid", "mail", "mailbox", "mailman", "makeup", "malaysia", "male", "mall", "mallet", "man", "manager", "mandolin", "manicure", "manx", "map", "maple", "maraca", "marble", "march", "margaret", "margin", "maria", "marimba", "mark", "market", "married", "mary", "mascara", "mask", "mass", "match", "math", "mattock", "may", "mayonnaise", "meal", "measure", "meat", "mechanic", "medicine", "meeting", "melody", "memory", "men", "menu", "mercury", "message", "metal", "meteorology", "meter", "methane", "mexican", "mexico", "mice", "michael", "michelle", "microwave", "middle", "mile", "milk", "milkshake", "millennium", "millimeter", "millisecond", "mimosa", "mind", "mine", "mini-skirt", "minibus", "minister", "mint", "minute", "mirror", "missile", "mist", "mistake", "mitten", "moat", "modem", "mole", "mom", "monday", "money", "monkey", "month", "moon", "morning", "morocco", "mosque", "mosquito", "mother", "mother-in-law", "motion", "motorboat", "motorcycle", "mountain", "mouse", "moustache", "mouth", "move", "multi-hop", "multimedia", "muscle", "museum", "music", "musician", "mustard", "myanmar", "nail", "name", "nancy", "napkin", "narcissus", "nation", "neck", "need", "needle", "neon", "nepal", "nephew", "nerve", "nest", "net", "network", "news", "newsprint", "newsstand", "nic", "nickel", "niece", "nigeria", "night", "nitrogen", "node", "noise", "noodle", "north", "north america", "north korea", "norwegian", "nose", "note", "notebook", "notify", "novel", "november", "number", "numeric", "nurse", "nut", "nylon", "oak", "oatmeal", "objective", "oboe", "observation", "occupation", "ocean", "ocelot", "octagon", "octave", "october", "octopus", "odometer", "offence", "offer", "office", "oil", "okra", "olive", "onion", "open", "opera", "operation", "ophthalmologist", "opinion", "option", "orange", "orchestra", "orchid", "order", "organ", "organisation", "organization", "ornament", "ostrich", "otter", "ounce", "output", "outrigger", "oval", "oven", "overcoat", "owl", "owner", "ox", "oxygen", "oyster", "package", "packet", "page", "pail", "pain", "paint", "pair", "pajama", "pakistan", "palm", "pamphlet", "pan", "pancake", "pancreas", "panda", "pansy", "panther", "panties", "pantry", "pants", "panty", "pantyhose", "paper", "paperback", "parade", "parallelogram", "parcel", "parent", "parentheses", "park", "parrot", "parsnip", "part", "particle", "partner", "partridge", "party", "passbook", "passenger", "passive", "pasta", "paste", "pastor", "pastry", "patch", "path", "patient", "patio", "patricia", "paul", "payment", "pea", "peace", "peak", "peanut", "pear", "pedestrian", "pediatrician", "peen", "peer-to-peer", "pelican", "pen", "penalty", "pencil", "pendulum", "pentagon", "peony", "pepper", "perch", "perfume", "period", "periodical", "peripheral", "permission", "persian", "person", "peru", "pest", "pet", "pharmacist", "pheasant", "philippines", "philosophy", "phone", "physician", "piano", "piccolo", "pickle", "picture", "pie", "pig", "pigeon", "pike", "pillow", "pilot", "pimple", "pin", "pine", "ping", "pink", "pint", "pipe", "pisces", "pizza", "place", "plain", "plane", "planet", "plant", "plantation", "plaster", "plasterboard", "plastic", "plate", "platinum", "play", "playground", "playroom", "pleasure", "plier", "plot", "plough", "plow", "plywood", "pocket", "poet", "point", "poison", "poland", "police", "policeman", "polish", "politician", "pollution", "polo", "polyester", "pond", "popcorn", "poppy", "population", "porch", "porcupine", "port", "porter", "position", "possibility", "postage", "postbox", "pot", "potato", "poultry", "pound", "powder", "power", "precipitation", "preface", "prepared", "pressure", "price", "priest", "print", "printer", "prison", "probation", "process", "processing", "produce", "product", "production", "professor", "profit", "promotion", "propane", "property", "prose", "prosecution", "protest", "protocol", "pruner", "psychiatrist", "psychology", "ptarmigan", "puffin", "pull", "puma", "pump", "pumpkin", "punch", "punishment", "puppy", "purchase", "purple", "purpose", "push", "pvc", "pyjama", "pyramid", "quail", "quality", "quart", "quarter", "quartz", "queen", "question", "quicksand", "quiet", "quill", "quilt", "quince", "quit", "quiver", "quotation", "rabbi", "rabbit", "racing", "radar", "radiator", "radio", "radish", "raft", "rail", "railway", "rain", "rainbow", "raincoat", "rainstorm", "rake", "ramie", "random", "range", "rat", "rate", "raven", "ravioli", "ray", "rayon", "reaction", "reading", "reason", "receipt", "recess", "record", "recorder", "rectangle", "red", "reduction", "refrigerator", "refund", "regret", "reindeer", "relation", "relative", "religion", "relish", "reminder", "repair", "replace", "report", "representative", "request", "resolution", "respect", "responsibility", "rest", "restaurant", "result", "retailer", "revolve", "revolver", "reward", "rhinoceros", "rhythm", "rice", "richard", "riddle", "rifle", "ring", "rise", "risk", "river", "riverbed", "road", "roadway", "roast", "robert", "robin", "rock", "rocket", "rod", "roll", "romania", "romanian", "ronald", "roof", "room", "rooster", "root", "rose", "rotate", "route", "router", "rowboat", "rub", "rubber", "rugby", "rule", "run", "russia", "russian", "rutabaga", "ruth", "sack", "sagittarius", "sail", "sailboat", "sailor", "salad", "salary", "sale", "salesman", "salmon", "salt", "sampan", "samurai", "sand", "sandra", "sandwich", "santa", "sarah", "sardine", "satin", "saturday", "sauce", "saudi arabia", "sausage", "save", "saw", "saxophone", "scale", "scallion", "scanner", "scarecrow", "scarf", "scene", "scent", "schedule", "school", "science", "scissors", "scooter", "scorpio", "scorpion", "scraper", "screen", "screw", "screwdriver", "sea", "seagull", "seal", "seaplane", "search", "seashore", "season", "seat", "second", "secretary", "secure", "security", "seed", "seeder", "segment", "select", "selection", "self", "semicircle", "semicolon", "sense", "sentence", "separated", "september", "servant", "server", "session", "sex", "shade", "shadow", "shake", "shallot", "shame", "shampoo", "shape", "share", "shark", "sharon", "shears", "sheep", "sheet", "shelf", "shell", "shield", "shingle", "ship", "shirt", "shock", "shoe", "shoemaker", "shop", "shorts", "shoulder", "shovel", "show", "shrimp", "shrine", "siamese", "siberian", "side", "sideboard", "sidecar", "sidewalk", "sign", "signature", "silica", "silk", "silver", "sing", "singer", "single", "sink", "sister", "sister-in-law", "size", "skate", "skiing", "skill", "skin", "skirt", "sky", "slash", "slave", "sled", "sleep", "sleet", "slice", "slime", "slip", "slipper", "slope", "smash", "smell", "smile", "smoke", "snail", "snake", "sneeze", "snow", "snowboarding", "snowflake", "snowman", "snowplow", "snowstorm", "soap", "soccer", "society", "sociology", "sock", "soda", "sofa", "softball", "softdrink", "software", "soil", "soldier", "son", "song", "soprano", "sort", "sound", "soup", "sousaphone", "south africa", "south america", "south korea", "soy", "soybean", "space", "spade", "spaghetti", "spain", "spandex", "spark", "sparrow", "spear", "specialist", "speedboat", "sphere", "sphynx", "spider", "spike", "spinach", "spleen", "sponge", "spoon", "spot", "spring", "sprout", "spruce", "spy", "square", "squash", "squid", "squirrel", "stage", "staircase", "stamp", "star", "start", "starter", "state", "statement", "station", "statistic", "steam", "steel", "stem", "step", "step-aunt", "step-brother", "step-daughter", "step-father", "step-grandfather", "step-grandmother", "step-mother", "step-sister", "step-son", "step-uncle", "stepdaughter", "stepmother", "stepson", "steven", "stew", "stick", "stinger", "stitch", "stock", "stocking", "stomach", "stone", "stool", "stop", "stopsign", "stopwatch", "store", "storm", "story", "stove", "stranger", "straw", "stream", "street", "streetcar", "stretch", "string", "structure", "study", "sturgeon", "submarine", "substance", "subway", "success", "sudan", "suede", "sugar", "suggestion", "suit", "summer", "sun", "sunday", "sundial", "sunflower", "sunshine", "supermarket", "supply", "support", "surfboard", "surgeon", "surname", "surprise", "susan", "sushi", "swallow", "swamp", "swan", "sweater", "sweatshirt", "sweatshop", "swedish", "sweets", "swim", "swimming", "swing", "swiss", "switch", "sword", "swordfish", "sycamore", "syria", "syrup", "system", "t-shirt", "table", "tablecloth", "tabletop", "tachometer", "tadpole", "tail", "tailor", "taiwan", "talk", "tank", "tanker", "tanzania", "target", "taste", "taurus", "tax", "taxi", "taxicab", "tea", "teacher", "teaching", "team", "technician", "teeth", "television", "teller", "temper", "temperature", "temple", "tempo", "tendency", "tennis", "tenor", "tent", "territory", "test", "text", "textbook", "texture", "thailand", "theater", "theory", "thermometer", "thing", "thistle", "thomas", "thought", "thread", "thrill", "throat", "throne", "thumb", "thunder", "thunderstorm", "thursday", "ticket", "tie", "tiger", "tights", "tile", "timbale", "time", "timer", "timpani", "tin", "tip", "tire", "titanium", "title", "toad", "toast", "toe", "toenail", "toilet", "tom-tom", "tomato", "ton", "tongue", "tooth", "toothbrush", "toothpaste", "top", "tornado", "tortellini", "tortoise", "touch", "tower", "town", "toy", "tractor", "trade", "traffic", "trail", "train", "tramp", "transaction", "transmission", "transport", "trapezoid", "tray", "treatment", "tree", "trial", "triangle", "trick", "trigonometry", "trip", "trombone", "trouble", "trousers", "trout", "trowel", "truck", "trumpet", "trunk", "tsunami", "tub", "tuba", "tuesday", "tugboat", "tulip", "tuna", "tune", "turkey", "turkish", "turn", "turnip", "turnover", "turret", "turtle", "tv", "twig", "twilight", "twine", "twist", "typhoon", "tyvek", "uganda", "ukraine", "ukrainian", "umbrella", "uncle", "underclothes", "underpants", "undershirt", "underwear", "unit", "united kingdom", "unshielded", "use", "utensil", "uzbekistan", "vacation", "vacuum", "valley", "value", "van", "var verbs = [aardvark", "vase", "vault", "vegetable", "vegetarian", "veil", "vein", "velvet", "venezuela", "venezuelan", "verdict", "vermicelli", "verse", "vessel", "vest", "veterinarian", "vibraphone", "vietnam", "view", "vinyl", "viola", "violet", "violin", "virgo", "viscose", "vise", "vision", "visitor", "voice", "volcano", "volleyball", "voyage", "vulture", "waiter", "waitress", "walk", "wall", "wallaby", "wallet", "walrus", "war", "warm", "wash", "washer", "wasp", "waste", "watch", "watchmaker", "water", "waterfall", "wave", "wax", "way", "wealth", "weapon", "weasel", "weather", "wedge", "wednesday", "weed", "weeder", "week", "weight", "whale", "wheel", "whip", "whiskey", "whistle", "white", "wholesaler", "whorl", "wilderness", "william", "willow", "wind", "windchime", "window", "windscreen", "windshield", "wine", "wing", "winter", "wire", "wish", "witch", "withdrawal", "witness", "wolf", "woman", "women", "wood", "wool", "woolen", "word", "work", "workshop", "worm", "wound", "wrecker", "wren", "wrench", "wrinkle", "wrist", "writer", "xylophone", "yacht", "yak", "yam", "yard", "yarn", "year", "yellow", "yew", "yogurt", "yoke", "yugoslavian", "zebra", "zephyr", "zinc", "zipper", "zone", "zoo", "zoology" ];    
+        var adverbs = ["finally", "additionally", "interestingly", "recently", "importantly", "similarly", "surprisingly", "specifically", "conversely", "consequently", "collectively", "currently", "accordingly", "notably", "subsequently", "previously", "unfortunately", "remarkably", "unexpectedly", "lastly", "strikingly", "secondly", "alternatively", "intriguingly", "generally", "firstly", "italy", "consistently", "initially", "significantly", "traditionally", "ultimately", "histologically", "particularly", "typically", "clinically", "mechanistically", "historically", "simultaneously", "paradoxically", "postoperatively", "concomitantly", "correspondingly", "globally", "presently", "especially", "functionally", "usually", "concurrently", "ideally", "thirdly", "apparently", "immunohistochemically", "microscopically", "clearly", "july", "eventually", "crucially", "fortunately", "occasionally", "increasingly", "histopathologically", "critically", "rarely", "namely", "totally", "normally", "briefly", "theoretically", "frequently", "morphologically", "intraoperatively", "presumably", "actually", "curiously", "experimentally", "obviously", "ultrastructurally", "preoperatively", "conclusively", "classically", "cumulatively", "retrospectively", "commonly", "evidently", "inversely", "behaviorally", "conventionally", "noticeably", "possibly", "statistically", "contrarily", "grossly", "hopefully", "reciprocally", "potentially", "structurally", "essentially", "probably", "radiographically", "separately", "macroscopically", "individually", "physiologically", "biochemically", "lately", "nationally", "approximately", "quantitatively", "radiologically", "uniquely", "incidentally", "comparatively", "concordantly", "qualitatively", "basically", "broadly", "early", "sicily", "pathologically", "internationally", "conceivably", "phylogenetically", "conceptually", "contrastingly", "independently", "intuitively", "analogously", "annually", "equally", "primarily", "arguably", "certainly", "ironically", "originally", "undoubtedly", "mostly", "phenotypically", "family", "secondarily", "specially", "expectedly", "genetically", "prospectively", "encouragingly", "fourthly", "mathematically", "naturally", "worryingly", "unsurprisingly", "anatomically", "characteristically", "differently", "likely", "locally", "reportedly", "technically", "alternately", "respectively", "coincidentally", "counterintuitively", "immediately", "predictably", "unusually", "longitudinally", "methodologically", "practically", "additionaly", "biologically", "sadly", "computationally", "geographically", "molecularly", "precisely", "regrettably", "amazingly", "consequentially", "empirically", "inevitably", "preferably", "spatially", "anecdotally", "evolutionarily", "only", "periodically", "perioperatively", "predominantly", "reassuringly", "serologically", "congruently", "cytologically", "daily", "hypothetically", "intracellularly", "mainly", "regionally", "relatively", "acutely", "assembly", "astonishingly", "behaviourally", "developmentally", "endoscopically", "kelly", "neuropathologically", "overwhelmingly", "principally", "relevantly", "routinely", "serendipitously", "tentatively", "virtually", "concretely", "electrophysiologically", "exceptionally", "exemplarily", "extracellularly", "formally", "formerly", "fundamentally", "gradually", "immunologically", "invariably", "jointly", "largely", "lilly", "logically", "nearly", "operationally", "optimally", "postnatally", "subjectively", "successively", "temporally", "understandably", "admittedly", "analytically", "complementarily", "consecutively", "cytochemically", "dentsply", "epidemiologically", "excitingly", "externally", "histochemically", "immunocytochemically", "impressively", "kinetically", "pathophysiologically", "pharmacologically", "reilly", "systemically", "uncommonly", "alarmingly", "architecturally", "bilaterally", "biomechanically", "centrally", "coincidently", "conservatively", "contemporaneously", "contextually", "disappointingly", "distally", "ecologically", "effectively", "ethnically", "fascinatingly", "histomorphometrically", "immunohistologically", "infrequently", "jelly", "markedly", "neurally", "numerically", "oppositely", "optionally", "physically", "posteriorly", "preclinically", "progressively", "reversely", "suddenly", "summarily", "taxonomically", "therapeutically", "topologically", "unprecedentedly", "anaerobically", "analogically", "angiographically", "antenatally", "atypically", "bailly", "baly", "chemically", "chronically", "chronologically", "commercially", "connolly", "correlatively", "customarily", "elderly", "etiologically", "explicitly", "fittingly", "fortuitously", "implicitly", "indirectly", "intrestingly", "laparoscopically", "latterly", "mechanically", "metrically", "microbiologically", "multivariately", "neurobiologically", "neurophysiologically", "oddly", "ordinarily", "peripherally", "pharmacodynamically", "postprandially", "preliminarily", "proportionally", "randomly", "realistically", "roughly", "scientifically", "scully", "superfamily", "suprisingly", "surgically", "tellingly", "thankfully", "thessaly", "timely", "unpredictably", "visually", "accordantly", "aditionally", "aerobically", "algorithmically", "arthroscopically", "biophysically", "bizarrely", "booly", "chiefly", "clinicopathologically", "coherently", "collaterally", "comprehensively", "considerably", "conspicuously", "continuously", "conversly", "corroboratively", "cytogenetically", "definitely", "demographically", "dfly", "diagnostically", "disconcertingly", "distinctively", "disturbingly", "ectrodactyly", "embryologically", "emotionally", "energetically", "ethically", "geometrically", "hemodynamically", "inexplicably", "informally", "interestedly", "intermittently", "internally", "intraorally", "intrinsically", "iteratively", "jekely", "joly", "lamentably", "luckily", "maternally", "medicinally", "micrencephaly", "minimally", "monthly", "morally", "morphometrically", "multivariably", "neuroanatomically", "neurochemically", "neurologically", "notablely", "opportunely", "orally", "ostensibly", "parallely", "parenthetically", "partially", "partly", "pathogenetically", "peroperatively", "phytogeographically", "postmeiotically", "postsynaptically", "prenatally", "prognostically", "proximally", "psychologically", "psychophysically", "putatively", "puzzlingly", "rapidly", "regretfully", "regularly", "relatedly", "seasonally", "sequentially", "simplistically", "singly", "speculatively", "spindly", "splenomegaly", "spontaneously", "sporadically", "successfully", "superficially", "supposedly", "symptomatically", "systematically", "terminally", "topically", "ultrasonographically", "uniformly", "univariately", "unlikely", "yearly", "aboaly", "acceptably", "accidentally", "acly", "acromegaly", "additionly", "additonally", "advantageously", "adventitiously", "adversely", "advisably", "aesthetically", "aetiologically", "affectively", "allegedly", "anteriorly", "apically", "appropriately", "archaeologically", "arespectively", "bacteriologically", "bareilly", "basally", "beautifully", "beverly", "bioinformatically", "biosynthetically", "bodily", "byerly", "canonically", "causally", "cellularly", "cephalometrically", "clasically", "climatologically", "coincidingly", "comparably", "compatibly", "compellingly", "complimentarily", "concordingly", "concurringly", "conformably", "conjecturally", "connoly", "consquentially", "constitutively", "contradictorily", "controversly", "conversantly", "coronally", "cosmetically", "covalently", "cranially", "culturally", "curiosly", "cytomorphologically", "cytopathologically", "decisively", "delightfully", "densply", "descriptively", "desirably", "dewailly", "dimensionally", "directly", "disappointedly", "distinctly", "dolly", "echographically", "electronically", "electronmicroscopically", "electrophoretically", "emphatically", "endogenously", "endosonographically", "enthrallingly", "enzymatically", "erroneously", "ethnopharmacologically", "evocatively", "exclusively", "expectably", "expectantly", "extragingivally", "extraorally", "extremely", "feasibly", "feraly", "fifthly", "finallly", "findingsinitially", "focally", "frustratingly", "ganguly", "generically", "genomically", "genotypically", "gergely", "gratifyingly", "greely", "gully", "habitually", "happily", "hemperly", "hepatosplenomegaly", "hisologically", "holly", "holoprosencephaly", "hooghly", "identically", "ignificantly", "immuhistochemically", "immunochemically", "immunophenotypically", "inadvertently", "indisputably", "industrially", "inferiorly", "inherently", "inspiringly", "interspecifically", "interstingly", "intialy", "intradurally", "intrahepatically", "intralysosomally", "intraperitonally", "intraspecifically", "intriguinly", "intringuingly", "ipsilaterally", "isely", "karunagappally", "karyologically", "lally", "laterally", "legally", "lily", "literally", "logistically", "lovely", "macropharmacologically", "marginally", "metabolically", "meteorologically", "methodically", "microcephaly", "microregionally", "moberly", "modestly", "muhly", "naively", "nally", "natively", "naturalistically", "neatly", "nomenclaturally", "noteworthily", "nouzilly", "nutritionally", "objectively", "observationally", "oceanographically", "ontogenetically", "ontogenically", "ophthalmoscopically", "optically", "orly", "osmotically", "outstandingly", "pathohistologically", "pathomorphologically", "perceptually", "perinatally", "perioperaively", "peroperativly", "perplexingly", "pertinently", "pharmacokinetically", "phenomenologically", "philly", "philosophically", "phongsaly", "phylogenitically", "phylogentically", "phytochemically", "pivotally", "plausibly", "positionally", "postauricularly", "postsurgically", "pragmatically", "preauricularly", "preferentially", "premenstrually", "problematically", "prominently", "promisingly", "proportionately", "provisionally", "proximately", "prudently", "quickly", "rahilly", "rationally", "really", "reassembly", "recurrently", "renomegaly", "repressingly", "resultantly", "resultspreviously", "revealingly", "rheologically", "rhetorically", "scilly", "seemingly", "selectively", "semiannually", "sequently", "shortly", "simulteneously", "socially", "socioeconomically", "spectacularly", "spectroscopically", "startlingly", "steadily", "strangely", "subcellularly", "substantially", "substantively", "suggestively", "summatively", "superiorly", "supply", "surely", "synchronously", "syntactically", "synthetically", "technologically", "temporarily", "thermodynamically", "thoracically", "tinctorially", "transmurally", "tribally", "trivially", "ultrascructurally", "ultrasonically", "ultrastructually", "undeniably", "undesirably", "unequivocally", "unexplainably", "unfortunatly", "unintentionally", "univariably", "universally", "unknowingly", "unquestionably", "untypically", "utrastructurally", "wailly", "weekly", "wessely", "whitely", "willy", "worrisomely"];
+
+
+            //when adding games, check newgame, buildgameboard, getcorrrectremaining, and keypresses 
+            //and fix special square function!
+
+        var multiplesArray = [];
+        var factors = [];
+        var expressionsArray = [];
+        var randomStateFlags = [];
+        var randomWorldFlags = [];
+        var expressionValue = 0;
+        var characterIsAnimating = false;
+        var movementAnimationSpeed = 400;
+        var digAnimationSpeed = 800;
+        var amIThereYet = false;
+        var gameStatus = true;
+
+        var score = 5;
+        var round = 0;
+
+        var gameOverride = false;
+
+        var gameSpeed = 15000;
+
+        var startingSquare = "square"+startingLocation[Math.floor(Math.random()*startingLocation.length)];
+        var correctRemaining = 0;
+        var gameMode = 0;
+        var specialSquareTimer;
+        var newGameTimer;
+        $("#score").text("Score is "+score);
+        }
+
+        //Helper Methods (TitleCasing, Factors, Multiples, Mode, RemoveCapitals)
+        {
+
+        function removeCapitals(){
+            for(var i = 0; i<stateCapitals.length; i++){
+                majorCities.splice( majorCities.indexOf(stateCapitals[i]), 1 );
+            }
+        }
+
+        function toTitleCase(str) {
+            return str.replace(/\w\S*/g, function(txt){
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            });
+        }
+        
+        function getFactors(integer){
+            var factors = [],
+            quotient = 0;
+
+            for(var i = 1; i <= integer; i++){
+                quotient = integer/i;
+
+                if(quotient === Math.floor(quotient)){
+                factors.push(i); 
+                }
+            }
+            return factors;
+            }
+
+        function getMultiples(integer){
+            var tempArray  = [];
+            for(var i =1; i<100; i++)
+            {
+                if(i%integer===0){
+                    tempArray.push(i);
+                }
+            }
+            return tempArray;
+        }
+
+        function getMode(arr) {
+            var numMapping = {};
+            var greatestFreq = 0;
+            var mode;
+            arr.forEach(function findMode(number) {
+                numMapping[number] = (numMapping[number] || 0) + 1;
+
+                if (greatestFreq < numMapping[number]) {
+                    greatestFreq = numMapping[number];
+                    mode = number;
+                }
+            });
+            return +mode;
+        }
+
+        function sortNumber(a,b) {
+            return a - b;
+        }
+
+        }
+
+        //Remove capitals from the major cities array on launch
+        removeCapitals();
+
+        function buildGameBoard(){
+            for(var i = 1; i<31; i++){
+                var randomNumber = Math.floor(Math.random() * 3) + 1;
+                var value;
+                if(gameMode<9){
+                    if(randomNumber === 1){
+                        value = statesArray[Math.floor(Math.random()*statesArray.length)];
+                    }
+                    else if(randomNumber ===2){
+                        value = majorCities[Math.floor(Math.random()*majorCities.length)];
+                    }
+                    else{
+                        value = stateCapitals[Math.floor(Math.random()*stateCapitals.length)];
+                    }
+                }
+                if(gameMode>=10&&gameMode<19){
+                    console.log("Making board for geography")
+                    value = statesArray[Math.floor(Math.random()*statesArray.length)];
+                    if(gameMode===10){
+                        $("#question").text("Select states that border an ocean");
+                    }
+                    else if(gameMode===11){
+                        $("#question").text("Select states that border the Pacific Ocean");
+                    }
+                    else if(gameMode===12){
+                        $("#question").text("Select states that border the Atlantic Ocean");
+                    }
+                    else if(gameMode===13){
+                        $("#question").text("Select states that border Mexico");
+                    }
+                    else if(gameMode===14){
+                        $("#question").text("Select states that border Canada");
+                    }
+                    else if(gameMode===15){
+                        $("#question").text("Select states that were in the Union");
+                    }
+                    else if(gameMode===16){
+                        $("#question").text("Select states that were in the Confederacy");
+                    }
+                    else if(gameMode===17){
+                        $("#question").text("Select states that were Border States in the Civil War");
+                    }
+                    else if(gameMode===18){
+                        $("#question").text("Select states that were the original 13 Colonies");
+                    }
+                }
+                if(gameMode>=19&&gameMode<27){
+                    var randomNumber = Math.floor(Math.random() * 5) + 1;
+                    var value;
+                    if(randomNumber === 1){
+                        value = europeanCountries[Math.floor(Math.random()*europeanCountries.length)];
+                    }
+                    else if(randomNumber ===2){
+                        value = asianCountries[Math.floor(Math.random()*asianCountries.length)];
+                    }
+                    else if(randomNumber ===3){
+                        value = africanCountries[Math.floor(Math.random()*africanCountries.length)];
+                    }
+                    else if(randomNumber ===4){
+                        value = naCountries[Math.floor(Math.random()*naCountries.length)];
+                    }
+                    else{
+                        value = saCountries[Math.floor(Math.random()*saCountries.length)];
+                    }
+                    if(gameMode===19){
+                        $("#question").text("Select countries in Europe");
+                    }
+                    else if(gameMode===20){
+                        $("#question").text("Select countries in Asia");
+                    }
+                    else if(gameMode===21){
+                        $("#question").text("Select countries in Africa");
+                    }
+                    else if(gameMode===22){
+                        $("#question").text("Select countries in North America");
+                    }
+                    else if(gameMode===23){
+                        $("#question").text("Select countries in South America");
+                    }
+                    else if(gameMode===24){
+                        $("#question").text("Select countries that are in the European Union");
+                    }
+                    else if(gameMode===25){
+                        $("#question").text("Select majority speaking English countries");
+                    }
+                    else if(gameMode===26){
+                        $("#question").text("Select countries fought in World War 1");
+                    }
+                }
+                if(gameMode>=27&&gameMode<31){
+                    var randomNumber = Math.floor(Math.random() * 4) + 1;
+                    var value;
+                    if(randomNumber === 1){
+                        value = adjectives[Math.floor(Math.random()*adjectives.length)];
+                    }
+                    else if(randomNumber ===2){
+                        value = verbs[Math.floor(Math.random()*verbs.length)];
+                    }
+                    else if(randomNumber ===3){
+                        value = nouns[Math.floor(Math.random()*nouns.length)];
+                    }
+                    else{
+                        value = adverbs[Math.floor(Math.random()*adverbs.length)];
+                    }
+                    if(gameMode===27){
+                        $("#question").text("Select all of the adjectives");
+                    }
+                    else if(gameMode===28){
+                        $("#question").text("Select all of the verbs");
+                    }
+                    else if(gameMode===29){
+                        $("#question").text("Select all of the nouns");
+                    }
+                    else if(gameMode===30){
+                        $("#question").text("Select all of the adverbs");
+                    }
+
+                }
+                $("#square"+i).data('value', value);
+                $("#square"+i).text(value);
+                $("#square"+i).css("background-color", "transparent");
+                $("#square"+i).removeClass("character");
+                $("#square"+i).removeClass("specialSquare");
+                $("#square"+i).css("border-style", "solid");
+                $("#square"+i).css("border-color", "yellow");
+                $("#square"+i).css("border-width", "15px");
+                getCorrectRemaining();
+            }
+        }
+
+        function buildMapBoard(){
+            if(gameMode===9){
+                console.log("building map");
+                randomStateFlags = [];
+                var allTheFlags = "";
+                while(randomStateFlags.length<5){
+                    var value = stateFlagsArray[Math.floor(Math.random()*stateFlagsArray.length)];
+                    if(!randomStateFlags.includes(toTitleCase(value.slice(0, -4).replace('-', ' ')))){
+                        randomStateFlags.push(toTitleCase(value.slice(0, -4).replace('-', ' ')));
+                        allTheFlags += " "+toTitleCase(value.slice(0, -4).replace('-', ' '));
+                        if(randomStateFlags.length<5){
+                            allTheFlags+=","
+                        }
+                    }
+                }
+                $("#question").text("Select only flags from these states: "+allTheFlags);
+                console.log(randomStateFlags);
+                for(var i = 1; i<31; i++){
+                    var value;
+                    value = stateFlagsArray[Math.floor(Math.random()*stateFlagsArray.length)];
+                    console.log("./assets/images/flags/us-flags/"+value);
+                    $("#square"+i).addClass("flagClass");
+                    $("#square"+i).css("background-image", "url(./assets/images/flags/us-flags/"+value+")");
+                    value = toTitleCase(value.slice(0, -4).replace('-', ' '));
+                    console.log("this is the value in building "+value);
+                    $("#square"+i).data('value', value);
+                    $("#square"+i).text("");
+                    $("#square"+i).css("background-color", "transparent");
+                    $("#square"+i).removeClass("character");
+                    $("#square"+i).removeClass("specialSquare");
+                    $("#square"+i).css("border-style", "solid");
+                    $("#square"+i).css("border-color", "yellow");
+                    $("#square"+i).css("border-width", "15px");
+                    getCorrectRemaining();
+                }
+            }
+            if(gameMode===31){
+                // console.log("building map");
+                randomWorldFlags = [];
+                var allTheFlags = "";
+                while(randomWorldFlags.length<5){
+                    console.log("am I stuck here in building the map first lool?");
+                    var value = worldFlagsArray[Math.floor(Math.random()*worldFlagsArray.length)];
+                    if(!randomWorldFlags.includes(toTitleCase(value.slice(0, -4)))){
+                        randomWorldFlags.push(toTitleCase(value.slice(0, -4)));
+                        allTheFlags += " "+toTitleCase(value.slice(0, -4).replace(/-/g, " "));
+                        if(randomWorldFlags.length<5){
+                            allTheFlags+=","
+                        }
+                    }
+                }
+                $("#question").text("Select only flags from these countries: "+allTheFlags);
+                console.log(randomWorldFlags);
+
+                var checker = true;
+                var counter = 0;
+
+                var a = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
+                var n;
+                var r=[];
+                for (n=1; n<=5; ++n){
+                    var i = Math.floor((Math.random() * (20-n)) + 1);
+                    r.push(a[i]);
+                    a[i] = a[20-n];
+                }
+                console.log(r);
+
+
+                for(var i = 1; i<31; i++){
+                    if(!r.includes(i)){
+                        var value;
+                        value = worldFlagsArray[Math.floor(Math.random()*worldFlagsArray.length)];
+                        console.log("./assets/images/flags/world-flags/"+value);
+                        $("#square"+i).addClass("flagClass");
+                        $("#square"+i).css("background-image", "url(./assets/images/flags/world-flags/"+value+")");
+                        value = toTitleCase(value.slice(0, -4));
+                        console.log("this is the value in building "+i+ " "+value);
+                        $("#square"+i).data('value', value);
+                        $("#square"+i).text("");
+                        $("#square"+i).css("background-color", "transparent");
+                        $("#square"+i).removeClass("character");
+                        $("#square"+i).removeClass("specialSquare");
+                        $("#square"+i).css("border-style", "solid");
+                        $("#square"+i).css("border-color", "yellow");
+                        $("#square"+i).css("border-width", "15px");
+                        getCorrectRemaining();
+                    }
+                    else{
+                        var randomNumber = Math.floor(Math.random() * 5) + 0;
+                        var value;
+                        value = randomWorldFlags[randomNumber]+".png";
+                        console.log("./assets/images/flags/world-flags/"+value);
+                        $("#square"+i).addClass("flagClass");
+                        $("#square"+i).css("background-image", "url(./assets/images/flags/world-flags/"+value+")");
+                        value = toTitleCase(value.slice(0, -4));
+                        console.log("this is the value in building "+value);
+                        $("#square"+i).data('value', value);
+                        $("#square"+i).text("");
+                        $("#square"+i).css("background-color", "transparent");
+                        $("#square"+i).removeClass("character");
+                        $("#square"+i).removeClass("specialSquare");
+                        $("#square"+i).css("border-style", "solid");
+                        $("#square"+i).css("border-color", "yellow");
+                        $("#square"+i).css("border-width", "15px");
+                        getCorrectRemaining();
+                    }
+                }
+            }
+        }
+
+        function buildNumberBoard(){
+            for(var i = 1; i<31; i++){
+                var value = Math.floor(Math.random() * 30) + 1;
+                if(gameMode===2){
+                    value = Math.floor(Math.random() * 10) + 1;
+                }
+                $("#square"+i).data('value', value);
+                $("#square"+i).text(value);
+                $("#square"+i).css("background-color", "transparent");
+                $("#square"+i).removeClass("character");
+                $("#square"+i).removeClass("specialSquare");
+                $("#square"+i).css("border-style", "solid");
+                $("#square"+i).css("border-color", "yellow");
+                $("#square"+i).css("border-width", "15px");
+                getCorrectRemaining();
+            }
+        }
+
+        function buildExpressionsBoard(){
+            expressionsArray = [];
+            var tempArray = [];
+            while(tempArray.length<7){
+                var value = Math.floor(Math.random() * 30) + 1;
+                if(!tempArray.includes(value)){
+                    tempArray.push(value);
+                }
+            }
+            console.log(tempArray.sort(sortNumber));
+            var value1;
+            var value2;
+            var operatorNumber;
+            var operator;
+
+            for(var i = 1; i<31; i++){
+                var theValue = 0;
+                var expressionChecker = true;
+
+                if(tempArray.includes(i)){
+                    while(expressionChecker){
+                        value1 = Math.floor(Math.random() * 10) + 1;
+                        value2 = Math.floor(Math.random() * 10) + 1;
+                        operatorNumber = Math.floor(Math.random() * 4) + 1;
+                        if(operatorNumber===1){
+                            operator = "+";
+                        }
+                        else if(operatorNumber===2){
+                            operator = "-";
+                        }   
+                        else if(operatorNumber===3){
+                            operator = "*";
+                        }
+                        else{
+                            operator = "/";
+                        }
+                        theValue = eval(value1+operator+value2);
+                        if(gameMode===4){
+                            if (theValue === parseInt(theValue, 10)&&theValue<10&&theValue===expressionValue){
+                                expressionChecker = false;
+                            }
+                            else{
+                                expressionChecker = true;
+                            }
+                        }
+                        else if(gameMode===5){
+                            if (theValue === parseInt(theValue, 10)&&theValue<10&&theValue!==expressionValue){
+                                expressionChecker = false;
+                            }
+                            else{
+                                expressionChecker = true;
+                            }
+                        }
+                    }
+                }
+                else{
+                    while(expressionChecker){
+                        value1 = Math.floor(Math.random() * 10) + 1;
+                        value2 = Math.floor(Math.random() * 10) + 1;
+                        operatorNumber = Math.floor(Math.random() * 4) + 1;
+                        if(operatorNumber===1){
+                            operator = "+";
+                        }
+                        else if(operatorNumber===2){
+                            operator = "-";
+                        }   
+                        else if(operatorNumber===3){
+                            operator = "*";
+                        }
+                        else{
+                            operator = "/";
+                        }
+                        theValue = eval(value1+operator+value2);
+                        if(gameMode===4){
+                            if (theValue === parseInt(theValue, 10)&&theValue<10&&theValue!==expressionValue){
+                                expressionChecker = false;
+                            }
+                            else{
+                                expressionChecker = true;
+                            }
+                        }
+                        else if(gameMode===5){
+                            if (theValue === parseInt(theValue, 10)&&theValue<10&&theValue===expressionValue){
+                                expressionChecker = false;
+                            }
+                            else{
+                                expressionChecker = true;
+                            }
+                        }
+                    }
+                }
+
+                $("#square"+i).data('value', theValue);
+                $("#square"+i).text(value1+operator+value2);
+                $("#square"+i).css("background-color", "transparent");
+                $("#square"+i).removeClass("character");
+                $("#square"+i).removeClass("specialSquare");
+                $("#square"+i).css("border-style", "solid");
+                $("#square"+i).css("border-color", "yellow");
+                $("#square"+i).css("border-width", "15px");
+                expressionsArray.push($("#square"+i).data('value'));
+            }
+            getCorrectRemaining();
+        }
+
+        //1-5 are math, 6-8 states and cities, 9 state flags, 10-18 us geography, 19-26 world geography, 27-30 grammar
+        function newGame()
+        {
+            gameStatus = true;
+            round++;
+            correctRemaining = 0;
+            var quizRandomNumber = 0;
+            expressionsArray = [];
+            expressionValue = 0;
+            multiplesArray = [];
+            factors = [];
+            $("#round").text("Round "+round);
+            clearTimeout(specialSquareTimer);
+            clearTimeout(newGameTimer);
+
+            for(var i = 1; i<31; i++){
+                $("#square"+i).css('background-image', 'none');
+            }
+
+            if(!gameOverride){
+                gameMode = Math.floor(Math.random() * 31) + 1;
+            }
+            // gameMode = 30;
+            console.log("what game mode are we in? "+gameMode);
+            if(gameMode===1){
+                quizRandomNumber = Math.floor(Math.random() * 6) + 2;
+                $("#question").text("Select only multiples of "+quizRandomNumber);
+                multiplesArray = getMultiples(quizRandomNumber);
+                buildNumberBoard();
+            }
+            else if(gameMode===2){
+                quizRandomNumber = Math.floor(Math.random() * 30) + 15;
+                $("#question").text("Select only factors of "+quizRandomNumber);
+                factors = getFactors(quizRandomNumber);
+                buildNumberBoard();
+            }
+            else if(gameMode===3){
+                quizRandomNumber = Math.floor(Math.random() * 6) + 2;
+                buildNumberBoard();
+                $("#question").text("Select only prime numbers");
+            }
+            else if(gameMode===4){
+                //equality
+                quizRandomNumber = Math.floor(Math.random() * 10) + 1;
+                expressionValue = quizRandomNumber;
+                buildExpressionsBoard();
+                getCorrectRemaining();
+                $("#question").text("Select only expressions equal to " + quizRandomNumber);
+            }
+            else if(gameMode===5){
+                //inequality
+                quizRandomNumber = Math.floor(Math.random() * 10) + 1;
+                expressionValue = quizRandomNumber;
+                buildExpressionsBoard();
+                getCorrectRemaining();
+                $("#question").text("Select only expressions NOT equal to " + quizRandomNumber);
+            }
+            else if(gameMode===6){
+                //states
+                $("#question").text("Select only U.S. States");
+                buildGameBoard();
+            }
+            else if(gameMode===7){
+                //major cities
+                $("#question").text("Select only U.S. cities that are NOT capitals");
+                buildGameBoard();
+            }
+            else if(gameMode===8){
+                //capitals
+                $("#question").text("Select only U.S. Capitals");
+                buildGameBoard();
+            }
+            else if(gameMode===9){
+                //flags
+                $("#question").text("Something about US Flags");
+                buildMapBoard();
+            }
+            else if(gameMode===10){
+                //ocean states, no flags
+                $("#question").text("Something about geography");
+                buildGameBoard();
+            }
+            else if(gameMode===11){
+                //pacific ocean, no flags
+                $("#question").text("Something about geography");
+                buildGameBoard();
+            }
+            else if(gameMode===12){
+                //atlantic ocean, no flags
+                $("#question").text("Something about geography");
+                buildGameBoard();
+            }
+            else if(gameMode===13){
+                //mexico border, no flags
+                $("#question").text("Something about geography");
+                buildGameBoard();
+            }
+            else if(gameMode===14){
+                //canada border, no flags
+                $("#question").text("Something about geography");
+                buildGameBoard();
+            }
+            else if(gameMode===15){
+                //union states, no flag
+                $("#question").text("Something about history");
+                buildGameBoard();
+            }
+            else if(gameMode===16){
+                //confederate states, no flag
+                $("#question").text("Something about history");
+                buildGameBoard();
+            }
+            else if(gameMode===17){
+                //border states, no flag
+                $("#question").text("Something about history");
+                buildGameBoard();
+            }
+            else if(gameMode===18){
+                //original colonies states, no flag
+                $("#question").text("Something about history");
+                buildGameBoard();
+            }
+            else if(gameMode===19){
+                //world geography, no flag
+                $("#question").text("Something about world geography");
+                buildGameBoard();
+            }
+            else if(gameMode===20){
+                //world geography, no flag
+                $("#question").text("Something about world geography");
+                buildGameBoard();
+            }
+            else if(gameMode===21){
+                //world geography, no flag
+                $("#question").text("Something about world geography");
+                buildGameBoard();
+            }
+            else if(gameMode===22){
+                //world geography, no flag
+                $("#question").text("Something about world geography");
+                buildGameBoard();
+            }
+            else if(gameMode===23){
+                //world geography, no flag
+                $("#question").text("Something about world geography");
+                buildGameBoard();
+            }
+            else if(gameMode===24){
+                //world geography, no flag
+                $("#question").text("Something about world history");
+                buildGameBoard();
+            }
+            else if(gameMode===25){
+                //world geography, no flag
+                $("#question").text("Something about world history");
+                buildGameBoard();
+            }
+            else if(gameMode===26){
+                //world geography, no flag
+                $("#question").text("Something about world history");
+                buildGameBoard();
+            }
+            else if(gameMode===27){
+                //grammar
+                $("#question").text("Something about grammar");
+                buildGameBoard();
+            }
+            else if(gameMode===28){
+                //grammar
+                $("#question").text("Something about grammar");
+                buildGameBoard();
+            }
+            else if(gameMode===29){
+                //grammar
+                $("#question").text("Something about grammar");
+                buildGameBoard();
+            }
+            else if(gameMode===30){
+                //grammar
+                $("#question").text("Something about grammar");
+                buildGameBoard();
+            }
+            else if(gameMode===31){
+                //flags
+                $("#question").text("Something about World Flags");
+                buildMapBoard();
+            }
+
+            startingSquare = "square"+startingLocation[Math.floor(Math.random()*startingLocation.length)];
+            $("#"+startingSquare).css("border-color", "lightblue");
+            $("#"+startingSquare).addClass("character");
+            $(".character").prepend('<img id="guybrush" src="./assets/images/standing.png" />')
+
+            $(".col").addClass("padding-0");
+            
+            if(correctRemaining<=0){
+                newGame();
+            }
+            specialSquareTimer = setInterval(function() {
+                setSpecialSquare();
+                getCorrectRemaining();
+                
+            },gameSpeed);
+        }
+
+        //looks okay and is self contained.
+        function getCorrectRemaining(){
+            // console.log("Get remaining count");
+            correctRemaining = 0;
+            for(var i = 1; i<31; i++){
+                var value = $("#square"+i).data('value');
+                if(gameMode===1){
+                    if(multiplesArray.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===2){
+                    if(factors.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===3){
+                    if(primeNumbers.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===4){
+                    if(value===expressionValue&&value!==""){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===5){
+                    if(value!==expressionValue&&value!==""){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===6){
+                    if(statesArray.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===7){
+                    if(majorCities.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===8){
+                    if(stateCapitals.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===9){
+                     console.log("this is stored in the value: "+value);
+                    if(randomStateFlags.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===10){
+                    if(pacificOceanStates.includes(value)){
+                        correctRemaining++;
+                    }
+                    else if(pacificOceanStates.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===11){
+                    if(pacificOceanStates.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===12){
+                    if(atlanticOceanStates.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===13){
+                    if(mexicoBorderStates.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===14){
+                    if(canadaBorderStates.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===15){
+                    if(unionStates.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===16){
+                    if(confederateStates.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===17){
+                    if(civilWarBorderStates.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===18){
+                    if(originalColonies.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===19){
+                    if(europeanCountries.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===20){
+                    if(asianCountries.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===21){
+                    if(africanCountries.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===22){
+                    if(naCountries.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===23){
+                    if(saCountries.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===24){
+                    if(countriesInEU.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===25){
+                    if(nativeEnglishSpeaking.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===26){
+                    if(ww1Countries.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===27){
+                    if(adjectives.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===28){
+                    if(verbs.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===29){
+                    if(nouns.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===30){
+                    if(adverbs.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else if(gameMode===31){
+                     console.log("this is stored in the world value: "+value);
+                    if(randomWorldFlags.includes(value)){
+                        correctRemaining++;
+                    }
+                }
+                else{
+
+                }
+            }
+            $("#remaining").text("Remaining "+correctRemaining);
+            $("#score").text("Score is "+score);
+
+        }
+
+        //special square isn't working for flags. needs a rewrite
+        function setSpecialSquare(){
+            // console.log("set special square");
+            var keepGettingNewSquare = true;
+            // console.log(randomSquare);
+            while(keepGettingNewSquare){
+                var randomSquare = Math.floor(Math.random() * 30) + 1;
+                if($("#square"+randomSquare).data("value")!==""&&!$("#square"+randomSquare).hasClass("character")){
+                    if(gameMode<4){
+                        var value = Math.floor(Math.random() * 30) + 1;
+                        $("#square"+randomSquare).data('value', value);
+                        $("#square"+randomSquare).text(value);
+                        $("#square"+randomSquare).fadeOut(500).fadeIn(500);
+                    }
+                    else if(gameMode<6){
+                        var value1 = Math.floor(Math.random() * 10) + 1;
+                        var value2 = Math.floor(Math.random() * 10) + 1;
+                        var operatorNumber = Math.floor(Math.random() * 4) + 1;
+                        var operator;
+                        if(operatorNumber===1){
+                            operator = "+";
+                        }
+                        else if(operatorNumber===2){
+                            operator = "-";
+                        }   
+                        else if(operatorNumber===3){
+                            operator = "*";
+                        }
+                        else{
+                            operator = "/";
+                        }
+                        $("#square"+randomSquare).data('value', eval(value1+operator+value2));
+                        $("#square"+randomSquare).text(value1+operator+value2);
+                        $("#square"+randomSquare).fadeOut(500).fadeIn(500);
+                        expressionsArray.push($("#square"+randomSquare).data('value'));
+                    }
+                    else{
+                        if(gameMode!=9&&gameMode!=31){
+                            var randomNumber = Math.floor(Math.random() * 3) + 1;
+                            var value;
+                            if(gameMode>=10&&gameMode<19){
+                                randomNumber = 1;
+                            }
+                            if(randomNumber === 1){
+                                value = statesArray[Math.floor(Math.random()*statesArray.length)];
+                            }
+                            else if(randomNumber === 2){
+                                value = majorCities[Math.floor(Math.random()*majorCities.length)];
+                            }
+                            else{
+                                value = stateCapitals[Math.floor(Math.random()*stateCapitals.length)];
+                            }
+
+                            if(gameMode>=19&&gameMode<27){
+                                var randomNumber = Math.floor(Math.random() * 5) + 1;
+                                var value;
+                                if(randomNumber === 1){
+                                    value = europeanCountries[Math.floor(Math.random()*europeanCountries.length)];
+                                }
+                                else if(randomNumber ===2){
+                                    value = asianCountries[Math.floor(Math.random()*asianCountries.length)];
+                                }
+                                else if(randomNumber ===3){
+                                    value = africanCountries[Math.floor(Math.random()*africanCountries.length)];
+                                }
+                                else if(randomNumber ===4){
+                                    value = naCountries[Math.floor(Math.random()*naCountries.length)];
+                                }
+                                else{
+                                    value = saCountries[Math.floor(Math.random()*saCountries.length)];
+                                }
+                            }
+                            if(gameMode>=27&&gameMode<31){
+                                var randomNumber = Math.floor(Math.random() * 4) + 1;
+                                var value;
+                                if(randomNumber === 1){
+                                    value = adjectives[Math.floor(Math.random()*adjectives.length)];
+                                }
+                                else if(randomNumber ===2){
+                                    value = verbs[Math.floor(Math.random()*verbs.length)];
+                                }
+                                else if(randomNumber ===3){
+                                    value = nouns[Math.floor(Math.random()*nouns.length)];
+                                }
+                                else{
+                                    value = adverbs[Math.floor(Math.random()*adverbs.length)];
+                                }
+                            }
+
+                            $("#square"+randomSquare).data('value', value);
+                            $("#square"+randomSquare).text(value);
+                            $("#square"+randomSquare).fadeOut(500).fadeIn(500);
+                        }   
+                    }
+                    score-=2;
+                    keepGettingNewSquare=false;
+                }
+                else{
+                    keepGettingNewSquare=true;
+                }
+            }
+        }
+
+        //working correctly, but has a lot of duplicate code and needs a rewrite
+        function moveCharacter(currrentSquare, direction){
+            console.log("Div height = "+$(".character").height());
+            var divHeight = $(".character").height();
+            console.log("Div width = "+$(".character").width());
+            var divWidth = $(".character").width();
+            console.log("Image height = "+$("#guybrush").height());
+            var imageHeight = $("#guybrush").height();
+            console.log("Image width = "+$("#guybrush").width());
+            var imageWidth = $("#guybrush").width();
+        
+            var centerHorizontal = divWidth - ((divWidth/2) - (imageWidth/2));
+            var centerVertical = divHeight - ((divHeight/2) - (imageHeight/2));
+
+            var animationDirection = 0;
+            var animationSource = "";
+            var animationAxis = "";
+            if(direction===1){
+                var currentValue = $(".character").data("value");
+                var nextValue = $("#square"+(currrentSquare+direction)).data("value");
+                console.log(currentValue);
+
+                characterIsAnimating = true;
+                animationDirection = -(centerHorizontal);
+                animationAxis = "margin-right";
+                animationSource = "./assets/images/animations/walk-right.gif";
+                $("#guybrush").attr("src", animationSource);
+                $(".character").css("border-color", "yellow");
+                $('#guybrush').animate({"margin-right": animationDirection+(imageWidth/2)/2}, movementAnimationSpeed, function(){
+                    $(".character img:last-child").remove();
+                    $("#square"+currrentSquare).removeClass("character");
+                    $("#square"+(currrentSquare+direction)).addClass("character");
+                    $(".character").prepend('<img id="guybrush" src="./assets/images/standing.png" />')
+                    $("#guybrush").attr("src", animationSource);
+                    $("#guybrush").css("left", animationDirection);
+                    $('#guybrush').animate({"margin-right": animationDirection+(imageWidth/2)/2}, movementAnimationSpeed, function(){
+                        $(".character").css("border-color", "lightblue");
+                        $("#guybrush").css("left", "0px");
+                        $("#guybrush").css("margin", "auto");
+                        $("#guybrush").attr("src","./assets/images/standing.png");
+                        characterIsAnimating = false;
+                    });
+                });
+            }
+            else if(direction===-6){
+                characterIsAnimating = true;
+                animationDirection = -(centerVertical);
+                animationAxis = "margin-top";
+                animationSource = "./assets/images/animations/walk-up.gif";
+                $("#guybrush").attr("src", animationSource);
+                $(".character").css("border-color", "yellow");
+                $('#guybrush').animate({"margin-top": animationDirection}, movementAnimationSpeed, function(){
+                    $(".character img:last-child").remove();
+                    $("#square"+currrentSquare).removeClass("character");
+                    $("#square"+(currrentSquare+direction)).addClass("character");
+                    $(".character").prepend('<img id="guybrush" src="./assets/images/standing.png" />')
+                    $("#guybrush").attr("src", animationSource);
+                    $("#guybrush").css("bottom", animationDirection-(imageHeight/2)/2);
+                    $('#guybrush').animate({"margin-top": animationDirection-(imageHeight/2)/2}, movementAnimationSpeed, function(){
+                        $(".character").css("border-color", "lightblue");
+                        $("#guybrush").css("bottom", "0px");
+                        $("#guybrush").css("margin", "auto");
+                        $("#guybrush").attr("src","./assets/images/standing.png");
+                        characterIsAnimating = false;
+                    });
+                });
+            }
+            else if(direction===-1){
+                characterIsAnimating = true;
+                animationDirection = centerHorizontal;
+                animationAxis = "margin-right";
+                animationSource = "./assets/images/animations/walk-left.gif";
+                $("#guybrush").attr("src", animationSource);
+                $(".character").css("border-color", "yellow");
+                $('#guybrush').animate({"margin-right": animationDirection}, movementAnimationSpeed, function(){
+                    $(".character img:last-child").remove();
+                    $("#square"+currrentSquare).removeClass("character");
+                    $("#square"+(currrentSquare+direction)).addClass("character");
+                    $(".character").prepend('<img id="guybrush" src="./assets/images/standing.png" />')
+                    $("#guybrush").attr("src", animationSource);
+                    $("#guybrush").css("left", animationDirection);
+                    $('#guybrush').animate({"margin-right": animationDirection+(imageWidth/2)/2}, movementAnimationSpeed, function(){
+                        $(".character").css("border-color", "lightblue");
+                        $("#guybrush").css("left", "0px");
+                        $("#guybrush").css("margin", "auto");
+                        $("#guybrush").attr("src","./assets/images/standing.png");
+                        characterIsAnimating = false;
+                    });
+                });
+            }
+            else if(direction===6){
+                characterIsAnimating = true;
+                animationDirection = centerVertical;
+                animationAxis = "margin-top";
+                animationSource = "./assets/images/animations/walk-down.gif";
+                $("#guybrush").attr("src", animationSource);
+                $(".character").css("border-color", "yellow");
+                $('#guybrush').animate({"margin-top": animationDirection+(imageHeight/2)/2}, movementAnimationSpeed, function(){
+                    $(".character img:last-child").remove();
+                    $("#square"+currrentSquare).removeClass("character");
+                    $("#square"+(currrentSquare+direction)).addClass("character");
+                    $(".character").prepend('<img id="guybrush" src="./assets/images/standing.png" />')
+                    $("#guybrush").attr("src", animationSource);
+                    $("#guybrush").css("bottom", animationDirection-(imageHeight/2)/2);
+                    $('#guybrush').animate({"margin-top": animationDirection-(imageHeight/2)/2}, movementAnimationSpeed, function(){
+                        $(".character").css("border-color", "lightblue");
+                        $("#guybrush").css("bottom", "0px");
+                        $("#guybrush").css("margin", "auto");
+                        $("#guybrush").attr("src","./assets/images/standing.png");
+                        characterIsAnimating = false;
+                    });
+                });
+            }
+            else{
+                $(".character").css("border-color", "yellow");
+                $(".character img:last-child").remove();
+                $("#square"+currrentSquare).removeClass("character");
+                $("#square"+(currrentSquare+direction)).addClass("character");
+                $(".character").css("border-color", "lightblue");
+                $(".character").prepend('<img id="guybrush" src="./assets/images/standing.png" />')
+            }
+            
+        }
+
+        //self contained. looks to be working fine. changes border-color to lightgreen, image to guybrush
+        //this restarts the game if correctRemaining is zero
+
+        //fix the animation bug!
+        function eatNumber(currrentSquare){
+            $(".character").css("border-color", "lightgreen");
+            $("#square"+currrentSquare).data('value', "");
+            $("#square"+currrentSquare).text("");
+            $(".character").prepend('<img id="guybrush" src="./assets/images/standing.png" />')
+            $("#square"+currrentSquare).css('background-image', 'none');
+
+            // 
+            
+            score+=1;
+            correctRemaining--;
+            if(correctRemaining===0){
+                gameStatus = false;
+                score+=5;
+                var animationSource = "./assets/images/animations/blowup.gif";
+                $("#guybrush").attr("src", animationSource);
+                newGameTimer = setTimeout(function() {
+                    newGame();
+                },3801);
+            }
+        }
+
+
+        //uses arrays to check if the value exists, calls eatNumber() if it does. Border-color orangered if wrong
+        //seems to be self contained and fine
+        function pointChecker(arrayToCheck, currrentSquare){
+            if(arrayToCheck.includes($(".character").data("value"))&&$(".character").data("value")!=="")
+            {
+                eatNumber(currrentSquare);
+            }
+            else if($(".character").data("value")!==""){
+                $(".character").css("border-color", "orangered");
+                score-=5;
+            }
+            else{}
+            $("#remaining").text("Remaining "+correctRemaining);
+        }
+
+
+        //TODO
+        //needs a rewrite. lots of duplicate logic when pressing spacebar (eating)
+        document.onkeydown = function(event) {
+            console.log(gameStatus);
+
+            for(var i = 1; i<31; i++){
+                if($("#square"+i).data("value")===""){
+                    $("#square"+i).css("border-color", "lightgreen");
+                }
+            }
+
+            var currrentSquare = $(".character").attr("id").replace('square','');
+            currrentSquare = parseInt(currrentSquare);
+            if(gameStatus){
+                if(event.key ==="ArrowLeft" && characterIsAnimating===false){
+                    if(!leftBounds.includes(currrentSquare)){
+                        moveCharacter(currrentSquare, -1);
+                    }
+                }
+                else if(event.key==="ArrowUp" && characterIsAnimating===false){
+                    if(!topBounds.includes(currrentSquare)){
+                        moveCharacter(currrentSquare, -6);
+                    }
+                }
+                else if(event.key==="ArrowRight" && characterIsAnimating===false){
+                    if(!rightBounds.includes(currrentSquare)){
+                        moveCharacter(currrentSquare, 1);
+                    }
+                }
+                else if(event.key==="ArrowDown" && characterIsAnimating===false){
+                    if(!bottomBounds.includes(currrentSquare)){
+                        moveCharacter(currrentSquare, 6);
+                    }
+                }
+                else if(event.key===" " && characterIsAnimating===false){
+                    characterIsAnimating = true;
+                    animationDirection = 0;
+                    animationAxis = "margin-right";
+                    animationSource = "./assets/images/animations/dig.gif";
+                    $("#guybrush").attr("src", animationSource);
+                    $(".character").css("background-color", "transparent");
+                    $('#guybrush').animate({"right": animationDirection}, digAnimationSpeed, function(){
+                        $(".character img:last-child").remove();
+                        $(".character").prepend('<img id="guybrush" src="./assets/images/standing.png" />')
+                        characterIsAnimating = false;
+                        if(gameMode===1){
+                            pointChecker(multiplesArray, currrentSquare);
+                        }
+                        else if(gameMode===2){
+                            pointChecker(factors, currrentSquare);
+                        }
+                        else if(gameMode===3){
+                            pointChecker(primeNumbers, currrentSquare);
+                        }
+                        else if(gameMode===4){
+                            console.log("this is a tset");
+                            if($("#square"+currrentSquare).data('value')===expressionValue&&$("#square"+currrentSquare).data('value')!==""){
+                                eatNumber(currrentSquare);
+                            }
+                            else if($("#square"+currrentSquare).data('value')!==expressionValue&&$("#square"+currrentSquare).data('value')!==""){
+                                $(".character").css("border-color", "red");
+                                score-=5;
+                            }
+                            $("#remaining").text("Remaining "+correctRemaining);
+                        }
+                        else if(gameMode===5){
+                            if($("#square"+currrentSquare).data('value')!==expressionValue){
+                                eatNumber(currrentSquare);
+                            }
+                            else if($("#square"+currrentSquare).data('value')!==expressionValue&&$("#square"+currrentSquare).data('value')===""){
+                                $(".character").css("border-color", "red");
+                                score-=5;
+                            }
+                            $("#remaining").text("Remaining "+correctRemaining);
+                        }
+                        else if(gameMode===6){
+                            pointChecker(statesArray, currrentSquare);
+                        }
+                        else if(gameMode===7){
+                            pointChecker(majorCities, currrentSquare);
+                        }
+                        else if(gameMode===8){
+                            pointChecker(stateCapitals, currrentSquare);
+                        }
+                        else if(gameMode===9){
+                            pointChecker(randomStateFlags, currrentSquare);
+                        }
+                        else if(gameMode===10){
+                            var oceanState = pacificOceanStates.concat(atlanticOceanStates);
+                            pointChecker(oceanState, currrentSquare);
+                        }
+                        else if(gameMode===11){
+                            pointChecker(pacificOceanStates, currrentSquare);
+                        }
+                        else if(gameMode===12){
+                            pointChecker(atlanticOceanStates, currrentSquare);
+                        }
+                        else if(gameMode===13){
+                            pointChecker(mexicoBorderStates, currrentSquare);
+                        }
+                        else if(gameMode===14){
+                            pointChecker(canadaBorderStates, currrentSquare);
+                        }
+                        else if(gameMode===15){
+                            pointChecker(unionStates, currrentSquare);
+                        }
+                        else if(gameMode===16){
+                            pointChecker(confederateStates, currrentSquare);
+                        }
+                        else if(gameMode===17){
+                            pointChecker(civilWarBorderStates, currrentSquare);
+                        }
+                        else if(gameMode===18){
+                            pointChecker(originalColonies, currrentSquare);
+                        }
+                        else if(gameMode===19){
+                            pointChecker(europeanCountries, currrentSquare);
+                        }
+                        else if(gameMode===20){
+                            pointChecker(asianCountries, currrentSquare);
+                        }
+                        else if(gameMode===21){
+                            pointChecker(africanCountries, currrentSquare);
+                        }
+                        else if(gameMode===22){
+                            pointChecker(naCountries, currrentSquare);
+                        }
+                        else if(gameMode===23){
+                            pointChecker(saCountries, currrentSquare);
+                        }
+                        else if(gameMode===24){
+                            pointChecker(countriesInEU, currrentSquare);
+                        }
+                        else if(gameMode===25){
+                            pointChecker(nativeEnglishSpeaking, currrentSquare);
+                        }
+                        else if(gameMode===26){
+                            pointChecker(ww1Countries, currrentSquare);
+                        }
+                        else if(gameMode===27){
+                            pointChecker(adjectives, currrentSquare);
+                        }
+                        else if(gameMode===28){
+                            pointChecker(verbs, currrentSquare);
+                        }
+                        else if(gameMode===29){
+                            pointChecker(nouns, currrentSquare);
+                        }
+                        else if(gameMode===30){
+                            pointChecker(adverbs, currrentSquare);
+                        }
+                        else if(gameMode===31){
+                            pointChecker(randomWorldFlags, currrentSquare);
+                        }
+                        else{
+
+                        }
+                        $("#score").text("Score is "+score);
+                    });
+                }
+                else{
+
+                }
+            for(var i = 1; i<31; i++){
+                if($("#square"+i).data("value")===""){
+                    $("#square"+i).css("border-color", "lightgreen");
+                }
+            }
+            }
+        };
+
+        //starts a new game at launch, should be after intro/instructions
+        newGame();
+   
+   //Buttons for testing
+   {
+        $(".btn").click(function() {
+            gameOverride = true;
+        });
+
+        $("#mathButton").click(function() {
+            gameMode = Math.floor(Math.random() * 5) + 1;
+            newGame();
+        });
+        $("#statesCitiesButton").click(function() {
+            gameMode = Math.floor(Math.random() * 3) + 6;
+            newGame();
+        });
+        $("#stateFlagsButton").click(function() {
+            gameMode = 9;
+            newGame();
+        });
+        $("#usGeographyButton").click(function() {
+            gameMode = Math.floor(Math.random() * 9) + 10;
+            newGame();
+        });
+        $("#worldGeographyButton").click(function() {
+            gameMode = Math.floor(Math.random() * 8) + 19;
+            newGame();
+        });
+        $("#grammarButton").click(function() {
+            gameMode = Math.floor(Math.random() * 4) + 27;
+            newGame();
+        });
+        $("#worldFlagsButton").click(function() {
+            gameMode = 31;
+            newGame();
+        });
+        
+   }
+ 
+   //pathfinding
+
+   $(".col").click(function() {
+
+            for(var i = 1; i<31; i++){
+                if($("#square"+i).data("value")===""){
+                    $("#square"+i).css("border-color", "lightgreen");
+                }
+            }
+                    
+            var characterSquare = parseInt($(".character").attr("id").replace('square', ''));
+            var goalSquare = parseInt($(this).attr("id").replace('square', ''));
+            console.log(characterSquare);
+            console.log(goalSquare);
+            if(characterSquare!==goalSquare){
+                if((Math.ceil(characterSquare/6)===Math.ceil(goalSquare/6))){
+                    if(characterSquare>goalSquare){
+                        console.log("move left");
+                        moveCharacter(characterSquare, -1);
+                    }
+                    else{
+                        console.log("move right");
+                        moveCharacter(characterSquare, 1);
+                    }
+                }
+                else if((characterSquare-goalSquare)>0){
+                    console.log("up");
+                    moveCharacter(characterSquare, -6);
+                }
+                else if((characterSquare-goalSquare)<0){
+                    console.log("down");
+                    moveCharacter(characterSquare, 6);
+                }
+            }
+            else{
+                characterIsAnimating = true;
+                var currrentSquare = characterSquare
+                animationDirection = 0;
+                animationAxis = "margin-right";
+                animationSource = "./assets/images/animations/dig.gif";
+                $("#guybrush").attr("src", animationSource);
+                $(".character").css("background-color", "transparent");
+                $('#guybrush').animate({"right": animationDirection}, digAnimationSpeed, function(){
+                    $(".character img:last-child").remove();
+                    $(".character").prepend('<img id="guybrush" src="./assets/images/standing.png" />')
+                    characterIsAnimating = false;
+                    if(gameMode===1){
+                        pointChecker(multiplesArray, currrentSquare);
+                    }
+                    else if(gameMode===2){
+                        pointChecker(factors, currrentSquare);
+                    }
+                    else if(gameMode===3){
+                        pointChecker(primeNumbers, currrentSquare);
+                    }
+                    else if(gameMode===4){
+                        console.log("this is a tset");
+                        if($("#square"+currrentSquare).data('value')===expressionValue&&$("#square"+currrentSquare).data('value')!==""){
+                            eatNumber(currrentSquare);
+                        }
+                        else if($("#square"+currrentSquare).data('value')!==expressionValue&&$("#square"+currrentSquare).data('value')!==""){
+                            $(".character").css("border-color", "red");
+                            score-=5;
+                        }
+                        $("#remaining").text("Remaining "+correctRemaining);
+                    }
+                    else if(gameMode===5){
+                        if($("#square"+currrentSquare).data('value')!==expressionValue){
+                            eatNumber(currrentSquare);
+                        }
+                        else if($("#square"+currrentSquare).data('value')!==expressionValue&&$("#square"+currrentSquare).data('value')===""){
+                            $(".character").css("border-color", "red");
+                            score-=5;
+                        }
+                        $("#remaining").text("Remaining "+correctRemaining);
+                    }
+                    else if(gameMode===6){
+                        pointChecker(statesArray, currrentSquare);
+                    }
+                    else if(gameMode===7){
+                        pointChecker(majorCities, currrentSquare);
+                    }
+                    else if(gameMode===8){
+                        pointChecker(stateCapitals, currrentSquare);
+                    }
+                    else if(gameMode===9){
+                        pointChecker(randomStateFlags, currrentSquare);
+                    }
+                    else if(gameMode===10){
+                        var oceanState = pacificOceanStates.concat(atlanticOceanStates);
+                        pointChecker(oceanState, currrentSquare);
+                    }
+                    else if(gameMode===11){
+                        pointChecker(pacificOceanStates, currrentSquare);
+                    }
+                    else if(gameMode===12){
+                        pointChecker(atlanticOceanStates, currrentSquare);
+                    }
+                    else if(gameMode===13){
+                        pointChecker(mexicoBorderStates, currrentSquare);
+                    }
+                    else if(gameMode===14){
+                        pointChecker(canadaBorderStates, currrentSquare);
+                    }
+                    else if(gameMode===15){
+                        pointChecker(unionStates, currrentSquare);
+                    }
+                    else if(gameMode===16){
+                        pointChecker(confederateStates, currrentSquare);
+                    }
+                    else if(gameMode===17){
+                        pointChecker(civilWarBorderStates, currrentSquare);
+                    }
+                    else if(gameMode===18){
+                        pointChecker(originalColonies, currrentSquare);
+                    }
+                    else if(gameMode===19){
+                        pointChecker(europeanCountries, currrentSquare);
+                    }
+                    else if(gameMode===20){
+                        pointChecker(asianCountries, currrentSquare);
+                    }
+                    else if(gameMode===21){
+                        pointChecker(africanCountries, currrentSquare);
+                    }
+                    else if(gameMode===22){
+                        pointChecker(naCountries, currrentSquare);
+                    }
+                    else if(gameMode===23){
+                        pointChecker(saCountries, currrentSquare);
+                    }
+                    else if(gameMode===24){
+                        pointChecker(countriesInEU, currrentSquare);
+                    }
+                    else if(gameMode===25){
+                        pointChecker(nativeEnglishSpeaking, currrentSquare);
+                    }
+                    else if(gameMode===26){
+                        pointChecker(ww1Countries, currrentSquare);
+                    }
+                    else if(gameMode===27){
+                        pointChecker(adjectives, currrentSquare);
+                    }
+                    else if(gameMode===28){
+                        pointChecker(verbs, currrentSquare);
+                    }
+                    else if(gameMode===29){
+                        pointChecker(nouns, currrentSquare);
+                    }
+                    else if(gameMode===30){
+                        pointChecker(adverbs, currrentSquare);
+                    }
+                    else if(gameMode===31){
+                        pointChecker(randomWorldFlags, currrentSquare);
+                    }
+                    else{
+
+                    }
+                    $("#score").text("Score is "+score);
+                });
+                
+            }
+            for(var i = 1; i<31; i++){
+                if($("#square"+i).data("value")===""){
+                    $("#square"+i).css("border-color", "lightgreen");
+                }
+            }
+    });
+
+    </script>
+</body>
+</html>
