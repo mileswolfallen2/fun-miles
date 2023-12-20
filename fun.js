@@ -16,19 +16,16 @@ alert("fun yesss🎅🏼 you found santa congrats you won")
  function yourmom(){
    alert("your mom still in testing")
  }
- var fps = document.getElementById("fps");
- var startTime = Date.now();
- var frame = 0;
- 
- function tick() {
-   var time = Date.now();
-   frame++;
-   if (time - startTime > 1000) {
-       fps.innerHTML = (frame / ((time - startTime) / 1000)).toFixed(1);
-       startTime = time;
-       frame = 0;
-   }
-   window.requestAnimationFrame(tick);
- }
- tick();
- 
+ const fpsElem = document.querySelector("#fps");
+
+let then = 0;
+function render(now) {
+  now *= 0.001;                          // convert to seconds
+  const deltaTime = now - then;          // compute time since last frame
+  then = now;                            // remember time for next frame
+  const fps = 1 / deltaTime;             // compute frames per second
+  fpsElem.textContent = fps.toFixed(1);  // update fps display
+  
+  requestAnimationFrame(render);
+}
+requestAnimationFrame(render);
