@@ -1,4 +1,17 @@
 <html>
+   <body>
+      <script>
+         var password = "fun miles";
+         (function passcodeprotect() {
+            var passcode = prompt("Enter PassCode");
+            while (passcode !== password) {
+               alert("Incorrect PassCode");
+               return passcodeprotect();
+            }
+         }());
+         alert('Welcome To The bata!');
+      </script>
+
     <a href="/index.html">home</a>
     <link rel="shortcut icon" type="x-icon" href="/open-uri20210108-68-lujeec">
     <title>home</title>
