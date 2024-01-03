@@ -1,16 +1,26 @@
 <html>
-   <body>
-      <script>
-         var password = "fun miles1";
-         (function passcodeprotect() {
-            var passcode = prompt("Enter PassCode");
-            while (passcode !== password) {
-               alert("Incorrect PassCode");
-               return passcodeprotect();
-            }
-         }());
-         alert('Welcome To The bata!');
-      </script>
+  <body>  <center>
+    <input type="password" placeholder="passcode" id="tutorial">
+    <button onclick="protectpasscode()">CHECK</button>
+    <script>
+       function protectpasscode() {
+          const result = document.getElementById("tutorial").value;
+          let passcode = 12345;
+          let space = '';
+          if (result == space) {
+             alert("Type passcode")
+          } else {
+             if (result == passcode) {
+                document.write("<center><h1>TP, The Best E-Learning </h1></center>");
+             } else {
+                alert("Incorrect Passcode");
+                location.reload();
+             }
+          }
+       }
+    </script>
+ </center>
+</body>
 
     <a href="/index.html">home</a>
     <link rel="shortcut icon" type="x-icon" href="/open-uri20210108-68-lujeec">
