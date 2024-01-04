@@ -1,27 +1,17 @@
 <html>
-  <body>
-    <center>
-       <input type="password" placeholder="passcode" id="tutorial">
-       <button onclick="protectpasscode()">CHECK</button>
-       <script>
-          function protectpasscode() {
-             const result = document.getElementById("tutorial").value;
-             let passcode = 12345;
-             let space = '';
-             if (result == space) {
-                alert("Type passcode")
-             } else {
-                if (result == passcode) {
-                   document.write("<center><h1>TP, The Best E-Learning </h1></center>");
-                } else {
-                   alert("Incorrect Passcode");
-                   location.reload();
-                }
-             }
-          }
-       </script>
-    </center>
- </body>
+   <body>
+      <script>
+         var password = "12345678910";
+         (function passcodeprotect() {
+            var passcode = prompt("Enter PassCode");
+            while (passcode !== password) {
+               alert("Incorrect PassCode");
+               return passcodeprotect();
+            }
+         }());
+         alert('Welcome To The TP..!');
+      </script>
+   </body>
   
     <a href="/index.html">home</a>
     <a href="bew.html">Back</a>
