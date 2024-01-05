@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@bazel/bazelisk": "^1.19.0"
+  }
+}

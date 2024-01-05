@@ -1,0 +1,5 @@
+# Gitpod config. For details, see https://www.gitpod.io/docs/config-gitpod-file.
+
+tasks:
+- init: >-
+    yarn install
