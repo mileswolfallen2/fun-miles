@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /*/@latest
+Disallow: /*/@v/list
+Disallow: /*/@v/*.info
+Disallow: /*/@v/*.mod
+Disallow: /*/@v/*.zip
+Disallow: /sumdb/
+Disallow: /stats/
