@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+            html {
+        width: 100vw;
+        height: 100vw;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vw;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: auto auto auto auto auto;
+      }
+
+      section #images_header {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+      }
+
+      section #desc_map_rules {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        overflow: hidden;
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+      }
+
+      section #image_grid {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+      }
+
+      section #availability {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+      }
+
+      section #reviews {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+        display: flex;
+        height: max-content;
+        width: 100vw;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="images_header"></section>
+    <section id="desc_map_rules"></section>
+    <section id="image_grid"></section>
+    <section id="Availability"></section>
+    <section id="reviews"></section>
+    <!-- <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script> -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="http://localhost:3009/bundle.js"></script>
+    <script src="http://localhost:3007/bundle.js"></script>
+    <script src="http://localhost:3000/public/bundle.js"></script>
+    <script src="http://localhost:3001/dist/bundle.js"></script>
+  </body>
+</html>
