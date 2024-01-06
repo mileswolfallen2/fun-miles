@@ -1,1 +1,79 @@
-<html><p>ai</p>"</html>
+
+Write
+Sign up
+
+Sign in
+
+
+
+How to Create Your Own ChatGPT in HTML CSS and JavaScript
+Emma Delaney
+
+
+Emma Delaney
+
+·
+Follow
+
+9 min read
+·
+Jul 27, 2023
+101
+
+
+2
+
+
+
+
+
+ChatGPT has grown significantly in popularity over the past few months or years, completely changing the way we interact with automated chatbots. As a beginner web developer, you might be curious to create your own ChatGPT. The good news is that it is possible to create a ChatGPT clone using standard HTML, CSS and JavaScript.
+
+If you are not familiar: ChatGPT is an advanced chatbot template developed by Open AI. It uses artificial intelligence to generate human-like responses in a conversational format. ChatGPT has grown tremendously in popularity due to its ability to simulate natural conversations.
+
+In this blog post, we’ll walk you through the steps to create your own ChatGPT using HTML, CSS, and JavaScript. By creating a ChatGPT clone project, budding web developers can gain hands-on experience and apply their HTML, CSS, and JavaScript skills to real projects.
+
+This ChatGPT clone project lets you ask questions and get answers instantly. Moreover, you have the option to switch between dark and light themes. Your chat history is stored in the browser’s local storage, so it persists even if you refresh the page. However, you can easily delete chats by clicking the corresponding Delete Chat button.
+
+Read More: Frequently Asked Questions: Interview Questions for JavaScript
+
+Steps to create a ChatGPT clone using HTML and JavaScript
+To create your own ChatGPT using HTML, CSS and JavaScript, follow these steps — step — detailed instructions:
+
+Create a folder. You can name this folder whatever you want and create the named files in this folder.
+Create an index.html file. The file name should be index and its extension .html.
+Create a style.css file. The file name should be “style” and the extension should be “.css”.
+Create a script.js file. The file name should be “script” with the extension “.js”.
+Download the images folder and place it in your project directory. This folder contains the user’s avatar and the chatbot’s logo.
+First add the following HTML codes to your index.html file: in this code snippet, you will find a “Container of cat” -Div. Later we will use JavaScript to dynamically add the “chat” div which contains all the chat details.
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ChatGPT Clone in JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Chats container -->
+    <div class="chat-container"></div>
+    
+    <!-- Typing container -->
+    <div class="typing-container">
+      <div class="typing-content">
+        <div class="typing-textarea">
+          <textarea id="chat-input" spellcheck="false" placeholder="Enter a prompt here" required></textarea>
+          <span id="send-btn" class="material-symbols-rounded">send</span>
+        </div>
+        <div class="typing-controls">
+          <span id="theme-btn" class="material-symbols-rounded">light_mode</span>
+          <span id="delete-btn" class="material-symbols-rounded">delete</span>
+      </div>
+    </div>
+
+  </body>
+</html>
