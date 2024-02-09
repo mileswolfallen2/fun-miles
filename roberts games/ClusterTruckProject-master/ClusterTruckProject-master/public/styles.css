@@ -1,0 +1,77 @@
+#title {
+    background-color: orange;
+    height: 100px;
+    width: 100%;
+    display: inline-block;
+}
+
+#titleWords {
+    float: left;
+    width: 90%;
+    height: 100px;
+    margin: 0px;
+}
+
+#map {
+    height: 100%;
+    width: 100%;   
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #eee;
+}
+
+h1, h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.facetButton {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.facetDrop {
+    float: right;
+    width: 10%;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.facetDrop-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 100%;
+}
+
+
+.facetDrop-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+}
+
+.facetDrop-content a:hover {
+    background-color: #f1f1f1
+}
+
+.facetDrop:hover .facetDrop-content {
+    display: block;
+}
+
+.facetDrop:hover .facetButton {
+    background-color: white;
+    color: black;
+}

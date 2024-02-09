@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCooDk0ln_ccwCuCUX9LtHC019vdYCSxWc",
+            authDomain: "nyevents-77bd9.firebaseapp.com",
+            databaseURL: "https://nyevents-77bd9.firebaseio.com",
+            projectId: "nyevents-77bd9",
+            storageBucket: "",
+            messagingSenderId: "73094720751"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAfDnbONaf2dEAsFIR4JEb2WolXTqsdgc&callback=initMap"
+    async defer>
+    </script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="markers.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body>
+  <div id="title">
+    <div id="titleWords">
+      <h1>ClusterTruck Take Home Problem</h1>
+      <h2>Created by: Logan Schiessle</h2>
+    </div>
+    <div class="facetDrop">
+        <button class="facetButton">Facet Category Options</button>
+        <div class="facetDrop-content">
+            <input type="radio" name="facet" value="none" onchange="changeFacet(-1)" checked> None <br>
+            <input type="radio" name="facet" value="0" onchange="changeFacet(0)"> 0 <br>
+            <input type="radio" name="facet" value="1" onchange="changeFacet(1)"> 1 <br>
+        </div>
+      </div>
+  </div>
+  <div id="map"></div>    
+</body>
+</html>
