@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guess the Number Game</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+margin-top: 50px;
+}
+#result {
+font-size: 24px;
+margin: 20px;
+}
+</style>
+</head>
+<body>
+<h1>Guess the Number Game</h1>
+<p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+<div class="form">
+<input type="text" id="guessField" placeholder="Enter a number">
+<input type="submit" value="Check my guess" onclick="checkGuess()">
+</div>
+<div id="result"></div>
+<script>
+var randomNumber = Math.floor(Math.random() * 100) + 1;
+var guesses = 0;
+
+function checkGuess() {
+var userGuess = document.getElementById('guessField').value;
+var resultText = '';
+guesses++;
+if (userGuess == randomNumber) {
+resultText = 'Congratulations! You got it right!';
+} else if (guesses >= 10) {
+resultText = '!!!GAME OVER!!!';
+} else {
+resultText = (userGuess > randomNumber) ? 'Your guess is too high!' : 'Your guess is too low!';
+}
+document.getElementById('result').textContent = resultText;
+if (userGuess == randomNumber || guesses >= 10) {
+document.getElementById('guessField').disabled = true;
+}
+}
+</script>
+</body>
+</html>
