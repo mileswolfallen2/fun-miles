@@ -1,0 +1,479 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+/* this should block should be set as display: none; as this is used for debugging purposes only */
+.question-count-wrapper{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    padding: 20px;
+    border-radius: 10px;
+    outline: 1px solid white;
+    gap: 10px;
+    --position-top-left-distance: 20px;
+    bottom: var(--position-top-left-distance);
+    left: var(--position-top-left-distance);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #1a1b26;
+   
+}
+
+.question-count{
+    display: inherit;
+} 
+
+.game-instructions,
+.main-screen,
+.game-screen,
+.question-panel,
+.option-panel,
+.score-panel,
+.game-end-panel,
+.result-panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.main-screen{
+    background-color: #1a1b26;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    flex-direction: column;
+    gap: 15vh;
+}
+
+.output,
+.code,
+.string,
+.start-btn,
+.if-else,
+.function,
+.brackets,
+.init{
+    font-family: 'Fira Code', monospace;
+}
+
+.init{
+    color: #ac9af7;
+}
+
+.if-else{
+    color: #db78a1;
+}
+
+.function{
+    color: #4def74;
+}
+
+.brackets{
+    color: #2c4f9e;
+}
+
+.colon, .code{
+    color: #5aceff;
+}
+
+.string{
+    color: #e9ef84;
+    font-size: 2.5vw;
+}
+
+.output{
+    color: #dedede;
+}
+
+.start-btn,
+.restart-btn{
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 1.3vw;
+}
+
+.restart-btn{
+    margin-right: 4vw;
+}
+
+.start-btn:hover,
+.restart-btn:hover{
+    color: #4def74;
+}
+
+.start-btn:hover .btn-brackets,
+.restart-btn:hover .btn-brackets{
+    color: #2c4f9e;
+}
+
+.start-btn:hover .btn-colon,
+.restart-btn:hover .btn-colon{
+    color: #5aceff;
+}
+
+.start-btn:active,
+.restart-btn:active{
+    border-color: #db78a1;
+}
+
+
+.exit:hover,
+.read-instruction{
+    cursor: pointer;
+    user-select: none;
+}
+
+.exit:hover,
+.read-instruction:hover{
+    text-shadow: #4def74 1px 0 10px;;
+}
+
+.exit:hover .brackets,
+.read-instruction:hover .brackets{
+    text-shadow: #2c4f9e 1px 0 10px;;
+}
+
+.exit:hover,
+.read-instruction:hover .colon{
+    text-shadow: #5aceff 1px 0 10px;;
+}
+
+.game-screen{
+    font-family: 'Nunito', sans-serif;
+    text-transform: capitalize;
+    color: white;
+    background-color: rgb(89, 14, 89);
+    height: 100vh;
+    width: 100vw;
+    
+    flex-direction: column;
+   
+}
+
+.game-screen .score-panel{
+    font-size: 2vw;
+    margin-left: 78vw;
+    display: flex;
+    gap: 5px;
+}
+
+.game-screen .score-panel .score{
+    font-size: 3vw;
+}
+
+
+.game-panel{
+    background-color: rgba(255, 255, 255, 0.100);
+    /* backdrop-filter: blur(5px); */
+    display: flex;
+    flex-direction: column;
+    /* height: 75vh; */
+    height: fit-content;
+    width: 70vw;
+    border: 1px solid white;
+    border-radius: 10px;
+    gap: 80px;
+     /* gap: 40px; */
+}
+
+.question-panel{
+    padding: 0 10px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Slabo 13px', serif;
+    font-size: clamp(0.5rem, 1.2vw,5rem);
+}
+
+.option-panel{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.option-panel .options{
+    text-align: center;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.800);
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    word-wrap: nowrap;
+    font-size: clamp(1.1rem, 1.35vw,5rem);
+    min-width: 50vw;
+    text-transform: lowercase;
+}
+
+.options:hover{
+    background-color: rgba(255, 255, 255, 0.300);
+}
+
+.options:active{
+    background-color: transparent;
+}
+
+    
+.game-end-panel{
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1a1b26;
+    display: none;
+
+}
+
+.result-panel{
+    margin-top: 30px;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    flex-direction: column;
+}
+
+.exit{
+    font-size: 1.3vw;
+    justify-self: flex-end;
+    cursor: pointer;
+    margin-left: 45vw;
+}
+
+.is-love{
+    color: crimson;
+}
+
+.game-instructions{
+    display: none;
+    padding: 10px;
+    padding-right: 20px;
+    background-color: #111111d6;
+    border-radius: 30px;
+    flex-direction: column;
+    border: 1px solid white;
+    width: 55vw;
+    height: 75vh;
+    position: absolute;
+    backdrop-filter: blur(3px);
+    left: 21vw;  
+    top: 12vh;
+    z-index: 12;
+    transition: 400ms;
+}
+
+.game-instructions:hover{
+    box-shadow: 0 0 30px #4def74;
+}
+
+.instructions{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.inst-heading,
+.inst-heading .string{
+    font-size: 1.2vw;
+}
+
+.inst-text{
+    color: #dedede;
+    font-family: "fira code";
+    font-size: 1.2vw;
+    font-weight: 300;
+}
+
+.inst-text li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.inst-text li::before{
+    content: "- ";
+}
+
+.output{
+    animation: output-anime 800ms linear infinite;
+}
+
+.option-panel .right-option{
+    background:limegreen;
+    text-shadow: 1px 1px 3px black;
+}
+
+.option-panel .wrong-option{
+    background: crimson;
+    text-shadow: 1px 1px 3px black;
+}
+
+@keyframes output-anime {
+    
+    0%{
+        filter: opacity(1);
+
+    }
+    
+    20%{
+        filter: opacity(0);
+
+    }
+    
+    40%{
+        filter: opacity(1);
+
+    }
+    
+    60%{
+        filter: opacity(1);
+
+    }
+    
+    80%{
+        filter: opacity(0);
+
+    }
+    
+    100%{
+        filter: opacity(1);
+
+    }
+
+}
+
+/* media queries */
+@media (max-width:600px) {
+    
+    .main-screen{
+        font-size: 3vw;
+     
+        
+    }
+
+    .main-screen .string{
+        font-size: 5vw;
+    }
+    
+    .start-btn,
+    .restart-btn{
+        padding: 10px 25px;
+        border-radius: 30px;
+        font-size: 5vw;
+    }
+
+    .game-instructions{
+        padding-right:7vw;
+        width: 80vw;
+        left: 5.5vw;
+        top: 5vh;
+    }
+
+    .inst-heading,
+    .inst-heading .string{
+    font-size: 3.5vw;
+    }
+
+    .inst-text{
+        font-size: 3.3vw;
+    }
+
+    .exit{
+        font-size: 5vw;
+    }
+    
+    .game-panel{
+        width: 90vw;
+        /* height: 90vh; */
+        /* height: fit-content; */
+        overflow: hidden;
+        padding: 20px 10px ;
+        gap: 40px;
+    }
+    
+        .game-panel .score-panel{
+            font-size: 7vw;
+        }
+
+        .option-panel{
+           padding: 0 !important;
+        }
+
+        .option-panel .options{
+            padding:  5px !important;
+         }
+
+
+         .game-end-panel{
+            width: 100%;
+         }
+
+         .end-result{
+            padding: 40px 30px;
+         }
+
+      .game-screen .score-panel{
+            font-size: 5vw;
+            margin-left: 72vw;
+           
+           
+        }
+
+        .game-screen .score-panel .score{
+            font-size: 5vw;
+           
+        }
+       
+}
+
+/* adding media query for other devices */
+@media all and (max-width: 720px) {
+    .game-panel {
+      height: 80%;
+    }
+    .option-panel .options{
+        
+        height: 100%;
+        text-align: center;
+        padding: 3px;
+       width: 100%;
+       overflow: auto;
+       
+    }
+    .option-panel {
+        height: 100%;
+    }
+    .game-screen {
+        width: 100%;
+    }
+    body, .option-panel {
+    overflow: auto;
+    }
+  
+  }
+  
+@media all and (max-width: 900px) {
+    .option-panel {
+        height: 100%;
+/*        margin-top: -50px; */
+        }
+    .option-panel .options {
+         text-align: center;
+         padding: 5px;
+         width: 50%;
+            }
+}
