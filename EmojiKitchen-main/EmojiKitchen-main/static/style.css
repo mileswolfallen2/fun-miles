@@ -1,0 +1,53 @@
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url('img/background.png');
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px;
+}
+
+.full-size {
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+}
+
+.sticky-table-headers-top {
+    /* Stick to the left */
+    top: 0;
+    position: sticky;
+
+    /* Displayed on top of other rows when scrolling */
+    z-index: 1;
+}
+
+.sticky-table-headers-left {
+    /* Stick to the left */
+    left: 0;
+    position: sticky;
+
+    /* Displayed on top of other rows when scrolling */
+    z-index: 0;
+}
+
+.emojiSquared {
+    background-color: #9ca3af;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 12.3px 7.9px rgba(0, 0, 0, 0.072),
+                0 11.8px 3.4px rgba(0, 0, 0, 0.086),
+                0 10px 8px rgba(0, 0, 0, 0.12);
+}
+
+a {
+    color: inherit;
+}
