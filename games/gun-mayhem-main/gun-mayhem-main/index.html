@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>gun mayhem</title>
+  </head>
+    <center>
+      <div id="container" style="border: #ccc 0px solid;height:100%;100%;"></div>
+    <script>
+      window.RufflePlayer = window.RufflePlayer || {};
+      window.addEventListener("load", (event) => {
+          const ruffle = window.RufflePlayer.newest();
+          const player = ruffle.createPlayer();
+          const container = document.getElementById("container");
+          container.appendChild(player);
+          player.style.height = "100%";
+          player.style.width = "100%";
+          player.load("gun_mayhem.swf");
+      });
+    </script>
+    <script src="ruffle/ruffle.js"></script>
+    </center>
+  </body>
+</html>
