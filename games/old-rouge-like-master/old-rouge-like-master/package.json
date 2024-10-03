@@ -1,0 +1,23 @@
+{
+  "name": "nazi",
+  "version": "0.0.0",
+  "description": "Multiplayer roguelike",
+  "license": "MIT",
+  "author": "Brandon Semilla <semibran@gmail.com>",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kbve/nazi.git"
+  },
+  "scripts": {
+    "watch": "watchify client -o client/build/index.js -v"
+  },
+  "dependencies": {
+    "bel": "^4.6.0",
+    "server": "github:semibran/server#v1.0.0",
+    "socket.io": "^1.7.3"
+  },
+  "devDependencies": {
+    "watchify": "^3.9.0"
+  }
+}
