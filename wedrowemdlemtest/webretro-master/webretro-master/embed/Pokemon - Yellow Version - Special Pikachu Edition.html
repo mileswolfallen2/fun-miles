@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Example webretro embed</title>
+		<title>Pokemon - Yellow Version</title>
 		<style>
 			#webretro-container {
 				width: 800px;
@@ -21,7 +21,7 @@
 		
 		<script type="text/javascript" src="embed.js"></script>
 		<script>
-			var frame = webretroEmbed(document.getElementById("webretro-container"), "../", {system: "GBA", rom: "Pokemon - Yellow Version - Special Pikachu Edition (USA, Europe) (GBC,SGB Enhanced).zip"});
+			var frame = webretroEmbed(document.getElementById("webretro-container"), "../", {system: "mGBA", rom: "Pokemon - Yellow Version - Special Pikachu Edition (USA, Europe) (GBC,SGB Enhanced).zip"});
 			document.getElementById("fullscreen").onclick = function() {
 				frame.requestFullscreen();
 			};
