@@ -17,11 +17,11 @@
 		<input type="button" id="fullscreen" value="Fullscreen">
 		<br>
 		<br>
-		<a href="roms/LICENSE.txt">License for the example game "2048"</a>
+
 		
 		<script type="text/javascript" src="embed.js"></script>
 		<script>
-			var frame = webretroEmbed(document.getElementById("webretro-container"), "../", {system: "mGBA", rom: "Pokemon - Yellow Version - Special Pikachu Edition (USA, Europe) (GBC,SGB Enhanced).zip"});
+			var frame = webretroEmbed(document.getElementById("webretro-container"), "../", {system: "GB", rom: "Pokemon - Yellow Version - Special Pikachu Edition (USA, Europe) (GBC,SGB Enhanced).zip"});
 			document.getElementById("fullscreen").onclick = function() {
 				frame.requestFullscreen();
 			};
