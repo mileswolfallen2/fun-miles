@@ -86,7 +86,7 @@ const mainContentData = [
   {
     name: "game test",
     image: "assets/Screenshot 2024-10-20 8.57.25 PM.png",
-    link: "games/Snow-Rider3D-main/Snow-Rider3D-main/index.html",
+    link: "https://fun-miles-4jub.onrender.com/games/Snow-Rider3D-main/Snow-Rider3D-main/index.html",
   },
 ];
 
