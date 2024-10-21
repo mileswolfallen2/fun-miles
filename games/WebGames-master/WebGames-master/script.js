@@ -83,6 +83,11 @@ const mainContentData = [
     image: "assets/tic-tac-toe.png",
     link: "https://fun-miles-4jub.onrender.com/test",
   },
+  {
+name: "test"
+imag: "games/WebGames-master/WebGames-master/assets/Screenshot 2024-10-20 8.57.25 PM.png"
+link:"/wedrowemdlemtest/webretro-master/webretro-master/embed/Mario Kart 64.html"
+  },
 ];
 
 mainContentData.forEach(item => {
