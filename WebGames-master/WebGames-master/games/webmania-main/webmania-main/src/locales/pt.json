@@ -1,0 +1,114 @@
+{
+  "general": {
+    "apply": "Aplicar",
+    "error": "Erro",
+    "loading": "A carregar...",
+    "reset": "Reset",
+    "pick": "Escolhe uma música ou um padrão",
+    "pressanykey": "Pressiona qualquer tecla de jogo para começar",
+    "paused": "Jogo pausado",
+    "newaudiooffset": "Nova sincronização auditiva: "
+  },
+  "header": {
+    "fullscreen": "Ecrã inteiro",
+    "general": "Geral",
+    "keybinds": "Teclas",
+    "options": "Opções",
+    "audioOffset": "Sincronização auditiva (-9999-9999 ms)",
+    "visualOffset": "Sincronização visual (-9999-9999 ms)",
+    "pickpattern": "Escolher padrão",
+    "picksong": "Escolher música",
+    "skin": "Skin"
+  },
+  "rules": {
+    "number": "Valor tem de ser um número.",
+    "value": "Valor tem de estar entre {min} e {max}."
+  },
+  "options": {
+    "general": {
+      "fps": "Fotogramas  por segundo (0-255)",
+      "name": "Nome",
+      "scrollspeed": "Velocidade de deslizamento (0-9999 ms)",
+      "osutoms": "Velocidade de deslizamento do Osu! para ms",
+      "hitposition": "Posição de toque",
+      "calculate": "Calcular",
+      "fromosu": "Do Osu!",
+      "showfps": "Mostrar FPS",
+      "volume": "Volume (0-100%)"
+    },
+    "skin": {
+      "bmsstyle": "Estilo bms",
+      "bmsnone": "8K",
+      "bmsleft": "7+1K Esquerda",
+      "bmsright": "7+1K Direita",
+      "lanecovertop": "Cobrir em cima",
+      "lanecoverbottom": "Cobrir em baixo",
+      "accuracy": "Precisão",
+      "background": "Fundo",
+      "columns": "Colunas",
+      "combo": "Combo",
+      "effects": "Efeitos",
+      "fps": "Fps",
+      "hint": "Linha de toque",
+      "info": "Informação",
+      "judgement": "Avaliação",
+      "score": "Pontuação",
+      "skin": "Skin",
+      "time": "Tempo",
+      "timing": "Barra de precisão",
+      "upscroll": "Rolar para cima"
+    },
+    "keybinds": {
+      "newkeybind": "Nova tecla",
+      "pressakey": "Pressione qualquer tecla",
+      "change": "Mudar",
+      "pause": "Pausar",
+      "restart": "Reiniciar",
+      "fullscreen": "Ecrã inteiro",
+      "incrementoffset": "Aumentar sincronização de áudio",
+      "decrementoffset": "Diminuir sincronização de áudio"
+    }
+  },
+  "pickpattern": {
+    "bpm": "Batidas por minuto (0-9999)",
+    "keymode": "Número de teclas"
+  },
+  "picksong": {
+    "noscratch": "Sem Scratch",
+    "mirror": "Espelho",
+    "random": "Aleatório",
+    "timingwindows":"OD (Janela para acertar)",
+    "length": "Duração",
+    "notes": "Notas",
+    "longnotes": "Notas compridas",
+    "starrating": "Classificação estrela",
+    "play": "Jogar",
+    "keys": "Teclas",
+    "bpm": "BPM",
+    "songrate": "Velocidade da música"
+  },
+  "upload": {
+    "invalidformat": "Não foram encontrados ficheiros válidos.",
+    "nomusic": "Não foi possível ler o ficheiro de música.",
+    "nobackground": "Não foi possível ler a imagem de fundo.",
+    "corruptosz": "Não foi possível ler o ficheiro .osz.",
+    "picksong": "Arrasta os ficheiros/pasta da música de Osu!, O2jam, BMS ou Stepmania aqui.",
+    "warning": "Aviso: Arrasta uma música de cada vez."
+  },
+  "skins": {
+    "arrows": "Setas",
+    "arrowsColor": "Setas (Nota colorida)",
+    "bars": "Barras",
+    "barsColor": "Barras (Nota colorida)",
+    "circles": "Circulos",
+    "circlesColor": "Circulos (Nota colorida)",
+    "diamonds": "Diamantes",
+    "diamondsColor": "Diamantes (Nota colorida)"
+  },
+  "footer": {
+    "madeby": "Feito por ",
+    "version": "Versão ",
+    "discord": "Discord",
+    "donate": "Doar"  
+  }
+}

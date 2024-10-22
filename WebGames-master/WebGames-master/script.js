@@ -89,14 +89,9 @@ const mainContentData = [
     link: "games/Snow-Rider3D-main/Snow-Rider3D-main/index.html",
   },
   {
-    name: "EaglercraftX",
-    image: "assets/tic-tac-toe.png",
-    link: "EaglercraftX_1.8_Signed_Singleplayer_Offline (1)/EaglercraftX_1_8_u23_Offline_Signed.html",
-  },
-  {
-    name: "EaglercraftX",
-    
-    link: "EaglercraftX_1.8_Signed_Singleplayer_Offline (1)/EaglercraftX_1_8_u23_Offline_Signed.html",
+    name: "HexGL",
+    image: "assets/HexGL256.png",
+    link: "games/HexGL-master/HexGL-master/index.html",
   },
 ];
 
