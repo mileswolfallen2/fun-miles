@@ -86,17 +86,17 @@ const mainContentData = [
   {
     name: "Snow-Rider3D",
     image: "assets/tennes.png",
-    link: "https://fun-miles-4jub.onrender.com/games/Snow-Rider3D-main/Snow-Rider3D-main/index.html",
+    link: "games/Snow-Rider3D-main/Snow-Rider3D-main/index.html",
   },
   {
     name: "EaglercraftX",
     image: "assets/tic-tac-toe.png",
-    link: "https://fun-miles-4jub.onrender.com/EaglercraftX_1_8_u27_Offline_Signed.html",
+    link: "EaglercraftX_1.8_Signed_Singleplayer_Offline (1)/EaglercraftX_1_8_u23_Offline_Signed.html",
   },
   {
     name: "EaglercraftX",
     
-    link: "https://fun-miles-4jub.onrender.com/EaglercraftX_1_8_u27_Offline_Signed.html",
+    link: "EaglercraftX_1.8_Signed_Singleplayer_Offline (1)/EaglercraftX_1_8_u23_Offline_Signed.html",
   },
 ];
 
