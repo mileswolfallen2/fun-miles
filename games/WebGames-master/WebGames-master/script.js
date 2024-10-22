@@ -102,7 +102,7 @@ const mainContentData = [
 
 mainContentData.forEach(item => {
   let newDiv = `
-     <a href=${item.link} class="game game1" target="_blank">
+     <a href=${item.link} class="game game1" >
         <img src=${item.image} alt="" />
         <h3 class="game-text">${item.name}</h3>
       </a>
