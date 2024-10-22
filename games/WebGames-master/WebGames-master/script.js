@@ -84,9 +84,14 @@ const mainContentData = [
     link: "https://fun-miles-4jub.onrender.com/test",
   },
   {
-    name: "game test",
-    image: "assets/Screenshot 2024-10-20 8.57.25 PM.png",
+    name: "Snow-Rider3D",
+    image: "assets/tennes.png",
     link: "https://fun-miles-4jub.onrender.com/games/Snow-Rider3D-main/Snow-Rider3D-main/index.html",
+  },
+  {
+    name: "EaglercraftX",
+    image: "assets/tic-tac-toe.png",
+    link: "https://fun-miles-4jub.onrender.com/EaglercraftX_1_8_u27_Offline_Signed.html",
   },
 ];
 
