@@ -93,6 +93,11 @@ const mainContentData = [
     image: "assets/tic-tac-toe.png",
     link: "https://fun-miles-4jub.onrender.com/EaglercraftX_1_8_u27_Offline_Signed.html",
   },
+  {
+    name: "EaglercraftX",
+    
+    link: "https://fun-miles-4jub.onrender.com/EaglercraftX_1_8_u27_Offline_Signed.html",
+  },
 ];
 
 mainContentData.forEach(item => {
