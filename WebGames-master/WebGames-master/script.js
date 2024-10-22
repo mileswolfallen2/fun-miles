@@ -93,6 +93,11 @@ const mainContentData = [
     image: "assets/images (2).jpeg",
     link: "games/CutTheRope-master/CutTheRope-master/index.html",
   },
+  {
+    name: "Tunnel-Rush",
+    image: "assets/tunelrush.jpeg",
+    link: "games/zTunnel-Rush.html",
+  },
 ];
 
 mainContentData.forEach(item => {
