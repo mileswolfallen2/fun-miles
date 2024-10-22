@@ -79,19 +79,19 @@ const mainContentData = [
     link: "https://hangmangame02.netlify.app/",
   },
   {
-    name: "Tic-Tac-Toe",
-    image: "assets/tic-tac-toe.png",
-    link: "https://fun-miles-4jub.onrender.com/test",
-  },
-  {
     name: "Snow-Rider3D",
-    image: "assets/tennes.png",
+    image: "Wassets/snnowriders3d.jpeg",
     link: "games/Snow-Rider3D-main/Snow-Rider3D-main/index.html",
   },
   {
     name: "HexGL",
     image: "assets/HexGL256.png",
     link: "games/HexGL-master/HexGL-master/index.html",
+  },
+  {
+    name: "cut the rope",
+    image: "assets/images (2).jpeg",
+    link: "games/CutTheRope-master/CutTheRope-master/index.html",
   },
 ];
 
