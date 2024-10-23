@@ -108,6 +108,21 @@ const mainContentData = [
     image: "assets/learn-to-fly-2.jpeg",
     link: "games/Learn-To-Fly-2-main/Learn-To-Fly-2-main/index.html",
   },
+  {
+    name: "vex 5",
+    image: "assets/vex-5.jpeg",
+    link: "games/vex5/index.html",
+  },
+  {
+    name: "slope",
+    image: "assets/slope.jpeg",
+    link: "games/Slope-Game-main/Slope-Game-main/index.html",
+  },
+  {
+    name: "Stealing_the_Diamond.html",
+    image: "assets/stealing-the-dimend.jpeg",
+    link: "games/henreystikman/Stealing_the_Diamond.html",
+  },
 ];
 
 mainContentData.forEach(item => {
