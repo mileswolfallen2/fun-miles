@@ -132,12 +132,37 @@ const mainContentData = [
   {
     name: "Tetris",
     image: "assets/tetres.png",
-    link: "/games/☁Tetris-Online-Multiplayer☁.html",
+    link: "games/☁Tetris-Online-Multiplayer☁.html",
   },
   {
-    name: "Tetris",
-    image: "assets/tetres.png",
-    link: "/games/☁Tetris-Online-Multiplayer☁.html",
+    name: "Basketball Legends 2020",
+    image: "assets/2020.avif",
+    link: "games/Basketball-Legends-2020-gh-pages/Basketball-Legends-2020-gh-pages/index.html",
+  },
+  {
+    name: "tanuki sunset",
+    image: "assets/taunki.jpeg",
+    link: "games/tanuki-sunset-master/index.html",
+  },
+  {
+    name: "fnaf",
+    image: "assets/anan.jpeg",
+    link: "games/FNAF/FNAF/index.html",
+  },
+  {
+    name: "Super Scratch Bros Beta 4",
+    image: "assets/Super-Scratch-Bros-Beta.jpeg",
+    link: "games/Super-Scratch-Bros-Beta-4-(2).html",
+  },
+  {
+    name: "gun-mayhem",
+    image: "assets/gamemntze-gun-mayhem-original-29173-img.png",
+    link: "games/gun-mayhem-main/gun-mayhem-main/index.html",
+  },
+  {
+    name: "vido chat room",
+    image: "assets/gamemntze-gun-mayhem-original-29173-img.png",
+    link: "chat.html",
   },
 ];
 
