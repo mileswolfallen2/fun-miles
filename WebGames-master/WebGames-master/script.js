@@ -80,7 +80,7 @@ const mainContentData = [
   },
   {
     name: "Snow-Rider3D",
-    image: "Wassets/snnowriders3d.jpeg",
+    image: "assets/snnowriders3d.jpeg",
     link: "games/Snow-Rider3D-main/Snow-Rider3D-main/index.html",
   },
   {
@@ -90,13 +90,23 @@ const mainContentData = [
   },
   {
     name: "cut the rope",
-    image: "assets/images (2).jpeg",
+    image: "assets/cut-the-rope.jpeg",
     link: "games/CutTheRope-master/CutTheRope-master/index.html",
   },
   {
     name: "Tunnel-Rush",
     image: "assets/tunelrush.jpeg",
     link: "games/zTunnel-Rush.html",
+  },
+  {
+    name: "DuckLife4",
+    image: "assets/duck-lifde-4.jpeg",
+    link: "games/DuckLife4-main/DuckLife4-main/index.html",
+  },
+  {
+    name: "Learn To Fly 2",
+    image: "assets/learn-to-fly-2.jpeg",
+    link: "games/Learn-To-Fly-2-main/Learn-To-Fly-2-main/index.html",
   },
 ];
 
