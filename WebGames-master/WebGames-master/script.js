@@ -45,6 +45,7 @@ const onToggleDarkMode = () => {
   }
 };
 
+
 const toggleSideBar = () => {
   const currentWidth = sideBar.style.width;
   if (currentWidth === "73vw") {
@@ -119,9 +120,24 @@ const mainContentData = [
     link: "games/Slope-Game-main/Slope-Game-main/index.html",
   },
   {
-    name: "Stealing_the_Diamond.html",
+    name: "Stealing the Diamond",
     image: "assets/stealing-the-dimend.jpeg",
     link: "games/henreystikman/Stealing_the_Diamond.html",
+  },
+  {
+    name: "fnf not stabel we will work on it",
+    image: "assets/fnf.png",
+    link: "games/FNF-Week7-Html5-Test-main/index.html",
+  },
+  {
+    name: "Tetris",
+    image: "assets/tetres.png",
+    link: "/games/☁Tetris-Online-Multiplayer☁.html",
+  },
+  {
+    name: "Tetris",
+    image: "assets/tetres.png",
+    link: "/games/☁Tetris-Online-Multiplayer☁.html",
   },
 ];
 
