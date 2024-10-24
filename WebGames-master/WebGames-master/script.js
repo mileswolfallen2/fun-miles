@@ -164,6 +164,16 @@ const mainContentData = [
     image: "assets/gamemntze-gun-mayhem-original-29173-img.png",
     link: "chat.html",
   },
+  {
+    name: "The Shadow Reform",
+    image: "assets/L16Q_;$y06Eo%NIp_9${IrNK^d-inGgRhouA.png",
+    link: "games/The-Shadow-Reform.html",
+  },
+  {
+    name: "Kirby's Dreamland 3 Maker",
+    image: "",
+    link: "games/Kirby's Dreamland 3 Maker.html",
+  },
 ];
 
 mainContentData.forEach(item => {
