@@ -171,8 +171,23 @@ const mainContentData = [
   },
   {
     name: "Kirby's Dreamland 3 Maker",
-    image: "",
-    link: "games/Kirby's Dreamland 3 Maker.html",
+    image: "assets/kaertt.png",
+    link: "games/Kirby's-Dreamland-3-Maker.html",
+  },
+  {
+    name: "supersmashflash",
+    image: "assets/supersmashflash.jpeg",
+    link: "games/flasharchive-main/flasharchive-main/html/supersmashflash.html",
+  },
+  {
+    name: "drift-hunters",
+    image: "assets/512x512bb.jpg",
+    link: "games/drift-hunters-main/index.html",
+  },
+  {
+    name: "drift-hunters",
+    image: "assets/512x512bb.jpg",
+    link: "games/drift-hunters-main/index.html",
   },
 ];
 
