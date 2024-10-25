@@ -187,7 +187,12 @@ const mainContentData = [
   {
     name: "drift-hunters",
     image: "assets/512x512bb.jpg",
-    link: "games/drift-hunters-main/index.html",
+    link: "games/SceneGd-780a63fac5c58a2fb23f22ff58e7add03353329d/SceneGd-780a63fac5c58a2fb23f22ff58e7add03353329d/WebGLTemplates/PluginYG/index.html",
+  },
+  {
+    name: "dit life",
+    image: "assets/unnamed_480.webp",
+    link: "games/ditlifytest/index.html",
   },
 ];
 

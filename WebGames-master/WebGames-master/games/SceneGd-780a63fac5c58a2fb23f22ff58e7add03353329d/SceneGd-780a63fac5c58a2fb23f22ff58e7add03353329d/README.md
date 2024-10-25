@@ -1,2 +1,0 @@
-# SceneGd
-Geometry Dash Unity
