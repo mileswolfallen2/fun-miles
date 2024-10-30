@@ -185,14 +185,13 @@ const mainContentData = [
     link: "games/drift-hunters-main/index.html",
   },
   {
-    name: "drift-hunters",
-    image: "assets/512x512bb.jpg",
-    link: "games/SceneGd-780a63fac5c58a2fb23f22ff58e7add03353329d/SceneGd-780a63fac5c58a2fb23f22ff58e7add03353329d/WebGLTemplates/PluginYG/index.html",
-  },
-  {
     name: "dit life",
     image: "assets/unnamed_480.webp",
     link: "games/ditlifytest/index.html",
+  }, {
+    name: "3d game test",
+    image: "assets/unnamed_480.webp",
+    link: "games/3d-gam.zip_unzipped/1-main/index.html",
   },
 ];
 
