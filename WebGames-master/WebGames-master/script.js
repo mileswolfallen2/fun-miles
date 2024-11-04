@@ -166,12 +166,12 @@ const mainContentData = [
   },
   {
     name: "The Shadow Reform",
-    image: "assets/L16Q_;$y06Eo%NIp_9${IrNK^d-inGgRhouA.png",
+    image: "assets/kaertt.png",
     link: "games/The-Shadow-Reform.html",
   },
   {
     name: "Kirby's Dreamland 3 Maker",
-    image: "assets/kaertt.png",
+    image: "assets/images3.jpeg",
     link: "games/Kirby's-Dreamland-3-Maker.html",
   },
   {
@@ -189,8 +189,8 @@ const mainContentData = [
     image: "assets/unnamed_480.webp",
     link: "games/ditlifytest/index.html",
   }, {
-    name: "3d game test",
-    image: "assets/unnamed_480.webp",
+    name: "Deth run 3d",
+    image: "assets/Dethrun3d.jpeg",
     link: "games/3d-gam.zip_unzipped/1-main/index.html",
   },
 ];
