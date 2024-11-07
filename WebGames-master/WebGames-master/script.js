@@ -193,6 +193,11 @@ const mainContentData = [
     image: "assets/Dethrun3d.jpeg",
     link: "games/3d-gam.zip_unzipped/1-main/index.html",
   },
+  {
+    name: "Pokemon - Red Version",
+    image: "assets/pokemon-red.jpeg",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon-Red-Version.html",
+  },
 ];
 
 mainContentData.forEach(item => {
