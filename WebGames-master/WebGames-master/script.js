@@ -203,6 +203,11 @@ const mainContentData = [
     image: "assets/Chrono-Trigger.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Chrono-Trigger.html",
   },
+  {
+    name: "Mario Kart 64",
+    image: "assets/mareoc64.jpeg",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Mario-Kart-64.html",
+  },
 ];
 
 mainContentData.forEach(item => {
