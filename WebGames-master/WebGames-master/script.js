@@ -208,7 +208,11 @@ const mainContentData = [
     image: "assets/mareoc64.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Mario-Kart-64.html",
   },
-  
+  {
+    name: "isaac rath or the lam",
+    image: "assets/isik.jpeg",
+    link: "stuftochanch/isaac.html",
+  },
 ];
 
 mainContentData.forEach(item => {
