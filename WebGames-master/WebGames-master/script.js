@@ -198,6 +198,11 @@ const mainContentData = [
     image: "assets/pokemon-red.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon-Red-Version.html",
   },
+  {
+    name: "Chrono-Trigger",
+    image: "assets/Chrono-Trigger.jpeg",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Chrono-Trigger.html",
+  },
 ];
 
 mainContentData.forEach(item => {
