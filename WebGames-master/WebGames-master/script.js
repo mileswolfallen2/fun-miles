@@ -213,6 +213,11 @@ const mainContentData = [
     image: "assets/isik.jpeg",
     link: "stuftochanch/isaac.html",
   },
+  {
+    name: "nes gd",
+    image: "assets/gd-nes.jpeg",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/gd.html",
+  },
 ];
 
 mainContentData.forEach(item => {
