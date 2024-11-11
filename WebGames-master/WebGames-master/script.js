@@ -218,6 +218,16 @@ const mainContentData = [
     image: "assets/gd-nes.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/gd.html",
   },
+  {
+    name: "Legend-of-Zelda-The--A-Link-to-the-Past",
+    image: "assets/thelegindofzelda.jpg",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Legend-of-Zelda-The--A-Link-to-the-Past.html",
+  },
+  {
+    name: "earthbound",
+    image: "assets/earthbound.png",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/EarthBound.html",
+  },
 ];
 
 mainContentData.forEach(item => {
