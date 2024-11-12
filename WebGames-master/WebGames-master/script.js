@@ -132,7 +132,7 @@ const mainContentData = [
   {
     name: "Tetris",
     image: "assets/tetres.png",
-    link: "a1r/A1R/game/tetris/index.html",
+    link: "games2/game/tetris/index.html",
   },
   {
     name: "Basketball Legends 2020",
@@ -230,8 +230,8 @@ const mainContentData = [
   },
   {
     name: "temple-run",
-    image: "a1r/A1R/assets/temple-run.png",
-    link: "a1r/A1R/game/temple-run/index.html",
+    image: "games2/assets/temple-run.png",
+    link: "games2/game/temple-run/index.html",
   },
 ];
 
