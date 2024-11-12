@@ -132,7 +132,7 @@ const mainContentData = [
   {
     name: "Tetris",
     image: "assets/tetres.png",
-    link: "games/☁Tetris-Online-Multiplayer☁.html",
+    link: "a1r/A1R/game/tetris/index.html",
   },
   {
     name: "Basketball Legends 2020",
@@ -227,6 +227,11 @@ const mainContentData = [
     name: "earthbound",
     image: "assets/earthbound.png",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/EarthBound.html",
+  },
+  {
+    name: "temple-run",
+    image: "a1r/A1R/assets/temple-run.png",
+    link: "a1r/A1R/game/temple-run/index.html",
   },
 ];
 
