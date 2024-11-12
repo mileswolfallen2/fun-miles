@@ -233,6 +233,21 @@ const mainContentData = [
     image: "games2/assets/temple-run.png",
     link: "games2/game/temple-run/index.html",
   },
+  {
+    name: "drift-boss",
+    image: "games2/assets/drift-boss.jpg",
+    link: "games2/game/drift-boss/index.html",
+  },
+  {
+    name: "drift-hunters",
+    image: "games2/assets/drifthunters.jpg",
+    link: "games2/game/drift-hunters/index.html",
+  },
+  {
+    name: " new cookie-clicker",
+    image: "games2/assets/cookie-clicker.png",
+    link: "games2/game/cookie-clicker/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
