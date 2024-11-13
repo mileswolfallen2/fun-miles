@@ -258,6 +258,16 @@ const mainContentData = [
     image: "games2/game/tiny-fishing/thumb.png",
     link: "games2/game/tiny-fishing/index.html",
   },
+  {
+    name: "idle-breakout",
+    image: "games2/assets/idle-breakout.jpg",
+    link: "games2/game/idle-breakout/index.html",
+  },
+  {
+    name: "getaway-shootout",
+    image: "games2/assets/getaway-shootout.jpg",
+    link: "games2/game/getaway-shootout/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
