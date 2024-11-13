@@ -244,9 +244,19 @@ const mainContentData = [
     link: "games2/game/drift-hunters/index.html",
   },
   {
-    name: " new cookie-clicker",
+    name: "new cookie-clicker",
     image: "games2/assets/cookie-clicker.png",
     link: "games2/game/cookie-clicker/index.html",
+  },
+  {
+    name: "retro-bowl",
+    image: "games2/assets/retro-bowl.jpg",
+    link: "games2/game/retro-bowl/index.html",
+  },
+  {
+    name: "tiny-fishing",
+    image: "games2/game/tiny-fishing/thumb.png",
+    link: "games2/game/tiny-fishing/index.html",
   },
 ];
 
