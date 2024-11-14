@@ -268,6 +268,16 @@ const mainContentData = [
     image: "games2/assets/getaway-shootout.jpg",
     link: "games2/game/getaway-shootout/index.html",
   },
+  {
+    name: "jetpack-joyride",
+    image: "games2/assets/jetpack-joyride.jpg",
+    link: "games2/game/jetpack-joyride/index.html",
+  },
+  {
+    name: "just-fall",
+    image: "games2/assets/just-fall.jpg",
+    link: "games2/game/just-fall/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
