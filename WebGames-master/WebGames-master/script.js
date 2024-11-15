@@ -278,6 +278,26 @@ const mainContentData = [
     image: "games2/assets/just-fall.jpg",
     link: "games2/game/just-fall/index.html",
   },
+  {
+    name: "monkey-mart",
+    image: "games2/assets/monkey-mart.png",
+    link: "games2/game/monkey-mart/index.html",
+  },
+  {
+    name: "moto-x3m",
+    image: "games2/assets/moto-x3m.jpg",
+    link: "games2/game/moto-x3m/index.html",
+  },
+  {
+    name: "moto-x3m-spooky-land",
+    image: "games2/assets/moto-spooky.jpg",
+    link: "games2/game/moto-x3m-spooky-land/index.html",
+  },
+  {
+    name: "motox3m2",
+    image: "games2/assets/motox3m2.jpg",
+    link: "games2/game/motox3m2/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
