@@ -298,6 +298,16 @@ const mainContentData = [
     image: "games2/assets/motox3m2.jpg",
     link: "games2/game/motox3m2/index.html",
   },
+  {
+    name: "Drill Dozer",
+    image: "assets/Drill-Dozer.jpeg",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/DrillDozer(USA).html",
+  },
+  {
+    name: "SuperMarioLand2",
+    image: "assets/Super-Mario-Land-2.png",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/SuperMarioLand2DX.html",
+  },
 ];
 
 mainContentData.forEach(item => {

@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Drill Dozer</title>
+		<style>
+			#webretro-container {
+				width: 800px;
+				height: 600px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Drill Dozer</h1>
+		<div id="webretro-container"></div>
+		<br>
+		<input type="button" id="fullscreen" value="Fullscreen">
+		<br>
+		<br>
+
+		
+		<script type="text/javascript" src="embed.js"></script>
+		<script>
+			var frame = webretroEmbed(document.getElementById("webretro-container"), "../", {system: "GB/GBC/GBA", rom: "Drill Dozer (USA).gba"});
+			document.getElementById("fullscreen").onclick = function() {
+				frame.requestFullscreen();
+			};
+		</script>
+	</body>
+</html>
