@@ -308,6 +308,11 @@ const mainContentData = [
     image: "assets/Super-Mario-Land-2.png",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/SuperMarioLand2DX.html",
   },
+  {
+    name: "doom",
+    image: "assets/doom.jpeg",
+    link: "/Doom-In-Docker-master/Doom-In-Docker-master/doom/public/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
