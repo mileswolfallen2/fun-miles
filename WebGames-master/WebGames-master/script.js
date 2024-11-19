@@ -160,11 +160,6 @@ const mainContentData = [
     link: "games/gun-mayhem-main/gun-mayhem-main/index.html",
   },
   {
-    name: "vido chat room",
-    image: "assets/gamemntze-gun-mayhem-original-29173-img.png",
-    link: "chat.html",
-  },
-  {
     name: "The Shadow Reform",
     image: "assets/kaertt.png",
     link: "games/The-Shadow-Reform.html",
@@ -316,7 +311,7 @@ const mainContentData = [
   {
     name: "doodle-jump 2",
     image: "games2/assets/doodle.jpg",
-    link: "games2/game/doodle-jump/index.html",
+    link: "games/flasharchive-main/flasharchive-main/html/doodlejump.html",
   },
 ];
 
