@@ -313,6 +313,11 @@ const mainContentData = [
     image: "assets/doom.jpeg",
     link: "/Doom-In-Docker-master/Doom-In-Docker-master/doom/public/index.html",
   },
+  {
+    name: "doodle-jump 2",
+    image: "games2/assets/doodle.jpg",
+    link: "games2/game/doodle-jump/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
