@@ -316,7 +316,7 @@ const mainContentData = [
   {
     name: "pokemon f red",
     image: "assets/pokemonfred.jpeg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon_ FireRed Version.html",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon_FireRedVersion.html",
   },
   {
     name: "pokemon f red rado",
