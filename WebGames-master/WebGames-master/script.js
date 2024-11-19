@@ -309,9 +309,19 @@ const mainContentData = [
     link: "/Doom-In-Docker-master/Doom-In-Docker-master/doom/public/index.html",
   },
   {
-    name: "doodle-jump 2",
+    name: "doodle-jump ",
     image: "games2/assets/doodle.jpg",
     link: "games/flasharchive-main/flasharchive-main/html/doodlejump.html",
+  },
+  {
+    name: "pokemon f red",
+    image: "assets/pokemonfred.jpeg",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon_ FireRed Version.html",
+  },
+  {
+    name: "pokemon f red rado",
+    image: "assets/pokemonrado.jpeg",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/pokemonradom.html",
   },
 ];
 
