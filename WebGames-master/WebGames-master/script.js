@@ -323,6 +323,11 @@ const mainContentData = [
     image: "assets/pokemonrado.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/pokemonradom.html",
   },
+  {
+    name: "n64test",
+    image: "",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
