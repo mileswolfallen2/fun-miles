@@ -319,13 +319,8 @@ const mainContentData = [
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon_FireRedVersion.html",
   },
   {
-    name: "pokemon f red rado",
-    image: "assets/pokemonrado.jpeg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/pokemonradom.html",
-  },
-  {
-    name: "n64test",
-    image: "",
+    name: "Legend of Zelda - Time Lost",
+    image: "assets/LegendofZeldaTimeLost.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/index.html",
   },
 ];
