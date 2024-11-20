@@ -323,6 +323,11 @@ const mainContentData = [
     image: "assets/LegendofZeldaTimeLost.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/index.html",
   },
+  {
+    name: "youshey 64",
+    image: "assets/yoshey64.jpeg",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/youshey.html",
+  },
 ];
 
 mainContentData.forEach(item => {
