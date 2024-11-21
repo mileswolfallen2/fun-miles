@@ -329,9 +329,14 @@ const mainContentData = [
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/youshey.html",
   },
   {
-    name: "youshey 64",
+    name: "paper moaro",
     image: "assets/papermoaro.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/papermaro.html",
+  },
+  {
+    name: "FZeroX",
+    image: "assets/F_ZOERX.jpeg",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/FZeroX.html",
   },
 ];
 
