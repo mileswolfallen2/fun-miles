@@ -328,6 +328,11 @@ const mainContentData = [
     image: "assets/yoshey64.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/youshey.html",
   },
+  {
+    name: "youshey 64",
+    image: "assets/papermoaro.jpeg",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/papermaro.html",
+  },
 ];
 
 mainContentData.forEach(item => {
