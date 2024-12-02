@@ -338,11 +338,6 @@ const mainContentData = [
     image: "assets/F_ZOERX.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/FZeroX.html",
   },
-  {
-    name: "smash",
-    image: "assets/smash.jpeg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/smash.html",
-  },
 ];
 
 mainContentData.forEach(item => {
