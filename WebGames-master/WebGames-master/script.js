@@ -338,6 +338,16 @@ const mainContentData = [
     image: "assets/F_ZOERX.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/FZeroX.html",
   },
+  {
+    name: "GD",
+    image: "/WebGames-master/WebGames-master/games2/assets/geometry.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/geometry-dash-remastered/index.html",
+  },
+  {
+    name: "pacman",
+    image: "/WebGames-master/WebGames-master/games2/assets/pacman.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/pacman/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
