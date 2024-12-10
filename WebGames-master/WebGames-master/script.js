@@ -353,6 +353,11 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/games/10-minutes-till-dawn/icon.png",
     link: "/WebGames-master/WebGames-master/games/10-minutes-till-dawn/index.html",
   },
+  {
+    name: "pokemon emerald",
+    image: "/WebGames-master/WebGames-master/games2/assets/pok-emerald.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/pokemon/emerald/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
