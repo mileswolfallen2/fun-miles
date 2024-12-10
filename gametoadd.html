@@ -5,18 +5,43 @@
 <li>pokemon emreled</li>
 <li>all the old games</li>
 </ul>
-<script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
-<link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
-    <div id="comment-section"></div>
-    <script>
-initComments({
-  node: document.getElementById("comment-section"),
-  defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
-  serverName: "cactus.chat",
-  siteName: "<fun-miles>",
-  commentSectionId: "section1"
-})
-</script>
+<!--
+  The widget follows "system" settings for light/dark mode
+  by default, but you can manually select "light" or "dark"
+  mode for a consistent display
+-->
+<div
+  data-chirpy-theme="system"
+  data-chirpy-comment="true"
+  id="chirpy-comment"
+></div>
+<body>
+  <!--
+  The widget follows "system" settings for light/dark mode
+  by default, but you can manually select "light" or "dark"
+  mode for a consistent display
+-->
+<div
+data-chirpy-theme="system"
+data-chirpy-comment="true"
+id="chirpy-comment"
+></div>
+  <script defer src="https://chirpy.dev/bootstrapper.js" data-chirpy-domain="fun-miles-4jub.onrender.com"></script>
+  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+      <div id="comment-section"></div>
+      <script>
+  initComments({
+    node: document.getElementById("comment-section"),
+    defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
+    serverName: "cactus.chat",
+    siteName: "<fun-miles>",
+    commentSectionId: "section1"
+  })
+  </script>
+
+</body>
+
 
 </body>
 </html>
