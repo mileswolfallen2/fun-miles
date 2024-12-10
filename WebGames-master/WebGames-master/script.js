@@ -348,6 +348,11 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/games2/assets/pacman.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/pacman/index.html",
   },
+  {
+    name: "10-minutes-till-dawn",
+    image: "/WebGames-master/WebGames-master/games/10-minutes-till-dawn/icon.png",
+    link: "/WebGames-master/WebGames-master/games/10-minutes-till-dawn/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
