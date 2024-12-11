@@ -358,6 +358,16 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/games2/assets/pok-emerald.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/pokemon/emerald/index.html",
   },
+  {
+    name: "backrooms",
+    image: "/WebGames-master/WebGames-master/game3/games-1/backrooms/Backrooms-Games.webp",
+    link: "/WebGames-master/WebGames-master/game3/games-1/backrooms/index.html",
+  },
+  {
+    name: "car game",
+    image: "/WebGames-master/WebGames-master/game3/games-1/cars-simulator/splash.png",
+    link: "/WebGames-master/WebGames-master/game3/games-1/cars-simulator/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
