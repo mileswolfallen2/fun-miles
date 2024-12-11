@@ -360,13 +360,18 @@ const mainContentData = [
   },
   {
     name: "backrooms",
-    image: "/WebGames-master/WebGames-master/game3/games-1/backrooms/Backrooms-Games.webp",
-    link: "/WebGames-master/WebGames-master/game3/games-1/backrooms/index.html",
+    image: "/WebGames-master/WebGames-master/games2/game/backrooms/Backrooms-Games.webp",
+    link: "/WebGames-master/WebGames-master/games2/game/backrooms/index.html",
   },
   {
     name: "car game",
-    image: "/WebGames-master/WebGames-master/game3/games-1/cars-simulator/splash.png",
-    link: "/WebGames-master/WebGames-master/game3/games-1/cars-simulator/index.html",
+    image: "/WebGames-master/WebGames-master/games2/game/cars-simulator/splash.png",
+    link: "/WebGames-master/WebGames-master/games2/game/cars-simulator/index.html",
+  },
+  {
+    name: "a-dance-of-fire-and-ice",
+    image: "/WebGames-master/WebGames-master/games2/game/a-dance-of-fire-and-ice/splash.png",
+    link: "/WebGames-master/WebGames-master/games2/game/a-dance-of-fire-and-ice/index.html",
   },
 ];
 
