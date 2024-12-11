@@ -373,6 +373,16 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/games2/game/a-dance-of-fire-and-ice/splash.png",
     link: "/WebGames-master/WebGames-master/games2/game/a-dance-of-fire-and-ice/index.html",
   },
+  {
+    name: "worlds-hardest-game",
+    image: "/WebGames-master/WebGames-master/games2/assets/worlds-hardest-game.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/worlds-hardest-game/index.html",
+  },
+  {
+    name: "pokemon sapphire",
+    image: "/WebGames-master/WebGames-master/assets/61p+1+PYSML.jpg",
+    link: "/WebGames-master/WebGames-master/pokemon-netplay/pokemon/sapphire/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {

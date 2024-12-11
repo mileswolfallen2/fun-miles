@@ -8,9 +8,9 @@ the best online gaming  you can make on your ones by yousiung
 thare or 2 playses to host this sit render.com and vrdick hostig 
 
 
-you can host you one by sinig up and going to 
-
-
+you can host you one by sinig up and going to the home page and presing
+<img scr='/redme/Screenshot 2024-12-11 11.04.25 AM.png' alt='home page'>
+<img scr='/redme/Screenshot 2024-12-11 11.04.49 AM.png' alt='crat butten'>
 
 
 
