@@ -64,6 +64,11 @@ const mainContentData = [
     image: "/images.png",
     link: "/WebGames-master/WebGames-master/index.html",
   },
+  {
+    name: " old games",
+    image: "images1.png",
+    link: "/games.html",
+  },
 ];
 mainContentData.forEach(item => {
   let newDiv = `
