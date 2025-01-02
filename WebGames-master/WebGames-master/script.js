@@ -388,6 +388,11 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/assets/glad.jpeg",
     link: "/WebGames-master/WebGames-master/games/Gladihoppers-gh-pages/index.html",
   },
+  {
+    name: "Phoenix Wright Ace Attorney",
+    image: "/WebGames-master/WebGames-master/assets/phoenix-wright-ace-attorney.avif",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/wit.html",
+  },
 ];
 
 mainContentData.forEach(item => {
