@@ -384,9 +384,9 @@ const mainContentData = [
     link: "/WebGames-master/WebGames-master/pokemon-netplay/pokemon/sapphire/index.html",
   },
   {
-    name: "pokemon sapphire",
+    name: "Gladihoppers",
     image: "/WebGames-master/WebGames-master/assets/glad.jpeg",
-    link: "/WebGames-master/WebGames-master/games/Gladihoppers/index.html",
+    link: "/WebGames-master/WebGames-master/games/Gladihoppers-gh-pages/index.html",
   },
 ];
 

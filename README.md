@@ -22,7 +22,7 @@ Create a new branch for your project or idea.
 Develop your project or idea, ensuring it aligns with the repository's purpose.
 Commit your changes and push them to your forked repository.
 Submit a pull request to the original "fun-miles" repository, explaining your project or idea and why it fits within the repository's scope.
-By contributing to the "fun-miles" Git repository, you can help make it a more diverse and engaging collection of projects and ideas, while also showcasing your own idy
+By contributing to the "fun-miles" Git repository, you can help make it a more diverse and engaging collection of projects and ideas, while also showcasing your own idy if you do this 10 or more times we will give you barect editing acses
 
 
 <h1>notes</h1>
