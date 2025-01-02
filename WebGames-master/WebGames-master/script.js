@@ -393,6 +393,11 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/assets/phoenix-wright-ace-attorney.avif",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/wit.html",
   },
+  {
+    name: "thumb fighter",
+    image: "/WebGames-master/WebGames-master/assets/thum.jpeg",
+    link: "/WebGames-master/WebGames-master/games/thumb-fighter-main/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
