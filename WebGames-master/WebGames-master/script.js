@@ -110,11 +110,6 @@ const mainContentData = [
     link: "games/Learn-To-Fly-2-main/Learn-To-Fly-2-main/index.html",
   },
   {
-    name: "vex 5",
-    image: "assets/vex-5.jpeg",
-    link: "games/vex5/index.html",
-  },
-  {
     name: "slope",
     image: "assets/slope.jpeg",
     link: "games/Slope-Game-main/Slope-Game-main/index.html",
@@ -397,6 +392,36 @@ const mainContentData = [
     name: "thumb fighter",
     image: "/WebGames-master/WebGames-master/assets/thum.jpeg",
     link: "/WebGames-master/WebGames-master/games/thumb-fighter-main/index.html",
+  },
+  {
+    name: "bob the robber 2",
+    image: "/WebGames-master/WebGames-master/games2/assets/bob-the-robber-2.png",
+    link: "/WebGames-master/WebGames-master/games2/game/bob-the-robber-2/index.html",
+  },
+  {
+    name: "vex3",
+    image: "/WebGames-master/WebGames-master/games2/assets/vex3.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/vex3/index.html",
+  },
+  {
+    name: "vex4",
+    image: "/WebGames-master/WebGames-master/games2/assets/vex4.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/vex4/index.html",
+  },
+  {
+    name: "vex5",
+    image: "/WebGames-master/WebGames-master/games2/assets/vex5.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/vex5/index.html",
+  },
+  {
+    name: "vex6",
+    image: "/WebGames-master/WebGames-master/games2/assets/vex6.jpeg",
+    link: "/WebGames-master/WebGames-master/games2/game/vex6/index.html",
+  },
+  {
+    name: "vex7",
+    image: "/WebGames-master/WebGames-master/games2/assets/vex7.jpeg",
+    link: "/WebGames-master/WebGames-master/games2/game/vex7/index.html",
   },
 ];
 
