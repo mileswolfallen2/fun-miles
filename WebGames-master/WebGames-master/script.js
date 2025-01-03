@@ -423,6 +423,11 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/games2/assets/vex7.jpeg",
     link: "/WebGames-master/WebGames-master/games2/game/vex7/index.html",
   },
+  {
+    name: "n-gon",
+    image: "/WebGames-master/WebGames-master/assets/n-gon.png",
+    link: "/WebGames-master/WebGames-master/n-gon-master/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
