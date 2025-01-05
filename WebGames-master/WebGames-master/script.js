@@ -428,6 +428,11 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/assets/n-gon.png",
     link: "/WebGames-master/WebGames-master/n-gon-master/index.html",
   },
+  {
+    name: "chess",
+    image: "/WebGames-master/WebGames-master/games2/assets/chess.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/chess/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
