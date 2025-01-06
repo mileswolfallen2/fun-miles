@@ -433,6 +433,16 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/games2/assets/chess.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/chess/index.html",
   },
+ {
+    name: "cluster-rush",
+    image: "/WebGames-master/WebGames-master/games2/assets/cluster-rush.png",
+    link: "/WebGames-master/WebGames-master/games2/game/cluster-rush/index.html",
+  },
+  {
+    name: "awesome-tanks-2",
+    image: "/WebGames-master/WebGames-master/games2/assets/at2.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/awesome-tanks-2/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
