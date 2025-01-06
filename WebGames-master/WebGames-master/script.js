@@ -145,9 +145,9 @@ const mainContentData = [
     link: "games/FNAF/FNAF/index.html",
   },
   {
-    name: "Super Scratch Bros Beta 4",
+    name: "Super Scratch Bros",
     image: "assets/Super-Scratch-Bros-Beta.jpeg",
-    link: "games/Super-Scratch-Bros-Beta-4-(2).html",
+    link: "/WebGames-master/WebGames-master/games/SuperScratchBros41.html",
   },
   {
     name: "gun-mayhem",
