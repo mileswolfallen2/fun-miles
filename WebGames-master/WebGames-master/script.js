@@ -458,6 +458,21 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/games2/assets/subway-surfer.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/subway-surfers/index.html",
   },
+  {
+    name: "block blast",
+    image: "/WebGames-master/WebGames-master/assets/blockblast.jpeg",
+    link: "/WebGames-master/WebGames-master/games/block-blast-main/index.html",
+  },
+  {
+    name: "happy wheels",
+    image: "/WebGames-master/WebGames-master/games2/assets/happy-wheels.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/happy-wheels/index.html",
+  },
+  {
+    name: "shell shockers",
+    image: "/WebGames-master/WebGames-master/games2/assets/shell-shockers.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/shellshockers/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
