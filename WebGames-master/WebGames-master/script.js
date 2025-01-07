@@ -443,6 +443,21 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/games2/assets/at2.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/awesome-tanks-2/index.html",
   },
+  {
+    name: "stickman hook",
+    image: "/WebGames-master/WebGames-master/games2/assets/stickman-hook.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/stickman-hook/index.html",
+  },
+  {
+    name: "superhot",
+    image: "/WebGames-master/WebGames-master/games2/assets/super-hot.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/superhot/index.html",
+  },
+  {
+    name: "subway surfers",
+    image: "/WebGames-master/WebGames-master/games2/assets/subway-surfer.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/subway-surfers/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
