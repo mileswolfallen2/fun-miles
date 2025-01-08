@@ -463,6 +463,11 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/assets/blockblast.jpeg",
     link: "/WebGames-master/WebGames-master/games/block-blast-main/index.html",
   },
+  {
+    name: "stick merge",
+    image: "/WebGames-master/WebGames-master/games2/assets/stick-merge.png",
+    link: "/WebGames-master/WebGames-master/games2/game/stick-merge/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
