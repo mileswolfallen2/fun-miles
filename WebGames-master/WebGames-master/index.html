@@ -1,4 +1,48 @@
 <!DOCTYPE html>
+<head>
+<title>Loading Animation</title>
+<style>
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+.loading-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+  border-top-color: #3498db; /* Blue */
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+<div class="loading-container">
+  <div class="loading-circle"></div>
+</div>
+<script>
+// Simulate loading time (replace with your actual loading logic)
+setTimeout(() => {
+  const loadingContainer = document.querySelector('.loading-container');
+  loadingContainer.style.display = 'none';
+}, 5000); // Hide after 3 seconds
+</script>
+</body>
 <html lang="en">  
   <head>
     <meta charset="UTF-8" />
