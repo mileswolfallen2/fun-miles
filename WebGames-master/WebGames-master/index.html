@@ -1,47 +1,4 @@
-<!DOCTYPE html>
-<head>
-<style>
-.bod2 {
-  background-color: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-.loading-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  height: 800px;
-}
-.loading-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 5px solid #ccc;
-  border-top-color: #3498db; /* Blue */
-  animation: spin 1s linear infinite;
-}
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-</style>
-</head>
-<body class="bod2">
-<div class="loading-container">
-  <div class="loading-circle"></div>
-</div>
-<script>
-// Simulate loading time (replace with your actual loading logic)
-setTimeout(() => {
-  const loadingContainer = document.querySelector('.loading-container');
-  loadingContainer.style.display = 'none';
-}, 5000); // Hide after 3 seconds
-</script>
-</body class="bod2"> 
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
