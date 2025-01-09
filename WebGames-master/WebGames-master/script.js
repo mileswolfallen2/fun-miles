@@ -468,6 +468,11 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/games2/assets/stick-merge.png",
     link: "/WebGames-master/WebGames-master/games2/game/stick-merge/index.html",
   },
+  {
+    name: "cubefield",
+    image: "/WebGames-master/WebGames-master/games2/assets/cubefield.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/cubefield/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
