@@ -473,6 +473,11 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/games2/assets/cubefield.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/cubefield/index.html",
   },
+  {
+    name: "mario kart flash",
+    image: "WebGames-master/WebGames-master/assets/mareokartflach.jpeg",
+    link: "/WebGames-master/WebGames-master/games/flasharchive-main/flasharchive-main/html/mariokart.html",
+  },
 ];
 
 mainContentData.forEach(item => {
