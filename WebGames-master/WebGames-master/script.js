@@ -478,6 +478,11 @@ const mainContentData = [
     image: "WebGames-master/WebGames-master/assets/mareokartflach.jpeg",
     link: "/WebGames-master/WebGames-master/games/flasharchive-main/flasharchive-main/html/mariokart.html",
   },
+  {
+    name: "factory balls",
+    image: "WebGames-master/WebGames-master/games2/assets/factory-balls.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/factoryballsforever/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
