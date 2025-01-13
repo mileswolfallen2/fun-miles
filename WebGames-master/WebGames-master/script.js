@@ -60,6 +60,11 @@ const toggleSideBar = () => {
 // Rendering the main content dynamically
 const mainContentData = [
   {
+    name: "home",
+    image: "/WebGames-master/WebGames-master/assets/home.png",
+    link: "/index.html",
+  },
+  {
     name: "Tic-Tac-Toe",
     image: "assets/tic-tac-toe.png",
     link: "tic-tac-toe/index.html",
@@ -419,11 +424,6 @@ const mainContentData = [
     link: "/WebGames-master/WebGames-master/games2/game/vex6/index.html",
   },
   {
-    name: "vex7",
-    image: "/WebGames-master/WebGames-master/games2/assets/vex7.jpeg",
-    link: "/WebGames-master/WebGames-master/games2/game/vex7/index.html",
-  },
-  {
     name: "n-gon",
     image: "/WebGames-master/WebGames-master/assets/n-gon.png",
     link: "/WebGames-master/WebGames-master/n-gon-master/index.html",
@@ -475,13 +475,18 @@ const mainContentData = [
   },
   {
     name: "mario kart flash",
-    image: "WebGames-master/WebGames-master/assets/mareokartflach.jpeg",
+    image: "/WebGames-master/WebGames-master/assets/mareokartflach.jpeg",
     link: "/WebGames-master/WebGames-master/games/flasharchive-main/flasharchive-main/html/mariokart.html",
   },
   {
     name: "factory balls",
-    image: "WebGames-master/WebGames-master/games2/assets/factory-balls.jpg",
+    image: "/WebGames-master/WebGames-master/games2/assets/factory-balls.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/factoryballsforever/index.html",
+  },
+  {
+    name: "HouseOfHazards",
+    image: "/WebGames-master/WebGames-master/games/HouseOfHazards-main/screenshots/0609b0ba2889859b21cf47ca205818fe.avif",
+    link: "/WebGames-master/WebGames-master/games/HouseOfHazards-main/index.html",
   },
 ];
 
