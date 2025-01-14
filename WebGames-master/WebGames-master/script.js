@@ -488,6 +488,11 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/games/HouseOfHazards-main/screenshots/0609b0ba2889859b21cf47ca205818fe.avif",
     link: "/WebGames-master/WebGames-master/games/HouseOfHazards-main/index.html",
   },
+  {
+    name: "krunker",
+    image: "/WebGames-master/WebGames-master/games2/game/krunker/img/krunker-io.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/krunker/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
