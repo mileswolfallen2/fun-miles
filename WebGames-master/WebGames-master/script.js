@@ -309,11 +309,6 @@ const mainContentData = [
     link: "games/flasharchive-main/flasharchive-main/html/doodlejump.html",
   },
   {
-    name: "pokemon f red",
-    image: "assets/pokemonfred.jpeg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon_FireRedVersion.html",
-  },
-  {
     name: "Legend of Zelda - Time Lost",
     image: "assets/LegendofZeldaTimeLost.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/index.html",
@@ -349,11 +344,6 @@ const mainContentData = [
     link: "/WebGames-master/WebGames-master/games/10-minutes-till-dawn/index.html",
   },
   {
-    name: "Pokemon Emerald",
-    image: "/WebGames-master/WebGames-master/games2/assets/pok-emerald.jpg",
-    link: "/WebGames-master/WebGames-master/games2/game/pokemon/emerald/index.html",
-  },
-  {
     name: "BackRooms",
     image: "/WebGames-master/WebGames-master/games2/game/backrooms/Backrooms-Games.webp",
     link: "/WebGames-master/WebGames-master/games2/game/backrooms/index.html",
@@ -372,11 +362,6 @@ const mainContentData = [
     name: "Worlds Hardest Game",
     image: "/WebGames-master/WebGames-master/games2/assets/worlds-hardest-game.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/worlds-hardest-game/index.html",
-  },
-  {
-    name: "Pokemon Sapphire",
-    image: "/WebGames-master/WebGames-master/assets/61p+1+PYSML.jpg",
-    link: "/WebGames-master/WebGames-master/pokemon-netplay/pokemon/sapphire/index.html",
   },
   {
     name: "Gladi Hoppers",

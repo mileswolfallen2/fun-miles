@@ -79,6 +79,11 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/games2/assets/pok-emerald.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/pokemon/emerald/index.html",
   },
+  {
+    name: "Pokemon Sapphire",
+    image: "/WebGames-master/WebGames-master/assets/61p+1+PYSML.jpg",
+    link: "/WebGames-master/WebGames-master/pokemon-netplay/pokemon/sapphire/index.html",
+  },
 ];
 mainContentData.forEach(item => {
   let newDiv = `
