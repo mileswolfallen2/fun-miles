@@ -60,12 +60,12 @@ const toggleSideBar = () => {
 // Rendering the main content dynamically
 const mainContentData = [
   {
-    name: "home",
+    name: "Back",
     image: "/WebGames-master/WebGames-master/assets/home.png",
     link: "/index.html",
   },
   {
-    name: "Tic-Tac-Toe",
+    name: "Tic Tac Toes",
     image: "assets/tic-tac-toe.png",
     link: "tic-tac-toe/index.html",
   },
@@ -80,12 +80,12 @@ const mainContentData = [
     link: "DevQuiz/index.html",
   },
   {
-    name: "HangMan",
+    name: "Hang Man",
     image: "assets/hangman.png",
     link: "https://hangmangame02.netlify.app/",
   },
   {
-    name: "Snow-Rider3D",
+    name: "Snow Rider",
     image: "assets/snnowriders3d.jpeg",
     link: "games/Snow-Rider3D-main/Snow-Rider3D-main/index.html",
   },
@@ -95,12 +95,12 @@ const mainContentData = [
     link: "games/HexGL-master/HexGL-master/index.html",
   },
   {
-    name: "cut the rope",
+    name: "Cut The Rope",
     image: "assets/cut-the-rope.jpeg",
     link: "games/CutTheRope-master/CutTheRope-master/index.html",
   },
   {
-    name: "Tunnel-Rush",
+    name: "Tunnel Rush",
     image: "assets/tunelrush.jpeg",
     link: "games/zTunnel-Rush.html",
   },
@@ -115,17 +115,17 @@ const mainContentData = [
     link: "games/Learn-To-Fly-2-main/Learn-To-Fly-2-main/index.html",
   },
   {
-    name: "slope",
+    name: "Slope",
     image: "assets/slope.jpeg",
     link: "games/Slope-Game-main/Slope-Game-main/index.html",
   },
   {
-    name: "Stealing the Diamond",
+    name: "Stealing The Diamond",
     image: "assets/stealing-the-dimend.jpeg",
     link: "games/henreystikman/Stealing_the_Diamond.html",
   },
   {
-    name: "fnf not stabel we will work on it",
+    name: "FNF Unstable",
     image: "assets/fnf.png",
     link: "games/FNF-Week7-Html5-Test-main/index.html",
   },
