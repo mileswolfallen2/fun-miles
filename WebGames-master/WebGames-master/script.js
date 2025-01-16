@@ -506,7 +506,7 @@ const mainContentData = [
   {
     name: "Pokemon Games",
     image: "/WebGames-master/WebGames-master/games2/game/krunker/img/krunker-io.jpg",
-    link: "/WebGames-master/WebGames-master/games2/game/krunker/index.html",
+    link: "/pokemonindex.html",
   },
 ];
 
