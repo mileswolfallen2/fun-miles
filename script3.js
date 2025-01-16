@@ -60,18 +60,18 @@ const toggleSideBar = () => {
 // Rendering the main content dynamically
 const mainContentData = [
   {
-    name: "games",
-    image: "/images.png",
+    name: "Back",
+    image: "/WebGames-master/WebGames-master/assets/home.png",
     link: "/WebGames-master/WebGames-master/index.html",
   },
   {
     name: "Pokemon - Red Version",
-    image: "assets/pokemon-red.jpeg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon-Red-Version.html",
+    image: "WebGames-master/WebGames-master/assets/pokemon-red.jpeg",
+    link: "/webretro-master/webretro-master/embed/Pokemon-Red-Version.html",
   },
   {
     name: "pokemon f red",
-    image: "assets/pokemonfred.jpeg",
+    image: "WebGames-master/WebGames-master/assets/pokemonfred.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon_FireRedVersion.html",
   },
   {
