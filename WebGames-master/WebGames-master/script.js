@@ -498,6 +498,16 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/games2/game/krunker/img/krunker-io.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/krunker/index.html",
   },
+  {
+    name: "Don't Get Clicked!",
+    image: "/WebGames-master/WebGames-master/games2/game/krunker/img/krunker-io.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/krunker/index.html",
+  },
+  {
+    name: "Pokemon",
+    image: "/WebGames-master/WebGames-master/games2/game/krunker/img/krunker-io.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/krunker/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
