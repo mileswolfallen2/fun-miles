@@ -505,8 +505,8 @@ const mainContentData = [
   },
   {
     name: "Pokemon Games",
-    image: "/WebGames-master/WebGames-master/games2/game/krunker/img/krunker-io.jpg",
-    link: "/pokemonindex.html",
+    image:"/image-robert-added/poke.png",
+    link:"/pokemonindex.html",
   },
 ];
 
