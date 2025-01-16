@@ -65,20 +65,19 @@ const mainContentData = [
     link: "/WebGames-master/WebGames-master/index.html",
   },
   {
-    name: " old games",
-    image: "images1.png",
-    link: "/games.html",
-  
+    name: "Pokemon - Red Version",
+    image: "assets/pokemon-red.jpeg",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon-Red-Version.html",
   },
   {
-    name: "credits",
-    image: "images1.png",
-    link: "/credits.html",
+    name: "pokemon f red",
+    image: "assets/pokemonfred.jpeg",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon_FireRedVersion.html",
   },
   {
-    name: "games coming soon",
-    image: "/gamestooadd.jpeg",
-    link: "/gametoadd.html",
+    name: "Pokemon Emerald",
+    image: "/WebGames-master/WebGames-master/games2/assets/pok-emerald.jpg",
+    link: "/WebGames-master/WebGames-master/games2/game/pokemon/emerald/index.html",
   },
 ];
 mainContentData.forEach(item => {

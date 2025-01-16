@@ -189,11 +189,6 @@ const mainContentData = [
     link: "games/3d-gam.zip_unzipped/1-main/index.html",
   },
   {
-    name: "Pokemon - Red Version",
-    image: "assets/pokemon-red.jpeg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon-Red-Version.html",
-  },
-  {
     name: "Chrono-Trigger",
     image: "assets/Chrono-Trigger.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Chrono-Trigger.html",
