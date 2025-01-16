@@ -495,7 +495,7 @@ const mainContentData = [
   },
   {
     name: "Clone Hatch",
-    image: "/WebGames-master/WebGames-master/games2/game/krunker/img/krunker-io.jpg",
+    image: "/image-robert-added/clone.png",
     link: "/WebGames-master/WebGames-master/games2/game/krunker/index.html",
   },
   {
