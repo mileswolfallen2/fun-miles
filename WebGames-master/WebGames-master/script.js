@@ -231,7 +231,7 @@ const mainContentData = [
   },
   {
     name: "2048",
-    image: "/",
+    image: "/image-robert-added/Screenshot 2025-01-17 10.11.56 AM.png",
     link: "/dao-2048-main/dao-2048-main/index.html",
   },
 ];
