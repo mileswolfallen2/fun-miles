@@ -224,6 +224,11 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/games2/game/krunker/img/krunker-io.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/krunker/index.html",
   },
+  {
+    name: "mega grel",
+    image: "/",
+    link: "/WebGames-master/WebGames-master/megagrle/SURVIVOR/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
