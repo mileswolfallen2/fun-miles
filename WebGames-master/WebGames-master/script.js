@@ -229,6 +229,11 @@ const mainContentData = [
     image: "/",
     link: "/WebGames-master/WebGames-master/megagrle/SURVIVOR/index.html",
   },
+  {
+    name: "2048",
+    image: "/",
+    link: "/dao-2048-main/dao-2048-main/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
