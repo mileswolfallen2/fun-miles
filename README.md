@@ -5,7 +5,7 @@ The Best Online Gaming Site  You Can Make One Of Your by Hosting
 
 
 <h1>How To Make Your Own Verson To Host</h1>
-There Are 2 Places To Host The Site render.com And vrdick Hosting 
+To Host The Site Go To render.com 
 
 
 You Can Host Your Own By Signing Up And Going To The Home Page And Press
@@ -19,21 +19,21 @@ You Can Host Your Own By Signing Up And Going To The Home Page And Press
 
 Fork The Repository To Your Own GitHub Account.
 Create A New Branch For Your Project Or Idea.
-Develop Your Project Or Idea, ensuring it aligns with the repository's purpose.
-Commit your changes and push them to your forked repository.
-Submit a pull request to the original "fun-miles" repository, explaining your project or idea and why it fits within the repository's scope.
-By contributing to the "fun-miles" Git repository, you can help make it a more diverse and engaging collection of projects and ideas, while also showcasing your own idy if you do this 10 or more times we will give you barect editing acses
+Develop Your Project Or Idea, Ensuring It Aligns With The Repository's Purpose.
+Commit Your Changes And Push Them To Your Forked Repository.
+Submit A Pull Request To The Original "Fun-Miles" Repository,
+By Contributing To The "Fun-Miles" Git Repository, You Can Help Make It A More Diverse And Engaging Collection Of Projects And Ideas, While Also Showcasing Your Own Idea.
 
 
-<h1>notes</h1>
+<h1>Notes</h1>
 
   [render preview]
-  to make a prevew
+  To Make A Rrevew
   
     cd to a folder
     exsapel
     cd ./games/
 
-  git clone (url)
-ecsampel git clone --bare https://github.com/mileswolfallen2/fun-miles
-hi
+  Git Clone (url)
+Example git clone --bare https://github.com/mileswolfallen2/fun-miles
+
