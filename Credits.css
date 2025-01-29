@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    }
+    
+    .credits-container {
+    text-align: center;
+    background: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #333;
+    }
+    
+    .credits-list {
+    margin-bottom: 20px;
+    }
+    
+    .credit-item {
+    margin-bottom: 15px;
+    }
+     
+    .credit-item h2 {
+    font-size: 24px;
+    margin: 0; color: #ff6f61;
+    }
+    
+    .credit-item p {
+    font-size: 18px;
+    margin: 5px 0 0;
+    color: #555;
+    }
+    
+    button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    
+    button:hover {
+    background-color: #ff4a3d;
+    }

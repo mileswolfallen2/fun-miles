@@ -60,23 +60,23 @@ const toggleSideBar = () => {
 // Rendering the main content dynamically
 const mainContentData = [
   {
-    name: "games",
+    name: "Games",
     image: "/images.png",
     link: "/WebGames-master/WebGames-master/index.html",
   },
   {
-    name: " old games",
+    name: " Old Games",
     image: "images1.png",
     link: "/games.html",
   
   },
   {
-    name: "credits",
+    name: "Credits",
     image: "images1.png",
     link: "/credits.html",
   },
   {
-    name: "games coming soon",
+    name: "Games That Are Comeing Soon",
     image: "/gamestooadd.jpeg",
     link: "/gametoadd.html",
   },
