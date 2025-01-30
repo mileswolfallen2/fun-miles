@@ -80,6 +80,11 @@ const mainContentData = [
     image: "/gamestooadd.jpeg",
     link: "/gametoadd.html",
   },
+  {
+    name: "Contact Us",
+    image: "/gamestooadd.jpeg",
+    link: "/gametoadd.html",
+  }
 ];
 mainContentData.forEach(item => {
   let newDiv = `

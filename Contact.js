@@ -1,12 +1,12 @@
-document.getElementById('contactForm').addEventListener('submit', functie(gebeurtenis) {
-    gebeurtenis.preventDefault();
-    const naam = document.getElementById('naam').value;
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const bericht = document.getElementById('bericht').value;
-    
-    als (naam && e-mail && bericht) {
-    document.getElementById('statusMessage').textContent = 'Bedankt voor uw bericht, ' + name + '! We nemen zo snel mogelijk contact met u op.';
-    } anders {
-    document.getElementById('statusMessage').textContent = 'Vul alle velden in.';
+    const message = document.getElementById('message').value;
+
+    if (name && email && message) {
+        document.getElementById('statusMessage').textContent = 'Thank you for reaching out, ' + name + '! We will get back to you soon.';
+    } else {
+        document.getElementById('statusMessage').textContent = 'Please fill out all fields.';
     }
-    });
+});
