@@ -84,6 +84,11 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/assets/61p+1+PYSML.jpg",
     link: "/WebGames-master/WebGames-master/pokemon-netplay/pokemon/sapphire/index.html",
   },
+  {
+    name: "Cat",
+    image: "/image-robert-added/pokefun.png",
+    link: "/cat.html",
+  },
 ];
 mainContentData.forEach(item => {
   let newDiv = `

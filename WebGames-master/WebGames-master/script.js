@@ -234,6 +234,11 @@ const mainContentData = [
     image: "/image-robert-added/2048.png",
     link: "/dao-2048-main/dao-2048-main/index.html",
   },
+  {
+    name: "Drive Mad",
+    image: "/",
+    link: "/drive-mad-main/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
