@@ -1,23 +1,16 @@
 The Best Online Gaming Site  You Can Make One Of Your by Hosting
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/mileswolfallen2/fun-miles">fun-miles</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/mileswolfallen2">miles Allen and Robert Winberg</a> The Licensed Is Under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
 
-
-
-<head><style>img {
-  max-width: 20%;
-  height: auto;
-}</style></head>
 <h1>How To Make Your Own Verson To Host</h1>
 To host the “fun-miles” GitHub repository using Render static sites, follow these steps outlined in the flowchart:
 
 Fork the repository using github
-Create a Render account and create a new static site, <img src="https://render.com/docs/static/9705deafa360259a1e4342980e6efff5/7a72b/new-static-site.png" alt="Selecting Static Site from the New menu" max-width: 20%;
-  height: auto;>
+Create a Render account and create a new static site, <img src="https://render.com/docs/static/9705deafa360259a1e4342980e6efff5/7a72b/new-static-site.png" alt="Selecting Static Site from the New menu" 
+  height:auto>
 connecting it to your GitHub and then
-<img src="https://render.com/docs/static/2c8e1ccdd8cd76c9409ea39a966c501e/2b72d/git-connect.png" alt="Git Connect" max-width: 20%;
-  height: auto;/>
-<img src="https://render.com/docs/static/2b69098df84b4909b0a2336f43542dab/dcb99/github-connect-repo.png" alt="List of GitHub repos in the Render Dashboard"max-width: 20%;
-  height: auto;/>
+<img src="https://render.com/docs/static/2c8e1ccdd8cd76c9409ea39a966c501e/2b72d/git-connect.png" alt="Git Connect" height:auto/>
+<img src="https://render.com/docs/static/2b69098df84b4909b0a2336f43542dab/dcb99/github-connect-repo.png" alt="List of GitHub repos in the Render Dashboard"
+  height: auto/>
 
 Configure the build settings, deploy the site, and then view your live site via the provided URL.
 
