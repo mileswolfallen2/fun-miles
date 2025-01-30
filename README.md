@@ -5,7 +5,8 @@ The Best Online Gaming Site  You Can Make One Of Your by Hosting
 
 
 <h1>How To Make Your Own Verson To Host</h1>
-<img src="https://render.com/docs/static/9705deafa360259a1e4342980e6efff5/7a72b/new-static-site.png" alt="Selecting Static Site from the New menu"/>![image](https://github.com/user-attachments/assets/820bdb15-a18a-4a2b-bd22-14a5360f4451)
+<img src="https://render.com/docs/static/9705deafa360259a1e4342980e6efff5/7a72b/new-static-site.png" alt="Selecting Static Site from the New menu"/ width="200" 
+     height="300" >![image](https://github.com/user-attachments/assets/820bdb15-a18a-4a2b-bd22-14a5360f4451)
 
 To host the “fun-miles” GitHub repository using Render static sites, follow these steps outlined in the flowchart:
 
