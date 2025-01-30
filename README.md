@@ -4,7 +4,7 @@ The Best Online Gaming Site  You Can Make One Of Your by Hosting
 
 
 <head><style>img {
-  max-width: 100%;
+  max-width: 20%;
   height: auto;
 }</style></head>
 <h1>How To Make Your Own Verson To Host</h1>
