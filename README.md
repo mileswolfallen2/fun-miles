@@ -6,7 +6,7 @@ To host the “fun-miles” GitHub repository using Render static sites, follow 
 
 Fork the repository using github
 Create a Render account and create a new static site, <img src="https://render.com/docs/static/9705deafa360259a1e4342980e6efff5/7a72b/new-static-site.png" alt="Selecting Static Site from the New menu" 
-  height="300" width="auto">
+  height="300" width="auto" align=”left”>
 connecting it to your GitHub and then
 <img src="https://render.com/docs/static/2c8e1ccdd8cd76c9409ea39a966c501e/2b72d/git-connect.png" alt="Git Connect" height="300" width="auto"/>
 <img src="https://render.com/docs/static/2b69098df84b4909b0a2336f43542dab/dcb99/github-connect-repo.png" alt="List of GitHub repos in the Render Dashboard"
