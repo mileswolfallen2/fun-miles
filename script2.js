@@ -82,8 +82,8 @@ const mainContentData = [
   },
   {
     name: "Contact Us",
-    image: "/gamestooadd.jpeg",
-    link: "/gametoadd.html",
+    image: "/",
+    link: "/Contact.html",
   }
 ];
 mainContentData.forEach(item => {
