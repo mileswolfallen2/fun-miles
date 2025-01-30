@@ -5,12 +5,13 @@ The Best Online Gaming Site  You Can Make One Of Your by Hosting
 
 
 <h1>How To Make Your Own Verson To Host</h1>
-To Host The Site Go To render.com 
+To host the “fun-miles” GitHub repository using Render static sites, follow these steps outlined in the flowchart:
+
+Fork the repository using github
+Create a Render account and create a new static site, connecting it to your GitHub and then
+Configure the build settings, deploy the site, and then view your live site via the provided URL.
 
 
-You Can Host Your Own By Signing Up And Going To The Home Page And Press
-<img scr='/redme/Screenshot 2024-12-11 11.04.25 AM.png' alt='home page'>
-<img scr='/redme/Screenshot 2024-12-11 11.04.49 AM.png' alt='crat butten'>
 
 
 
