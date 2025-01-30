@@ -236,7 +236,7 @@ const mainContentData = [
   },
   {
     name: "Drive Mad",
-    image: "/",
+    image: "/image-robert-added/unnamed.png",
     link: "/drive-mad-main/index.html",
   },
 ];
