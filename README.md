@@ -28,12 +28,12 @@ By Contributing To The "Fun-Miles" Git Repository, You Can Help Make It A More D
 <h1>Notes</h1>
 
   [render preview]
-  To Make A Rrevew
+  To Make A preview
   
-    cd to a folder
-    exsapel
-    cd ./games/
 
   Git Clone (url)
 Example git clone --bare https://github.com/mileswolfallen2/fun-miles
+
+   cd to a folder
+    cd ./games/
 
