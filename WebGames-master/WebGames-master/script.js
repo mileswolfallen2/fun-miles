@@ -239,6 +239,11 @@ const mainContentData = [
     image: "/image-robert-added/unnamed.png",
     link: "/drive-mad-main/index.html",
   },
+  {
+    name: "Stacktris",
+    image: "/image-robert-added/maxresdefault (1).jpg",
+    link: "/stacktris-main/stacktris-main/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
