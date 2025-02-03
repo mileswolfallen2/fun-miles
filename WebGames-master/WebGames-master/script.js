@@ -221,12 +221,12 @@ const mainContentData = [
   },
   {
     name: "Stacktris",
-    image: "/image-robert-added/Stack.jpg",
+    image: "/image-robert-added/Stack.png",
     link: "/stacktris-main/stacktris-main/index.html",
   },
   {
     name: "Dino Game",
-    image: "/image-robert-added/Dino.jpeg",
+    image: "/image-robert-added/Dino.png",
     link: "/dino.html",
   },
   {
