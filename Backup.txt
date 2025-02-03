@@ -253,3 +253,8 @@
     image: "assets/Super-Scratch-Bros-Beta.jpeg",
     link: "/WebGames-master/WebGames-master/games/SuperScratchBros41.html",
   },
+    {
+    name: "Henry Stick Man Collectsin",
+    image: "assets/Super-Scratch-Bros-Beta.jpeg",
+    link: "/henry stick man.html",
+  },
