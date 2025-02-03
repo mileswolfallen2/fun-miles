@@ -251,8 +251,13 @@ const mainContentData = [
   },
   {
     name: "Sky Rush",
-    image: "/image-robert-added/Dino.jpeg",
-    link: "games/Skyrush.html",
+    image: "/image-robert-added/Skyrush.png",
+    link: "/WebGames-master/WebGames-master/games/skyrush.html",
+  },
+  {
+    name: "Power Tower",
+    image: "/",
+    link: "/WebGames-master/WebGames-master/games/PowerTower.html",
   },
 ];
 
