@@ -210,26 +210,6 @@ const mainContentData = [
     link: "/WebGames-master/WebGames-master/games/HouseOfHazards-main/index.html",
   },
   {
-    name: "Krunker",
-    image: "/WebGames-master/WebGames-master/games2/game/krunker/img/krunker-io.jpg",
-    link: "/WebGames-master/WebGames-master/games2/game/krunker/index.html",
-  },
-  {
-    name: "Clone Hatch",
-    image: "/image-robert-added/clone.png",
-    link: "/WebGames-master/WebGames-master/games2/game/krunker/index.html",
-  },
-  {
-    name: "Don't Get Clicked!",
-    image: "/WebGames-master/WebGames-master/games2/game/krunker/img/krunker-io.jpg",
-    link: "/WebGames-master/WebGames-master/games2/game/krunker/index.html",
-  },
-  {
-    name: "mega grel",
-    image: "/",
-    link: "/WebGames-master/WebGames-master/megagrle/SURVIVOR/index.html",
-  },
-  {
     name: "2048",
     image: "/image-robert-added/2048.png",
     link: "/dao-2048-main/dao-2048-main/index.html",
