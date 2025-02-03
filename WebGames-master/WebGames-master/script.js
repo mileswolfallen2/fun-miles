@@ -241,8 +241,18 @@ const mainContentData = [
   },
   {
     name: "Stacktris",
-    image: "/image-robert-added/maxresdefault (1).jpg",
+    image: "/image-robert-added/Stack.jpg",
     link: "/stacktris-main/stacktris-main/index.html",
+  },
+  {
+    name: "Dino Game",
+    image: "/image-robert-added/Dino.jpeg",
+    link: "/dino.html",
+  },
+  {
+    name: "Sky Rush",
+    image: "/image-robert-added/Dino.jpeg",
+    link: "games/Skyrush.html",
   },
 ];
 
