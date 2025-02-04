@@ -239,6 +239,11 @@ const mainContentData = [
     image: "/image-robert-added/PowerTower.png",
     link: "/WebGames-master/WebGames-master/games/PowerTower.html",
   },
+  {
+    name: "Scratch Town",
+    image: "/image-robert-added/PowerTower.png",
+    link: "/WebGames-master/WebGames-master/games/town",
+  },
 ];
 
 mainContentData.forEach(item => {
