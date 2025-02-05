@@ -65,12 +65,6 @@ const mainContentData = [
     link: "/WebGames-master/WebGames-master/index.html",
   },
   {
-    name: " Old Games",
-    image: "images1.png",
-    link: "/games.html",
-  
-  },
-  {
     name: "Credits",
     image: "images1.png",
     link: "/credits.html",
