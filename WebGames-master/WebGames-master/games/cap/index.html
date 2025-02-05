@@ -1,0 +1,1419 @@
+<!DOCTYPE html><html><head><title>CubeAndSaw</title><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui=1"><meta charset="UTF-8"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="description" content=""><link rel="manifest" href="manifest.json"><link rel="icon" type="image/png" href="icon64.png"><link rel="apple-touch-icon" sizes="180x180" href="icon180.png"><link rel="icon" type="image/png" sizes="32x32" href="icon32.png"><link rel="icon" type="image/png" sizes="16x16" href="icon16.png"><style>html,body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  overflow:hidden;
+  font-family: Verdana;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#canvaswrapper {
+  text-align: center ;
+}
+</style><style>@font-face { font-family: "BitCell" ; src: url("fonts/BitCell.ttf") format("truetype"); }</style><script>window.fonts = ["BitCell"]</script></head><body class="noselect custom-cursor" oncontextmenu="return false;"><div id="canvaswrapper"></div><script type="text/javascript">var resources = {"images":[{"file":"bas.png","version":1,"size":4327,"properties":{}},{"file":"blade.png","version":5,"size":472,"properties":{"frames":2,"fps":18}},{"file":"cage.png","version":19,"size":371,"properties":{"frames":1,"fps":5}},{"file":"chick.png","version":17,"size":614,"properties":{"frames":7,"fps":12}},{"file":"columnblade.png","version":2,"size":288,"properties":{"frames":1,"fps":5}},{"file":"columnempty.png","version":2,"size":238,"properties":{"frames":1,"fps":5}},{"file":"cube.png","version":16,"size":288,"properties":{"frames":6,"fps":10}},{"file":"cube_ghost.png","version":13,"size":294,"properties":{"frames":6,"fps":10}},{"file":"icon.png","version":9,"size":3749,"properties":{"frames":1,"fps":5}},{"file":"mockup_bas.png","version":1,"size":45262,"properties":{}},{"file":"piece.png","version":2,"size":112,"properties":{"frames":1,"fps":5}},{"file":"poster.png","version":1,"size":31500,"properties":{"frames":1,"fps":5}},{"file":"spike.png","version":84,"size":501,"properties":{"frames":6,"fps":10}},{"file":"tower.png","version":5,"size":1141,"properties":{"frames":1,"fps":5}},{"file":"tower1.png","version":2,"size":839,"properties":{"frames":1,"fps":5}},{"file":"tower2.png","version":2,"size":564,"properties":{"frames":1,"fps":5}}],"assets":[],"maps":{},"sounds":[{"file":"death.wav","version":1,"size":47912,"properties":{}},{"file":"jump.wav","version":1,"size":16486,"properties":{}}],"music":[{"file":"music.mp3","version":1,"size":1711500,"properties":{}}]};
+var graphics = "M1";
+
+</script><script type="text/javascript">var orientation = 'portrait' ;
+var aspect = 'free' ;
+var ms_libs = [] ;
+window.skip_service_worker = true;
+window.exported_project = true;
+window.ms_use_server = true ;
+</script><script src="compiler.js"></script><script src="parser.js"></script><script src="processor.js"></script><script src="program.js"></script><script src="routine.js"></script><script src="runner.js"></script><script src="token.js"></script><script src="tokenizer.js"></script><script src="transpiler.js"></script><script src="microengine.js"></script></body><script type="text/javascript">//
+//
+// The game is started with the code below.
+// Once you have received the "started" signal (see below),
+// you can do the following:
+// 1) Inject functions or objects into the global context of the microStudio engine, example:
+//
+//   window.player.setGlobal("special_callback",function(x) { console.info(x) }) ;
+//   // Your microScript code can now call the "special_callback" function
+//
+// 2) Call microScript global functions from your JavaScript code, example:
+//
+//   window.player.call("call_me_from_javascript",[10,1000]) ;
+//   // arguments to the function call are provided as an array
+//
+// 3) Run a microScript code snippet from your JavaScript code, example:
+//
+//   window.player.exec("player.position_x = 50",function(result) { console.log(result) ; }) ;
+//
+
+window.addEventListener("load",function() {
+  window.player = new Player(function(event) {
+    if (event.name == "started") {
+      // signal that the game is started
+    }
+    else if (event.name == "log") {
+      // console.info(event.data) ;
+    }
+  }) ;
+  document.body.focus() ;
+}) ;
+
+</script><script id="code" type="text/x-microscript">
+
+
+function()
+COLUMN_X = 52
+PLAYER_X = COLUMN_X - 12
+PLAYER_Y = 0
+
+init = function()
+  
+  userName = storage.get("userName")
+  if not userName then
+     userName = "AAA"
+     storage.set("userName",userName)
+  end
+  
+  for t in system.threads t.stop() end
+  every 1 second do 
+    if player.y == 0 then
+      webapi.getTodayHighs()
+      webapi.getTodayGameOvers()
+      webapi.getTodayRank(userName)
+    end
+  end
+  
+  input = new Input()
+  client.init()
+  initGame()
+  gui = new Gui()
+  state = "idle"
+  audio.playMusic("music", 0.5, 1)
+end
+
+initGame = function(seed=client.room.seed,id=client.id)
+  //print("initGame with seed: "+seed +" and client id: "+id)
+  entities = []
+  entities += camera = new Camera(0,0,1.5)
+  entities += background = new Background()
+  entities += trap = new Trap()
+  entities += columns = new Columns(seed)
+  entities += particles = new Particles()
+  entities += player = new Player(PLAYER_X,PLAYER_Y)
+  //Game start
+  webapi.gameStart(userName)
+end
+
+update = function()
+  input.update()
+  
+  if state == "idle" then
+    if input.press.LEFT or client.connection.status != "connected" then 
+      state = "solo"
+      client.close()
+      return 0 
+    end
+    if input.press.RIGHT then state = "multi" client.init() return 0  end
+  elsif state == "solo" then
+    if player.y==0 and input.press.UP then 
+      system.prompt( "YOUR NAME?", 
+        function(ok,text) 
+          if (ok) then 
+            userName = text.substring(0,6)
+            storage.set("userName",userName)
+          end
+        end)	
+      state = "idle"
+      client.close()
+      initGame()
+    end
+    // //exit solo with down
+    // if trap.pause and input.press.DOWN then 
+    //   state = "idle"
+    //   client.close()
+    //   initGame()
+    // end
+  elsif state == "multi" then
+    if client.connection.status == "connected" then
+      state = "waiting"
+    end
+  elsif state == "waiting" then
+    //exit
+    if input.press.UP then 
+      state = "idle"
+      client.close()
+      initGame()
+    end
+    if client.playersCount() > 1 then
+       state = "play"
+       return 0 
+    end
+    if player.dead then
+      
+    end
+  elsif state == "dead" then
+    if input.press.UP then 
+      state = "idle"
+      client.close()
+      initGame()
+    end
+  end
+  
+  //------------------------------------------------------------
+  //exit condition from multiplayer
+  if client.id != 0 then
+    //go back to waiting if connected with no players
+    if client.playersCount()<2 and state == "play"  then
+      print("no other players in room.")
+      state = "waiting"
+    end
+    //disconnection during multiplayer
+    if client.connection.status !="connected" and state == "play" then
+      print("disconnection from room.")
+      state = "waiting"
+    end
+    //player is dead
+    if player.dead and state == "play" then
+      print("you're dead")
+      state = "dead"
+    end
+  end
+  if client.connection then
+    client.update()
+  end
+  
+  //------------------------------------------------------------
+  //Camera follow
+  if state != "solo" and player.dead then
+    local bestY = client.playersBest() //best of the room
+    camera.follow(0,bestY+50)
+  else
+    camera.follow(0,player.y+50) //player 
+  end
+  //Update game entities
+  for e in entities
+    e.update()
+  end
+  
+  //Death condition
+  if not player.dead then
+    if columns.hit(player) or trap.hit(player) then
+      player.dead = true
+      audio.playSound("death",0.5)
+      entities.removeElement(player)
+      sprayDeath(player.x,player.y)
+      after 0.1 second do sprayDeath(player.x,player.y) end
+      after 0.2 second do sprayDeath(player.x,player.y) end
+      after 0.5 second do sprayDeath(player.x,player.y) end
+      after 1 second do 
+        if state == "solo" then 
+          initGame()
+        end
+      end
+      
+      if player.score>0 then
+        webapi.gameOver(userName, player.score)
+      end
+    end
+  end
+  
+  //Update gui
+  gui.update()
+end
+
+sprayDeath = function(x,y)
+  for i=0 to 12
+    local dx = (random.next()-0.5)*4
+    local dy = (random.next()-0.5)*8
+    particles.addSprite("piece",x,y,dx,dy,0.5,0.2)
+  end
+end
+
+draw = function()
+  screen.clear()
+  screen.setScale(camera.z,camera.z)
+  screen.setTranslation(-camera.x*camera.z,-camera.y*camera.z)
+  for e in entities
+    e.draw()
+  end
+  if client.connection then
+    client.draw()
+  end
+  
+  screen.setTranslation(0,0)
+  screen.setScale(1,1)
+  gui.draw()
+end
+end()
+
+
+
+function()
+Background = class
+  MODULO_Y = 96
+  
+  constructor = function()
+    offset = 0
+    oldcameray=camera.y   
+  end
+  
+  update = function()
+    local dy = camera.y - oldcameray
+    oldcameray = camera.y   
+    offset -= dy * 0.8
+    offset %= MODULO_Y
+  end
+  
+  draw = function()
+    local miny = camera.y-250
+    local maxy = camera.y+250
+    
+    for y=miny to maxy by MODULO_Y
+      screen.drawSprite( "tower1", 0, y+offset+0 )
+      screen.drawSprite( "tower2", 0, y+offset+32 )
+      screen.drawSprite( "tower2", 0, y+offset+64 )
+    end
+  end
+end
+end()
+
+
+
+function()
+Camera = class
+  
+  constructor = function(x=0,y=0,z=1)
+    this.x = x
+    this.y = y
+    this.z = z
+    
+    this.xt = x
+    this.yt = y
+    this.zt = z
+    
+    this.speed = 0.05
+  end
+  
+  follow = function(xt,yt)
+    this.xt = xt
+    this.yt = yt
+  end
+  
+  update = function()
+    x += (xt-x)*speed
+    y += (yt-y)*speed
+    z += (zt-z)*speed
+  end
+  
+  draw = function()
+    
+  end
+  
+end
+end()
+
+
+
+function()
+Columns = class
+  WIDTH = 16
+  HEIGHT = 24
+  
+  constructor = function(seed)
+    randomSeeded = random.clone(seed)
+    columns = []
+    addRow(camera.y-(24*5))
+    update()
+  end 
+  
+  addRow = function(yc)
+    local haveBlade = randomSeeded.next()>0.5
+    //first rows are safes
+    local safe = columns.length<20
+    
+    local cSX = object
+      x = -COLUMN_X
+      y = yc
+      width = WIDTH*2
+      height = HEIGHT
+      dir = 1
+      blade = haveBlade and not safe
+    end
+    columns += cSX
+    
+    local cDX = object
+      x = COLUMN_X
+      y = yc
+      width = WIDTH*2
+      height = HEIGHT
+      dir = -1
+      blade = not haveBlade and not safe
+    end
+    columns += cDX
+  end
+  
+  update = function()
+    local miny = camera.y-250
+    local maxy = camera.y+250
+    
+    columns.sortList(function(c1,c2) c1.y - c2.y end)
+    
+    while(columns.last().y<maxy)
+      addRow(columns.last().y+24)
+    end
+
+    //Don't remove for multipleayer view    
+    // while(columns.first().y<miny)
+    //   columns.removeElement(columns.first())
+    // end
+  end
+  
+  hit = function(other)
+    //check all columns with blade if hit
+    for c in columns
+      if c.blade and tools.collide(c,other) then
+        return true
+      end
+    end
+    return false
+  end
+  
+  draw = function()
+    for c in columns
+      screen.setDrawScale(c.dir,1)
+      screen.drawSprite("columnempty",c.x,c.y)
+      if c.blade then 
+        screen.drawSprite("blade",c.x + c.dir*12,c.y)
+        screen.drawSprite("columnblade",c.x,c.y)
+      end
+      screen.setDrawScale(1,1)
+    end
+  end
+  
+end
+end()
+
+
+
+function()
+Gui = class
+  
+  constructor = function()
+  
+  end
+  
+  update = function()
+    
+  end
+  
+  drawIdle = function()
+    local x = -60
+    local y = -40
+    screen.fillRoundRect(x,y,60,20,5,palette.BLACK)
+    screen.drawRoundRect(x,y,60,20,5,palette.GREY)
+    screen.drawText("SOLO",x,y,12,palette.WHITE)
+    
+    local x = 60
+    local y = -40
+    screen.fillRoundRect(x,y,60,20,5,palette.BLACK)
+    screen.drawRoundRect(x,y,60,20,5,palette.GREY)
+    screen.drawText("MULTI",x,y,12,palette.WHITE)
+  end
+  
+  drawSolo = function()
+    if player.score==0 then
+      if player.score==player.high then screen.setColor(palette.ORANGE) end
+      local x = 0
+      local y = 70
+      if client.connection and client.connection.status == "connected" then
+        screen.fillRoundRect(x,y,60,20,5,palette.BLACK)
+        screen.drawRoundRect(x,y,60,20,5,palette.GREY)
+        screen.drawText("EXIT",x,y,12,palette.WHITE)
+      end
+      screen.drawText("HIGH: " + player.high,0,screen.height/2-50,16,palette.WHITE)
+    end
+  end
+  
+  drawMulti = function()
+    screen.setColor(palette.WHITE)
+    
+    local x = -screen.width/2+40
+    local y = screen.height/2-8
+    screen.drawText("SERVER: " + client.connection.status,x,y,8)
+    y-=10
+    screen.drawText("ID: " + client.id,x,y,8)
+    y-=10
+    screen.drawText("ROOM: " + client.room.roomId,x,y,8)
+    y-=10
+    screen.drawText("SEED: " + client.room.seed,x,y,8)
+    y-=10
+    local countPlayers = 0
+    for p in client.players
+      if p then countPlayers +=1 end
+    end
+    screen.drawText("PLAYERS: " + countPlayers,x,y,8)
+    y-=10
+    if(player.dead or player.score==0) then
+      screen.drawText("ROOM BEST: " + client.room.high,0,-screen.height/2+32,16,palette.ORANGE)
+    end
+    if state == "dead" or state == "waiting" then
+      local x = 0
+      local y = 70
+      screen.fillRoundRect(x,y,60,20,5,palette.BLACK)
+      screen.drawRoundRect(x,y,60,20,5,palette.GREY)
+      screen.drawText("EXIT",x,y,12,palette.WHITE)
+    end
+  end
+  
+  drawScoreAndName = function()
+    screen.drawText("SCORE: " + player.score,0,screen.height/2-8,16,palette.WHITE)
+    if(userName and player.y==0)then
+      screen.fillRoundRect(0,screen.height/2-30,120,20,8,palette.BLUE)
+      screen.drawRoundRect(0,screen.height/2-30,120,20,8,palette.WHITE)
+      screen.drawText("PLAYER: " + userName,0,screen.height/2-30,16,palette.WHITE)
+    end
+  end
+  
+  drawHighScoreTower = function()
+    //return false
+    if(player.y==0 and webapi.gameOvers!=0 )then
+      local x = 0
+      local y = 30
+      
+      screen.fillRoundRect(x,y-35,120,90,8,palette.BLUE)
+      screen.drawRoundRect(x,y-35,120,90,8,palette.WHITE)
+      screen.drawText("TODAY'S BEST of " + webapi.gameOvers,x,y,10,palette.ORANGE)
+      y-=12
+      for h in webapi.highs
+        if h.value < 9999 then
+          screen.drawText(h.userName + " - " + h.value,x,y,10,palette.WHITE)
+        else
+          screen.drawText(h.userName + " - " + "[Cheater :P]",x,y,10,palette.GREY)
+        end
+        y-=10
+      end
+      y-=4
+      screen.drawText("YOU RANKED: " + webapi.rank + "°",x,y,10,palette.ORANGE)
+    end
+  end
+  
+  draw = function()
+    if state == "idle" then
+      drawIdle()
+    elsif state == "solo" then
+      drawSolo()
+      drawScoreAndName()
+      drawHighScoreTower()
+    else
+      drawMulti()
+      drawScoreAndName()
+      drawHighScoreTower()
+    end
+    
+    screen.drawText(state,screen.width/2-40,screen.height/2-16,6,"#FFF")
+  end
+  
+end
+end()
+
+
+
+function()
+Input = class
+  
+  constructor = function()
+  
+    reset()
+  end
+  
+  reset = function()
+    
+    UP = false
+    DOWN = false
+    LEFT = false
+    RIGHT = false
+    ACTION = false
+    ESC = false
+    ANY = false
+    
+    press = object
+      UP = false
+      DOWN = false  
+      LEFT = false
+      RIGHT = false
+      ACTION = false
+      ESC = false
+      ANY = false
+    end
+    
+    release = object
+      UP = false
+      DOWN = false  
+      LEFT = false
+      RIGHT = false
+      ACTION = false
+      ESC = false
+      ANY = false
+    end
+  end
+  
+  update = function()
+    
+    //touch layer
+    local touchLeft = false
+    local touchRight = false
+    local touchUp = false
+    local touchDown = false
+    if touch.touching then
+      if touch.x < -40 then touchLeft = true end
+      if touch.x > 40 then touchRight = true end
+      if touch.y > 40 then touchUp = true end
+      if touch.y < -40 then touchDown = true end
+    end
+    
+    //map keys
+    local up = keyboard.UP or gamepad.UP or touchUp
+    local down = keyboard.DOWN or gamepad.DOWN or touchDown
+    local left = keyboard.LEFT or gamepad.LEFT or touchLeft
+    local right = keyboard.RIGHT or gamepad.RIGHT or touchRight
+    local action = keyboard.SPACE  or keyboard.ENTER or keyboard.X or gamepad.B
+    local esc = keyboard.ESCAPE or keyboard.Q or gamepad.MENU
+    local any = up or down or left or right or action
+    
+    //save rising edge
+    press.UP = up and not UP
+    press.DOWN = down and not DOWN
+    press.LEFT = left and not LEFT
+    press.RIGHT = right and not RIGHT
+    press.ACTION = action and not ACTION
+    press.ESC = esc and not ESC
+    press.ANY = any and not ANY
+    
+    //save falling edge
+    release.UP = not up and UP
+    release.DOWN = not down and DOWN
+    release.LEFT = not left and LEFT
+    release.RIGHT = not right and RIGHT
+    release.ACTION = not action and ACTION
+    release.ESC = not esc and ESC
+    release.ANY = not any and ANY
+    
+    //save state
+    UP =  up
+    DOWN = down
+    LEFT = left
+    RIGHT = right
+    ACTION = action
+    ESC = esc
+    ANY = any
+  end
+  
+  draw = function()
+    
+  end
+  
+end
+end()
+
+
+
+function()
+client = object
+  
+  init = function()
+    connection = new ServerConnection()
+    room = 0
+    ready = 0
+    players = []
+    lastScore = -1
+    tServer = 0
+    tRefresh = 0
+    id = 0
+    run = true
+  end
+  
+  close = function()
+    print("closing client...")
+    run = false
+    if connection then
+      connection.close()
+      delete connection
+    end
+    id = 0
+  end
+  
+  playersCount = function()
+    local count = 0
+    for p in players
+      if p and p.id != 0 then
+        count += 1
+      end
+    end
+    return count
+  end
+  
+  playersBest = function()
+    local bestY = 0
+    for p in players
+      if p and not p.dead and p.y>bestY then
+        bestY = p.y
+      end
+    end
+    return bestY
+  end
+  
+  update = function()
+    tRefresh += 1/60
+    
+    if not run then return end
+    
+    if connection.status == "error" then
+      tServer += 1/60
+      if tServer>5 then
+        tServer = 0
+        connection = new ServerConnection()
+        print("server: is " + connection.status + " try connecting...")
+      end
+    end
+    
+    //Received message
+    for msg in connection.messages
+      
+      if (msg.dataType == "id") then
+        print("<<id")
+        id = msg.id //store id in this object
+      end
+      
+      if (msg.dataType == "room") then
+        print("<<room")
+        local seedChanged = (msg.seed != room.seed)
+        room = msg //save msg room
+        if seedChanged then
+          initGame(msg.seed,id)
+        end
+      end
+      
+      if (msg.dataType == "player") then
+        //Check if other trigger death
+        if msg.dead and not players[msg.id].dead then
+          sprayDeath(msg.x,msg.y)
+        end
+        
+        //Save other players data
+        players[msg.id] = object
+            id = msg.id
+            name = msg.name
+            x = players[msg.id].x
+            y = players[msg.id].y
+            xt = msg.x
+            yt = msg.y
+            score = msg.score
+            dead = msg.dead
+        end
+      end
+      
+      if (msg.dataType == "restart") then
+          print(">> restart")
+          room.seed = msg.seed
+          initGame(room.seed,id)
+          global.state = "play"
+      end
+      
+      if (msg.dataType == "kick") then
+          print(">> kick")
+          players[msg.id]=0
+      end
+    end
+    
+    //Comunicate only after received an id
+    if id then
+      //Send message with my state
+      if player.score != lastScore or tRefresh > 0.5  then
+        lastScore = player.score
+        tRefresh = 0
+        local msgPlayer = object
+          dataType = "player"
+          id = id
+          name = player.name
+          //x = player.x
+          //y = player.y
+          x = player.side * -PLAYER_X
+          y = player.score * Columns.HEIGHT
+          score = player.score
+          dead = player.dead
+        end
+        connection.send(msgPlayer)
+        //print(">> player")
+      end
+    end
+    
+    //Update movements
+    for p in players
+      if p then
+        p.x += (p.xt-p.x)/4 
+        p.y += (p.yt-p.y)/4 
+      end
+    end
+    
+  end
+  
+  draw = function()
+    if id then //have and id from server
+      for p in players
+        if p and not p.dead and p.id != id and p.id != 0 then
+          
+          local side = -1
+          if p.x<0 then side=1 end
+          
+          //Draw ghost
+          screen.setAlpha(0.5)
+          screen.setDrawScale(1,-side)
+          screen.setDrawRotation(90)
+          screen.drawSprite("cube_ghost",p.x,p.y)
+          screen.setDrawRotation(0)
+          screen.setDrawScale(1,1)
+          screen.setAlpha(1)
+          
+          //Draw id
+          screen.drawText(p.id,p.x,p.y,4,"#FFF")
+        end
+      end
+    end
+  end
+  
+end
+end()
+
+
+
+function()
+serverInit = function()
+  server = new Server()
+  print("server Initiated")
+  t = 0
+  roomId = 0
+  rooms = []
+end
+
+createNewRoom = function()
+  roomId += 1
+  local room = object
+    dataType = "room"
+    roomId = roomId
+    seed = random.nextInt(9999)
+    clientIds = []
+    clientTimeouts = []
+    clientDeaths = []
+    high = 0
+    allDead = false
+  end
+  rooms += room
+  return room
+end
+
+findFreeRoom = function()
+  for room in rooms
+    if room.clientIds.length < 5 then
+      return room
+    end
+  end
+end
+
+findRoomByclientId = function(clientId)
+  for room in rooms
+    for cid in room.clientIds
+      if (cid = clientId)then
+        return room
+      end
+    end
+  end
+  return 0
+end
+
+serverSendTo = function(cid,msg)
+  for client in server.active_connections
+    if client.id == cid then
+     client.send(msg)
+    end
+  end
+end
+
+sendToRoom = function(room,msg)
+  for client in server.active_connections
+    for cid in room.clientIds
+      if client.id == cid then
+       client.send(msg)
+       //print(">> r:" + room.roomId +  " p:" + cid )
+      end
+    end
+  end
+end
+
+serverUpdate = function()
+  t += 1/60
+  
+  //new connections
+  for client in server.new_connections
+    print("new connection: " + client.id)
+    local cid = client.id
+    
+    //Send id to player
+    client.send(object 
+                  dataType = "id"
+                  id = cid
+                  end )
+    
+    //Find/Create a room for player
+    local room = findFreeRoom()
+    if not room then
+      room = createNewRoom()
+    end
+    
+    room.clientIds += cid
+    room.clientTimeouts[cid] = 5 // initial timeout
+    room.clientDeaths[cid] = false
+    //print(room)
+    
+    //Send room too all client Ids
+    sendToRoom(room,room)
+  end
+
+  //received messages
+  for msg in server.messages
+    if msg.data.dataType == "player" then
+      local clientId = msg.connection.id
+      local room = findRoomByclientId(clientId)
+      if room then
+        //Update this player timeout
+        room.clientTimeouts[clientId] = 2
+        //Update this player Death
+        room.clientDeaths[clientId] = msg.data.dead
+        //Check if player made an highscore
+        if msg.data.score > room.high then
+          room.high = msg.data.score
+          print("new room best "+ room.high)
+        end
+        //Update all other players in room with this player data
+        sendToRoom(room,msg.data)
+      else
+        print("! room not found for player:"+clientId)
+      end
+    end
+  end
+  
+  
+  //all players dead
+  for room in rooms
+    if room.clientIds.length>0 then
+      local allDead = true
+      for cid in room.clientIds
+        if not room.clientDeaths[cid] then
+          allDead = false
+        end
+      end
+      if allDead and not room.allDead then
+        local msgRestart= object
+             dataType = "restart"
+             id = cid
+             seed = random.nextInt(9999)
+        end
+        room.allDead = true
+        sendToRoom(room,msgRestart)
+        print("all dead in room")
+      end
+    end
+  end
+  
+  //disconnection
+  for room in rooms
+    for cid in room.clientIds
+      //Decrement timeout
+      room.clientTimeouts[cid]-=1/60
+      //Chekc if some client timed out
+      if room.clientTimeouts[cid]<0 then
+        //Remove client data
+        room.clientIds.removeElement(cid)
+        room.clientTimeouts.removeAt(cid)
+        room.clientDeaths.removeAt(cid)
+        print("kick: " + cid)
+        //update removed
+        local msgKick = object
+           dataType = "kick"
+           id = cid
+        end
+        //Send kick to room
+        sendToRoom(room,msgKick)
+        //disconnect
+        for client in server.active_connections
+          if client.id == cid then
+            client.disconnect()
+          end
+        end
+      end
+    end
+  end
+  
+end
+end()
+
+
+
+function()
+
+webapi = object
+  
+  highs = []
+  gameOvers = 0
+  rank = 0
+  base_url = "https://highscore.runasp.net/stat"
+  
+  gameStart = function(userId)
+    local url = base_url + "/add/CAS/1/"+userId  
+    fetchJSON(url,function(res) print(">>>: "+res.id) end)
+  end
+  
+  gameOver = function(userId,score)
+    local url = base_url + "/add/CAS/2"+"/"+userId  +"/"+score
+    //print(url)
+    fetchJSON(url,function(res) 
+        //print(">>>: "+res.id)
+      end)
+  end
+  
+  getTodayHighs = function()
+    local url = base_url + "/bestTodayVerified/CAS/16"
+    //local url = base_url + "/bestToday/CAS"
+    fetchJSON(url,function(res) 
+        //print(">>>: "+res)
+        highs = []
+        for h in res.slice(0,5)
+          highs += h
+          //print(h)
+        end
+      end)
+  end
+    
+  getTodayGameOvers = function()
+    local url = base_url + "/gameOverToday/CAS"
+    //print(url)
+    fetchJSON(url,function(res) 
+        //print(">>>: "+res)
+        gameOvers = res
+      end)
+  end
+  
+  getTodayRank = function(userId)
+    local url = base_url + "/rankToday/CAS/"+userId
+    //print(url)
+    fetchJSON(url,function(res) 
+        //print(">>>: "+res)
+        rank = res
+      end)
+  end
+  
+end
+
+system.javascript(
+"""
+  global.fetchJSON = function( url, callback ) {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => callback(data));
+  }
+  
+  global.parseJSON = function(json){
+    return JSON.parse(json)
+  }
+""")
+
+
+end()
+
+
+
+function()
+//pico 8 palette
+palette = object
+  
+  WHITE = "rgb(194,195,199)"
+  BLACK = "rgb(0,0,0)"
+  GREY = "rgb(95,87,79)"
+  ORANGE = "rgb(255,163,0)"
+  BROWN = "rgb(171,82,54)"
+  YELLOW = "rgb(255,236,39)"
+  PINK = "rgb(255,204,170)"
+  GREEN = "rgb(0,228,54)"
+  GREEN_DARK = "rgb(0,135,81)"
+  BLUE = "rgb(29,43,83)"
+  VIOLET = "rgb(131,118,156)"
+  PURPLE = "rgb(126,37,83)"
+  
+end
+end()
+
+
+
+function()
+Particles = class
+  
+  constructor = function()
+    particles = []
+  end
+  
+  addText = function(ptext,px,py,pvx,pvy,plife=1)
+    local p = object
+      text = ptext
+      x = px
+      y = py
+      vx = pvx
+      vy = pvy
+      life = plife
+      
+      update = function()
+        vx *= 0.95
+        vy *= 0.95
+      end
+      
+      draw = function()
+        screen.drawText(text,x,y,6,"rgb(194,195,199)")
+      end
+    end
+    particles.push(p)
+  end
+  
+  addTrail = function(px,py)
+    local p = object
+      x = px
+      y = py
+      width = 1+random.nextInt(2)
+      height = 1+random.nextInt(1)
+      vx = 0
+      vy = 0
+      life = 2
+      alpha = 1
+      
+      update = function()
+        alpha -= 1/120
+      end
+      
+      draw = function()
+        screen.setAlpha(alpha)
+        screen.fillRect(x,y,width,height,"rgb(0,228,54)")
+        screen.setAlpha(1)
+      end
+    end
+    particles.push(p)
+  end
+  
+  addSmoke = function(px,py)
+    local p = object
+      x = px
+      y = py
+      vx = (random.next()-0.5)
+      vy = (random.next()-0.5)
+      life = 0.5
+      
+      update = function()
+        //nothing special
+      end
+      
+      draw = function()
+        screen.fillRound(x,y,life*5,life*5,"rgb(194,195,199)")
+      end
+    end
+    particles.push(p)
+  end
+  
+  addSprite = function(sprite,px,py,pvx,pvy,plife=5,pG=0.1)
+     local p = object
+      x = px
+      y = py
+      vx = pvx
+      vy = pvy
+      a = random.nextInt(360)
+      life = plife
+      G = pG
+      sprite = sprite
+      timer = 0
+      frame = 0
+      
+      draw = function()
+        screen.setDrawRotation(a)
+        screen.drawSprite(sprite+"."+frame,x,y)
+        screen.setDrawRotation(0)
+      end
+      
+      update = function()
+        local spr = sprites[sprite]
+        spr.setFrame(frame)
+        timer += 1/60 
+        if timer > 1/spr.fps then
+          timer = 0
+          frame += 1
+        end
+        
+        if(spr.frames.length>1 and frame>=spr.frames.length) then
+          life = 0
+        end
+      end
+     end
+  
+    particles.push(p)
+  end
+  
+  update = function()
+    for p in particles
+       p.update()
+       p.x += p.vx 
+       p.y += p.vy
+       if p.G then p.vy-=p.G end
+       p.life -= 1/60 
+       if(p.life<0) then 
+        particles.removeElement(p)
+      end
+    end
+  end
+  
+  draw = function()
+    for p in particles
+      p.draw() 
+    end
+  end
+  
+end
+end()
+
+
+
+function()
+Player = class
+  
+  constructor = function(x,y)
+    local side = 1
+    if random.next()>0.5 then side*=-1 end
+  
+    this.x = x * -side
+    this.y = y
+    this.width = 10
+    this.height = 10
+    
+    this.xt = x * -side
+    this.yt = y
+    
+    this.jumpAngle = 180
+    this.jx = 0
+    
+    this.side = side
+    this.state ="idle"
+    this.t = 0
+    this.cooldown = 0
+    
+    this.id = 0
+    this.name = storage.get("name")
+    if not name then
+      name = "#"+random.nextInt(10)+"."+random.nextInt(10)
+    end
+    this.score = 0
+    this.high = storage.get("high")
+    this.dead = false
+    this.moves = []
+  end
+  
+  update = function()
+    t+=1/60
+    cooldown -= 1/60
+    
+    local newSide = 0
+    if cooldown<0 then
+      if input.press.LEFT then
+        newSide = 1
+      end
+      if input.press.RIGHT then
+        newSide = -1
+      end
+    end
+    
+    if newSide then
+      particles.addSmoke(player.x,player.y)
+      particles.addSmoke(player.x,player.y)
+      //nome, volume, intonazione, panoramica, ripetizione )
+      audio.playSound("jump",0.5,1,-newSide*0.5,0)
+      cooldown = 0.1
+      
+      if newSide!=side then
+       xt = side*PLAYER_X
+      else
+        jumpAngle = 0
+      end
+     
+      yt += Columns.HEIGHT
+      side = newSide
+      score += 1
+    end
+    
+    x += (xt-x)/4 
+    y += (yt-y)/4
+    
+    if jumpAngle<180 then jumpAngle+=10 end
+    jx = sind(jumpAngle) * 16 * side
+    
+    //save High score
+    if not dead and score>high then
+      high=score
+      storage.set("high",high)
+    end
+  end
+  
+  draw = function()
+    screen.setDrawScale(1,-side)
+    screen.setDrawRotation(90)
+    screen.drawSprite("cube",x+jx,y)
+    screen.setDrawRotation(0)
+    screen.setDrawScale(1,1)
+    //screen.drawRound(xt,yt,5,5,"#F0A")
+  end
+end
+end()
+
+
+
+function()
+dbg = function()
+  print("dbg")
+  system.pause()
+end
+
+List.first = function()
+  return this[0]
+end
+
+List.last = function()
+  return this[this.length-1]
+end
+
+List.update = function()
+  for o in this
+    o.update()
+  end
+end
+
+List.draw = function()
+  for o in this
+    o.draw()
+  end
+end
+
+random.nextRange = function(val_min,val_max)
+  return (random.next() * (val_max-val_min) + val_min)
+end
+  
+random.nextList = function(list)
+  local index = random.nextInt(list.length)
+  return list[index]
+end
+
+tools = object
+  clamp = function(val,vmin,vmax)
+    if(val>vmax) then return vmax end
+    if(val<vmin) then return vmin end
+    return val
+  end
+  
+  lerp = function(a,b,f)
+    return (a * (1.0 - f)) + (b * f)
+  end
+  
+  rLerp = function(a,b,f)
+    local cs = (1-f)*cosd(a) + f*cosd(b)
+    local sn = (1-f)*sind(a) + f*sind(b)
+    return atan2d(sn,cs)
+  end
+  
+  inRange = function(val,vmin,vmax)
+    return val>vmin and val<vmax
+  end
+  
+  roundDigits = function(val,digits)
+    local p = 10^digits
+    local r =  round(val * p)/p
+    return r.toString()
+  end
+  
+  padLeft = function(val,digits,char=" ")
+    local res = val.toString()
+    while res.length<digits 
+      res = char + res
+    end
+    return res
+  end
+  
+  //Assume r1 and r2 object with x,y,height,width
+  collide = function(r1,r2)
+    return(r1.x - r1.width/2 < r2.x + r2.width/2 and
+          r1.x + r1.width/2 > r2.x - r2.width/2 and
+          r1.y - r1.height/2 < r2.y + r2.height/2 and
+          r1.y + r1.height/2 > r2.y - r2.height/2) 
+  end
+  
+  distancePoints = function(x1,y1,x2,y2)
+    local dx = x1-x2
+    local dy = y1-y2
+    return sqrt(dx*dx+dy*dy)
+  end
+  
+  //Assume p1 and p2 with x,y
+  distance = function(p1,p2)
+    return distancePoints(p1.x,p1.y,p2.x,p2.y)
+  end
+end
+
+
+end()
+
+
+
+function()
+Trap = class
+  MAX_SPEED = 0.037
+  
+  constructor = function(y)
+    this.x = 0
+    this.y = -20
+    this.width = 400
+    this.height = 24
+    this.pause = true
+    this.t = 0
+  end
+  
+  update = function()
+    t += 1/60
+    if player.y-y>80 or t>10 then
+      pause=false
+    end
+    
+    if state != "idle" and not pause then
+      //Calc speed based on player score
+      speed = 0.01 + player.score/2000
+      if speed > MAX_SPEED then speed=MAX_SPEED end
+      //Follow player
+      y += (player.y-y+20)*speed
+    end
+  end
+  
+  hit = function(other)
+     return tools.collide(this,other)
+  end
+  
+  draw = function()
+     screen.drawSprite( "spike",-32, y )
+     screen.drawSprite( "spike",-16, y )
+     screen.drawSprite( "spike", 0, y )
+     screen.drawSprite( "spike",16, y )
+     screen.drawSprite( "spike", 32, y )
+     screen.drawSprite( "cage", 0, y-16 )
+  end
+  
+end
+end()
+
+
+</script></html>
