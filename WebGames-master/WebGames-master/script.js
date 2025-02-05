@@ -105,7 +105,7 @@ const mainContentData = [
     link: "games/Basketball-Legends-2020-gh-pages/Basketball-Legends-2020-gh-pages/index.html",
   },
   {
-    name: "tanuki sunset",
+  name: "Tanuki Sunset",
     image: "assets/taunki.jpeg",
     link: "games/tanuki-sunset-master/index.html",
   },
@@ -115,27 +115,27 @@ const mainContentData = [
     link: "games/The-Shadow-Reform.html",
   },
   {
-    name: "tiny-fishing",
+    name: "Tiny Fishing",
     image: "games2/game/tiny-fishing/thumb.png",
     link: "games2/game/tiny-fishing/index.html",
   },
   {
-    name: "idle-breakout",
+    name: "Idle Breakout",
     image: "games2/assets/idle-breakout.jpg",
     link: "games2/game/idle-breakout/index.html",
   },
   {
-    name: "just-fall",
+    name: "Just Fall",
     image: "games2/assets/just-fall.jpg",
     link: "games2/game/just-fall/index.html",
   },
   {
-    name: "monkey-mart",
+    name: "Monkey Mart",
     image: "games2/assets/monkey-mart.png",
     link: "games2/game/monkey-mart/index.html",
   },
   {
-    name: "BackRooms",
+    name: "Back Rooms",
     image: "/WebGames-master/WebGames-master/games2/game/backrooms/Backrooms-Games.webp",
     link: "/WebGames-master/WebGames-master/games2/game/backrooms/index.html",
   },
@@ -245,7 +245,7 @@ const mainContentData = [
     link: "/WebGames-master/WebGames-master/games/townmain.html",
   },
   {
-    name: "Achievement Unlocked",
+    name: "Achievement Unlocked Not Here Yet",
     image: "/image-robert-added/image-robert-added/achievementunlocked.png",
     link: "/WebGames-master/WebGames-master/games/townmain.html",
   },
