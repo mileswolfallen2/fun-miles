@@ -1,0 +1,467 @@
+<!DOCTYPE html><html><head><title>micro Box</title><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui=1"><meta charset="UTF-8"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="description" content=""><link rel="manifest" href="manifest.json"><link rel="icon" type="image/png" href="icon64.png"><link rel="apple-touch-icon" sizes="180x180" href="icon180.png"><link rel="icon" type="image/png" sizes="32x32" href="icon32.png"><link rel="icon" type="image/png" sizes="16x16" href="icon16.png"><style>html,body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  overflow:hidden;
+  font-family: Verdana;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#canvaswrapper {
+  text-align: center ;
+}
+</style><style>@font-face { font-family: "BitCell" ; src: url("fonts/BitCell.ttf") format("truetype"); }</style><style>@font-face { font-family: "Edunline" ; src: url("fonts/Edunline.ttf") format("truetype"); }</style><script>window.fonts = ["BitCell","Edunline"]</script></head><body class="noselect custom-cursor" oncontextmenu="return false;"><div id="canvaswrapper"></div><script type="text/javascript">var resources = {"images":[{"file":"arrow_left.png","version":11,"size":175,"properties":{"frames":1,"fps":5}},{"file":"arrow_right.png","version":6,"size":177,"properties":{"frames":1,"fps":5}},{"file":"exit.png","version":21,"size":152,"properties":{"frames":1,"fps":5}},{"file":"gamepad.png","version":33,"size":327,"properties":{"frames":1,"fps":5}},{"file":"icon.png","version":250,"size":748,"properties":{"frames":1,"fps":5}},{"file":"icon_transparent.png","version":19,"size":741,"properties":{"frames":1,"fps":5}},{"file":"keyboard.png","version":24,"size":272,"properties":{"frames":1,"fps":5}},{"file":"microstudio.png","version":1,"size":17652,"properties":{}},{"file":"poster.png","version":4,"size":56514,"properties":{"frames":1,"fps":5}},{"file":"rotate.png","version":47,"size":286,"properties":{"frames":1,"fps":5}},{"file":"touch.png","version":25,"size":239,"properties":{"frames":1,"fps":5}}],"assets":[],"maps":{},"sounds":[{"file":"microfxr-back.wav","version":1,"size":51772,"properties":{}},{"file":"microfxr-enter.wav","version":1,"size":51772,"properties":{}},{"file":"microfxr-switch.wav","version":1,"size":4872,"properties":{}},{"file":"microfxr-welcome.wav","version":1,"size":95192,"properties":{}}],"music":[]};
+var graphics = "M1";
+
+</script><script type="text/javascript">var orientation = 'landscape' ;
+var aspect = 'free' ;
+var ms_libs = [] ;
+window.skip_service_worker = true;
+window.exported_project = true;
+window.ms_use_server = false ;
+</script><script src="compiler.js"></script><script src="parser.js"></script><script src="processor.js"></script><script src="program.js"></script><script src="routine.js"></script><script src="runner.js"></script><script src="token.js"></script><script src="tokenizer.js"></script><script src="transpiler.js"></script><script src="microengine.js"></script></body><script type="text/javascript">//
+//
+// The game is started with the code below.
+// Once you have received the "started" signal (see below),
+// you can do the following:
+// 1) Inject functions or objects into the global context of the microStudio engine, example:
+//
+//   window.player.setGlobal("special_callback",function(x) { console.info(x) }) ;
+//   // Your microScript code can now call the "special_callback" function
+//
+// 2) Call microScript global functions from your JavaScript code, example:
+//
+//   window.player.call("call_me_from_javascript",[10,1000]) ;
+//   // arguments to the function call are provided as an array
+//
+// 3) Run a microScript code snippet from your JavaScript code, example:
+//
+//   window.player.exec("player.position_x = 50",function(result) { console.log(result) ; }) ;
+//
+
+window.addEventListener("load",function() {
+  window.player = new Player(function(event) {
+    if (event.name == "started") {
+      // signal that the game is started
+    }
+    else if (event.name == "log") {
+      // console.info(event.data) ;
+    }
+  }) ;
+  document.body.focus() ;
+}) ;
+
+</script><script id="code" type="text/x-microscript">
+
+
+function()
+addGame = function(title,nick,slug)
+  games += object
+    title = title
+    nick = nick
+    slug = slug
+  end
+end
+
+addGames = function()
+  games = []
+
+  addGame("Nameless Moth","Deleted","moth")
+  addGame("Evade","HomineLudens","evade")
+  addGame("Take me to Mars","JimB007","tmtm")
+  addGame("The Great Wyrm","KimsGames","holiday2022")
+  addGame("micro Mower","JimB007","micromower")
+  addGame("Lemmy Long Legs II","Ogofkop","lemmylonglegs2")
+  addGame("Panzer!","Sebastian","panzer")
+  addGame("Marble Quest","HomineLudens","marblequest")
+  addGame("Meowy's Adventure","mrLman","meowys_adventure")
+  addGame("Energy Leak","JmeJuniper","nrgleak2")
+  addGame("micro Farm","JimB007","microfarm")
+  addGame("Night Drive","jaysnjj","nightdrive")
+  addGame("Courage","KimsGames","courage")
+  addGame("NES Fire","royerson","fire")
+  addGame("micro Adventure","JimB007","micoadventure")
+  addGame("Sandra and the Avocados","stonith","sandra")
+  addGame("Troubles Be Gone","KimsGames","halloween")
+  addGame("Reggie the Hedgie","gilles","reggie")
+  addGame("Alien Blaster","jaysnjj","alien_blaster")
+  addGame("Lemmy Long Legs","Ogofkop","lemmylongleg")
+  addGame("Fishing Party","gilles","fishing2")
+  addGame("Racing Demo","gilles","racingdemo")
+  addGame("Planet Repair Squad","gilles","planetrepairsquad")
+  shuffle()
+end
+
+shuffle = function()
+  local g = []
+  while games.length > 0
+    local game = games.removeAt(random.nextInt(games.length))
+    g += game
+  end
+  games = g
+end
+
+end()
+
+
+
+system.javascript("""
+
+// javascript
+
+this.embed = function(url,close_button) {
+  console.info(url);
+  console.info("close_button = "+close_button)
+  var canvas = document.querySelector("canvas") ;
+  var parent = canvas.parentNode ;
+  var iframe = document.createElement("iframe") ;
+  iframe.src = url ;
+  iframe.allow = "autoplay https://microstudio.io; gamepad https://microstudio.io; midi https://microstudio.io"
+  iframe.style = "position: absolute ; top: 0 ; left: 0 ; width: 100% ; height: 100% ; border: none ; z-index: 0 ; transition-property: opacity ; transition-duration: 2s ; opacity: 0" ;
+  iframe.allowFullscreen = false ;
+
+  canvas.style["transition-property"] = "opacity" ;
+  canvas.style["transition-duration"] = "1s" ;
+  parent.insertBefore(iframe,canvas)
+  iframe.contentWindow.addEventListener("load",()=>{
+    iframe.contentWindow.focus() ;
+    iframe.style.opacity = 1 ;
+  })
+
+  iframe.contentWindow.addEventListener('keydown', (event) => {
+    console.log('Keydown event in iframe:', event);
+    if (event.key == "Escape") {
+      global.back_to_menu = true ;
+    }
+  });
+  
+  if (close_button) {
+    console.info("CLOSE BUTTON")
+    var img = new Image() ;
+    img.src = "sprites/exit.png" ;
+    img.id = "exit-button" ;
+    img.style = "width: 5vw ; position: fixed ; top: 1.5vw ; right: 1.5vw ; opacity: .5 ; image-rendering: moz-crisp-edges; image-rendering: pixelated ; z-index: 10" ;
+    document.body.appendChild(img) ;
+    img.addEventListener("click",()=>{global.back_to_menu = true})
+  }
+  
+  setTimeout(()=> {
+    canvas.style.opacity = 0 ;
+    setTimeout(()=>{
+      canvas.style.display = "none" ;
+    },1000)
+  },0)
+  
+  setTimeout(()=>{
+    
+  },500)
+
+  global.canvas = canvas
+  global.iframe = iframe
+  global.window = window
+}
+
+this.restore = function() {
+  var iframe = document.querySelector("iframe") ;
+  if (iframe) {
+    iframe.parentNode.removeChild(iframe) ;
+  }
+  var canvas = document.querySelector("canvas") ;
+  canvas.style.display = "block" ;
+  setTimeout(()=>{
+    canvas.style.opacity = 1 ;
+  },1)
+  
+  setTimeout(()=> { window.focus() },100)
+  var exit = document.getElementById("exit-button") ;
+  if (exit) {
+    exit.parentNode.removeChild(exit) ;
+  }
+}
+
+this.loadImage = function(url,callback) {
+  var img = new Image() ;
+  img.src = url ;
+  img.onload = ()=> { callback(new global.Image(img)) } ;
+}
+
+
+var fullscreendone = false ;
+
+document.body.addEventListener("mouseup",()=> {
+  if (! fullscreendone) {
+    fullscreendone = true ;
+    document.body.requestFullscreen() ;
+  }
+}) ;
+
+/*
+This will be needed to work cross-domain
+
+window.addEventListener("message",(msg)=>{
+  try {
+    var data = JSON.parse(msg.data) ;
+    if (data.name == "started") {
+      console.info("STARTED!") ;
+    }
+  } catch (err) {
+    
+  };
+}) ;*/
+
+""")
+
+
+
+function()
+CRT = function(size = 240,intensity = .5)
+  if not CRT_BUFFER.type or size != CRT_BUFFER_SIZE or intensity != CRT_BUFFER_INTENSITY then
+    CRT_BUFFER_SIZE = size
+    size *= 2
+    CRT_BUFFER_INTENSITY = intensity
+    CRT_BUFFER = new Image(size,size)
+    CRT_BUFFER.setRadialGradient(size/2,size/2,size/2*1.4142,"rgba(0,0,0,0)","rgba(0,0,0,"+intensity+")")
+    CRT_BUFFER.fillRect(0,0,size,size)
+
+    CRT_BUFFER.setRadialGradient(size/2,size/2,size/2*3,"rgba(0,0,0,0)","rgba(0,0,0,"+intensity+")")
+    for i=0 to size by 4
+      //CRT_BUFFER.drawLine(0,0,200,200)
+      CRT_BUFFER.drawLine(0,i+.5,size,i+.5)
+    end
+  end
+  
+  screen.setPixelated(false)
+  screen.drawImage(CRT_BUFFER,0,0,screen.width,screen.height)
+  screen.setPixelated(true)
+end
+end()
+
+
+
+function()
+init = function()
+  // embed()
+  addGames()
+  
+  for game in games
+    loadImage("https://microstudio.io/"+game.nick+"/"+game.slug+"/sprites/icon.png",function(img)
+      game.image = img
+    end)
+  end
+  
+  browse_position = 0
+  browse_selected = 0
+  target_position = 0
+  position_speed = 0
+  started = false
+  back_to_menu = false
+  dragging = false
+  
+  control_modes = ["keyboard","gamepad","touch"]
+  
+  control = object end
+  clickable = []
+  
+  mode = "browse"
+  screen.setFont("Edunline")
+end
+
+update = function()
+  if not started then
+    if mouse.press then
+      started = true
+      audio.playSound("microfxr/welcome",.125)
+    end
+    return
+  end
+  
+  if gamepad.press.RIGHT or gamepad.press.LEFT or gamepad.A then
+    control_modes = ["gamepad"]
+  end
+  
+  if keyboard.press.RIGHT or keyboard.press.LEFT or keyboard.press.ENTER or keyboard.press.SPACE then
+    control_modes = ["keyboard"]
+  end
+
+  control.LEFT = gamepad.press.LEFT or keyboard.press.LEFT
+  control.RIGHT = gamepad.press.RIGHT or keyboard.press.RIGHT
+  control.ACTION = gamepad.press.A or keyboard.press.ENTER or keyboard.press.SPACE
+  control.BACK = back_to_menu or gamepad.press.MENU or (gamepad.X and gamepad.B)
+  
+  if touch.press then
+    control_modes = ["touch"]
+    dragging = false
+    if abs(touch.x+150)<10 and abs(touch.y)<25 then
+      if target_position > 0 then
+        target_position -= 1
+        browse_selected = target_position+1
+        audio.playSound("microfxr/switch",.125)
+      end
+    elsif abs(touch.x-150)<10 and abs(touch.y)<25 then
+      if target_position < games.length-4 then
+        target_position += 1
+        browse_selected = target_position+1
+        audio.playSound("microfxr/switch",.125)
+      end
+    elsif abs(touch.x)<140 and abs(touch.y)<50 then
+      dragging = true
+      drag_start = target_position
+      drag_start_x = touch.x
+      drag_moved = false
+      browse_selected = round((touch.x+105)/70)+target_position
+    end
+  end
+  
+  if touch.touching then
+    if dragging then
+      if abs(touch.x - drag_start_x) > 10 then
+        drag_moved = true
+        browse_selected = -1
+      end
+      
+      if drag_moved then
+        target_position = max(0,min(games.length-4,drag_start+(drag_start_x-touch.x)/30))
+      end
+    end
+  end
+  
+  if touch.release then
+    if dragging then
+      dragging = false
+      if drag_moved then
+        target_position = round(target_position)
+        browse_selected = target_position + 1
+      else
+        control.ACTION = true
+      end
+    end
+  end
+   
+  if mode == "browse" then
+    if control.RIGHT then
+      if browse_selected < games.length-1 then
+        browse_selected += 1
+        audio.playSound("microfxr/switch",.125)
+        if target_position < browse_selected-2 then
+          target_position += 1
+          target_position = min(games.length-4,target_position)
+        end
+      end
+    end
+    
+    if (control.LEFT) and browse_selected > 0 then
+      browse_selected -= 1
+      audio.playSound("microfxr/switch",.125)
+      if target_position > browse_selected-1 and target_position > 0 then
+        target_position -= 1
+      end
+    end
+    
+    if control.ACTION then
+      mode = "play"
+      audio.playSound("microfxr/enter",.125)
+      local game = games[browse_selected]
+      embed("https://microstudio.io/"+game.nick+"/"+game.slug+"/",control_modes[0] == "touch")
+    end
+  else
+    if control.BACK then
+      back_to_menu = false
+      restore()
+      mode = "browse"
+      audio.playSound("microfxr/back",.125)
+    end
+  end
+  
+  position_speed += (target_position-browse_position)*.1
+  position_speed *= .5
+  browse_position += position_speed
+end
+
+draw = function()
+  local background = "rgb(5,30,43)"
+  screen.clear(background)
+  if screen.width < screen.height then
+    screen.setAlpha(.5)
+    screen.drawSprite("rotate",0,0,48)
+    screen.setAlpha(1)
+    return
+  end
+
+  screen.setFont("Edunline")
+  if not screen.isFontReady() then
+    return
+  end
+  screen.drawText("micro Box",0,65,20,"rgb(65,120,147)")
+  if not started then
+    screen.setFont("BitCell")
+    local size = sin((system.time()%500)/500*PI*2)
+    screen.fillRect(0,-25,60+size,18+size*.5,"rgb(197,87,87)")
+    screen.drawText("START",0,-25,10,"#FFF")
+    screen.drawSprite("icon_transparent",0,20)
+    screen.drawText("Powered by",0,-70,6,"rgba(255,255,255,.5)")
+    screen.setPixelated(false)
+    screen.drawSprite("microstudio",0,-80,50)
+    screen.setPixelated(true)
+    return
+  end
+  
+  //  screen.drawSprite("icon",-120,65,20)
+  
+  screen.setFont("BitCell")
+  for i=0 to games.length-1 by 1
+    local game = games[i]
+    local x = (i-browse_position)*70-105
+    if game and game.image and abs(x) <160 then
+      screen.setAlpha(max(0,min(1,3-abs(x)/160*3)))
+      if i == browse_selected then
+        screen.fillRect(x,0,55,55,"rgb(255,142,85)")
+        screen.fillRect(x,0,51,51,background)
+      else
+        screen.fillRect(x,0,55,55,"rgba(255,255,255,.1)")
+      end
+      screen.drawSprite(game.image,x,0,50,50)
+      screen.drawText(game.title,x,-35,7,"rgba(255,255,255,.8)")
+    end
+  end
+  
+  screen.setAlpha(.5)
+  if target_position > 0 then
+    screen.drawSprite("arrow_left",-150,0,8)
+  end
+  if target_position < games.length-4 then
+    screen.drawSprite("arrow_right",150,0,8)
+  end
+  
+  local dx = -(control_modes.length-1)/2*50
+  for c in control_modes
+    screen.drawSprite(c,dx,-65,24)
+    dx += 50
+  end
+  
+  if control_modes.length == 1 then
+    if control_modes[0] == "keyboard" then
+      screen.drawText("ENTER to start game - ESC to exit game",0,-90,8)
+    elsif control_modes[0] == "gamepad" then
+      screen.drawText("[A] to start game - [MENU] to exit game",0,-90,8)
+    else
+      screen.drawText("Tap to start game",-50,-90,8)
+      screen.drawText("exit game with",50,-90,8)
+      screen.setAlpha(1)
+      screen.drawSprite("exit",85,-90)
+    end
+  end
+  
+  screen.setAlpha(1)
+  
+//  CRT()
+end
+end()
+
+
+</script></html>
