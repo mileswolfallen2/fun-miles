@@ -237,7 +237,7 @@ const mainContentData = [
   {
     name: "Power Tower",
     image: "/image-robert-added/PowerTower.png",
-    link: "/WebGames-master/WebGames-master/games/PowerTower.html",
+    link: "/WebGames-master/WebGames-master/games/P.html",
   },
   {
     name: "Scratch Town",
