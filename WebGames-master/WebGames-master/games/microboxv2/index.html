@@ -1,0 +1,817 @@
+<!DOCTYPE html><html><head><title>microBox V2</title><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui=1"><meta charset="UTF-8"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="description" content=""><link rel="manifest" href="manifest.json"><link rel="icon" type="image/png" href="icon64.png"><link rel="apple-touch-icon" sizes="180x180" href="icon180.png"><link rel="icon" type="image/png" sizes="32x32" href="icon32.png"><link rel="icon" type="image/png" sizes="16x16" href="icon16.png"><style>html,body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  overflow:hidden;
+  font-family: Verdana;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#canvaswrapper {
+  text-align: center ;
+}
+</style><style>@font-face { font-family: "BitCell" ; src: url("fonts/BitCell.ttf") format("truetype"); }</style><style>@font-face { font-family: "Kapel" ; src: url("fonts/Kapel.ttf") format("truetype"); }</style><script>window.fonts = ["BitCell","Kapel"]</script></head><body class="noselect custom-cursor" oncontextmenu="return false;"><div id="canvaswrapper"></div><script type="text/javascript">var resources = {"images":[{"file":"arrow_left.png","version":21,"size":198,"properties":{"frames":1,"fps":5}},{"file":"arrow_right.png","version":30,"size":196,"properties":{"frames":1,"fps":5}},{"file":"exit.png","version":27,"size":180,"properties":{"frames":1,"fps":5}},{"file":"gamepad.png","version":75,"size":487,"properties":{"frames":1,"fps":5}},{"file":"icon.png","version":294,"size":802,"properties":{"frames":1,"fps":5}},{"file":"icon_transparent.png","version":40,"size":767,"properties":{"frames":1,"fps":5}},{"file":"keyboard.png","version":75,"size":367,"properties":{"frames":1,"fps":5}},{"file":"microstudio.png","version":1,"size":17652,"properties":{}},{"file":"poster.png","version":11,"size":55019,"properties":{"frames":1,"fps":5}},{"file":"rotate.png","version":86,"size":416,"properties":{"frames":1,"fps":5}},{"file":"search.png","version":19,"size":232,"properties":{"frames":1,"fps":5}},{"file":"touch.png","version":40,"size":339,"properties":{"frames":1,"fps":5}}],"assets":[{"file":"collaboratorchat-messages.json","version":2,"size":102,"properties":{}}],"maps":{},"sounds":[{"file":"microfxr-back.wav","version":1,"size":51772,"properties":{}},{"file":"microfxr-enter.wav","version":1,"size":51772,"properties":{}},{"file":"microfxr-switch.wav","version":1,"size":4872,"properties":{}},{"file":"microfxr-welcome.wav","version":1,"size":95192,"properties":{}}],"music":[]};
+var graphics = "M1";
+
+</script><script type="text/javascript">var orientation = 'landscape' ;
+var aspect = 'free' ;
+var ms_libs = [] ;
+window.skip_service_worker = true;
+window.exported_project = true;
+window.ms_use_server = false ;
+</script><script src="compiler.js"></script><script src="parser.js"></script><script src="processor.js"></script><script src="program.js"></script><script src="routine.js"></script><script src="runner.js"></script><script src="token.js"></script><script src="tokenizer.js"></script><script src="transpiler.js"></script><script src="microengine.js"></script></body><script type="text/javascript">//
+//
+// The game is started with the code below.
+// Once you have received the "started" signal (see below),
+// you can do the following:
+// 1) Inject functions or objects into the global context of the microStudio engine, example:
+//
+//   window.player.setGlobal("special_callback",function(x) { console.info(x) }) ;
+//   // Your microScript code can now call the "special_callback" function
+//
+// 2) Call microScript global functions from your JavaScript code, example:
+//
+//   window.player.call("call_me_from_javascript",[10,1000]) ;
+//   // arguments to the function call are provided as an array
+//
+// 3) Run a microScript code snippet from your JavaScript code, example:
+//
+//   window.player.exec("player.position_x = 50",function(result) { console.log(result) ; }) ;
+//
+
+window.addEventListener("load",function() {
+  window.player = new Player(function(event) {
+    if (event.name == "started") {
+      // signal that the game is started
+    }
+    else if (event.name == "log") {
+      // console.info(event.data) ;
+    }
+  }) ;
+  document.body.focus() ;
+}) ;
+
+</script><script id="code" type="text/x-microscript">
+
+
+function()
+addGame = function(title,nick,slug)
+  games += object
+    title = title
+    nick = nick
+    slug = slug
+  end
+end
+
+addGames = function()
+  games = []
+
+  addGame("Ant Obliterator","Bruhder","antobliterator")
+  addGame("AlphaBetaSoup2022","Martellus","alphabetasoup2022")
+  addGame("Bit Swarm","HomineLudens","bitswarm")
+  addGame("Calculator","Constantine_RetroGamer","calculator")
+  addGame("Circle Color Pong","Monolith","circle_color_pong")
+  addGame("CHESS","KingLauri200","micro_chess")
+  addGame("ChipToy S1","gilles","chiptoys1")
+  addGame("chrome dino","zybrc","dino")
+  addGame("Cube And Saw","HomineLudens","cas")
+  addGame("Da Smallest Fish","Bruhder","dasmolfish")
+  addGame("Dessert Devourer","Bruhder","dessert")
+  addGame("3d mini golf","this_name_is_taken","3dminigolf")
+  addGame("3D Platformer","this_name_is_taken","3dplatformer")
+  addGame("Evade","HomineLudens","evade")
+  addGame("Evil Dictatorship Simulator","jasper7474","evildictator")
+  addGame("ETFD","Bruhder","heat")
+  addGame("excuse genorator v2","ItsRPixelG","some_random_excusesv1234567890")
+  addGame("Fennec Adventure","microstudio","fennec")
+  addGame("Game Juice","Bruhder","gamejuice")
+  addGame("GloomCraft","PlasmaPuffs","gloomcraft")
+  addGame("Godless","Vafis","godless")
+  addGame("Hexoban","PlasmaPuffs","hexoban")
+  addGame("Hit The Duck","Ricopetitdej","hittheduck")
+  addGame("Idle CLicker","confusedcatgirl","idle")
+  addGame("Indie Bird","gilles","indiebird")
+  addGame("Jumpie Boi","Bruhder","jumpieboi")
+  addGame("Kaizo Lander","ItsRPixelG","kaizolander")
+  addGame("Lander","scotfree","lander")
+  addGame("Lemmy Long Legs","Ogofkop","lemmylongleg")
+  addGame("Lemmy Long Legs II","Ogofkop","lemmylonglegs2")
+  addGame("Lipe's Adventure","warrior","lipesadventure")
+  addGame("Marble Quest","HomineLudens","marblequest")
+  addGame("Meowy's Adventure","mrLman","meowys_adventure")
+  addGame("microFarm","JimB007","microfarm")
+  addGame("microMower","JimB007","micromower")
+  addGame("microPinball","osterberg","pinball")
+  addGame("microSands","Skaruts","microsands_js")
+  addGame("microVerse","microstudio","microverse")
+  addGame("microWords","pankusher","microwords")
+  addGame("Monster Troubles TD","jaysnjj","td")
+  addGame("Multiplayer No Game","gilles","multinogame")
+  addGame("Night Drive","jaysnjj","nightdrive")
+  addGame("90% of People Quit...","Bruhder","slotmachine")
+  addGame("Oh god santa has a gun","Jappa","ohgodsantahasagun")
+  addGame("One-Bit-Racer","JimB007","onebitracer")
+  addGame("Orbital Playground","PaulSt","orbitalplayground")
+  addGame("OutShot","fabricvisions","outshot")
+  addGame("Pacman Linear Edition","Lucifer","pacman")
+  addGame("Pixel Art Camera","gilles","pixelartcamera")
+  addGame("Planet Repair Squad","gilles","planetrepairsquad")
+  addGame("Pong","Vafis","newpong")
+  addGame("Pong With Powers :)","DX_studios1","pongwithpowers")
+  addGame("Poker v1.0","KingLauri200","poker")
+  addGame("Quick Baseball","Ogofkop","baseball")
+  addGame("realtime raytracing...","this_name_is_taken","realtimeraytracing")
+  addGame("Reggie the Hedgie","gilles","reggie")
+  addGame("RPixelG OG","ItsRPixelG","rpixelg_og")
+  addGame("Sad Snake","Tiberius","sadsnake")
+  addGame("SkyBound","ItsRPixelG","rpixelg_skybound")
+  addGame("SpaceBound","ItsRPixelG","rpixelg_spacebound")
+  addGame("SpaceShip Template","PaulSt","spaceshiptemplate")
+  addGame("Super Idle","MetalGuitarBoy","superidleofficial")
+  addGame("Suoer Mario Bros In microStudio","Tiberius","supermariobros")
+  addGame("Tank Game","JUANJUANJUAN","tank")
+  addGame("That was close","HomineLudens","thatwasclose")
+  addGame("The Great Wyrm","KimsGames","holiday2022")
+  addGame("The Hardest Platformer Ever.","KillButt","sorry")
+  addGame("TRAGR V1.2","DanMan97","tragr")
+  addGame("Turn v1.1","Gizmic","turnv1")
+  addGame("Wake Up","KimsGames","gamejam3")
+  addGame("windows","osterberg","windows")
+  addGame("Xmas Express","Romero","xmasexpress")
+end
+end()
+
+
+
+system.javascript("""
+
+// javascript
+
+this.embed = function(url,close_button) {
+  console.info(url);
+  console.info("close_button = "+close_button)
+  var canvas = document.querySelector("canvas") ;
+  var parent = canvas.parentNode ;
+  var iframe = document.createElement("iframe") ;
+  iframe.src = url ;
+  iframe.allow = "autoplay https://microstudio.io; gamepad https://microstudio.io; midi https://microstudio.io"
+  iframe.style = "position: absolute ; top: 0 ; left: 0 ; width: 100% ; height: 100% ; border: none ; z-index: 0 ; transition-property: opacity ; transition-duration: 2s ; opacity: 0" ;
+  iframe.allowFullscreen = false ;
+
+  canvas.style["transition-property"] = "opacity" ;
+  canvas.style["transition-duration"] = "1s" ;
+  parent.insertBefore(iframe,canvas)
+  iframe.contentWindow.addEventListener("load",()=>{
+    iframe.contentWindow.focus() ;
+    iframe.style.opacity = 1 ;
+  })
+
+  iframe.contentWindow.addEventListener('keydown', (event) => {
+    console.log('Keydown event in iframe:', event);
+    if (event.key == "Escape") {
+      global.back_to_menu = true ;
+    }
+  });
+  
+  if (close_button) {
+    console.info("CLOSE BUTTON")
+    var img = new Image() ;
+    img.src = "sprites/exit.png" ;
+    img.id = "exit-button" ;
+    img.style = "width: 5vw ; position: fixed ; top: 1.5vw ; right: 1.5vw ; opacity: .5 ; image-rendering: moz-crisp-edges; image-rendering: pixelated ; z-index: 10" ;
+    document.body.appendChild(img) ;
+    img.addEventListener("click",()=>{global.back_to_menu = true})
+  }
+  
+  setTimeout(()=> {
+    canvas.style.opacity = 0 ;
+    setTimeout(()=>{
+      canvas.style.display = "none" ;
+    },1000)
+  },0)
+  
+  setTimeout(()=>{
+    
+  },500)
+
+  global.canvas = canvas
+  global.iframe = iframe
+  global.window = window
+}
+
+this.restore = function() {
+  var iframe = document.querySelector("iframe") ;
+  if (iframe) {
+    iframe.parentNode.removeChild(iframe) ;
+  }
+  var canvas = document.querySelector("canvas") ;
+  canvas.style.display = "block" ;
+  setTimeout(()=>{
+    canvas.style.opacity = 1 ;
+  },1)
+  
+  setTimeout(()=> { window.focus() },100)
+  var exit = document.getElementById("exit-button") ;
+  if (exit) {
+    exit.parentNode.removeChild(exit) ;
+  }
+}
+
+this.loadImage = function(url,callback) {
+  var img = new Image() ;
+  img.src = url ;
+  img.onload = ()=> { callback(new global.Image(img)) } ;
+}
+
+
+var fullscreendone = false ;
+
+document.body.addEventListener("mouseup",()=> {
+  if (! fullscreendone) {
+    fullscreendone = true ;
+    document.body.requestFullscreen() ;
+  }
+}) ;
+
+
+//This will be needed to work cross-domain
+
+window.addEventListener("message",(msg)=>{
+  try {
+    var data = JSON.parse(msg.data) ;
+    if (data.name == "started") {
+      console.info("STARTED!") ;
+    }
+  } catch (err) {
+    
+  };
+}) ;
+
+""")
+
+
+
+function()
+init = function()
+  //embed()
+  addGames()
+  addBar()
+  
+  for game in games
+    loadImage("https://microstudio.io/"+game.nick+"/"+game.slug+"/sprites/icon.png",function(img)
+      game.image = img
+    end)
+  end
+  
+  browse_position = 0
+  browse_selected = 0
+  target_position = 0
+  position_speed = 0
+  started = false
+  back_to_menu = false
+  dragging = false
+  
+  control_modes = ["keyboard","gamepad","touch"]
+  
+  control = object end
+  clickable = []
+  
+  mode = "browse"
+  screen.setFont("Kapel")
+end
+
+update = function()
+  if not started then
+    if mouse.press then
+      started = true
+      audio.playSound("microfxr/welcome",.125)
+    end
+    return
+  end
+  
+  if gamepad.press.RIGHT or gamepad.press.LEFT or gamepad.A then
+    control_modes = ["gamepad"]
+  end
+  
+  if keyboard.press.RIGHT or keyboard.press.LEFT or keyboard.press.ENTER or keyboard.press.SPACE then
+    control_modes = ["keyboard"]
+  end
+
+  control.LEFT = gamepad.press.LEFT or keyboard.press.LEFT
+  control.RIGHT = gamepad.press.RIGHT or keyboard.press.RIGHT
+  control.ACTION = gamepad.press.A or keyboard.press.ENTER or keyboard.press.SPACE
+  control.BACK = back_to_menu or gamepad.press.MENU or (gamepad.X and gamepad.B)
+  
+  if touch.press then
+    control_modes = ["touch"]
+    dragging = false
+    if abs(touch.x+150)<10 and abs(touch.y)<25 then
+      if target_position > 0 then
+        target_position -= 1
+        browse_selected = target_position+1
+        audio.playSound("microfxr/switch",.125)
+      end
+    elsif abs(touch.x-150)<10 and abs(touch.y)<25 then
+      if target_position < games.length-4 then
+        target_position += 1
+        browse_selected = target_position+1
+        audio.playSound("microfxr/switch",.125)
+      end
+    elsif abs(touch.x)<140 and abs(touch.y)<50 then
+      dragging = true
+      drag_start = target_position
+      drag_start_x = touch.x
+      drag_moved = false
+      browse_selected = round((touch.x+105)/70)+target_position
+    end
+  end
+  
+  if touch.touching then
+    if dragging then
+      if abs(touch.x - drag_start_x) > 10 then
+        drag_moved = true
+        browse_selected = -1
+      end
+      
+      if drag_moved then
+        target_position = max(0,min(games.length-4,drag_start+(drag_start_x-touch.x)/30))
+      end
+    end
+  end
+  
+  if touch.release then
+    if dragging then
+      dragging = false
+      if drag_moved then
+        target_position = round(target_position)
+        browse_selected = target_position + 1
+      else
+        control.ACTION = true
+      end
+    end
+  end
+   
+  if mode == "browse" then
+    if control.RIGHT then
+      if browse_selected < games.length-1 then
+        browse_selected += 1
+        audio.playSound("microfxr/switch",.125)
+        if target_position < browse_selected-2 then
+          target_position += 1
+          target_position = min(games.length-4,target_position)
+        end
+      end
+    end
+    
+    if (control.LEFT) and browse_selected > 0 then
+      browse_selected -= 1
+      audio.playSound("microfxr/switch",.125)
+      if target_position > browse_selected-1 and target_position > 0 then
+        target_position -= 1
+      end
+    end
+    
+    if control.ACTION then
+      mode = "play"
+      audio.playSound("microfxr/enter",.125)
+      local game = games[browse_selected]
+      embed("https://microstudio.io/"+game.nick+"/"+game.slug+"/",control_modes[0] == "touch")
+      print("mode = "+ mode)
+    end
+  else
+    if control.BACK then
+      back_to_menu = false
+      restore()
+      mode = "browse"
+      audio.playSound("microfxr/back",.125)
+    end
+  end
+  
+  position_speed += (target_position-browse_position)*.1
+  position_speed *= .5
+  browse_position += position_speed
+end
+
+draw = function()
+  local background ="rgb(8,23,0)"
+  screen.clear(background)
+  if screen.width < screen.height then
+    screen.setAlpha(.5)
+    screen.drawSprite("rotate",0,0,48)
+    screen.setAlpha(1)
+    return
+  end
+
+  screen.setFont("Kapel")
+  if not screen.isFontReady() then
+    return
+  end
+  screen.drawText("microBox v2",0,65,30,"rgb(120,147,65)")
+  if not started then
+    screen.setFont("BitCell")
+    local size = sin((system.time()%500)/500*PI*2)
+    screen.fillRect(0,-25,60+size,18+size*.5,"rgb(197,87,87)")
+    screen.drawText("START",0,-25,10,"#FFF")
+    screen.drawSprite("icon_transparent",0,20)
+    screen.drawText("Powered by",0,-70,6,"rgba(255,255,255,.5)")
+    screen.setPixelated(false)
+    screen.drawSprite("microstudio",0,-80,50)
+    screen.setPixelated(true)
+    return
+  end
+  
+    screen.drawSprite("icon_transparent",-120,65,20)
+    
+  screen.setFont("BitCell")
+  for i=0 to games.length-1 by 1
+    local game = games[i]
+    local x = (i-browse_position)*70-105
+    if game and game.image and abs(x) <160 then
+      screen.setAlpha(max(0,min(1,3-abs(x)/160*3)))
+      if i == browse_selected then
+        screen.fillRect(x,0,55,55,"rgb(255,142,85)")
+        screen.fillRect(x,0,51,51,background)
+      else
+        screen.fillRect(x,0,55,55,"rgba(255,255,255,.1)")
+      end
+      screen.drawSprite(game.image,x,0,50,50)
+      screen.drawText(game.nick,x,-43,5,"rgba(255,255,255,.8)")
+      screen.drawText(game.title,x,-35,7,"rgba(255,255,255,.8)")
+    end
+  end
+  
+  screen.setAlpha(.5)
+  if target_position > 0 then
+    screen.drawSprite("arrow_left",-145,0,16)
+  end
+  if target_position < games.length-4 then
+    screen.drawSprite("arrow_right",145,0,16)
+  end
+  
+  local dx = -(control_modes.length-1)/2*50
+  for c in control_modes
+    screen.drawSprite(c,dx,-65,24)
+    dx += 50
+  end
+  
+  if control_modes.length == 1 then
+    if control_modes[0] == "keyboard" then
+      screen.drawText("ENTER to start game - ESC to exit game",0,-90,8)
+    elsif control_modes[0] == "gamepad" then
+      screen.drawText("[A] to start game - [MENU] to exit game",0,-90,8)
+    else
+      screen.drawText("Tap to start game",-50,-90,8)
+      screen.drawText("exit game with",50,-90,8)
+      screen.setAlpha(1)
+      screen.drawSprite("exit",85,-90)
+    end
+  end
+  
+  screen.setAlpha(1)
+  
+  if mode == "browse" then
+    screen.drawText("Search (WIP)",-140,-66.3,,8)
+    screen.fillRoundRect(-110,-67,135,15,10,"rgba(0,0,0,.5)")
+  end
+
+
+
+
+
+//  CRT()
+end
+end()
+
+
+
+function()
+initSearch = function()
+  drawBar()
+end
+
+updateSearch = function()
+end
+
+addBar = function()
+  if mode == "browse" then
+    screen.drawRoundRect(-115,-82,135,15,0,"rgba(255,255,255,.5)")
+  end
+end
+end()
+
+
+
+function()
+usingChat = false
+chatLog = []
+chatEntry = new TextField()
+maxChatLength = 8
+menuList = false
+menu = 0
+menus = object
+  options = 30
+  keybinds = 52
+  emoji = 74
+  language = 96
+end
+emojiSel = object
+  x = 0
+  y = 0
+  on = false
+  selected = 0
+  emoji = 0
+  emojiTime = 0
+end
+unread = 0
+
+// MENU CODE COMMENTED FOR PUBLIC BETA
+
+updateUI = function()
+  // TEMPORARY, REMOVE LATER
+  if menu then
+    menu.drawFunc = menuDraw[menu.name]
+    menu.updFunc = menuUpd[menu.name]
+  end
+
+  // chat stuff
+  if usingChat then
+    // reset unread
+    unread = 0
+    
+    // update chat
+    chatEntry.blockedChars = [keybinds.chat]
+    chatEntry.update()
+    
+    // send message
+    if keyboard.press[keybinds.submit] then
+      if chatEntry.text.length > 0 then
+        local sentChat = object
+          author = player.name
+          time = system.time()
+          message = chatEntry.text
+        end
+        chatLog.insert(sentChat)
+        connection.send(object
+          mType = "chat"
+          message = sentChat
+        end)
+        chatEntry.text = ""
+      else
+        setChatActive(false)
+      end
+    end
+    
+    // close chat
+    if mouse.press or keyboard.press[keybinds.exit_menu] then
+      setChatActive(false)
+    end
+  else
+    // open chat
+    if keyboard.press[keybinds.open_chat] and not usingChat then
+      setChatActive(true)
+    end
+  end
+  
+  // force a limit (8) on the length of the chat log
+  while chatLog.length > maxChatLength
+    chatLog.removeAt(chatLog.length-1)
+  end
+  
+  // emoji selector
+  if mouse.right then
+    if not emojiSel.on then
+      emojiSel.x = mouse.x
+      emojiSel.y = mouse.y
+    end
+    emojiSel.on = true
+    // do some math to find out what emoji is selected
+    emojiSel.selected = mod(floor((180-(atan2d(mouse.y-emojiSel.y, mouse.x-emojiSel.x)+(180-(90+360/emojis.length/2))))/(360/emojis.length)), emojis.length)
+  else
+    if emojiSel.on then
+      emojiSel.emoji = emojis[emojiSel.selected]
+      emojiSel.emojiTime = 120
+    end
+    emojiSel.on = false
+  end
+  if emojiSel.emojiTime >= 0 then
+    emojiSel.emojiTime -= 1
+  else
+    emojiSel.emoji = 0
+  end
+  
+  // handle menu items
+  if mouse.press and abs(mouse.x+screen.width/2-10) < 10 then
+    // custom made function to stop copying code
+    local checkButton = function(height)
+      return abs(mouse.y+screen.height/2-height) < 10
+    end
+    
+    // toggle menu list
+    if checkButton(10) then
+      menuList = not menuList
+    end
+    
+    // check if menu button is pressed
+    if menuList then
+      for m in menus
+        // if button pressed
+        if checkButton(menus[m]) then
+          if menu.name != m then
+            // then replace menu
+            menu = new Menu(m, menuDraw[m], menuUpd[m], 1)
+          else
+            // unless the menu is the same, in which case toggle
+            menu.toggleActive()
+          end
+        end
+      end
+    end
+  end
+  
+  // // update menu
+  if menu then
+    menu.update()
+    blockControl("menu")
+  else
+    unblockControl("menu")
+  end
+end
+
+drawUI = function()
+  // draw statuses
+  drawStatuses(player.getStatuses(), player.worldX, player.worldY)
+  for p in serverPlayers
+    if p.map == world.name then
+      drawStatuses(p.statuses, p.worldX, p.worldY)
+    end
+  end
+  
+  // draw names above entities & server players
+  for entity in entities+serverPlayers
+    if (not entity.map) or entity.map == world.name then
+      screen.drawText(entity.name, entity.worldX-cameraX, entity.worldY-cameraY+entity.height, entity.width, entity.nameCol)
+      screen.setLineWidth(0.2)
+      screen.drawTextOutline(entity.name, entity.worldX-cameraX, entity.worldY-cameraY+entity.height, entity.width, "#fff")
+    end
+  end
+  
+  // chat icon
+  if chatEntry.text.length > 0 then
+    screen.drawSprite("ui/chatting", player.worldX-cameraX+12, player.worldY-cameraY+7, 10, 10)
+  end
+  for p in serverPlayers
+    if p.map == world.name and p.chatting then
+      screen.drawSprite("ui/chatting", p.worldX-cameraX+12, p.worldY-cameraY+7, 10, 10)
+    end
+  end
+  
+  // emoji
+  if emojiSel.emojiTime >= 0 then
+    screen.drawSprite("ui/emotes/"+emojiSel.emoji, player.worldX-cameraX+22, player.worldY-cameraY+7, 10, 10)
+  end
+  for p in serverPlayers
+    if p.map == world.name and p.emoji != 0 then
+      screen.drawSprite("ui/emotes/"+p.emoji, p.worldX-cameraX+22, p.worldY-cameraY+7, 10, 10)
+    end
+  end
+
+ // draw energy bar
+  if player.energy < characters[player.char].energyMax then
+    screen.setDrawAnchor(-1, 0)
+    screen.setLineWidth(5.5)
+    screen.drawArc(0, -65, 7, 350*-(player.energy/characters[player.char].energyMax), 0, 1, "rgb(85,255,0)")
+    screen.drawSprite("ui/energy", -3.5, -screen.height/2.5+15, 8, 8)
+  end
+  
+  // draw chat stuff
+  if usingChat then
+    screen.setFont("monospace")
+    screen.setAlpha(0.6)
+    screen.setDrawAnchor(-1,0)
+    screen.fillRect(-screen.width/2+2, 60, 175, 90,"rgb(45,45,45)")
+    screen.setAlpha(1)
+    screen.setDrawAnchor(0,0)
+    // chat bar
+    screen.setDrawAnchor(-1,0)
+    screen.setAlpha(0.6)
+    if chatEntry.text == "" then
+      screen.drawText("say something...", -screen.width/2+4.5, 24, 7, "#000")
+      screen.fillRect(-screen.width/2+4.5, 24, 170, 12,"rgb(120,120,120)")
+    else
+      screen.fillRect(-screen.width/2+4.5, 24, 170, 12,"rgb(130,130,130)")
+      screen.setAlpha(0.9)
+      screen.setDrawAnchor(-1,0)
+      screen.drawText(chatEntry.text, -screen.width/2+4.5, 24, 7, "#000")
+    end
+    // draw cursor
+    if chatEntry.cd%24<12 then // make cursor blink
+      screen.fillRect(-screen.width/2+5+screen.textWidth(chatEntry.text, 7)/chatEntry.text.length*chatEntry.x, screen.height/2-76, 1, 8, "#fff")
+    end
+    screen.setAlpha(1)
+    screen.setDrawAnchor(0,0)
+  
+    // chat log
+    screen.setDrawAnchor(-1, 0)
+    local index = 1
+    local timeAtLastChat = chatLog[0].time
+    local t = 1-min((system.time()-timeAtLastChat)/300, 1) // to animate after a new message is recieved
+    t = (1-cos(t*PI))/2 // cosine smoothing
+    for chat in chatLog
+      local chatHours = floor((chat.time/1000/60/60)%12)
+      local chatMinutes = floor((chat.time/1000/60)%60)
+      if (chatMinutes+"").length < 2 then
+        chatMinutes = "0"+chatMinutes
+      end
+      local chatAMPM = ["AM", "PM"][(chat.time/1000/60/60)%24>=12]
+      if index == 1 then // last chat shouldn't be animated
+        screen.setAlpha(1)
+        screen.drawText("("+chatHours+":"+chatMinutes+" "+chatAMPM+") "+chat.author+": "+chat.message, -screen.width/2 + 4, 29+(index)*10, 5, "#fff")
+      elsif index == maxChatLength then // fade out last text
+        screen.setAlpha(t*0.6)
+        screen.drawText("("+chatHours+":"+chatMinutes+" "+chatAMPM+") "+chat.author+": "+chat.message, -screen.width/2 + 4, 29+(index-t)*10, 5, "#fff")
+      else
+        screen.setAlpha(0.6)
+        screen.drawText("("+chatHours+":"+chatMinutes+" "+chatAMPM+") "+chat.author+": "+chat.message, -screen.width/2 + 4, 29+(index-t)*10, 5, "#fff")
+      end
+      index += 1
+    end
+    screen.setFont("BitCell")
+  else
+    // draw prompt to open chat
+    lastchat = chatLog[0]
+    screen.setDrawAnchor(-1, 0)
+    screen.setAlpha(0.5)
+    screen.drawText(keybinds.open_chat.substring(0, 1)+keybinds.open_chat.substring(1, keybinds.open_chat.length).toLowerCase()+" - open chat",-screen.width/2+3, 88, 8, "#000")    
+    screen.fillRect(-screen.width/2+2,94,100, 7,"rgb(45,45,45)")
+    if lastchat.message then
+      screen.drawText(lastchat.author+": "+lastchat.message, -screen.width/2+4, 95, 5, "#fff")    
+    end
+    
+    screen.setDrawAnchor()
+    screen.setAlpha(1)
+    // draw unread messages
+    if unread then
+      screen.fillRound(-screen.width/2+110, screen.height/2-6, 10, 10, "#f00")
+      screen.drawText(unread, -screen.width/2+110, screen.height/2-6, 10/(unread+"").length, "#fff")
+    end
+  end
+  screen.setAlpha(1)
+  screen.setDrawAnchor(0, 0)
+  
+  // emoji selector
+  if emojiSel.on then
+    screen.setLineWidth(30)
+    screen.drawRound(emojiSel.x, emojiSel.y, 50, 50, "#555")
+    screen.setLineWidth(3)
+    local r = 90
+    local i = 0
+    for emoji in emojis
+      if emojiSel.selected == i then
+        screen.fillRound(emojiSel.x+cosd(r)*25, emojiSel.y+sind(r)*25, 30, 30, "#fff")
+      end
+      screen.drawSprite("ui/emotes/"+emoji, emojiSel.x+cosd(r)*25, emojiSel.y+sind(r)*25, 20, 20)
+      r -= 360/emojis.length
+      i += 1
+    end
+  end
+  
+  // bottom bar
+  screen.fillRect(0, -92, screen.width, 32, "rgba(0, 0, 0, 0.4")
+
+  // menu selector button
+  screen.drawSprite("ui/menu/menu."+menuList, -screen.width/2.01+10, -screen.height/2.03+10, 20, 20)
+  
+  // menu buttons
+  if menuList then
+    for m in menus
+      screen.drawSprite("ui/menu/"+m, -screen.width/2.01+menus[m], -screen.height/2.03+10, 20, 20)
+    end
+    if menu.active then
+      screen.fillRect(-screen.width/2+10, -screen.height/2+menus[menu.name], 20, 20, "#fff5")
+    end
+  end
+  // menu
+  if menu.active then
+    menu.draw()
+  end
+end
+
+
+setChatActive = function(active)
+  usingChat = active
+  if active then
+    blockControl("chat")
+  else
+    unblockControl("chat")
+  end
+end
+end()
+
+
+</script></html>

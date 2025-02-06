@@ -1,0 +1,6474 @@
+<!DOCTYPE html><html><head><title>GloomCraft</title><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui=1"><meta charset="UTF-8"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="description" content=""><link rel="manifest" href="manifest.json"><link rel="icon" type="image/png" href="icon64.png"><link rel="apple-touch-icon" sizes="180x180" href="icon180.png"><link rel="icon" type="image/png" sizes="32x32" href="icon32.png"><link rel="icon" type="image/png" sizes="16x16" href="icon16.png"><style>html,body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  overflow:hidden;
+  font-family: Verdana;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#canvaswrapper {
+  text-align: center ;
+}
+</style><style>@font-face { font-family: "AESystematic" ; src: url("fonts/AESystematic.ttf") format("truetype"); }</style><style>@font-face { font-family: "Alkhemikal" ; src: url("fonts/Alkhemikal.ttf") format("truetype"); }</style><style>@font-face { font-family: "AlphaBeta" ; src: url("fonts/AlphaBeta.ttf") format("truetype"); }</style><style>@font-face { font-family: "Arpegius" ; src: url("fonts/Arpegius.ttf") format("truetype"); }</style><style>@font-face { font-family: "Awesome" ; src: url("fonts/Awesome.ttf") format("truetype"); }</style><style>@font-face { font-family: "BitCell" ; src: url("fonts/BitCell.ttf") format("truetype"); }</style><style>@font-face { font-family: "Blocktopia" ; src: url("fonts/Blocktopia.ttf") format("truetype"); }</style><style>@font-face { font-family: "Comicoro" ; src: url("fonts/Comicoro.ttf") format("truetype"); }</style><style>@font-face { font-family: "Commodore64" ; src: url("fonts/Commodore64.ttf") format("truetype"); }</style><style>@font-face { font-family: "DigitalDisco" ; src: url("fonts/DigitalDisco.ttf") format("truetype"); }</style><style>@font-face { font-family: "Edunline" ; src: url("fonts/Edunline.ttf") format("truetype"); }</style><style>@font-face { font-family: "EnchantedSword" ; src: url("fonts/EnchantedSword.ttf") format("truetype"); }</style><style>@font-face { font-family: "EnterCommand" ; src: url("fonts/EnterCommand.ttf") format("truetype"); }</style><style>@font-face { font-family: "Euxoi" ; src: url("fonts/Euxoi.ttf") format("truetype"); }</style><style>@font-face { font-family: "FixedBold" ; src: url("fonts/FixedBold.ttf") format("truetype"); }</style><style>@font-face { font-family: "GenericMobileSystem" ; src: url("fonts/GenericMobileSystem.ttf") format("truetype"); }</style><style>@font-face { font-family: "GrapeSoda" ; src: url("fonts/GrapeSoda.ttf") format("truetype"); }</style><style>@font-face { font-family: "JupiterCrash" ; src: url("fonts/JupiterCrash.ttf") format("truetype"); }</style><style>@font-face { font-family: "Kapel" ; src: url("fonts/Kapel.ttf") format("truetype"); }</style><style>@font-face { font-family: "KiwiSoda" ; src: url("fonts/KiwiSoda.ttf") format("truetype"); }</style><style>@font-face { font-family: "Litebulb8bit" ; src: url("fonts/Litebulb8bit.ttf") format("truetype"); }</style><style>@font-face { font-family: "LycheeSoda" ; src: url("fonts/LycheeSoda.ttf") format("truetype"); }</style><style>@font-face { font-family: "MisterPixel" ; src: url("fonts/MisterPixel.ttf") format("truetype"); }</style><style>@font-face { font-family: "ModernDos" ; src: url("fonts/ModernDos.ttf") format("truetype"); }</style><style>@font-face { font-family: "NokiaCellPhone" ; src: url("fonts/NokiaCellPhone.ttf") format("truetype"); }</style><style>@font-face { font-family: "PearSoda" ; src: url("fonts/PearSoda.ttf") format("truetype"); }</style><style>@font-face { font-family: "PixAntiqua" ; src: url("fonts/PixAntiqua.ttf") format("truetype"); }</style><style>@font-face { font-family: "PixChicago" ; src: url("fonts/PixChicago.ttf") format("truetype"); }</style><style>@font-face { font-family: "PixelArial" ; src: url("fonts/PixelArial.ttf") format("truetype"); }</style><style>@font-face { font-family: "PixelOperator" ; src: url("fonts/PixelOperator.ttf") format("truetype"); }</style><style>@font-face { font-family: "Pixellari" ; src: url("fonts/Pixellari.ttf") format("truetype"); }</style><style>@font-face { font-family: "Pixolde" ; src: url("fonts/Pixolde.ttf") format("truetype"); }</style><style>@font-face { font-family: "PlanetaryContact" ; src: url("fonts/PlanetaryContact.ttf") format("truetype"); }</style><style>@font-face { font-family: "PressStart2P" ; src: url("fonts/PressStart2P.ttf") format("truetype"); }</style><style>@font-face { font-family: "RainyHearts" ; src: url("fonts/RainyHearts.ttf") format("truetype"); }</style><style>@font-face { font-family: "RetroGaming" ; src: url("fonts/RetroGaming.ttf") format("truetype"); }</style><style>@font-face { font-family: "Revolute" ; src: url("fonts/Revolute.ttf") format("truetype"); }</style><style>@font-face { font-family: "Romulus" ; src: url("fonts/Romulus.ttf") format("truetype"); }</style><style>@font-face { font-family: "Scriptorium" ; src: url("fonts/Scriptorium.ttf") format("truetype"); }</style><style>@font-face { font-family: "Squarewave" ; src: url("fonts/Squarewave.ttf") format("truetype"); }</style><style>@font-face { font-family: "Thixel" ; src: url("fonts/Thixel.ttf") format("truetype"); }</style><style>@font-face { font-family: "Unbalanced" ; src: url("fonts/Unbalanced.ttf") format("truetype"); }</style><style>@font-face { font-family: "UpheavalPro" ; src: url("fonts/UpheavalPro.ttf") format("truetype"); }</style><style>@font-face { font-family: "VeniceClassic" ; src: url("fonts/VeniceClassic.ttf") format("truetype"); }</style><style>@font-face { font-family: "ZXSpectrum" ; src: url("fonts/ZXSpectrum.ttf") format("truetype"); }</style><style>@font-face { font-family: "Zepto" ; src: url("fonts/Zepto.ttf") format("truetype"); }</style><script>window.fonts = ["AESystematic","Alkhemikal","AlphaBeta","Arpegius","Awesome","BitCell","Blocktopia","Comicoro","Commodore64","DigitalDisco","Edunline","EnchantedSword","EnterCommand","Euxoi","FixedBold","GenericMobileSystem","GrapeSoda","JupiterCrash","Kapel","KiwiSoda","Litebulb8bit","LycheeSoda","MisterPixel","ModernDos","NokiaCellPhone","PearSoda","PixAntiqua","PixChicago","PixelArial","PixelOperator","Pixellari","Pixolde","PlanetaryContact","PressStart2P","RainyHearts","RetroGaming","Revolute","Romulus","Scriptorium","Squarewave","Thixel","Unbalanced","UpheavalPro","VeniceClassic","ZXSpectrum","Zepto"]</script></head><body class="noselect custom-cursor" oncontextmenu="return false;"><div id="canvaswrapper"></div><script type="text/javascript">var resources = {"images":[{"file":"arrow.png","version":1,"size":215,"properties":{}},{"file":"bars-enemy-background.png","version":2,"size":103,"properties":{"frames":1,"fps":5}},{"file":"bars-enemy-foreground.png","version":3,"size":100,"properties":{"frames":1,"fps":5}},{"file":"bars-enemy-outline.png","version":1,"size":105,"properties":{}},{"file":"bars-life_bar-background.png","version":2,"size":116,"properties":{"frames":1,"fps":5}},{"file":"bars-life_bar-foreground.png","version":1,"size":118,"properties":{}},{"file":"bars-life_bar-outline.png","version":2,"size":118,"properties":{"frames":1,"fps":5}},{"file":"bars-mana_bar-background.png","version":5,"size":116,"properties":{"frames":1,"fps":5}},{"file":"bars-mana_bar-foreground.png","version":1,"size":119,"properties":{}},{"file":"bars-mana_bar-outline.png","version":3,"size":118,"properties":{"frames":1,"fps":5}},{"file":"book.png","version":1,"size":1404,"properties":{}},{"file":"coins-bronze.png","version":4,"size":327,"properties":{"frames":4,"fps":4}},{"file":"coins-gold.png","version":4,"size":333,"properties":{"frames":4,"fps":6}},{"file":"coins-silver.png","version":2,"size":334,"properties":{"frames":4,"fps":5}},{"file":"cursor-idle.png","version":4,"size":167,"properties":{"frames":1,"fps":5}},{"file":"cursor-pointing.png","version":3,"size":181,"properties":{"frames":1,"fps":5}},{"file":"dungeon-stairs.png","version":2,"size":203,"properties":{"frames":1,"fps":5}},{"file":"dungeon-tileset.png","version":40,"size":901,"properties":{"frames":15,"fps":5}},{"file":"enemies-slimes-blue.png","version":9,"size":548,"properties":{"frames":6,"fps":9}},{"file":"enemies-slimes-green.png","version":5,"size":547,"properties":{"frames":6,"fps":8}},{"file":"enemies-slimes-orange.png","version":6,"size":542,"properties":{"frames":6,"fps":12}},{"file":"enemies-slimes-purple.png","version":13,"size":550,"properties":{"frames":6,"fps":11}},{"file":"flask-fill.png","version":5,"size":151,"properties":{"frames":1,"fps":5}},{"file":"flask-outline.png","version":4,"size":190,"properties":{"frames":1,"fps":5}},{"file":"furniture-crafting_benches-0.png","version":1,"size":326,"properties":{}},{"file":"furniture-crafting_benches-1.png","version":1,"size":381,"properties":{}},{"file":"furniture-crafting_benches-2.png","version":1,"size":279,"properties":{}},{"file":"furniture-crafting_benches-3.png","version":1,"size":306,"properties":{}},{"file":"furniture-shop_stand.png","version":1,"size":515,"properties":{}},{"file":"furniture-treasure_chest.png","version":10,"size":470,"properties":{"frames":8,"fps":12}},{"file":"game_over.png","version":1,"size":3929,"properties":{}},{"file":"icon.png","version":11,"size":173,"properties":{"frames":1,"fps":5}},{"file":"icons-color.png","version":1,"size":274,"properties":{}},{"file":"icons-cooldown.png","version":1,"size":239,"properties":{}},{"file":"icons-knockback.png","version":1,"size":240,"properties":{}},{"file":"icons-life.png","version":1,"size":215,"properties":{}},{"file":"icons-mana.png","version":1,"size":227,"properties":{}},{"file":"icons-pouch.png","version":1,"size":309,"properties":{}},{"file":"icons-power.png","version":1,"size":196,"properties":{}},{"file":"icons-recoil.png","version":1,"size":221,"properties":{}},{"file":"icons-size.png","version":1,"size":172,"properties":{}},{"file":"icons-speed.png","version":1,"size":195,"properties":{}},{"file":"icons-vision.png","version":1,"size":203,"properties":{}},{"file":"ingredients-goo-black.png","version":1,"size":152,"properties":{}},{"file":"ingredients-goo-blue.png","version":1,"size":160,"properties":{}},{"file":"ingredients-goo-green.png","version":1,"size":160,"properties":{}},{"file":"ingredients-goo-orange.png","version":1,"size":158,"properties":{}},{"file":"ingredients-goo-purple.png","version":1,"size":160,"properties":{}},{"file":"ingredients-shards-blue.png","version":1,"size":169,"properties":{}},{"file":"ingredients-shards-green.png","version":1,"size":149,"properties":{}},{"file":"ingredients-shards-orange.png","version":1,"size":128,"properties":{}},{"file":"ingredients-shards-purple.png","version":1,"size":155,"properties":{}},{"file":"lantern.png","version":3,"size":229,"properties":{"frames":9,"fps":12}},{"file":"pixelpuff.png","version":28,"size":1185,"properties":{"frames":1,"fps":5}},{"file":"planks-half.png","version":1,"size":922,"properties":{}},{"file":"planks-quarter.png","version":1,"size":552,"properties":{}},{"file":"player-dying.png","version":3,"size":676,"properties":{"frames":4,"fps":8}},{"file":"player-hand.png","version":1,"size":102,"properties":{}},{"file":"player-idle.png","version":6,"size":260,"properties":{"frames":2,"fps":2}},{"file":"player-rolling.png","version":3,"size":1791,"properties":{"frames":13,"fps":12}},{"file":"player-running.png","version":3,"size":342,"properties":{"frames":4,"fps":10}},{"file":"poster.png","version":1,"size":1622762,"properties":{}},{"file":"projectiles-fills-huge.png","version":3,"size":122,"properties":{"frames":1,"fps":5}},{"file":"projectiles-fills-large.png","version":3,"size":115,"properties":{"frames":1,"fps":5}},{"file":"projectiles-fills-medium.png","version":3,"size":113,"properties":{"frames":1,"fps":5}},{"file":"projectiles-fills-small.png","version":3,"size":112,"properties":{"frames":1,"fps":5}},{"file":"projectiles-fills-tiny.png","version":3,"size":97,"properties":{"frames":1,"fps":5}},{"file":"projectiles-huge.png","version":5,"size":134,"properties":{"frames":1,"fps":5}},{"file":"projectiles-large.png","version":8,"size":127,"properties":{"frames":1,"fps":5}},{"file":"projectiles-medium.png","version":3,"size":125,"properties":{"frames":1,"fps":5}},{"file":"projectiles-outlines-huge.png","version":4,"size":127,"properties":{"frames":1,"fps":5}},{"file":"projectiles-outlines-large.png","version":3,"size":119,"properties":{"frames":1,"fps":5}},{"file":"projectiles-outlines-medium.png","version":2,"size":118,"properties":{"frames":1,"fps":5}},{"file":"projectiles-outlines-small.png","version":3,"size":115,"properties":{"frames":1,"fps":5}},{"file":"projectiles-outlines-tiny.png","version":3,"size":101,"properties":{"frames":1,"fps":5}},{"file":"projectiles-small.png","version":4,"size":123,"properties":{"frames":1,"fps":5}},{"file":"projectiles-tiny.png","version":1,"size":102,"properties":{}},{"file":"scroll.png","version":1,"size":229,"properties":{}},{"file":"shadows-large.png","version":3,"size":99,"properties":{"frames":1,"fps":5}},{"file":"shadows-medium.png","version":1,"size":98,"properties":{}},{"file":"shadows-small.png","version":3,"size":97,"properties":{"frames":1,"fps":5}},{"file":"slots-stone-current.png","version":1,"size":183,"properties":{}},{"file":"slots-stone-focused.png","version":1,"size":181,"properties":{}},{"file":"slots-stone-hover.png","version":1,"size":181,"properties":{}},{"file":"slots-stone-idle.png","version":1,"size":184,"properties":{}},{"file":"slots-wooden-hover_16.png","version":1,"size":152,"properties":{}},{"file":"slots-wooden-hover_24.png","version":1,"size":181,"properties":{}},{"file":"slots-wooden-idle_16.png","version":1,"size":155,"properties":{}},{"file":"slots-wooden-idle_24.png","version":1,"size":183,"properties":{}},{"file":"title.png","version":1,"size":5143,"properties":{}},{"file":"transmutation_circle.png","version":1,"size":2488,"properties":{}},{"file":"weapons-scepter.png","version":1,"size":268,"properties":{}},{"file":"weapons-short_staff.png","version":1,"size":181,"properties":{}},{"file":"weapons-staff.png","version":2,"size":219,"properties":{"frames":1,"fps":5}},{"file":"weapons-thick_staff.png","version":16,"size":239,"properties":{"frames":1,"fps":5}},{"file":"weapons-wand.png","version":3,"size":140,"properties":{"frames":1,"fps":5}}],"assets":[{"file":"font.ttf","version":1,"size":9704,"properties":{}}],"maps":{},"sounds":[{"file":"boom.wav","version":1,"size":28790,"properties":{}},{"file":"click.wav","version":1,"size":7862,"properties":{}},{"file":"coin.wav","version":1,"size":23204,"properties":{}},{"file":"craft.wav","version":1,"size":30630,"properties":{}},{"file":"death.wav","version":1,"size":16938,"properties":{}},{"file":"hit.wav","version":1,"size":3756,"properties":{}},{"file":"pickup.wav","version":1,"size":15698,"properties":{}},{"file":"shoot.wav","version":1,"size":4048,"properties":{}},{"file":"step.wav","version":1,"size":5842,"properties":{}},{"file":"swoosh.wav","version":1,"size":40676,"properties":{}},{"file":"transaction.wav","version":1,"size":45068,"properties":{}}],"music":[{"file":"menu.mp3","version":0,"size":615026,"properties":{}},{"file":"ost.mp3","version":1,"size":5028049,"properties":{}}]};
+var graphics = "M1";
+
+</script><script type="text/javascript">var orientation = 'any' ;
+var aspect = '16x9' ;
+var ms_libs = [] ;
+window.skip_service_worker = true;
+window.exported_project = true;
+window.ms_use_server = false ;
+</script><script src="compiler.js"></script><script src="parser.js"></script><script src="processor.js"></script><script src="program.js"></script><script src="routine.js"></script><script src="runner.js"></script><script src="token.js"></script><script src="tokenizer.js"></script><script src="transpiler.js"></script><script src="microengine.js"></script></body><script type="text/javascript">//
+//
+// The game is started with the code below.
+// Once you have received the "started" signal (see below),
+// you can do the following:
+// 1) Inject functions or objects into the global context of the microStudio engine, example:
+//
+//   window.player.setGlobal("special_callback",function(x) { console.info(x) }) ;
+//   // Your microScript code can now call the "special_callback" function
+//
+// 2) Call microScript global functions from your JavaScript code, example:
+//
+//   window.player.call("call_me_from_javascript",[10,1000]) ;
+//   // arguments to the function call are provided as an array
+//
+// 3) Run a microScript code snippet from your JavaScript code, example:
+//
+//   window.player.exec("player.position_x = 50",function(result) { console.log(result) ; }) ;
+//
+
+window.addEventListener("load",function() {
+  window.player = new Player(function(event) {
+    if (event.name == "started") {
+      // signal that the game is started
+    }
+    else if (event.name == "log") {
+      // console.info(event.data) ;
+    }
+  }) ;
+  document.body.focus() ;
+}) ;
+
+</script><script id="code" type="text/x-microscript">
+
+
+function()
+
+global.init = function()
+  asset_manager.loadFont("font")
+  screen.setFont("font")
+  global.lastHighScore = storage.get("highscore")
+  global.highScore = global.lastHighScore
+  global.lastScore = false
+  global.setupDebug(false)
+  global.clock = new global.Clock()
+  global.tweenService = new global.TweenService()
+  global.cursor = new global.Cursor()
+  global.sceneManager = new global.SceneManager()
+  global.transition = new global.Transition()
+  global.sceneManager.setScene()
+end
+
+global.update = function()
+  global.tweenService.tick()
+  global.clock.tick()
+  global.cursor.update()
+  global.transition.update()
+  global.sceneManager.update()
+  global.updateDebug()
+end
+
+global.draw = function()
+  screen.clear(1)
+  global.sceneManager.draw()
+  global.transition.draw()
+  global.drawDebug()
+  global.cursor.draw()
+end
+
+
+end()
+
+
+
+system.javascript("""
+
+
+// javascript
+global.hideCursor = function() { document.body.style.cursor = "none"; };
+
+const TODO = "Tasks/Features, Bugs, Polish, Extra";
+/**/
+
+const DOING = "";
+/*
+- Complete Itch.io Page
+- Finish Game Design Document
+*/
+
+const DONE = "Ordered From Most Recent to Oldest";
+/*
+- Final Polish/Touches
+- Game Music
+- Game Balancing
+- Game Pausing
+- Highscores and Persistent Data
+- Buttons for the UI
+- Flasks/Potions Drinking and Throwing
+- Ingredient/Potion Power Ups/Equipment Descriptions
+- ADVANCED SHADOW/DUNGEON SURFACES CASTING/RENDERING/MASKING
+- Shop Stands (Random Items)
+- Treasure Chests
+- Ingredients (Effects on Player and Weapons)
+- Inventory System (Slots, Pouch, Book, Table, Shop)
+- Tooltips and Custom Cursor
+- Particles and SFX and VFX and JUICE
+- Transitions and FULL GAME LOOP !!!
+- Damage Number and Interaction Effects
+- Game Timer (Different from the Global Clock)
+- Optimization (Furnituring, Code Structure, Physics (Delta Time), Pathfinding)
+- Inventory System (Statistics, Slots, Pouch, Recipes)
+- Furniture (Chest, Shop Stand, Crafting Bench, Stairs)
+- Optimization (Code Organization, Physics Hitbox Optimization)
+- Introduction Scene, Main Menu Scene, Game Over Scene, Instructions Scene
+- Currency System (Bronze Coins, Silver Coins, Gold Coins)
+- Enemies (Pathfinding, Life/Death System, Attacking, Drops, Lifebars, Effects)
+- Projectiles (Shooting Bullets)
+- Weapons (Wand, Short Staff, Staff, Thick Staff, Scepter)
+- Optimization (Dungeon as Image Layers, Shadow Surfaces Culling)
+- Inventory Slots (Keyboard Digits or Click to Select)
+- Physics (Tilemap, Radius for Entities)
+- Camera (Panning and Shakes)
+- Player (Movement, Rolling, Life/Death System, Effects)
+- Tile Bitmasking (Dungeon Rendering)
+- Dungeon Generation
+- Hard Light Shadows
+*/
+
+
+
+""")
+
+
+
+function()
+
+global.craft = function(group)
+  if group.length <= 1 then return group end
+  
+  local getResult = function(group, recipe)
+    local left = [] + group
+    local used = []
+    
+    for name in recipe[0]
+      local found = false
+      
+      for item in left
+        if item[0].name == name then
+          found = true
+          used.push(item)
+          left.removeElement(item)
+        end
+      end
+      
+      if not found then return false end
+    end
+    
+    local midpoint = [0, 0]
+    for item in group
+      midpoint[0] += item[1][0]
+      midpoint[1] += item[1][1]
+    end
+    
+    midpoint[0] /= group.length
+    midpoint[1] /= group.length
+    
+    local result = global.Ingredient.getData(recipe[1])
+    
+    left.push([result, midpoint])
+    return left
+  end
+  
+  for recipe in global.recipes
+    local result = getResult(group, recipe)
+    if result then return result end
+  end
+  
+  return false
+end
+
+
+global.recipes = [
+  [["Purple Goo", "Green Goo", "Blue Goo", "Orange Goo"], "Black Goo"]
+]
+
+
+end()
+
+
+
+function()
+
+global.Node = class
+  constructor = function()
+    this.parent = 0
+    this.position = 0
+    
+    this.g = 0
+    this.h = 0
+    this.f = 0
+  end
+  
+  equals = function(node)
+    (
+      this.position[0] == node.position[0] and 
+      this.position[1] == node.position[1]
+    )
+  end
+end
+
+global.findPath = function(dungeon, start, target, distance = false)
+  local startNode = new global.Node()
+  startNode.position = [floor(start[0] / 16), floor(start[1] / 16)]
+  
+  local targetNode = new global.Node()
+  targetNode.position = [floor(target[0] / 16), floor(target[1] / 16)]
+  
+  local adjacencies = [
+    [0, -1], [-1, 0], [1, 0], [0, 1],
+    [-1, -1], [-1, 1], [1, -1], [1, 1]
+  ]
+  
+  local open = [startNode]
+  local closed = []
+  
+  local searches = 0
+  while open.length > 0
+    if distance then
+      if searches >= distance then return false else searches += 1 end
+    end
+    
+    local currentNode = open[0]
+    local currentIndex = 0
+    
+    for index = 0 to open.length - 1
+      local node = open[index]
+      
+      if node.f < currentNode.f then
+        currentNode = node
+        currentIndex = index
+      end
+    end
+    
+    open.removeAt(currentIndex)
+    closed.push(currentNode)
+    
+    if currentNode.equals(targetNode) then
+      local path = []
+      
+      local current = currentNode
+      while current
+        path.push(current.position)
+        current = current.parent
+      end
+      
+      return path.reverse()
+    end
+    
+    local children = []
+    random.shuffle(adjacencies)
+    for adjacency in adjacencies
+      local column = currentNode.position[0] + adjacency[0]
+      local row = currentNode.position[1] + adjacency[1]
+      
+      if not dungeon.colliderMap[row][column] then continue
+      elsif abs(adjacency[0]) + abs(adjacency[1]) - 1 then
+        if not dungeon.colliderMap[
+          currentNode.position[0] + adjacency[0]
+        ][currentNode.position[1]] then continue end
+        
+        if not dungeon.colliderMap[
+          currentNode.position[0]
+        ][currentNode.position[1] + adjacency[1]] then continue end
+      end
+      
+      local newNode = new global.Node()
+      newNode.parent = currentNode
+      newNode.position = [column, row]
+      children.push(newNode)
+    end
+    
+    for child in children
+      local childClosed = false
+      for closedChild in closed
+        if closedChild.equals(child) then
+          childClosed = true
+        end
+      end
+      
+      if childClosed then continue end
+      
+      child.g = currentNode.g + 1
+      child.h = (
+        pow(child.position[0] - targetNode.position[0], 2) +
+        pow(child.position[1] - targetNode.position[1], 2)
+      )
+      
+      child.f = child.g + child.h
+      
+      local childOpened = false
+      for openNode in open
+        if openNode.equals(child) and openNode.g < child.g then
+          childOpened = true
+        end
+      end
+      
+      if not childOpened then open.push(child) end
+    end
+  end
+  
+  return false
+end
+
+
+
+end()
+
+
+
+function()
+
+global.tilemapCollision = function(entity)
+  local points = entity.hitbox.rectangle.vertices()
+  local colliderMap = entity.game.dungeon.colliderMap
+  
+  for point in points
+    local column = floor(point[0] / 16)
+    local row = floor(point[1] / 16)
+    if not colliderMap[row][column] then return true end
+  end
+  
+  return false
+end
+
+global.move = function(entity, axis, distance)
+  local units = round(distance * entity.precision)
+  if not units then return end
+  
+  local steps = abs(units)
+  local step = units / steps
+  
+  for _ = 1 to steps
+    entity[axis] += step / entity.precision
+    entity.updateHitbox()
+    
+    if global.tilemapCollision(entity) then
+      entity[axis] -= step / entity.precision
+      entity["v" + axis] = 0
+      return true
+    end
+  end
+  
+  return false
+end
+
+global.applyPhysics = function(entity)
+  local deltaTime = min(global.clock.deltaTime, 1 / entity.friction)
+  
+  entity.vx -= entity.vx * entity.friction * deltaTime
+  entity.vy -= entity.vy * entity.friction * deltaTime
+  
+  local horizontalCollision = global.move(entity, "x", entity.vx)
+  local verticalCollision = global.move(entity, "y", entity.vy)
+  
+  return horizontalCollision or verticalCollision
+end
+
+global.resetForces = function(entity)
+  entity.vx = 0
+  entity.vy = 0
+end
+
+global.applyImpulse = function(entity, x, y)
+  entity.vx += x
+  entity.vy += y
+end
+
+global.updatePhysics = function(entities)
+  for entity in entities
+    for otherEntity in entities
+      if entity == otherEntity then continue end
+      
+      if entity.hitbox.intersection(
+        otherEntity.hitbox, global.Hitbox.CIRCLE
+      ) then
+        local horizontalDistance = entity.x - otherEntity.x
+        local verticalDistance = entity.y - otherEntity.y
+        local distance = sqrt(
+          pow(horizontalDistance, 2) + pow(verticalDistance, 2)
+        )
+        
+        local overshot = (
+          entity.hitbox.circle.radius +
+          otherEntity.hitbox.circle.radius
+        ) - distance
+        
+        local horizontalPush = overshot * horizontalDistance / distance
+        local verticalPush = overshot * verticalDistance / distance
+        
+        global.move(entity, "x", horizontalPush)
+        global.move(entity, "y", verticalPush)
+        
+        global.applyImpulse(entity, horizontalPush, verticalPush)
+        global.applyImpulse(otherEntity, -horizontalPush, -verticalPush)
+        
+        if entity.identifier == "player" then
+          local damage = otherEntity.damage
+          entity.takeDamage(random.integerRange(damage[0], damage[1]))
+          global.applyImpulse(
+            entity,
+            otherEntity.knockback * horizontalDistance / distance,
+            otherEntity.knockback * verticalDistance / distance
+          )
+        elsif otherEntity.identifier == "player" then
+          local damage = entity.damage
+          otherEntity.takeDamage(random.integerRange(damage[0], damage[1]))
+          global.applyImpulse(
+            otherEntity,
+            entity.knockback * -horizontalDistance / distance,
+            entity.knockback * -verticalDistance / distance
+          )
+        end
+      end
+    end
+  end
+end
+
+
+
+end()
+
+
+
+function()
+
+global.Camera = class
+  constructor = function()
+    this.x = 0
+    this.y = 0
+    
+    this.tx = 0
+    this.ty = 0
+    this.dx = screen.width / 4
+    this.dy = screen.height / 4
+    
+    this.sx = 0
+    this.sy = 0
+    this.speed = 0.05
+    this.shakePower = 0
+    this.shakeDecay = 0.1
+    this.shakeThreshold = 0.1
+    this.pan = 4
+  end
+  
+  update = function()
+    this.x += (this.tx - this.x) * this.speed
+    this.y += (this.ty - this.y) * this.speed
+    
+    if this.shakePower then
+      this.sx = ((random.next() * 2) - 1) * this.shakePower
+      this.sy = ((random.next() * 2) - 1) * this.shakePower
+      this.shakePower -= this.shakePower * this.shakeDecay
+      if this.shakePower < this.shakeThreshold then
+        this.shakePower = 0
+      end
+    else
+      this.sx = 0
+      this.sy = 0
+    end
+  end
+  
+  translate = function(surface = screen)
+    local x = (this.pan * (mouse.x / (screen.width / 2))) + this.x + this.sx
+    local y = (this.pan * (mouse.y / (screen.height / 2))) + this.y + this.sy
+    surface.setTranslation(-x, -y)
+  end
+  
+  transpose = function(surface = screen)
+    surface.setTranslation(0, 0)
+  end
+  
+  snap = function(x, y)
+    this.tx = x
+    this.ty = y
+    this.x = x
+    this.y = y
+  end
+  
+  shake = function(amount)
+    this.shakePower += amount
+  end
+  
+  setFocus = function(x, y)
+    this.tx = min(max(this.tx, x - (this.dx / 2)), x + (this.dx / 2))
+    this.ty = min(max(this.ty, y - (this.dy / 2)), y + (this.dy / 2))
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Bar = class
+  constructor = function(game, name, folderName, x, y)
+    this.game = game
+    this.name = name
+    
+    this.folderName = folderName
+    
+    this.current = 1
+    this.total = 1
+    this.scale = 1
+    this.speed = 1
+    
+    this.x = x
+    this.y = y
+  end
+  
+  update = function()
+    this.change(this.regeneration * this.game.timer.deltaTime)
+    local difference = ((this.current / this.total) - this.scale)
+    this.scale += difference * this.speed * this.game.timer.deltaTime
+  end
+  
+  draw = function()
+    screen.setTranslation(screen.width / -2, screen.height / 2)
+    screen.setDrawAnchor(-1, 1)
+    
+    screen.setAlpha(0.2)
+    screen.drawSprite(
+      "bars/" + this.folderName + "/background",
+      this.x, this.y, 64, 8
+    )
+    
+    screen.setAlpha(1)
+    
+    screen.setDrawScale(this.scale, 1)
+    screen.drawSprite(
+      "bars/" + this.folderName + "/foreground",
+      this.x, this.y, 64, 8
+    )
+    
+    screen.setDrawScale(1, 1)
+    screen.drawSprite(
+      "bars/" + this.folderName + "/outline",
+      this.x, this.y, 64, 8
+    )
+    
+    local text = this.name + ": " + floor(this.current) + "/" + this.total
+    screen.setLineWidth(2)
+    screen.drawTextOutline(text, this.x + 68, this.y - 2, 4, "#2a2d38")
+    screen.drawText(text, this.x + 68, this.y - 2, 4, 999)
+    
+    screen.setDrawAnchor(0, 0)
+    screen.setTranslation(0, 0)
+  end
+  
+  set = function(value)
+    this.current = min(max(value, 0), this.total)
+  end
+  
+  change = function(value)
+    this.set(this.current + value)
+  end
+end
+
+global.EnemyBar = class
+  constructor = function(game, parent)
+    this.game = game
+    this.parent = parent
+    
+    this.current = 1
+    this.total = 1
+    this.scale = 1
+    this.speed = 4
+  end
+  
+  update = function()
+    local difference = ((this.current / this.total) - this.scale)
+    this.scale += difference * this.speed * this.game.timer.deltaTime
+  end
+  
+  draw = function()
+    local x = this.parent.x
+    local y = this.parent.y + (this.parent.height / 2)
+    
+    screen.setAlpha(0.2)
+    screen.drawSprite("bars/enemy/background", x, y, 16, 4)
+    screen.setAlpha(1)
+    
+    screen.setDrawAnchor(-1, 0)
+    screen.setDrawScale(this.scale, 1)
+    screen.drawSprite("bars/enemy/foreground", x - 8, y, 16, 4)
+    screen.setDrawScale(1, 1)
+    screen.setDrawAnchor(0, 0)
+    
+    screen.drawSprite("bars/enemy/outline", x, y, 16, 4)
+  end
+end
+
+
+
+
+
+end()
+
+
+
+function()
+
+global.Coin = class
+  BRONZE = ["Bronze", "bronze", 1, 0.5]
+  SILVER = ["Silver", "silver", 10, 1]
+  GOLD = ["Gold", "gold", 100, 2]
+  
+  constructor = function(game, x, y, scatter, data)
+    this.game = game
+    this.name = data[0]
+    this.sprite = data[1]
+    this.value = data[2]
+    this.pitch = data[3]
+    
+    this.x = x
+    this.y = y
+    
+    this.width = 8
+    this.height = 8
+    
+    local power = random.nextInt(30) + 20
+    this.vx = cosd(scatter) * power
+    this.vy = sind(scatter) * power
+    
+    this.hitbox = new global.Hitbox()
+    this.hitbox.rectangle.width = this.width
+    this.hitbox.rectangle.height = this.height
+    this.hitbox.rectangle.x = this.x
+    this.hitbox.rectangle.y = this.y
+  end
+  
+  update = function()
+    this.x += this.vx * this.game.timer.deltaTime
+    this.y += this.vy * this.game.timer.deltaTime
+    this.vx -= this.vx * 2 * this.game.timer.deltaTime
+    this.vy -= this.vy * 2 * this.game.timer.deltaTime
+    
+    this.hitbox.rectangle.x = this.x
+    this.hitbox.rectangle.y = this.y
+    
+    if global.tilemapCollision(this) then
+      this.x -= this.vx * this.game.timer.deltaTime
+      this.y -= this.vy * this.game.timer.deltaTime
+      this.vx = 0
+      this.vy = 0
+    end
+    
+    local player = this.game.player
+    if (
+      this.x < player.x + player.width and
+      this.x + this.width > player.x and
+      this.y < player.y + player.height and
+      this.y + this.height > player.y
+    ) then
+      local sound = audio.playSound("coin", 0.2)
+      sound.setPitch(this.pitch)
+      this.game.player.balance += this.value
+      this.game.coins.removeElement(this)
+    end
+  end
+  
+  draw = function()
+    local sprite = "coins/" + this.sprite
+    screen.drawSprite(sprite, this.x, this.y, this.width, this.height)
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Damage = class
+  constructor = function(game, number)
+    this.game = game
+    
+    this.x = 0
+    this.y = 0
+    
+    this.number = number
+    this.size = 4 + (abs(number) / 8)
+    this.lift = number
+    this.speed = 100
+    
+    this.line = 0
+    this.text = 999
+    this.alpha = 1
+  end
+  
+  update = function()
+    if not (this.alpha == 1) then return end
+    
+    this.lift -= this.game.timer.deltaTime * this.speed
+    this.y += this.game.timer.deltaTime * this.speed
+    
+    if this.lift <= 0 then
+      this.alpha -= this.game.timer.deltaTime
+      after 0.5 seconds do
+        local destroy = function() this.game.effects.removeElement(this) end
+        global.tweenService.createTween(
+          this, "alpha", 1, 0, 0.5, global.Easing.quadInOut, destroy
+        )
+      end
+    end
+  end
+  
+  draw = function()
+    screen.setAlpha(this.alpha)
+    screen.setLineWidth(this.size / 2)
+    screen.drawTextOutline(this.number, this.x, this.y, this.size, this.line)
+    screen.drawText(this.number, this.x, this.y, this.size, this.text)
+    screen.setAlpha(1)
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.EnemyData = class
+  constructor = function(data)
+    this.name = data[0]
+    this.sprite = data[1]
+    this.search = data[2]
+    this.width = data[3]
+    this.height = data[4]
+    this.hitboxWidth = data[5]
+    this.hitboxHeight = data[6]
+    this.hitboxRadius = data[7]
+    this.friction = data[8]
+    this.acceleration = data[9]
+    this.damage = data[10]
+    this.knockback = data[11]
+    this.life = data[12]
+    this.coins = data[13]
+    this.color = data[14]
+    this.drops = data[15]
+  end
+end
+
+global.Enemy = class
+  PURPLE_SLIME = new global.EnemyData([
+    "Purple Slime", "enemies/slimes/purple", 16, 16, 16, 12, 12, 8, 10, 4,
+    [4, 8], 1, [8, 16], [10, 20], "#883eb3", [
+      ["Purple Shard", 0.2],
+      ["Purple Goo", 0.5]
+    ]
+  ])
+  
+  ORANGE_SLIME = new global.EnemyData([
+    "Orange Slime", "enemies/slimes/orange", 8, 16, 16, 12, 12, 8, 12, 8,
+    [8, 12], 4, [4, 8], [10, 20], "#ed7207", [
+      ["Orange Shard", 0.2],
+      ["Orange Goo", 0.5]
+    ]
+  ])
+
+  GREEN_SLIME = new global.EnemyData([
+    "Green Slime", "enemies/slimes/green", 12, 16, 16, 12, 12, 8, 10, 8,
+    [2, 4], 1, [24, 32], [10, 20], "#25b346", [
+      ["Green Shard", 0.2],
+      ["Green Goo", 0.5]
+    ]
+  ])
+
+  BLUE_SLIME = new global.EnemyData([
+    "Blue Slime", "enemies/slimes/blue", 12, 16, 16, 12, 12, 8, 12, 16,
+    [2, 4], 2, [8, 16], [10, 20], "#307cd9", [
+      ["Blue Shard", 0.2],
+      ["Blue Goo", 0.5]
+    ]
+  ])
+  
+  constructor = function(game, data)
+    this.game = game
+    this.name = data.name
+    this.sprite = data.sprite
+    this.color = data.color
+    this.identifier = "enemy"
+    
+    this.path = false
+    this.search = data.search
+    
+    this.x = 0
+    this.y = 0
+    this.flip = random.sign()
+    this.width = data.width
+    this.height = data.height
+    this.scale = [1, 1]
+    
+    this.hitbox = new global.Hitbox()
+    this.hitbox.rectangle.width = data.hitboxWidth
+    this.hitbox.rectangle.height = data.hitboxHeight
+    this.hitbox.circle.radius = data.hitboxRadius
+    
+    this.vx = 0
+    this.vy = 0
+    
+    this.friction = data.friction
+    this.acceleration = data.acceleration
+    this.precision = 5
+    
+    this.damage = data.damage
+    this.knockback = data.knockback
+    
+    this.bar = new global.EnemyBar(this.game, this)
+    this.bar.total = random.integerRange(data.life[0], data.life[1])
+    this.bar.total = round(this.bar.total * this.game.levelNumber / 5)
+    this.bar.current = this.bar.total
+    this.bar.regeneration = 1
+    
+    this.coins = random.integerRange(data.coins[0], data.coins[1])
+    
+    local dropped = []
+    for item in data.drops
+      if random.next() < item[1] then
+        dropped.push(item[0])
+        break
+      end
+    end
+    
+    this.drop = if dropped.length then random.choice(dropped) else false end
+    
+    this.hurtFrames = 0
+    this.hurtDuration = 6
+    
+    local sampleTrailParticle = function(self, game, emitter)
+      local particle = new global.Particle(game, emitter)
+      
+      local size = random.integerRange(6, 8)
+      particle.width = size
+      particle.height = size
+      
+      local lightness = random.integerRange(50, 100)
+      local alpha = random.floatRange(0.4, 0.8)
+      particle.color = (
+        "rgba(" +
+        lightness + ", " +
+        lightness + ", " +
+        lightness + ", " +
+        alpha + ")"
+      )
+      
+      particle.x = self.x + random.integerRange(-8, 8)
+      particle.y = self.y - 8
+      
+      particle.lifespan = random.floatRange(0.2, 0.6)
+      particle.decay.alpha = true
+      particle.decay.sx = true
+      particle.decay.sy = true
+      
+      particle.vx = random.integerRange(10, 20) * -self.flip
+      particle.vy = random.integerRange(20, 40)
+      
+      return particle
+    end
+    
+    this.trail = new global.Emitter(this.game, sampleTrailParticle, this)
+    this.trail.interval = 4
+    this.trail.chance = 0.4
+    
+    this.currentWobble = 0
+    this.wobbleSpeed = 10
+    this.wobbleDegrees = 6
+    this.wobbleTime = 0
+    this.sine = function(t) sin(t) end
+    this.cosine = function(t) sin(t) end
+    this.wobbleWave = random.choice([this.sine, this.cosine])
+  end
+  
+  update = function()
+    this.trail.update()
+    this.bar.update()
+    this.scale[0] += ((1 - this.scale[0]) * 0.1)
+    this.scale[1] += ((1 - this.scale[1]) * 0.1)
+    this.flip = (this.game.player.x - this.x) / abs(this.game.player.x - this.x)
+    
+    this.path = global.findPath(
+      this.game.dungeon, [this.x, this.y],
+      [this.game.player.x, this.game.player.y - (this.game.player.height / 3)],
+      this.search
+    )
+    
+    if this.path then
+      local position = this.path[if this.path.length > 1 then 1 else 0 end]
+      local deltaTime = min(this.game.timer.deltaTime, 1 / this.friction)
+        
+      local horizontalDistance = ((this.path[1][0] + 0.5) * 16) - this.x
+      local verticalDistance = ((this.path[1][1] + 0.5) * 16) - this.y
+        
+      local distance = sqrt(
+        pow(horizontalDistance, 2) + pow(verticalDistance, 2)
+      )
+        
+      this.vx += horizontalDistance * this.acceleration * deltaTime / distance
+      this.vy += verticalDistance * this.acceleration * deltaTime / distance
+      
+      if not this.wobbleTime then
+        if this.wobbleWave == this.sine then
+          this.wobbleWave = this.cosine
+        elsif this.wobbleWave == this.cosine then
+          this.wobbleWave = this.sine
+        end
+      end
+      
+      this.wobbleTime += deltaTime * this.wobbleSpeed
+      local wobbleValue = this.wobbleWave(this.wobbleTime)
+      this.currentWobble = this.wobbleDegrees * wobbleValue
+    else
+      this.steppingFrames = 0
+      this.wobbleTime = 0
+      this.currentWobble = 0
+    end
+    
+    global.applyPhysics(this)
+    if this.hurtFrames > 0 then this.hurtFrames -= 1 end
+  end
+  
+  draw = function()
+    this.trail.draw(this.game.camera.x, this.game.camera.y)
+    screen.setDrawScale(this.scale[0] * this.flip, this.scale[1])
+    screen.setDrawRotation(this.currentWobble)
+    
+    if this.hurtFrames then
+      screen.drawSpriteWithColor(
+        this.sprite, this.x, this.y, this.width, this.height, "white"
+      )
+    else
+      screen.drawSprite(this.sprite, this.x, this.y, this.width, this.height)
+    end
+    
+    screen.setDrawRotation(0)
+    screen.setDrawScale(1, 1)
+  end
+  
+  updateHitbox = function()
+    this.hitbox.circle.x = this.x
+    this.hitbox.circle.y = this.y
+    this.hitbox.rectangle.x = this.x
+    this.hitbox.rectangle.y = this.y
+  end
+  
+  takeDamage = function(amount, damageColor)
+    if not amount or this.hurtFrames then return end
+    
+    audio.playSound("hit", 0.2)
+    this.bar.current = max(this.bar.current - amount, 0)
+    
+    local damageText = new global.Damage(this.game, amount)
+    damageText.x = this.x
+    damageText.y = this.y
+    damageText.text = damageColor[0]
+    damageText.line = damageColor[1]
+    this.game.effects.push(damageText)
+
+    if not this.bar.current then
+      local coinScatter = function(count, data)
+        if not count then return end
+        
+        local offset = random.integerRange(0, 360)
+        local slice = 360 / count
+        
+        for index = 0 to count - 1
+          local angle = (index * slice) + offset
+          local coin = new global.Coin(this.game, this.x, this.y, angle, data)
+          this.game.coins.push(coin)
+        end
+      end
+      
+      local c = this.coins
+      local bronzeCoins = c % 10
+      local silverCoins = (c / 10) % 10
+      local goldCoins = max(floor(c - bronzeCoins - (10 * silverCoins)), 0)
+      
+      coinScatter(bronzeCoins, global.Coin.BRONZE)
+      coinScatter(silverCoins, global.Coin.SILVER)
+      coinScatter(goldCoins, global.Coin.GOLD)
+      
+      if this.drop then
+        local ingredient = new global.Ingredient(this.game, this.drop)
+        ingredient.x = this.x
+        ingredient.y = this.y
+        this.game.ingredients.push(ingredient)
+      end
+      
+      this.game.camera.shake(4)
+      this.game.entities.removeElement(this)
+    else
+      this.game.camera.shake(2)
+      this.scale = [1.5, 0.5]
+      this.hurtFrames = this.hurtDuration
+    end
+  end
+  
+  splatter = function(direction, speed)
+    local sample = function(self, game, emitter)
+      local particle = new global.Particle(game, emitter)
+      
+      particle.x = self.x
+      particle.y = self.y
+      
+      local size = random.integerRange(8, 16)
+      particle.width = size
+      particle.height = size
+      particle.color = self.color
+      
+      local angle = direction + random.integerRange(-60, 60)
+      local power = speed * random.next()
+      particle.vx = cosd(angle) * power
+      particle.vy = sind(angle) * power
+      
+      particle.lifespan = 0.5
+      return particle
+    end
+    
+    local splatter = new global.Emitter(this.game, sample, this)
+    splatter.infinite = false
+    splatter.count = [8, 12]
+    this.game.emitters.push(splatter)
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Player = class
+  constructor = function(game)
+    this.game = game
+    this.identifier = "player"
+    this.frozen = false
+    
+    this.light = new global.Light(0, 0, 0, 0)
+    this.lightTween = false
+    
+    this.x = 0
+    this.y = 0
+    this.vx = 0
+    this.vy = 0
+    
+    this.flip = 1
+    this.width = 16
+    this.height = 16
+    this.column = 0
+    this.row = 0
+    this.scale = [1, 1]
+    
+    this.hitbox = new global.Hitbox()
+    this.hitbox.rectangle.width = 8
+    this.hitbox.rectangle.height = 4
+    this.hitbox.circle.radius = 8
+    
+    this.handWidth = 4
+    this.handHeight = 4
+    this.handAngle = 0
+    this.handDistance = 8
+    this.handOffsets = [0, 0]
+    this.equipment = false
+    
+    this.rollingFrames = 0
+    this.rollingInterval = 2
+    this.rollingDirection = [0, 0]
+    this.rollingPower = 4
+    this.rollingCooldown = 0.5
+    this.canRoll = true
+    
+    this.currentWobble = 0
+    this.wobbleSpeed = 10
+    this.wobbleDegrees = 6
+    this.wobbleTime = 0
+    this.sine = function(t) sin(t) end
+    this.cosine = function(t) sin(t) end
+    this.wobbleWave = random.choice([this.sine, this.cosine])
+    
+    this.steppingFrames = 0
+    this.nextStep = random.nextInt(5) + 15
+    
+    local sampleTrailParticle = function(self, game, emitter)
+      local particle = new global.Particle(game, emitter)
+      
+      local size = random.integerRange(6, 8)
+      particle.width = size
+      particle.height = size
+      
+      local lightness = random.integerRange(50, 100)
+      local alpha = random.floatRange(0.4, 0.8)
+      particle.color = (
+        "rgba(" +
+        lightness + ", " +
+        lightness + ", " +
+        lightness + ", " +
+        alpha + ")"
+      )
+      
+      particle.x = self.x + random.integerRange(-8, 8)
+      particle.y = self.y - 8
+      
+      particle.lifespan = random.floatRange(0.2, 0.6)
+      particle.decay.alpha = true
+      particle.decay.sx = true
+      particle.decay.sy = true
+      
+      particle.vx = random.integerRange(10, 20) * -self.flip
+      particle.vy = random.integerRange(20, 40)
+      
+      return particle
+    end
+    
+    this.trail = new global.Emitter(this.game, sampleTrailParticle, this)
+    this.trail.interval = 4
+    this.trail.chance = 0.4
+    
+    this.friction = 5
+    this.precision = 5
+    this.acceleration = 8
+    
+    this.afterimages = []
+    
+    this.hurtFrames = 0
+    this.hurtDuration = 6
+    this.invincible = 0
+    this.invincibleDuration = 20
+    
+    this.lifeBar = new global.Bar(this.game, "Life", "life_bar", 5, -5)
+    this.lifeBar.total = 100
+    this.lifeBar.current = 100
+    this.lifeBar.regeneration = 0.5
+    
+    this.manaBar = new global.Bar(this.game, "Mana", "mana_bar", 5, -15)
+    this.manaBar.total = 100
+    this.manaBar.current = 100
+    this.manaBar.regeneration = 2
+    
+    this.deathFrames = 0
+    this.deathInterval = 2
+    this.dead = false
+    
+    this.balance = 0
+    this.displayBalance = 0
+    this.inventory = new global.Inventory(this.game, this)
+    
+    this.data = []
+    this.updateData()
+  end
+  
+  update = function()
+    for afterimage in this.afterimages
+      if not afterimage.update() then
+        this.afterimages.removeElement(afterimage)
+      end
+    end
+    
+    this.scale[0] += ((1 - this.scale[0]) * 0.1)
+    this.scale[1] += ((1 - this.scale[1]) * 0.1)
+    
+    this.light.x = this.x
+    this.light.y = this.y - 6
+    
+    this.lifeBar.update()
+    this.manaBar.update()
+    this.inventory.update()
+    this.trail.update()
+    if not (this.equipment.type == "number") then this.equipment.update() end
+    
+    if not (this.displayBalance == this.balance) then
+      local difference = this.balance - this.displayBalance
+      this.displayBalance += difference / abs(difference)
+    end
+    
+    if keyboard.press.Z then
+      if this.inventory.showing then
+        if this.inventory.state == global.Inventory.IDLE then
+          this.inventory.setVisibility(false)
+        end
+      else
+        this.inventory.state = global.Inventory.IDLE
+        this.inventory.setVisibility(true)
+      end
+    end
+    
+    this.game.camera.setFocus(this.x, this.y)
+    if this.dead or this.frozen or this.inventory.showing then
+      this.trail.active = false
+      return
+    end
+    
+    local deltaTime = min(this.game.timer.deltaTime, 1 / this.friction)
+    local leftInput = keyboard.LEFT or gamepad.LEFT
+    local rightInput = keyboard.RIGHT or gamepad.RIGHT
+    local upInput = keyboard.UP or gamepad.UP
+    local downInput = keyboard.DOWN or gamepad.DOWN
+    
+    local horizontalInput = rightInput - leftInput
+    local verticalInput = upInput - downInput
+    
+    this.flip = if horizontalInput then horizontalInput else this.flip end
+    
+    if horizontalInput and verticalInput then
+      horizontalInput /= sqrt(2)
+      verticalInput /= sqrt(2)
+    end
+    
+    local moving = round(sqrt(pow(this.vx, 2) + pow(this.vy, 2)))
+    this.trail.active = moving
+    
+    local roll = (
+      keyboard.press.SPACE or
+      keyboard.press.SHIFT_LEFT or
+      keyboard.press.SHIFT_RIGHT
+    )
+    
+    if this.rollingFrames then
+      if this.rollingFrames > 12 * this.rollingInterval then this.stopRolling()
+      else
+        local index = floor(this.rollingFrames / this.rollingInterval)
+        local frame = global.sprites["player/rolling"].frames[index]
+        local afterimage = new global.Afterimage(
+          frame, this.x, this.y,
+          this.width, this.height,
+          0.1, 0.2
+        )
+        
+        this.afterimages.push(afterimage)
+        this.rollingFrames += 1 
+      end
+    elsif roll and this.canRoll and moving then
+      this.game.camera.shake(4)
+      this.rollingFrames = 1
+      this.canRoll = false
+      audio.playSound("swoosh", 0.1)
+      
+      local currentDirection = atan2(this.vy, this.vx)
+      this.rollingDirection = [
+        cos(currentDirection) * this.rollingPower,
+        sin(currentDirection) * this.rollingPower
+      ]
+    end
+    
+    if this.deathFrames then
+      if this.deathFrames > 3 * this.deathInterval then
+        this.deathFrames = 0
+        this.die()
+      else this.deathFrames += 1 end
+    else
+      this.vx += horizontalInput * this.acceleration * deltaTime
+      this.vy += verticalInput * this.acceleration * deltaTime
+    end
+    
+    if this.rollingFrames then
+      this.vx = this.rollingDirection[0]
+      this.vy = this.rollingDirection[1]
+    end
+    
+    local collided = global.applyPhysics(this)
+    if collided and this.rollingFrames then this.stopRolling() end
+    this.column = floor(this.x / 16)
+    this.row = floor(this.y / 16)
+    
+    if moving and not this.rollingFrames then
+      this.steppingFrames += 1
+      
+      if not this.wobbleTime then
+        if this.wobbleWave == this.sine then
+          this.wobbleWave = this.cosine
+        elsif this.wobbleWave == this.cosine then
+          this.wobbleWave = this.sine
+        end
+      end
+      
+      this.wobbleTime += deltaTime * this.wobbleSpeed
+      local wobbleValue = this.wobbleWave(this.wobbleTime)
+      this.currentWobble = this.wobbleDegrees * wobbleValue
+      
+      if this.steppingFrames > this.nextStep then
+        this.nextStep = random.nextInt(5) + 15
+        this.steppingFrames = 0
+        audio.playSound("step", 0.2)
+      end
+    else
+      this.steppingFrames = 0
+      this.wobbleTime = 0
+      this.currentWobble = 0
+    end
+    
+    this.handAngle = atan2d(
+      mouse.y - (this.y - this.game.camera.y),
+      mouse.x - (this.x - this.game.camera.x)
+    )
+    
+    this.handOffsets = [
+      cosd(this.handAngle) * this.handDistance,
+      sind(this.handAngle) * this.handDistance
+    ]
+    
+    this.light.angle = atan2d(
+      mouse.y - (this.light.y - this.game.camera.y),
+      mouse.x - (this.light.x - this.game.camera.x)
+    )
+    
+    if not (this.equipment.type == "number") and not this.game.timer.frozen then
+      if mouse.left then this.equipment.useLeft() end
+      if mouse.right then this.equipment.useRight() end
+    end
+    
+    if this.hurtFrames > 0 then 
+      this.hurtFrames -= 1
+      
+      if not this.hurtFrames and not floor(this.lifeBar.current) then
+        this.stopRolling()
+        audio.playSound("death", 0.2)
+        this.game.camera.shake(10)
+        this.deathFrames += 1
+      end
+    end
+  
+    if this.invincible > 0 then this.invincible -= 1 end
+  end
+  
+  updateHitbox = function()
+    this.hitbox.circle.x = this.x
+    this.hitbox.circle.y = this.y
+    this.hitbox.rectangle.x = this.x
+    this.hitbox.rectangle.y = this.y - 4
+  end
+  
+  drawHand = function()
+    screen.setDrawRotation(this.handAngle)
+    if this.hurtFrames then
+      screen.drawSpriteWithColor(
+        "player/hand", 
+        this.x + this.handOffsets[0],
+        this.y + this.handOffsets[1],
+        this.handWidth, this.handHeight,
+        "white"
+      )
+    else
+      screen.drawSprite(
+        "player/hand", 
+        this.x + this.handOffsets[0],
+        this.y + this.handOffsets[1],
+        this.handWidth, this.handHeight
+      )
+    end
+    
+    screen.setDrawRotation(0)
+    if not (this.equipment.type == "number") then this.equipment.draw() end
+  end
+  
+  drawBody = function()
+    this.trail.draw(this.game.camera.x, this.game.camera.y)
+    for afterimage in this.afterimages afterimage.draw() end
+    
+    if this.handAngle >= 0 then this.drawHand() end
+    
+    screen.setDrawScale(this.scale[0] * this.flip, this.scale[1])
+    screen.setDrawRotation(this.currentWobble)
+    
+    if this.dead then
+      screen.drawSprite(
+        sprites["player/dying"].frames[3],
+        this.x, this.y,
+        this.width, this.height
+      )
+    elsif this.deathFrames then
+      local index = floor(this.deathFrames / this.deathInterval)
+      local frame = sprites["player/dying"].frames[index]
+      screen.drawSprite(frame, this.x, this.y, this.width, this.height)
+    elsif this.rollingFrames then
+      local index = floor(this.rollingFrames / this.rollingInterval)
+      local frame = sprites["player/rolling"].frames[index]
+      if this.hurtFrames then
+        screen.drawSpriteWithColor(
+          frame, this.x, this.y,
+          this.width, this.height, "white"
+        )
+      else screen.drawSprite(frame, this.x, this.y, this.width, this.height) end
+    else
+      local sprite = "player/"
+      if round(sqrt(pow(this.vx, 2) + pow(this.vy, 2))) then
+        sprite += "running"
+      else sprite += "idle" end
+      
+      if this.hurtFrames then
+        screen.drawSpriteWithColor(
+          sprite, this.x, this.y,
+          this.width, this.height, "white"
+        )
+      else
+        screen.drawSprite(
+          sprite, this.x, this.y,
+          this.width, this.height
+        )
+      end
+    end
+    
+    screen.setDrawScale(1, 1)
+    screen.setDrawRotation(0)
+    
+    if this.handAngle < 0 then this.drawHand() end
+  end
+  
+  drawShadows = function()
+    local surfaces = this.game.dungeon.surfaces
+    local position = [this.game.camera.x, this.game.camera.y]
+    local culledSurfaces = global.getCulledSurfaces(surfaces, position)
+    screen.drawShadows(this.light, culledSurfaces, 1)
+  end
+  
+  drawStats = function()
+    this.lifeBar.draw()
+    this.manaBar.draw()
+    
+    local x = (screen.width / -2) + 12
+    local y = (screen.height / 2) - 34
+    screen.drawSprite("icons/pouch", x, y, 16, 16)
+    screen.setLineWidth(3)
+    screen.drawTextOutline("Z", x, y, 6, "#2a2d38")
+    screen.drawText("Z", x, y, 6, 999)
+    screen.setDrawAnchor(-1, 1)
+    
+    screen.drawTextOutline(
+      "Dungeon #" + this.game.levelNumber,
+      (screen.width / -2) + 24,
+      (screen.height / 2) - 26,
+      6, "#2a2d38"
+    )
+    
+    screen.drawText(
+      "Dungeon #" + this.game.levelNumber,
+      (screen.width / -2) + 24,
+      (screen.height / 2) - 26,
+      6, 999
+    )
+    
+    screen.drawTextOutline(
+      "Balance: $" + this.displayBalance,
+      (screen.width / -2) + 24,
+      (screen.height / 2) - 36,
+      6, "#2a2d38"
+    )
+    
+    screen.drawText(
+      "Balance: $" + this.displayBalance,
+      (screen.width / -2) + 24,
+      (screen.height / 2) - 36,
+      6, 999
+    )
+    
+    screen.setDrawAnchor(0, 0)
+  end
+  
+  drawInventory = function() this.inventory.draw() end
+  
+  takeDamage = function(amount)
+    if this.frozen or this.dead then return end
+    if not amount or this.invincible or this.rollingFrames then return end
+    
+    this.lifeBar.change(-amount)
+    
+    local damageText = new global.Damage(this.game, -amount)
+    damageText.x = this.x
+    damageText.y = this.y
+    damageText.text = "#de4040"
+    damageText.line = "#290105"
+    this.game.effects.push(damageText)
+    
+    audio.playSound("hit", 0.2)
+    this.scale = [1.5, 0.5]
+    this.hurtFrames = this.hurtDuration
+    this.invincible = this.invincibleDuration
+    this.game.camera.shake(1)
+  end
+  
+  stopRolling = function()
+    this.currentWobble = 0
+    this.wobbleTime = 0
+    this.rollingFrames = 0
+    this.rollingDirection = [0, 0]
+    after this.rollingCooldown seconds do this.canRoll = true end
+  end
+  
+  die = function()
+    if this.frozen or this.dead then return end
+    this.stopRolling()
+    this.dead = true
+    
+    global.lastScore = this.game.levelNumber
+    if global.lastScore > global.highScore then
+      global.lastHighScore = global.highScore
+      global.highScore = global.lastScore
+      storage.set("highscore", global.highScore)
+    else global.lastHighScore = global.highScore end
+    
+    local deathTween = global.tweenService.createTween(
+      this.light, "angleRange", this.light.angleRange, 0, 1,
+      global.Easing.cubeOut
+    )
+    
+    deathTween.completionHandler = function()
+      local transition = function()
+        global.sceneManager.setScene(global.SceneManager.GAME_OVER)
+      end
+      
+      global.transition.requestTransition(transition, function() end, 1)
+    end
+  end
+  
+  equip = function(equipment)
+    if this.frozen or this.dead then return end
+    this.equipment = equipment
+    
+    local newFov = 0
+    if not (equipment.type == "number") then newFov = equipment.fov end
+    
+    if this.lightTween then global.tweenService.removeTween(this.lightTween) end
+    this.lightTween = global.tweenService.createTween(
+      this.light, "angleRange", this.light.angleRange,
+      newFov, 1, global.Easing.cubeOut
+    )
+  end
+  
+  lightsOut = function()
+    if this.frozen or this.dead then return end
+    
+    this.stopRolling()
+    this.frozen = true
+    
+    if this.lightTween then global.tweenService.removeTween(this.lightTween) end
+    local lightsOutTween = global.tweenService.createTween(
+      this.light, "angleRange", this.light.angleRange, 0, 1,
+      global.Easing.cubeOut
+    )
+    
+    lightsOutTween.completionHandler = function()
+      local transition = function()
+        global.sceneManager.scene.newLevel()
+      end
+      
+      local transitionEnd = function()
+        local game = global.sceneManager.scene
+        local newFov = 0
+        local equipment = game.player.equipment
+        if not (equipment.type == "number") then newFov = equipment.fov end
+        local lightsInTween = global.tweenService.createTween(
+          game.player.light, "angleRange", 0, newFov, 1,
+          global.Easing.cubeOut
+        )
+        
+        lightsInTween.completionHandler = function()
+          global.sceneManager.scene.player.frozen = false
+        end
+      end
+      
+      global.transition.requestTransition(transition, transitionEnd, 1)
+    end
+  end
+  
+  updateData = function()
+    local visionMultiplier = (this.light.angleRangeMultiplier * 100) + "%"
+    this.data = [
+      ["Life Regeneration", "life", this.lifeBar.regeneration + "/sec"],
+      ["Mana Regeneration", "mana", this.manaBar.regeneration + "/sec"],
+      ["Acceleration", "speed", this.acceleration],
+      ["Rolling Power", "power", this.rollingPower],
+      ["Rolling Cooldown", "cooldown", this.rollingCooldown + " Seconds"],
+      ["Vision Multiplier", "vision", visionMultiplier]
+    ]
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Flask = class
+  constructor = function(game, parent)
+    this.game = game
+    this.parent = parent
+    this.identifier = "equipment"
+    
+    this.name = "Empty Flask"
+    this.color = "#00000000"
+    this.fov = 0
+    this.width = 16
+    this.height = 16
+    this.ingredients = []
+    
+    this.drinking = false
+    this.yeet = false
+    this.angle = 0
+    this.speed = 150
+    this.x = 0
+    this.y = 0
+    
+    this.hitbox = new global.Hitbox()
+    this.hitbox.rectangle.width = 1
+    this.hitbox.rectangle.height = 1
+    this.hitbox.circle.radius = 8
+    
+    this.damage = 100
+    this.knockback = 10
+    
+    this.data = [
+      ["Vision", "vision", "0 Degrees"],
+      ["Damage", "power", this.damage],
+      ["Knockback", "knockback", this.knockback],
+      ["Speed", "speed", this.speed]
+    ]
+  end
+  
+  update = function()
+    if this.yeet then
+      this.angle += this.game.timer.deltaTime * 90 * this.yeet / abs(this.yeet)
+      this.x += cosd(this.yeet) * this.speed * this.game.timer.deltaTime
+      this.y += sind(this.yeet) * this.speed * this.game.timer.deltaTime
+      this.hitbox.rectangle.x = this.x
+      this.hitbox.rectangle.y = this.y
+      this.hitbox.circle.x = this.x
+      this.hitbox.circle.y = this.y
+      
+      if global.tilemapCollision(this) then
+        this.game.camera.shake(4)
+        audio.playSound("boom", 0.05)
+        this.destroy()
+        return
+      end
+      
+      for entity in this.game.entities
+        local horizontalDistance = entity.x - this.x
+        local verticalDistance = entity.y - this.y
+        local distance = sqrt(
+          pow(horizontalDistance, 2) + 
+          pow(verticalDistance, 2)
+        )
+        
+        local maximumDistance = (
+          (this.hitbox.circle.radius) + entity.hitbox.circle.radius
+        )
+        
+        if distance <= maximumDistance then
+          entity.takeDamage(this.damage, ["white", "black"])
+          entity.splatter(this.yeet, this.speed)
+          global.applyImpulse(
+            entity,
+            this.knockback * horizontalDistance / distance,
+            this.knockback * verticalDistance / distance
+          )
+              
+          this.destroy()
+          return
+        end
+      end
+    end
+  end
+  
+  draw = function()
+    if this.yeet then
+      screen.setDrawRotation(this.angle)
+      this.paint(this.x, this.y)
+    else
+      local direction = this.parent.handOffsets[0]
+      screen.setDrawRotation(this.drinking * (direction / abs(direction)) * 30)
+      local x = this.parent.x + this.parent.handOffsets[0]
+      local y = this.parent.y + this.parent.handOffsets[1] - 4
+      this.paint(x, y)
+    end
+    
+    screen.setDrawRotation(0)
+  end
+  
+  paint = function(x, y)
+    screen.setAlpha(0.8)
+    screen.drawSpriteWithColor(
+      "flask/fill", x, y, this.width, this.height, this.color
+    )
+    
+    screen.setAlpha(1)
+    screen.drawSprite("flask/outline", x, y, this.width, this.height)
+  end
+  
+  useLeft = function()
+    if this.drinking or this.yeet then return end
+    this.drinking = true
+    
+    after 1 seconds do
+      for ingredient in this.ingredients ingredient.affect(this.parent) end
+      this.ingredients = []
+      this.name = "Empty Flask"
+      this.color = "#00000000"
+      this.parent.updateData()
+      this.drinking = false
+      this.useRight()
+    end
+  end
+  
+  useRight = function()
+    if this.drinking or this.yeet then return end
+    this.yeet = this.parent.handAngle
+    this.x = this.parent.x + this.parent.handOffsets[0]
+    this.y = this.parent.y + this.parent.handOffsets[1] - 4
+    this.parent.inventory.slots.remove(this)
+    this.game.projectiles.push(this)
+  end
+  
+  add = function(ingredients)
+    local ingredientsLeft = [] + ingredients
+    
+    local sounded = false
+    local failed = (this.name == "Putrid Potion")
+    for ingredient in ingredientsLeft
+      if failed then continue
+      elsif ingredient[0].name.endsWith("Goo") then
+        this.ingredients.push(ingredient[0])
+        ingredientsLeft.removeElement(ingredient)
+        if not sounded then
+          audio.playSound("craft", 0.2)
+          sounded = true
+        end
+        
+        if this.ingredients.length > 1 then
+          local failChance = random.floatRange(0.05, 0.1)
+          if random.next() < failChance or ingredient[0].name == "Black Goo" then
+            this.name = "Sludge"
+            this.color = "#4a412a"
+            failed = true
+            continue
+          end
+        end
+      end
+    end
+    
+    if not failed and this.ingredients.length then
+      this.name = "Potion"
+      local r = random.next()
+      local a = r * (1 / 3)
+      local b = (r + 1) * (1 / 3)
+      local c = (r + 2) * (1 / 3)
+      local components = [a, b, c]
+      random.shuffle(components)
+      this.color = (
+        "rgb(" +
+        min(components[0] * 600, 255) + ", " +
+        min(components[1] * 600, 255) + ", " +
+        min(components[2] * 600, 255) + ")"
+      )
+    end
+    
+    return ingredientsLeft
+  end
+  
+  destroy = function()
+    local sample = function(self, game, emitter)
+      local particle = new global.Particle(game, emitter)
+      
+      particle.x = self.x
+      particle.y = self.y
+      
+      local size = random.integerRange(8, 16)
+      particle.width = size
+      particle.height = size
+      particle.color = "white"
+      particle.shape = global.Particle.RECTANGLE
+      
+      local angle = self.yeet + random.integerRange(-60, 60)
+      local power = self.speed * random.next()
+      particle.vx = cosd(angle) * power
+      particle.vy = sind(angle) * power
+      
+      particle.lifespan = 0.5
+      return particle
+    end
+    
+    local splatter = new global.Emitter(this.game, sample, this)
+    splatter.infinite = false
+    splatter.count = [8, 12]
+    this.game.emitters.push(splatter)
+    
+    this.game.projectiles.removeElement(this)
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Lantern = class
+  sprite = "lantern"
+  
+  constructor = function(game, parent)
+    this.game = game
+    this.parent = parent
+    this.identifier = "equipment"
+    
+    this.name = "Lantern"
+    this.fov = 360
+    this.width = 8
+    this.height = 8
+    
+    this.shine = 0
+    this.shineInterval = 2
+    this.shineDelay = 90
+    this.data = [
+      ["Vision", "vision", this.fov + " Degrees"]
+    ]
+  end
+  
+  update = function()
+    if this.shine then
+      if this.shine > 8 * this.shineInterval then this.shine = 0
+      else this.shine += 1 end
+    elsif not (this.game.timer.frames % this.shineDelay) then
+      this.shine += 1
+    end
+  end
+  
+  draw = function()
+    local frames = global.sprites[global.Lantern.sprite].frames
+    local frame = frames[floor(this.shine / this.shineInterval)]
+    screen.drawSprite(
+      frame, this.parent.x + this.parent.handOffsets[0],
+      this.parent.y + this.parent.handOffsets[1] - (this.parent.handHeight / 2),
+      this.width, this.height
+    )
+  end
+  
+  paint = function(x, y)
+    local sprite = global.sprites[global.Lantern.sprite].frames[0]
+    screen.drawSprite(sprite, x, y, this.width, this.height)
+  end
+  
+  useLeft = function()
+  end
+  
+  useRight = function()
+  end
+  
+  add = function(ingredients)
+    return ingredients
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.WeaponData = class
+  constructor = function(data)
+    this.name = data[0]
+    this.sprite = data[1]
+    this.fov = data[2]
+    this.width = data[3]
+    this.height = data[4]
+    
+    this.recoil = data[5]
+    this.shootCooldown = data[6]
+    this.projectileMana = data[7]
+    this.projectileDamage = data[8]
+    this.projectileKnockback = data[9]
+    this.projectileSpeed = data[10]
+    this.projectileSize = data[11]
+    this.projectileColor = data[12]
+  end
+end
+
+global.Weapon = class
+  WAND = new global.WeaponData([
+    "Wand", "weapons/wand", 30, 8, 8,
+    0, 0.5, 1, [1, 2], 0, 200, "TINY", "PURPLE"
+  ])
+
+  SHORT_STAFF = new global.WeaponData([
+    "Short Staff", "weapons/short_staff", 60, 16, 16,
+    1, 0.8, 2, [2, 5], 1, 180, "SMALL", "GREEN"
+  ])
+  
+  STAFF = new global.WeaponData([
+    "Staff", "weapons/staff", 90, 16, 16,
+    2, 1, 5, [5, 10], 2, 150, "MEDIUM", "BLUE"
+  ])
+
+  THICK_STAFF = new global.WeaponData([
+    "Thick Staff", "weapons/thick_staff", 120, 16, 16,
+    4, 1.6, 10, [10, 20], 5, 120, "LARGE", "ORANGE"
+  ])
+
+  SCEPTER = new global.WeaponData([
+    "Scepter", "weapons/scepter", 150, 20, 20,
+    8, 2, 20, [20, 50], 10, 100, "HUGE", "BLACK"
+  ])
+  
+  constructor = function(game, parent, data)
+    this.game = game
+    this.parent = parent
+    this.data = data
+    this.identifier = "equipment"
+    
+    this.name = this.data.name
+    this.sprite = this.data.sprite
+    this.fov = this.data.fov
+    this.width = this.data.width
+    this.height = this.data.height
+    
+    this.angle = 0
+    this.shoot = 0
+    this.canCreateProjectile = true
+    
+    this.recoil = this.data.recoil
+    this.shootCooldown = this.data.shootCooldown
+    
+    this.projectileMana = this.data.projectileMana
+    this.projectileDamage = this.data.projectileDamage
+    this.projectileKnockback = this.data.projectileKnockback
+    this.projectileSpeed = this.data.projectileSpeed
+    this.projectileSize = global.Projectile[this.data.projectileSize]
+    this.projectileColor = global.Projectile[this.data.projectileColor]
+    
+    this.updateData()
+  end
+  
+  update = function()
+    if not this.projectile and this.canCreateProjectile then
+      if this.parent.manaBar.current >= this.projectileMana then
+        this.parent.manaBar.current -= this.projectileMana
+        this.createProjectile()
+      end
+    end
+    
+    if this.shoot then this.shoot -= 1 end
+    this.angle = this.parent.handAngle - this.shoot
+    if this.projectile then this.projectile.update() end
+  end
+  
+  draw = function()
+    local x = this.parent.x + this.parent.handOffsets[0]
+    local y = this.parent.y + this.parent.handOffsets[1]
+    
+    screen.setDrawScale(1, this.parent.flip)
+    screen.setDrawRotation(this.angle)
+    screen.drawSprite(this.sprite, x, y, this.width, this.height)
+    screen.setDrawRotation(0)
+    screen.setDrawScale(1, 1)
+    
+    if this.projectile then
+      this.positionProjectile()
+      this.projectile.draw()
+    end
+  end
+  
+  paint = function(x, y)
+    screen.drawSprite(this.sprite, x, y, this.width, this.height)
+  end
+  
+  useLeft = function()
+    if not this.projectile then return end
+    audio.playSound("shoot", 0.2)
+    
+    this.shoot = 15
+    this.game.camera.shake(this.projectileSize[1] / 4)
+    
+    local recoil = random.integerRange(-this.recoil, this.recoil)
+    local angle = this.parent.handAngle + recoil
+    this.projectile.blastOff(angle, this.projectileSpeed)
+    this.game.projectiles.push(this.projectile)
+    
+    this.projectile = false
+    this.canCreateProjectile = false
+    after this.shootCooldown seconds do this.canCreateProjectile = true end
+  end
+  
+  useRight = function()
+  end
+  
+  createProjectile = function()
+    this.projectile = new global.Projectile(
+      this.game, this.projectileSize, this.projectileColor,
+      random.integerRange(this.projectileDamage[0], this.projectileDamage[1]),
+      this.projectileKnockback
+    )
+    
+    this.projectile.targets.push("enemy")
+    this.positionProjectile()
+  end
+  
+  positionProjectile = function()
+    this.projectile.angle = this.angle
+      
+    local x = this.parent.x + this.parent.handOffsets[0]
+    local y = this.parent.y + this.parent.handOffsets[1]
+    
+    local parentAngle = atan2d(y - this.parent.y, x - this.parent.x)
+    parentAngle += 45 * this.parent.flip
+    
+    this.projectile.x = x + (cosd(parentAngle) * this.width / 2)
+    this.projectile.y = y + (sind(parentAngle) * this.height / 2)
+  end
+  
+  add = function(ingredients)
+    audio.playSound("craft", 0.2)
+    for ingredient in ingredients ingredient[0].affect(this) end
+    this.updateData()
+    return []
+  end
+  
+  updateData = function()
+    local damage = this.projectileDamage[0] + "-" + this.projectileDamage[1]
+    local size = this.projectileSize[2] + " - " + this.projectileSize[1]
+    
+    this.data = [
+      ["Bullet Damage", "power", damage],
+      ["Bullet Knockback", "knockback", this.projectileKnockback],
+      ["Bullet Speed", "speed", this.projectileSpeed],
+      ["Bullet Size", "size", size],
+      ["Bullet Color", "color", this.projectileColor[2]],
+      ["Shoot Cooldown", "cooldown", this.shootCooldown + " Seconds"],
+      ["Shoot Recoil", "recoil", this.recoil],
+      ["Mana Usage", "mana", this.projectileMana + " per Bullet"],
+      ["Vision", "vision", this.fov + " Degrees"]
+    ]
+  end
+end
+
+
+
+
+end()
+
+
+
+function()
+
+global.CraftingBench = class
+  constructor = function(game, spot)
+    this.game = game
+    this.spot = spot
+    
+    this.x = 0
+    this.y = 0
+    this.flip = random.sign()
+    this.width = 32
+    this.height = 16
+    
+    this.interaction = new global.Interaction(this.game, "E")
+    this.variation = random.nextInt(4)
+  end
+  
+  update = function()
+    if this.canInteract(this.game.player) and keyboard.press.E then
+      if this.game.player.inventory.showing then
+        if this.game.player.inventory.state == global.Inventory.TABLE then
+          this.game.player.inventory.setVisibility(false)
+        end
+      else
+        this.game.player.inventory.state = global.Inventory.TABLE
+        this.game.player.inventory.setVisibility(true)
+      end
+    end
+  end
+  
+  draw = function()
+    screen.setDrawScale(this.flip, 1)
+    local sprite = "furniture/crafting_benches/" + this.variation
+    screen.drawSprite(sprite, this.x, this.y, this.width, this.height)
+    screen.setDrawScale(1, 1)
+  end
+  
+  canInteract = function(player)
+    local x = this.spot[0] - player.column
+    return (x < 2 and x > -3 and abs(this.spot[1] - player.row) < 2)
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.ShopStand = class
+  constructor = function(game, spot)
+    this.game = game
+    this.spot = spot
+    
+    this.x = 0
+    this.y = 0
+    this.width = 32
+    this.height = 32
+    
+    this.interaction = new global.Interaction(this.game, "E", "Investigate")
+    this.data = this.generateShopData()
+  end
+  
+  update = function()
+    if this.canInteract(this.game.player) and keyboard.press.E then
+      if this.game.player.inventory.showing then
+        if this.game.player.inventory.state == global.Inventory.SHOP then
+          this.game.player.inventory.setVisibility(false)
+        end
+      else
+        this.game.player.inventory.state = global.Inventory.SHOP
+        this.game.player.inventory.shop.stand = this
+        this.game.player.inventory.setVisibility(true)
+      end
+    end
+  end
+  
+  draw = function()
+    local sprite = "furniture/shop_stand"
+    screen.drawSprite(sprite, this.x, this.y, this.width, this.height)
+  end
+  
+  canInteract = function(player)
+    local x = this.spot[0] - player.column
+    local y = this.spot[1] - player.row
+    return (x < 2 and x > -3 and y < 2 and y > -3)
+  end
+  
+  generateShopData = function()
+    local number = this.game.levelNumber
+    local items = []
+    
+    local weaponData = false
+    local value = random.next()
+    if value < 0.1 then weaponData = [global.Weapon.SCEPTER, 1000]
+    elsif value < 0.2 then weaponData = [global.Weapon.THICK_STAFF, 500]
+    elsif value < 0.5 then weaponData = [global.Weapon.STAFF, 200]
+    else weaponData = [global.Weapon.SHORT_STAFF, 100] end
+    local weapon = new global.Weapon(this.game, this.game.player, weaponData[0])
+    items.push([weapon, weaponData[1]])
+    
+    for _ = 0 to random.nextInt(5)
+      local flask = new global.Flask(this.game, this.game.player)
+      items.push([flask, 50 * number])
+    end
+    
+    return items
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Stairs = class
+  constructor = function(game, spot, flip)
+    this.game = game
+    this.spot = spot
+    
+    this.x = 0
+    this.y = 0
+    this.flip = flip
+    this.width = 16
+    this.height = 16
+    
+    this.interaction = new global.Interaction(this.game, "Q", "Advance")
+    this.action = function() end
+  end
+  
+  update = function()
+    if this.canInteract(this.game.player) and keyboard.press.Q then
+      this.action()
+    end
+  end
+  
+  draw = function()
+    screen.setDrawScale(this.flip, 1)
+    screen.drawSprite("dungeon/stairs", this.x, this.y, this.width, this.height)
+    screen.setDrawScale(1, 1)
+  end
+  
+  canInteract = function(player)
+    return (
+      player.column == this.spot[0] and (
+        player.row == this.spot[1] or
+        player.row == this.spot[1] + 1
+      )
+    )
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.TreasureChest = class
+  constructor = function(game, spot)
+    this.game = game
+    this.spot = spot
+    
+    this.x = 0
+    this.y = 0
+    this.width = 16
+    this.height = 16
+    
+    this.open = false
+    this.empty = false
+    this.frame = 0
+    this.frameInterval = 4
+    
+    this.interaction = new global.Interaction(this.game, "E", "Open")
+    this.coinDispenseThread = false
+    this.coinQueue = []
+  end
+  
+  update = function()
+    if this.frame and not this.empty then
+      if this.frame >= this.frameInterval * 7 then
+        this.empty = true
+        this.obtain()
+      else this.frame += 1 end
+    end
+    
+    if this.canInteract(this.game.player) and keyboard.press.E then
+      this.openUp()
+    end
+  end
+  
+  draw = function()
+    local frameIndex = floor(this.frame / this.frameInterval)
+    local sprite = global.sprites["furniture/treasure_chest"].frames[frameIndex]
+    screen.drawSprite(sprite, this.x, this.y, this.width, this.height)
+  end
+  
+  openUp = function()
+    if this.open then return end
+    this.frame += 1
+    this.open = true
+  end
+  
+  canInteract = function(player)
+    return (
+      abs(this.spot[0] - player.column) < 2 and
+      abs(this.spot[1] - player.row) < 2
+    )
+  end
+  
+  obtain = function()
+    audio.playSound("transaction", 0.1)
+    this.dropCoins()
+  end
+  
+  dropCoins = function()
+    local player = this.game.player
+    local angle = atan2d(player.y - this.y, player.x - this.x)
+    
+    local createCoins = function(count, data, angle)
+      local coins = []
+      if not count then return coins end
+      for index = 0 to count - 1
+        local a = angle + random.nextInt(60) - 30
+        local x = this.x + (16 * cosd(a))
+        local y = this.y + (16 * sind(a))
+        local coin = new global.Coin(this.game, x, y, a, data)
+        coins.push(coin)
+      end
+      
+      return coins
+    end
+    
+    local money = random.integerRange(50, 150)
+    local bronzeCoins = money % 10
+    local silverCoins = floor((money / 10) % 10)
+    local goldCoins = floor(((money - bronzeCoins) - (10 * silverCoins)) / 100)
+    
+    this.coinQueue += createCoins(bronzeCoins, global.Coin.BRONZE, angle)
+    this.coinQueue += createCoins(silverCoins, global.Coin.SILVER, angle)
+    this.coinQueue += createCoins(goldCoins, global.Coin.GOLD, angle)
+    random.shuffle(this.coinQueue)
+    
+    this.coinDispenseThread = every 0.1 seconds do
+      if this.coinQueue.length then
+        local coin = this.coinQueue[0]
+        this.game.coins.push(coin)
+        this.coinQueue.removeElement(coin)
+      else this.coinDispenseThread.stop() end
+    end
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Rectangle = class
+  constructor = function()
+    this.x = 0
+    this.y = 0
+    this.width = 0
+    this.height = 0
+  end
+  
+  intersection = function(rectangle)
+    local w1 = this.width / 2
+    local h1 = this.height / 2
+    local w2 = rectangle.width / 2
+    local h2 = rectangle.height / 2
+    return (
+      this.x - w1 <= rectangle.x + w2 and
+      this.x + w1 >= rectangle.x - w2 and
+      this.y - h1 <= rectangle.y + h2 and
+      this.y + h1 >= rectangle.y - h2
+    )
+  end
+  
+  vertices = function()
+    local w = this.width / 2
+    local h = this.height / 2
+    
+    return [
+      [this.x - w, this.y - h],
+      [this.x - w, this.y + h],
+      [this.x + w, this.y - h],
+      [this.x + w, this.y + h]
+    ]
+  end
+end
+
+global.Circle = class
+  constructor = function()
+    this.x = 0
+    this.y = 0
+    this.radius = 0
+  end
+  
+  intersection = function(circle)
+    sqrt(
+      pow(this.x - circle.x, 2) + 
+      pow(this.y - circle.y, 2)
+    ) <= this.radius + circle.radius
+  end
+end
+
+global.Hitbox = class
+  RECTANGLE = 1
+  CIRCLE = 2
+  
+  constructor = function()
+    this.rectangle = new global.Rectangle()
+    this.circle = new global.Circle()
+  end
+  
+  intersection = function(hitbox, shape)
+    if shape == global.Hitbox.RECTANGLE then
+      return this.rectangle.intersection(hitbox.rectangle)
+    elsif shape == global.Hitbox.CIRCLE then
+      return this.circle.intersection(hitbox.circle)
+    else return false end
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.IngredientData = class
+  constructor = function(data)
+    this.name = data[0]
+    this.sprite = data[1]
+    this.width = data[2]
+    this.height = data[3]
+    this.size = data[4]
+    this.description = data[5]
+    this.affect = data[6]
+    this.identifier = "ingredient"
+  end
+end
+
+global.Ingredient = class
+  PURPLE_GOO = new global.IngredientData([
+    "Purple Goo", "ingredients/goo/purple", 8, 8, 8, (
+      "+5% Mana Renegeration" +
+      "\n+10 Total Mana" +
+      "\nUsed in potions." +
+      "\nChanges weapons's bullet colors."
+    ), function(subject)
+      if subject.identifier == "player" then
+        subject.manaBar.regeneration *= 1.05
+        subject.manaBar.total += 10
+      elsif subject.identifier == "equipment" then
+        subject.projectileColor = global.Projectile.PURPLE
+      end
+    end
+  ])
+
+  ORANGE_GOO = new global.IngredientData([
+    "Orange Goo", "ingredients/goo/orange", 8, 8, 8, (
+      "-5% Rolling Cooldown" +
+      "\n+10% Rolling Power" +
+      "\nUsed in potions." +
+      "\nChanges weapons's bullet colors."
+    ), function(subject)
+      if subject.identifier == "player" then
+        subject.rollingCooldown *= 0.95
+        subject.rollingPower *= 1.1
+      elsif subject.identifier == "equipment" then
+        subject.projectileColor = global.Projectile.ORANGE
+      end
+    end
+  ])
+
+  BLUE_GOO = new global.IngredientData([
+    "Blue Goo", "ingredients/goo/blue", 8, 8, 8, (
+      "10% Acceleration" +
+      "\nUsed in potions." +
+      "\nChanges weapons's bullet colors."
+    ), function(subject)
+      if subject.identifier == "player" then
+        subject.acceleration *= 1.1
+      elsif subject.identifier == "equipment" then
+        subject.projectileColor = global.Projectile.BLUE
+      end
+    end
+  ])
+
+  GREEN_GOO = new global.IngredientData([
+    "Green Goo", "ingredients/goo/green", 8, 8, 8, (
+      "+5% Health Regeneration" +
+      "\n+10 Total Health" +
+      "\nUsed in potions." +
+      "\nChanges weapons's bullet colors."
+    ), function(subject)
+      if subject.identifier == "player" then
+        subject.lifeBar.regeneration *= 1.05
+        subject.lifeBar.total += 10
+      elsif subject.identifier == "equipment" then
+        subject.projectileColor = global.Projectile.GREEN
+      end
+    end
+  ])
+  
+  BLACK_GOO = new global.IngredientData([
+    "Black Goo", "ingredients/goo/black", 8, 8, 8, (
+      "So this is what happens when you mix" +
+      "\nall of the colors together???"
+    ), function(subject)
+      subject.projectileColor = global.Projectile.BLACK
+    end
+  ])
+
+  PURPLE_SHARD = new global.IngredientData([
+    "Purple Shard", "ingredients/shards/purple", 8, 8, 8, (
+      "-10% Mana Usage" +
+      "\n-20% Shooting Recoil" +
+      "\nUsed to upgrade weapons."
+    ), function(subject)
+      subject.projectileMana = subject.projectileMana * 0.9
+      subject.recoil = subject.recoil * 0.8
+    end
+  ])
+
+  ORANGE_SHARD = new global.IngredientData([
+    "Orange Shard", "ingredients/shards/orange", 8, 8, 8, (
+      "+10 Strength" +
+      "\n+20% Knockback" +
+      "\nUsed to upgrade weapons."
+    ), function(subject)
+      subject.projectileDamage[0] += 10
+      subject.projectileDamage[1] += 10
+      subject.projectileKnockback *= 1.2
+    end
+  ])
+
+  BLUE_SHARD = new global.IngredientData([
+    "Blue Shard", "ingredients/shards/blue", 8, 8, 8, (
+      "+10% Bullet Speed" +
+      "\n-20% Shooting Cooldown" +
+      "\nUsed to upgrade weapons."
+    ), function(subject)
+      subject.projectileSpeed *= 1.1
+      subject.shootCooldown *= 0.8
+    end
+  ])
+
+  GREEN_SHARD = new global.IngredientData([
+    "Green Shard", "ingredients/shards/green", 8, 8, 8, (
+      "\n+10% Weapon Vision" +
+      "\nUsed to upgrade weapons."
+    ), function(subject) subject.fov *= 1.1 end
+  ])
+  
+  constructor = function(game, name)
+    this.game = game
+    this.identifier = "ingredient"
+    this.data = this.getData(name)
+    
+    this.name = this.data.name
+    this.sprite = this.data.sprite
+    this.description = this.data.description
+    this.affect = this.data.affect
+    
+    this.width = this.data.width
+    this.height = this.data.height
+    this.size = this.data.size
+    
+    this.x = 0
+    this.y = 0
+  end
+  
+  update = function()
+    local player = this.game.player
+    if (
+      this.x < player.x + player.width and
+      this.x + this.width > player.x and
+      this.y < player.y + player.height and
+      this.y + this.height > player.y
+    ) then
+      audio.playSound("pickup", 0.2)
+      this.game.player.inventory.pouch.add(this)
+      this.game.ingredients.removeElement(this)
+    end
+  end
+  
+  draw = function()
+    screen.drawSprite(this.sprite, this.x, this.y, this.width, this.height)
+  end
+  
+  getData = function(name)
+    local a = [
+      global.Ingredient.PURPLE_GOO,
+      global.Ingredient.ORANGE_GOO,
+      global.Ingredient.BLUE_GOO,
+      global.Ingredient.GREEN_GOO,
+      global.Ingredient.BLACK_GOO,
+      global.Ingredient.PURPLE_SHARD,
+      global.Ingredient.ORANGE_SHARD,
+      global.Ingredient.BLUE_SHARD,
+      global.Ingredient.GREEN_SHARD
+    ]
+    
+    for b in a if b.name == name then return b end end
+  end
+end
+
+  
+end()
+
+
+
+function()
+
+global.Interaction = class
+  constructor = function(game, key, action = "Interact")
+    this.game = game
+    
+    this.key = key
+    this.action = action
+    
+    this.x = 0
+    this.y = 0
+    this.textSize = 4
+  end
+  
+  update = function()
+  end
+  
+  draw = function()
+    local text = "Press '" + this.key + "' to " + this.action
+    
+    screen.setLineWidth(this.textSize / 2)
+    screen.drawTextOutline(text, this.x, this.y, this.textSize, 0)
+    screen.drawText(text, this.x, this.y, this.textSize, 999)
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Inventory = class
+  IDLE = 1
+  TABLE = 2
+  SHOP = 3
+  
+  constructor = function(game, parent)
+    this.game = game
+    this.parent = parent
+    this.state = global.Inventory.IDLE
+    
+    this.slots = new global.Slots(this.game, this)
+    this.pouch = new global.Pouch(this.game, this)
+    this.description = new global.Description(this.game, this)
+    this.table = new global.Table(this.game, this)
+    this.shop = new global.Shop(this.game, this)
+    
+    this.showing = false
+    this.underlayTween = false
+    this.underlayAlpha = 0
+  end
+  
+  update = function()
+    this.game.timer.frozen = this.showing
+    
+    this.slots.update()
+    
+    if this.showing then
+      this.pouch.update()
+      
+      if this.state == global.Inventory.TABLE then
+        this.table.update()
+      elsif this.state == global.Inventory.SHOP then
+        this.shop.update()
+      end
+      
+      this.description.update()
+    end
+  end
+  
+  draw = function()
+    if this.underlayAlpha then
+      screen.setAlpha(this.underlayAlpha)
+      screen.fillRect(0, 0, screen.width, screen.height, 0)
+      screen.setAlpha(1)
+      
+      this.pouch.draw()
+      
+      if this.state == global.Inventory.TABLE then
+        this.table.draw()
+      elsif this.state == global.Inventory.SHOP then
+        this.shop.draw()
+      end
+      
+      this.description.draw()
+    end
+    
+    this.slots.draw()
+  end
+  
+  equip = function(equipment) this.parent.equip(equipment) end
+  
+  setVisibility = function(showing)
+    if showing == this.showing then return end
+    
+    this.showing = showing
+    if this.underlayTween then
+      global.tweenService.removeTween(this.underlayTween)
+    end
+    
+    local alpha = if this.showing then 0.6 else 0 end
+    this.underlayTween = global.tweenService.createTween(
+      this, "underlayAlpha", this.underlayAlpha,
+      alpha, 0.5, global.Easing.sineInOut
+    )
+    
+    this.pouch.setVisibility(this.showing)
+    this.description.setVisibility(this.showing)
+    this.table.setVisibility(this.showing)
+    this.shop.setVisibility(this.showing)
+  end
+  
+  toggleVisibility = function()
+    this.setVisibility(not this.showing)
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Description = class
+  constructor = function(game, parent)
+    this.game = game
+    this.parent = parent
+    
+    this.showing = false
+    this.tween = false
+    this.offset = 200
+  end
+  
+  update = function()
+  end
+  
+  draw = function()
+    screen.setTranslation(-178, this.offset + 20)
+    screen.setDrawAnchor(-1, -1)
+    screen.drawSprite("book", 8, 0, 164, 72)
+    
+    local equipment = this.parent.slots.current
+    if equipment.type == "number" then
+      screen.drawText("[No Equipment]", 24, 40, 8, "#210f09")
+    else
+      screen.drawText(equipment.name, 24, 58, 8, "#210f09")
+      
+      local width = screen.textWidth(equipment.name, 8)
+      screen.drawText("Hover on Icon", 26 + width, 62, 3, "#210f09")
+      screen.drawText("to View Stats", 26 + width, 58, 3, "#210f09")
+      
+      local index = 0
+      for row = 2 to 0 by - 1
+        for column = 0 to 3
+          if equipment.data.length <= index then continue end
+          local d = equipment.data[index]
+          
+          local x = 24 + (column * 14)
+          local y = 18 + (row * 14)
+          
+          screen.drawSprite("icons/" + d[1], x, y, 12, 12)
+          
+          local cx = x + 6 - 178
+          local cy = y + 6 + 20
+          if global.cursor.hover(cx, cy, 12, 12, false) then
+            local text = d[0] + ": " + d[2]
+            global.cursor.tooltip = [text, ["#210f07", "#995940"]]
+          end
+          
+          index += 1
+        end
+      end
+    end
+    
+    local ingredient = false
+    if this.parent.state == global.Inventory.TABLE then
+      if this.parent.table.drag then
+        if this.parent.table.drag.identifier == "ingredient" then
+          ingredient = this.parent.table.drag
+        end
+      end
+      
+      if not ingredient and this.parent.hovering then
+        if this.parent.hovering.identifier == "ingredient" then
+          ingredient = this.parent.table.hovering
+        end
+      end
+    end
+    
+    if not ingredient then ingredient = this.parent.pouch.hovering end
+    if ingredient then
+      screen.drawText(ingredient.name, 98, 58, 8, "#210f09")
+      
+      local height = 58
+      for line in ingredient.description.split("\n")
+        height -= 6
+        screen.drawText(line, 98, height, 3, "#210f09")
+      end
+    else
+      screen.drawText("Stats", 98, 58, 8, "#210f09")
+      local width = screen.textWidth("Stats", 8)
+      screen.drawText("Hover on Icon", 100 + width, 62, 3, "#210f09")
+      screen.drawText("to View Stats", 100 + width, 58, 3, "#210f09")
+      
+      local player = this.parent.parent
+      screen.drawText("Balance: $" + player.balance, 98, 54, 3)
+      
+      local lifeBar = player.lifeBar
+      local life = "Life: " + round(lifeBar.current) + "/" + lifeBar.total
+      screen.drawText(life, 98, 50, 3)
+      
+      local manaBar = player.manaBar
+      local mana = "Mana: " + round(manaBar.current) + "/" + manaBar.total
+      screen.drawText(mana, 98, 46, 3)
+      
+      local index = 0
+      for row = 2 to 0 by - 1
+        for column = 0 to 3
+          if player.data.length <= index then continue end
+          local d = player.data[index]
+          
+          local x = 98 + (column * 14)
+          local y = 4 + (row * 14)
+          
+          screen.drawSprite("icons/" + d[1], x, y, 12, 12)
+          
+          local cx = x + 6 - 178
+          local cy = y + 6 + 20
+          if global.cursor.hover(cx, cy, 12, 12, false) then
+            local text = d[0] + ": " + d[2]
+            global.cursor.tooltip = [text, ["#210f07", "#995940"]]
+          end
+          
+          index += 1
+        end
+      end
+    end
+    
+    screen.setDrawAnchor(0, 0)
+    screen.setTranslation(0, 0)
+  end
+  
+  setVisibility = function(showing)
+    if showing == this.showing then return end
+    if this.tween then global.tweenService.removeTween(this.tween) end
+    
+    this.showing = showing
+    local newOffset = if this.showing then 0 else 200 end
+    this.tween = global.tweenService.createTween(
+      this, "offset", this.offset, newOffset, 0.5, global.Easing.quadInOut
+    )
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Pouch = class
+  constructor = function(game, parent)
+    this.game = game
+    this.parent = parent
+    
+    this.showing = false
+    this.tween = false
+    this.offset = 200
+    
+    this.data = []
+    this.page = 0
+    this.columns = 6
+    this.rows = 2
+    this.hovering = false
+    
+    this.scaleLeft = 1
+    this.scaleRight = 1
+  end
+  
+  update = function()
+    this.hovering = false
+  end
+  
+  draw = function()
+    screen.setTranslation(-178, this.offset - 60)
+    screen.setDrawAnchor(-1, -1)
+    screen.drawSprite("planks/quarter", 8, 0, 164, 72)
+    
+    screen.setLineWidth(4)
+    screen.drawTextOutline("Pouch", 16, 56, 8, "#210f07")
+    screen.drawText("Pouch", 16, 56, 8, 999)
+    
+    if this.parent.state == global.Inventory.IDLE then
+      local closeText = "Press 'Z' to close the pouch."
+      screen.setLineWidth(2)
+      screen.drawTextOutline(closeText, 48, 56, 4, "#210f07")
+      screen.drawText(closeText, 48, 56, 4, 999)
+    end
+    
+    screen.setDrawAnchor(0, 0)
+    
+    if this.page then
+      screen.setDrawScale(-1 * this.scaleLeft, this.scaleLeft)
+      screen.drawSprite("arrow", 20, 36, 16, 16)
+      if global.cursor.hover(20 - 178, 36 + this.offset - 60, 16, 16) then
+        global.cursor.tooltip = ["Previous Page", ["#210f07", "#995940"]]
+        this.scaleLeft += ((1.1 - this.scaleLeft) * 0.1)
+        if mouse.press then
+          this.scaleLeft = 0.8
+          this.page -= 1
+        end
+      else this.scaleLeft += ((1 - this.scaleLeft) * 0.1) end
+    else this.scaleLeft = 1 end
+    
+    if data.length > (this.page + 1) * this.columns * this.rows then
+      screen.setDrawScale(this.scaleRight, this.scaleRight)
+      screen.drawSprite("arrow", 160, 36, 16, 16)
+      if global.cursor.hover(160 - 178, 36 + this.offset - 60, 16, 16) then
+        global.cursor.tooltip = ["Next Page", ["#210f07", "#995940"]]
+        this.scaleRight += ((1.1 - this.scaleRight) * 0.1)
+        if mouse.press then
+          this.scaleRight = 0.8
+          this.page += 1
+        end
+      else this.scaleRight += ((1 - this.scaleRight) * 0.1) end
+    else this.scaleRight = 1 end
+    
+    screen.setDrawScale(1, 1)
+    
+    local index = this.page * this.columns * this.rows
+    for row = this.rows - 1 to 0 by - 1
+      for column = 0 to this.columns - 1
+        if data.length <= index then continue end
+        
+        local x = ((column + 1.5) * 16) + (column * 4) + 14
+        local y = ((row + 1.5) * 16) + (row * 4)
+        local item = this.data[index]
+        local i = item[0]
+        
+        local cx = x - 178
+        local cy = y + this.offset - 60
+        local triggersClick = this.parent.state == global.Inventory.TABLE
+        local hover = global.cursor.hover(cx, cy, 16, 16, triggersClick)
+        if hover then
+          global.cursor.tooltip = [i.name, ["#210f07", "#995940"]]
+          this.hovering = item[0]
+            
+          if triggersClick then
+            if mouse.pressed and not this.parent.table.drag then
+              this.parent.table.drag = i
+              item[1] -= 1
+              
+              if not item[1] then this.data.removeAt(index) end
+            end
+          end
+        end
+        
+        local sprite = "slots/wooden/" + if hover then "hover" else "idle" end
+        screen.drawSprite(sprite + "_16", x, y, 16, 16)  
+        screen.drawSprite(i.sprite, x, y + 1, i.width, i.height)
+          
+        screen.setLineWidth(3)
+        screen.drawTextOutline(item[1], x + 8, y - 8, 6, "#210f07")
+        screen.drawText(item[1], x + 8, y - 8, 6, 999)
+        
+        index += 1
+      end
+    end
+    
+    screen.setTranslation(0, 0)
+  end
+  
+  setVisibility = function(showing)
+    if showing == this.showing then return end
+    if this.tween then global.tweenService.removeTween(this.tween) end
+    
+    this.showing = showing
+    local newOffset = if this.showing then 0 else 200 end
+    this.tween = global.tweenService.createTween(
+      this, "offset", this.offset, newOffset, 0.5, global.Easing.quadInOut
+    )
+  end
+  
+  add = function(ingredient)
+    for item in this.data
+      if item[0].name == ingredient.name then
+        item[1] += 1
+        return
+      end
+    end
+    
+    this.data.push([ingredient, 1])
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Shop = class
+  instructions = "Left click on items to buy. Press 'E' to close the shop."
+  
+  constructor = function(game, parent)
+    this.game = game
+    this.parent = parent
+    
+    this.showing = false
+    this.tween = false
+    this.offset = 200
+    
+    this.stand = false
+    this.columns = 5
+    this.rows = 3
+  end
+  
+  update = function()
+  end
+  
+  draw = function()
+    screen.setTranslation(0, this.offset - 60)
+    screen.setDrawAnchor(-1, -1)
+    screen.drawSprite("planks/half", 8, 0, 164, 152)
+    
+    screen.setLineWidth(4)
+    screen.drawTextOutline("Shop Stand", 16, 136, 8, "#210f07")
+    screen.drawText("Shop Stand", 16, 136, 8, 999)
+    
+    screen.setLineWidth(2)
+    screen.drawTextOutline(global.Shop.instructions, 64, 136, 4, "#210f07")
+    screen.drawText(global.Shop.instructions, 64, 136, 4, 999)
+    
+    if not this.stand then
+      screen.setDrawAnchor(0, 0)
+      screen.setTranslation(0, 0)
+      return
+    end
+    
+    local index = 0
+    for row = this.rows - 1 to 0 by - 1
+      for column = 0 to this.columns - 1
+        if this.stand.data.length <= index then continue end
+        local item = this.stand.data[index]
+        
+        local ineligible = false
+        if item[1] > this.game.player.balance then
+          ineligible = "Not enough money."
+        elsif this.parent.slots.full then
+          ineligible = "Inventory full."
+        end
+        
+        local x = ((column + 0.5) * 24) + (column * 6) + 8
+        local y = ((row + 1.5) * 24) + (row * 16) - 12
+        
+        local sx = x + 8
+        local sy = y + this.offset - 48
+        
+        local hovering = global.cursor.hover(sx, sy, 24, 24)
+        if hovering then
+          if ineligible then
+            local text = item[0].name + " (" + ineligible + ")"
+            global.cursor.tooltip = [text, ["#210f07", "#de4040"]]
+          else
+            global.cursor.tooltip = [item[0].name, ["#210f07", "#995940"]]
+          end
+        end
+        
+        if global.cursor.click(sx, sy, 24, 24) and not ineligible then
+          if this.game.player.balance >= item[1] then
+            audio.playSound("transaction", 0.1)
+            this.game.player.balance -= item[1]
+            this.parent.slots.push(item[0])
+            this.stand.data.removeElement(item)
+          end
+        end
+        
+        local sprite = "slots/wooden/"
+        sprite += if hovering then "hover" else "idle" end
+        screen.drawSprite(sprite + "_24", x, y, 24, 24)
+        item[0].paint(x + (item[0].width / 4), y + 1 + (item[0].height / 4))
+        
+        if ineligible then
+          screen.setAlpha(0.4)
+          screen.drawSpriteWithColor(sprite + "_24", x, y, 24, 24, "black")
+          screen.setAlpha(1)
+        end
+        
+        local color = 999
+        if ineligible == "Not enough money." then color = "#de4040" end
+        
+        screen.setDrawAnchor(0, 0)
+        screen.setLineWidth(3)
+        screen.drawTextOutline("$" + item[1], x + 12, y - 2, 6, "#210f07")
+        screen.drawText("$" + item[1], x + 12, y - 2, 6, color)
+        screen.setDrawAnchor(-1, -1)
+        
+        index += 1
+      end
+    end
+    
+    screen.setDrawAnchor(0, 0)
+    screen.setTranslation(0, 0)
+  end
+  
+  setVisibility = function(showing)
+    if showing == this.showing then return end
+    if this.tween then global.tweenService.removeTween(this.tween) end
+    
+    this.showing = showing
+    local newOffset = if this.showing then 0 else 200 end
+    this.tween = global.tweenService.createTween(
+      this, "offset", this.offset, newOffset, 0.5, global.Easing.quadInOut
+    )
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Slots = class
+  constructor = function(game, parent)
+    this.game = game
+    this.parent = parent
+  
+    this.list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    this.current = 0
+    this.index = 0
+    this.full = false
+  end
+  
+  update = function()
+    for index = 0 to 9
+      local number = if index == 9 then 0 else index + 1 end
+      if keyboard.press["DIGIT_" + number] then this.equip(this.list[index]) end
+    end
+  end
+  
+  draw = function()
+    screen.setDrawAnchor(-1, -1)
+    for index = 1 to 10
+      local equipment = this.list[index - 1]
+      local x = (index * 10.5) + ((index - 1) * 24) - 178
+      
+      local hovering = global.cursor.hover(x + 12, -80, 24, 24)
+      if hovering then
+        local name = "[Empty]"
+        if not (equipment.type == "number") then name = equipment.name end
+        global.cursor.tooltip = [name, ["#2a2d38", "#8d9199"]]
+      end
+      
+      if hovering and this.parent.state == global.Inventory.TABLE then
+        if mouse.pressed and not this.parent.table.drag then
+          if this.parent.showing and not (equipment.type == "number") then
+            this.parent.table.drag = equipment
+            this.set(index - 1, false)
+          end
+        end
+      end
+      
+      local clicking = global.cursor.click(x + 12, -80, 24, 24)
+      if clicking then this.equip(index - 1) end
+      
+      local sprite = "slots/stone/"
+      local current = index - 1 == this.index
+      if current then sprite += if hovering then "focused" else "current" end
+      else sprite += if hovering then "hover" else "idle" end end
+      screen.drawSprite(sprite, x, -92, 24, 24)
+        
+      if not (equipment.type == "number") then
+        local y = -78 - (equipment.width / 2)
+        equipment.paint(x + 12 - (equipment.width / 2), y)
+      end
+      
+      screen.setLineWidth(3)
+      screen.drawTextOutline(index % 10, x + 10, -94, 6, "#2a2d38")
+      screen.drawText(index % 10, x + 10, -94, 6, 999)
+    end
+    
+    screen.setDrawAnchor(0, 0)
+  end
+  
+  equip = function(equipment)
+    if equipment.type == "number" then equipment = this.list[equipment] end
+    if equipment == this.current then return end
+    
+    this.current = equipment
+    this.index = this.list.indexOf(this.current)
+    this.parent.equip(current)
+    this.full = this.isFull()
+  end
+  
+  set = function(index, equipment)
+    if equipment then this.list[index] = equipment
+    else this.list[index] = index
+    end
+    
+    if index == this.index then this.equip(index) end
+    this.full = this.isFull()
+  end
+  
+  push = function(equipment)
+    for item in this.list
+      if item.type == "number" then
+        this.set(item, equipment)
+        return
+      end
+    end
+  end
+  
+  remove = function(equipment)
+    for index = 0 to this.list.length - 1
+      if this.list[index] == equipment then
+        this.set(index, false)
+      end
+    end
+  end
+  
+  isFull = function()
+    for i in this.list if i.type == "number" then return false end end
+    return true
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Table = class
+  instructions = [
+    (
+      "Drag and drop from the pouch or equipment slots" +
+      "onto the table to craft!"
+    ),
+    "Press 'E' to close the crafting bench."
+  ]
+  
+  constructor = function(game, parent)
+    this.game = game
+    this.parent = parent
+    
+    this.showing = false
+    this.tween = false
+    this.offset = 200
+    
+    this.data = []
+    this.drag = false
+    this.drop = new global.Glow(32)
+    this.hovering = false
+  end
+  
+  update = function()
+    this.hovering = false
+  end
+  
+  draw = function()
+    screen.setTranslation(0, this.offset - 60)
+    screen.setDrawAnchor(-1, -1)
+    screen.drawSprite("planks/half", 8, 0, 164, 152)
+    
+    screen.setLineWidth(4)
+    screen.drawTextOutline("Crafting Bench", 16, 136, 8, "#210f07")
+    screen.drawText("Crafting Bench", 16, 136, 8, 999)
+    
+    screen.setLineWidth(2)
+    local y = 124
+    for line in global.Table.instructions
+      screen.drawTextOutline(line, 16, y, 4, "#210f07")
+      screen.drawText(line, 16, y, 4, 999)
+      y -= 8
+    end
+    
+    screen.setAlpha(0.25)
+    screen.setDrawScale(0.9, 0.9)
+    screen.drawSprite("transmutation_circle", 32, 4, 120, 120)
+    screen.setDrawScale(1, 1)
+    screen.setAlpha(1)
+    
+    if this.drag then
+      local width = this.drag.width
+      local height = this.drag.height
+      
+      screen.setDrawScale(1.2, 1.2)
+      local dx = mouse.x
+      local dy = mouse.y + 60
+      if this.drag.identifier == "equipment" then this.drag.paint(dx, dy)
+      else screen.drawSprite(this.drag.sprite, dx, dy, width, height) end
+      screen.setDrawScale(1, 1)
+      
+      if not mouse.pressed then
+        if this.onTable(mouse.x, mouse.y, width, height) then
+          local item = [this.drag, [mouse.x, mouse.y]]
+          this.data.push(item)
+          this.checkCraft(item)
+        else
+          if this.drag.identifier == "equipment" then
+            this.parent.slots.push(this.drag)
+          elsif this.drag.identifier == "ingredient" then
+            this.parent.pouch.add(this.drag)
+          end
+        end
+        
+        this.drag = false
+      end
+    end
+    
+    for item in this.data
+      local i = item[0]
+      local p = item[1]
+      
+      local size = sqrt(pow(i.width, 2) +  pow(i.height, 2)) * 2
+      this.drop.draw(p[0] - i.width, p[1] + 60 - i.height, size, "black", 0.5)
+    end
+    
+    for item in this.data
+      local i = item[0]
+      local p = item[1]
+      
+      if i.identifier == "ingredient" then
+        screen.drawSprite(i.sprite, p[0], p[1] + 60, i.width, i.height)
+      elsif i.identifier == "equipment" then i.paint(p[0], p[1] + 60) end
+      
+      local x = p[0] + (i.width / 2)
+      local y = p[1] + (i.height / 2)
+      if global.cursor.hover(x, y, i.width, i.height) then
+        this.hovering = i
+        if not this.drag and mouse.pressed then
+          this.data.removeElement(item)
+          this.drag = i
+        end
+      end
+    end
+    
+    screen.setDrawAnchor(0, 0)
+    screen.setTranslation(0, 0)
+  end
+  
+  setVisibility = function(showing)
+    if showing == this.showing then return end
+    if this.tween then global.tweenService.removeTween(this.tween) end
+    
+    this.showing = showing
+    local newOffset = if this.showing then 0 else 200 end
+    this.tween = global.tweenService.createTween(
+      this, "offset", this.offset, newOffset, 0.5, global.Easing.quadInOut
+    )
+  end
+  
+  onTable = function(x, y, width, height)
+    (
+      x < 8 + 164 and
+      x + width > 8 and
+      y < -60 - this.offset + 152 and
+      y + height > -60 - this.offset
+    )
+  end
+  
+  checkCraft = function(i)
+    local group = [i]
+    for item in this.data
+      if item == i then continue end
+      if (
+        item[1][0] < i[1][0] + i[0].width and
+        item[1][0] + item[0].width > i[1][0] and
+        item[1][1] < i[1][1] + i[0].height and
+        item[1][1] + item[0].height > i[1][1]
+      ) then group.push(item) end
+    end
+    
+    if group.length <= 1 then return end
+    local ingredients = []
+    local equipments = []
+    for item in group
+      if item[0].identifier == "ingredient" then ingredients.push(item)
+      elsif item[0].identifier == "equipment" then equipments.push(item) end
+    end
+      
+    for equipment in equipments
+      if not ingredients.length then continue end
+      ingredients = equipment[0].add(ingredients)
+    end
+      
+    for item in group
+      if item[0].identifier == "ingredient" then
+        this.data.removeElement(item)
+      end
+    end
+      
+    local result = global.craft(ingredients)
+    if result then
+      audio.playSound("craft", 0.2)
+      this.data = this.data.concat(result)
+    else this.data = this.data.concat(ingredients) end
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Emitter = class
+  constructor = function(game, sample, parent)
+    this.game = game
+    this.sample = sample
+    this.parent = parent
+    this.particles = []
+    
+    this.duration = false
+    this.infinite = true
+    this.count = [1, 1]
+    this.interval = 1
+    this.chance = 1
+    this.active = true
+  end
+  
+  update = function()
+    for particle in this.particles
+      particle.update()
+    end
+    
+    if this.duration < 0 and not this.infinite then
+      if not this.particles.length then
+        this.game.emitters.removeElement(this)
+      end
+      return
+    end
+    
+    if not this.active then return end
+    if not this.infinite then this.duration -= this.game.timer.deltaTime end
+    if not (this.game.timer.frames % this.interval) then
+      if random.next() < this.chance then
+        for _ = 1 to random.integerRange(this.count[0], this.count[1])
+          this.particles.push(this.sample(this.parent, this.game, this))
+        end
+      end
+    end
+  end
+  
+  draw = function(x, y)
+    screen.setPixelated(true)
+    screen.drawImage(this.render(), x, y, screen.width, screen.height)
+  end
+  
+  render = function()
+    "HOW DO YOU DISABLE ANTI-ALIASING !?!"
+    
+    local image = new Image(screen.width, screen.height, true)
+    image.setPixelated(true)
+    for particle in particles particle.paint(image) end
+    image.setTranslation(0, 0)
+    return image
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Particle = class
+  CIRCLE = "fillRound"
+  RECTANGLE = "fillRect"
+  
+  constructor = function(game, parent)
+    this.game = game
+    this.parent = parent
+    
+    this.x = 0
+    this.y = 0
+    this.width = 0
+    this.height = 0
+    this.color = "white"
+    this.shape = global.Particle.CIRCLE
+    
+    this.ax = 0
+    this.ay = 0
+    this.vx = 0
+    this.vy = 0
+    this.fx = 0
+    this.fy = 0
+    this.gx = 0
+    this.gy = 0
+    
+    this.angle = 0
+    this.torque = 0
+    this.angularAcceleration = 0
+    this.angularFriction = 0
+    this.angularGravity = 0
+    
+    this.alpha = 1
+    this.sx = 1
+    this.sy = 1
+    
+    this.decay = object end
+    this.decay.alpha = true
+    this.decay.sx = true
+    this.decay.sy = true
+    
+    this.life = 1
+    this.lifespan = 1
+  end
+  
+  update = function()
+    local deltaTime = this.game.timer.deltaTime
+    
+    this.life -= deltaTime / this.lifespan
+    if this.life <= 0 then
+      this.parent.particles.removeElement(this)
+      return
+    end
+    
+    this.vx += this.ax * deltaTime
+    this.vy += this.ay * deltaTime
+    this.torque += this.angularAcceleration * deltaTime
+    this.vx += this.gx * deltaTime
+    this.vy += this.gy * deltaTime
+    this.torque += this.angularGravity * deltaTime
+    this.vx -= this.vx * this.fx * deltaTime
+    this.vy -= this.vy * this.fy * deltaTime
+    this.torque -= this.torque * this.angularFriction * deltaTime
+    this.x += this.vx * deltaTime
+    this.y += this.vy * deltaTime
+    this.angle += this.torque * deltaTime
+    
+    if this.decay.alpha then this.alpha = this.life end
+    if this.decay.sx then this.sx = this.life end
+    if this.decay.sy then this.sy = this.life end
+  end
+  
+  paint = function(surface)
+    local x = this.x - this.game.camera.x
+    local y = this.y - this.game.camera.y
+    
+    surface.setAlpha(this.alpha)
+    surface.setDrawRotation(this.angle)
+    surface.setDrawScale(this.sx, this.sy)
+    surface[this.shape](x, y, this.width, this.height, this.color)
+    surface.setDrawScale(1, 1)
+    surface.setDrawRotation(0)
+    surface.setAlpha(1)
+  end
+end
+
+
+
+end()
+
+
+
+function()
+
+global.Projectile = class
+  TINY = ["tiny", 4, "Tiny"]
+  SMALL = ["small", 6, "Small"]
+  MEDIUM = ["medium", 8, "Medium"]
+  LARGE = ["large", 10, "Large"]
+  HUGE = ["huge", 12, "Huge"]
+  
+  PURPLE = ["#ead7f7", "#36144d", "Purple"]
+  ORANGE = ["#fff2c9", "#260602", "Orange"]
+  BLUE = ["#c2ebfc", "#070e40", "Blue"]
+  GREEN = ["#dcf7c6", "#021a0f", "Green"]
+  BLACK = ["#4c5161", "black", "Black"]
+  
+  constructor = function(game, size, color, damage, knockback)
+    this.game = game
+    
+    this.x = 0
+    this.y = 0
+    this.angle = 0
+    
+    this.vx = 0
+    this.vy = 0
+    
+    this.size = size
+    this.color = color
+    this.torque = (random.next() * 12) - 6
+    
+    this.wobbleTime = 0
+    this.scale = 1
+    this.sine = function(t) sin(t) end
+    this.cosine = function(t) sin(t) end
+    this.wave = random.choice([this.sine, this.cosine])
+    
+    this.targets = []
+    
+    this.damage = damage
+    this.knockback = knockback
+    
+    this.hitbox = new global.Hitbox()
+    this.hitbox.rectangle.width = 1
+    this.hitbox.rectangle.height = 1
+    this.hitbox.circle.radius = this.size[1] / 2
+    this.hit = []
+    
+    local sample = function(self, game, emitter)
+      local particle = new global.Particle(game, emitter)
+      
+      local size = random.integerRange(self.size[1] / 2, self.size[1])
+      particle.width = size
+      particle.height = size
+      particle.color = self.color[0]
+      
+      particle.lifespan = 0.6
+      particle.x = self.x
+      particle.y = self.y
+      
+      return particle
+    end
+    
+    this.trail = new global.Emitter(this.game, sample, this)
+    this.trail.interval = 4
+    
+    this.glow = new global.Glow(32)
+    this.moving = false
+  end
+  
+  update = function()
+    this.wobbleTime += this.game.timer.deltaTime
+    this.scale = 1 + (0.1 * this.wave(this.wobbleTime * 10))
+    this.trail.update()
+    
+    if not this.moving then return end
+    this.angle += this.torque
+    this.x += this.vx * this.game.timer.deltaTime
+    this.y += this.vy * this.game.timer.deltaTime
+    this.updateHitbox()
+    
+    if global.tilemapCollision(this) then
+      this.game.camera.shake(this.size[1] / 8)
+      audio.playSound("boom", 0.05)
+      this.destroy()
+    elsif this.targets.length then
+      for entity in this.game.entities
+        if this.targets.contains(entity.identifier) then
+          local horizontalDistance = entity.x - this.x
+          local verticalDistance = entity.y - this.y
+          local distance = sqrt(
+            pow(horizontalDistance, 2) + 
+            pow(verticalDistance, 2)
+          )
+          
+          local maximumDistance = (
+            (this.hitbox.circle.radius) + entity.hitbox.circle.radius
+          )
+          
+          if distance <= maximumDistance then
+            if this.hit.contains(entity) then continue
+            else this.hit.push(entity) end
+            
+            entity.takeDamage(this.damage, this.color)
+            entity.splatter(
+              atan2d(verticalDistance, horizontalDistance),
+              sqrt(pow(this.vx, 2) + pow(this.vy, 2))
+            )
+            
+            global.applyImpulse(
+              entity,
+              this.knockback * horizontalDistance / distance,
+              this.knockback * verticalDistance / distance
+            )
+          end
+        end
+      end
+    end
+  end
+  
+  draw = function()
+    this.trail.draw(this.game.camera.x, this.game.camera.y)
+    
+    screen.setDrawRotation(this.angle)
+    screen.setDrawScale(this.scale, this.scale)
+    this.glow.draw(this.x, this.y, this.size[1] * 2, this.color[0], 1)
+    
+    screen.drawSpriteWithColor(
+      "projectiles/fills/" + this.size[0],
+      this.x, this.y,
+      this.size[1], this.size[1],
+      this.color[0]
+    )
+    
+    screen.drawSpriteWithColor(
+      "projectiles/outlines/" + this.size[0],
+      this.x, this.y,
+      this.size[1], this.size[1],
+      this.color[1]
+    )
+    
+    screen.setDrawScale(1, 1)
+    screen.setDrawRotation(0)
+  end
+  
+  destroy = function()
+    local sample = function(self, game, emitter)
+      local particle = new global.Particle(game, emitter)
+      
+      particle.x = self.x
+      particle.y = self.y
+      
+      local size = random.integerRange(self.size[1], self.size[1] * 2)
+      particle.width = size
+      particle.height = size
+      particle.color = self.color[0]
+      
+      local angle = atan2d(-self.vy, -self.vx) + random.integerRange(-60, 60)
+      local power = sqrt(pow(self.vx, 2) + pow(self.vy, 2)) * random.next()
+      particle.vx = cosd(angle) * power
+      particle.vy = sind(angle) * power
+      
+      particle.lifespan = 0.5
+      return particle
+    end
+    
+    local splatter = new global.Emitter(this.game, sample, this)
+    splatter.infinite = false
+    splatter.count = [8, 12]
+    this.game.emitters.push(splatter)
+    
+    this.game.projectiles.removeElement(this)
+  end
+  
+  updateHitbox = function()
+    this.hitbox.rectangle.x = this.x
+    this.hitbox.rectangle.y = this.y - (this.size[1] / 2)
+    this.hitbox.circle.x = this.x
+    this.hitbox.circle.y = this.y
+  end
+  
+  blastOff = function(angle, speed)
+    this.angle = angle
+    this.vx = cosd(angle) * speed
+    this.vy = sind(angle) * speed
+    this.moving = true
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.getColliderMap = function(dungeon)
+  local spaces = [
+    global.Dungeon.ROOM, global.Dungeon.TUNNEL,
+    global.Dungeon.START, global.Dungeon.FINISH
+  ]
+  
+  local colliderMap = []
+  for row = 0 to dungeon.rows - 1
+    colliderMap.push([])
+    for column = 0 to dungeon.columns - 1
+      local collider = spaces.contains(dungeon.tilemap[row][column])
+      colliderMap[row].push(collider)
+    end
+  end
+  
+  return colliderMap
+end
+
+
+end()
+
+
+
+function()
+
+global.furnish = function(game)
+  local enemyTypes = [
+    global.Enemy.PURPLE_SLIME,
+    global.Enemy.ORANGE_SLIME,
+    global.Enemy.GREEN_SLIME,
+    global.Enemy.BLUE_SLIME
+  ]
+  
+  local getChances = function()
+    local chances = object end
+    chances.treasureChest = 0.8
+    chances.enemies = 0.6
+    chances.craftingBench = 0.4
+    chances.shopStand = 0.2
+    return chances
+  end
+  
+  local getSpots = function(dungeon, room)
+    local spots = []
+    
+    for row = 0 to room.height - 1
+      for column = 0 to room.width - 1
+        local spotRow = room.row + row
+        local spotColumn = room.column + column
+        
+        local neighbors = [
+          dungeon.tilemap[spotRow - 1][spotColumn],
+          dungeon.tilemap[spotRow + 1][spotColumn],
+          dungeon.tilemap[spotRow][spotColumn - 1],
+          dungeon.tilemap[spotRow][spotColumn + 1]
+        ]
+        
+        if not neighbors.contains(global.Dungeon.TUNNEL) then
+          if dungeon.tilemap[spotRow][spotColumn] == global.Dungeon.ROOM then
+            spots.push([spotColumn, spotRow])
+          end
+        end
+      end
+    end
+    
+    return spots
+  end
+  
+  local getFitSpots = function(spots, width, height)
+    local fitSpots = []
+    
+    for spot in spots
+      local valid = true
+      
+      for row = 0 to height - 1
+        for column = 0 to width - 1
+          if not (column + row) then continue end
+          local newSpot = [spot[0] + column, spot[1] + row]
+          
+          local subValid = false
+          for otherSpot in spots
+            if otherSpot[0] == newSpot[0] and otherSpot[1] == newSpot[1] then
+              subValid = true
+            end
+          end
+          
+          if not subValid then valid = false end
+        end
+      end
+      
+      if valid then fitSpots.push(spot) end
+    end
+    
+    return fitSpots
+  end
+  
+  local applyFurniture = function(spots, spot, width, height)
+    for row = 0 to height - 1
+      for column = 0 to width - 1
+        local newColumn = spot[0] + column
+        local newRow = spot[1] + row
+        game.dungeon.tilemap[newRow][newColumn] = global.Dungeon.FURNITURE
+        
+        for otherSpot in spots
+          if otherSpot[0] == newColumn and otherSpot[1] == newRow then
+            spots.removeElement(otherSpot)
+          end
+        end
+      end
+    end
+  end
+  
+  local placeFurniture = function(game, furniture, spots, width, height)
+    local fitSpots = getFitSpots(spots, width, height)
+    local spot = random.choice(fitSpots)
+    applyFurniture(spots, spot, width, height)
+    
+    local instance = new furniture(game, spot)
+    instance.x = (spot[0] + (width / 2)) * 16
+    instance.y = (spot[1] + (height / 2)) * 16
+    instance.interaction.x = instance.x
+    instance.interaction.y = instance.y + (height * 8)
+    game.furniture.push(instance)
+  end
+  
+  for room in game.dungeon.rooms
+    local spots = getSpots(game.dungeon, room)
+    
+    local chances = getChances()
+    if room == game.dungeon.startRoom then chances.enemies = 0 end
+    
+    if random.next() < chances.shopStand then
+      placeFurniture(game, global.ShopStand, spots, 2, 2)
+      chances.craftingBench = 0
+      chances.treasureChest = 0
+    end
+    
+    if random.next() < chances.craftingBench then
+      placeFurniture(game, global.CraftingBench, spots, 2, 1)
+      chances.treasureChest = 0
+    end
+    
+    if random.next() < chances.treasureChest then
+      placeFurniture(game, global.TreasureChest, spots, 1, 1)
+    end
+    
+    if random.next() < chances.enemies then
+      local count = ceil(spots.length / 16)
+      for _ = 0 to count - 1
+        local spot = random.choice(spots)
+        spots.removeElement(spot)
+        
+        local enemy = new global.Enemy(game, random.choice(enemyTypes))
+        enemy.x = (spot[0] + 0.5) * 16
+        enemy.y = (spot[1] + 0.5) * 16
+        enemy.updateHitbox()
+        game.entities.push(enemy)
+      end
+    end
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.getLayers = function(dungeon)
+  local layers = object end
+  layers.ground = global.getGround(dungeon)
+  layers.walls = global.getWalls(dungeon)
+  return layers
+end
+
+global.getGround = function(dungeon)
+  local groundImage = new Image(dungeon.columns * 16, dungeon.rows * 16, true)
+  groundImage.setDrawScale(17 / 16, 17 / -16)
+  
+  local w = groundImage.width / 2
+  local h = groundImage.height / 2
+  
+  local floorSprite = global.sprites["dungeon/tileset"].frames[0]
+  for row = 0 to dungeon.rows - 1
+    for column = 0 to dungeon.columns - 1
+      if not (dungeon.tilemap[row][column] == global.Dungeon.WALL) then
+        groundImage.drawSprite(
+          floorSprite,
+          ((column + 0.5) * 16) - w,
+          ((row + 0.5) * 16) - h,
+          16, 16
+        )
+      end
+    end
+  end
+  
+  groundImage.setDrawScale(1, 1)
+  return groundImage
+end
+
+global.dungeonWallBitmasks = function(dungeon, column, row)
+  local indexes = []
+  
+  local space = function(columnShift, rowShift)
+    local newColumn = column + columnShift
+    local newRow = row + rowShift
+    
+    if (
+      newRow < 0 or newColumn < 0 or
+      newRow >= dungeon.tilemap.length or
+      newColumn >= dungeon.tilemap[0].length
+    ) then return false end
+    
+    return not (dungeon.tilemap[newRow][newColumn] == global.Dungeon.WALL)
+  end
+  
+  if space(0, -1) then
+    if space(-1, 0) and space(1, 0) then
+      indexes.push(4)
+    elsif space(-1, 0) then
+      indexes.push(1)
+    elsif space(1, 0) then
+      indexes.push(3)
+    else
+      indexes.push(2)
+    end
+    
+    return indexes
+  end
+  
+  if space(-1, 0) then
+    indexes.push(8)
+  end
+  
+  if space(1, 0) then
+    indexes.push(7)
+  end
+  
+  if not space(-1, 0) and space(-1, -1) then
+    indexes.push(6)
+  end
+  
+  if not space(1, 0) and space(1, -1) then
+    indexes.push(5)
+  end
+  
+  if space(0, 1) then
+    if space(-1, 0) and space(1, 0) then
+      indexes.push(10)
+    elsif space(-1, 0) then
+      indexes.push(9)
+    elsif space(1, 0) then
+      indexes.push(11)
+    else
+      indexes.push(13)
+    end
+  end
+  
+  if space(-1, 1) and not space(-1, 0) and not space(0, 1) then
+    indexes.push(14)
+  end
+  
+  if space(1, 1) and not space(1, 0) and not space(0, 1) then
+    indexes.push(12)
+  end
+  
+  return indexes
+end
+
+global.getWalls = function(dungeon)
+  local wallsImage = new Image(dungeon.columns * 16, dungeon.rows * 16, true)
+  wallsImage.setDrawScale(17 / 16, 17 / -16)
+  
+  local w = wallsImage.width / 2
+  local h = wallsImage.height / 2
+  
+  local frames = global.sprites["dungeon/tileset"].frames
+  for row = 0 to dungeon.rows - 1
+    for column = 0 to dungeon.columns - 1
+      if dungeon.tilemap[row][column] == global.Dungeon.WALL then
+        for index in global.dungeonWallBitmasks(dungeon, column, row)
+          local sprite = frames[index]
+          wallsImage.drawSprite(
+            sprite,
+            ((column + 0.5) * 16) - w,
+            ((row + 0.5) * 16) - h,
+            16, 16
+          )
+        end
+      end
+    end
+  end
+  
+  wallsImage.setDrawScale(1, 1)
+  return wallsImage
+end
+
+
+
+
+end()
+
+
+
+function()
+
+global.getCulledSurfaces = function(surfaces, position)
+  local distance = sqrt(pow(screen.width, 2) + pow(screen.height, 2)) / 2
+  local culledSurfaces = []
+  
+  for surface in surfaces
+    local distance1 = sqrt(
+      pow(position[0] - surface.x1, 2) + pow(position[1] - surface.y1, 2)
+    )
+    
+    local distance2 = sqrt(
+      pow(position[0] - surface.x2, 2) + pow(position[1] - surface.y2, 2)
+    )
+    
+    if distance1 < distance or distance2 < distance then
+      culledSurfaces.push(surface)
+    end
+  end
+  
+  return culledSurfaces
+end
+
+global.getLightmap = function(dungeon)
+  local lightmap = []
+  for row = 0 to dungeon.rows - 1
+    lightmap.push([])
+    for column = 0 to dungeon.columns - 1
+      if dungeon.tilemap[row][column] == global.Dungeon.WALL then
+        if row then
+          if not (dungeon.tilemap[row - 1][column] == global.Dungeon.WALL) then
+            lightmap[row].push(true)
+          else lightmap[row].push(false) end
+        else lightmap[row].push(false) end
+      else lightmap[row].push(true) end
+    end
+  end
+  
+  return lightmap
+end
+
+global.getSurfaces = function(dungeon)
+  local lightmap = global.getLightmap(dungeon)
+  local buffer = 1
+  
+  local surfaces = []
+  for row = 0 to dungeon.rows - 1
+    for column = 0 to dungeon.columns - 1
+      local c = [(column + 0.5) * 16, (row + 0.5) * 16]
+      
+      if lightmap[row][column] then
+        if (
+          dungeon.tilemap[row][column] == global.Dungeon.WALL and
+          not (dungeon.tilemap[row - 1][column] == global.Dungeon.WALL) and
+          not (dungeon.tilemap[row + 1][column] == global.Dungeon.WALL)
+        ) then
+          local lr = if lightmap[row][column - 1] then 0 else -6 end
+          local rr = if lightmap[row][column + 1] then 0 else 6 end
+          
+          local surface = new global.Surface(
+            c[0] + 8 + rr, c[1] + 8, c[0] - 8 + lr, c[1] + 8
+          )
+          
+          surface.direction = "BOTTOM"
+          surfaces.push(surface)
+        end
+        
+        continue
+      end
+      
+      if row then
+        if lightmap[row - 1][column] then
+          local lr = 0
+          if not lightmap[row - 1][column - 1] then lr = -6
+          elsif (
+            lightmap[row][column - 1] and
+            not (dungeon.tilemap[row - 1][column - 1] == global.Dungeon.WALL)
+          ) then lr = 6 end
+          
+          local rr = 0
+          if not lightmap[row - 1][column + 1] then rr = 6
+          elsif (
+            lightmap[row][column + 1] and
+            not (dungeon.tilemap[row - 1][column + 1] == global.Dungeon.WALL)
+          ) then rr = -6 end
+          
+          local surface = new global.Surface(
+            c[0] + 8 + rr + buffer, c[1] - 8, c[0] - 8 + lr - buffer, c[1] - 8
+          )
+          
+          surface.direction = "BOTTOM"
+          surfaces.push(surface)
+        end
+      end
+      
+      if column then
+        if lightmap[row][column - 1] then
+          local br = if lightmap[row - 1][column] then 0 else -6 end
+          local tr = 0
+          if (
+            lightmap[row + 1][column] and
+            not (dungeon.tilemap[row][column - 1] == global.Dungeon.WALL)
+          ) then tr = -6 end
+          
+          local surface = new global.Surface(
+            c[0] - 2, c[1] - 8 + br - buffer, c[0] - 2, c[1] + 8 + tr + buffer
+          )
+          
+          surface.direction = "RIGHT"
+          surfaces.push(surface)
+        end
+      end
+      
+      if not (row == dungeon.rows - 1) then
+        if lightmap[row + 1][column] then
+          local lr = 0
+          if lightmap[row + 1][column - 1] then
+            if lightmap[row][column - 1] then lr = 6 end
+          else lr = -6 end
+          
+          local rr = 0
+          if lightmap[row + 1][column + 1] then
+            if lightmap[row][column + 1] then rr = -6 end
+          else rr = 6 end
+          
+          local surface = new global.Surface(
+            c[0] + 8 + rr + buffer, c[1] + 2, c[0] - 8 + lr - buffer, c[1] + 2
+          )
+          
+          surface.direction = "TOP"
+          surfaces.push(surface)
+        end
+      end
+      
+      if not (column == dungeon.columns - 1) then
+        if lightmap[row][column + 1] then
+          local br = if lightmap[row - 1][column] then 0 else -6 end
+          local tr = 0
+          if (
+            lightmap[row + 1][column] and
+            not (dungeon.tilemap[row][column + 1] == global.Dungeon.WALL)
+          ) then tr = -6 end
+          
+          local surface = new global.Surface(
+            c[0] + 2, c[1] - 8 + br - buffer, c[0] + 2, c[1] + 8 + tr + buffer
+          )
+          
+          surface.direction = "LEFT"
+          surfaces.push(surface)
+        end
+      end
+    end
+  end
+  
+  return surfaces
+end
+
+
+
+
+
+
+end()
+
+
+
+function()
+
+global.Timer = class
+  constructor = function()
+    this._time = system.time() / 1000
+    this.fps = system.fps
+    this.deltaTime = 0
+    this.frames = 0
+    this.speed = 1
+    this.frozen = false
+  end
+  
+  tick = function()
+    this.deltaTime = ((system.time() / 1000) - this._time) * this.speed
+    this.deltaTime = if this.frozen then false else min(this.deltaTime, 1) end
+    this._time = system.time() / 1000
+    this.fps = system.fps
+    this.frames += 1
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Afterimage = class
+  constructor = function(sprite, x, y, width, height, fadeSpeed, alpha = 1)
+    this.sprite = sprite
+    this.x = x
+    this.y = y
+    this.width = width
+    this.height = height
+    this.fadeSpeed = fadeSpeed
+    this.alpha = alpha
+  end
+  
+  update = function()
+    this.alpha -= this.fadeSpeed
+    this.alpha = max(this.alpha, 0)
+    return this.alpha
+  end
+  
+  draw = function()
+    screen.setAlpha(this.alpha)
+    screen.drawSprite(
+      sprite, this.x, this.y, 
+      this.width, this.height
+    )
+    
+    screen.setAlpha(1)
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Button = class
+  IDLE = "Idle"
+  HOVER = "Hover"
+  CLICK = "Click"
+  
+  constructor = function(x, y, width, height, paint, action)
+    this.x = x
+    this.y = y
+    this.width = width
+    this.height = height
+    this.paint = paint
+    this.action = action
+    
+    this.targetScale = 1
+    this.scale = 1
+    this.speed = 0.1
+    this.state = global.Button.IDLE
+  end
+  
+  update = function()
+    local hover = global.cursor.hover(this.x, this.y, this.width, this.height)
+    
+    if this.state == global.Button.IDLE then
+      if hover then this.state = global.Button.HOVER 
+      else this.targetScale = 1 end
+    elsif this.state == global.Button.HOVER then
+      if not hover then this.state = global.Button.IDLE
+      elsif mouse.press then this.state = global.Button.CLICK
+      else this.targetScale = 1.1 end
+    elsif this.state == global.Button.CLICK then
+      if mouse.release then
+        if hover then
+          audio.playSound("click", 0.1)
+          this.state = global.Button.HOVER
+          this.action()
+        else this.state = global.Button.IDLE end
+      else this.targetScale = 0.8 end
+    end
+    
+    this.scale += ((this.targetScale - this.scale) * this.speed)
+  end
+  
+  draw = function()
+    screen.setDrawScale(this.scale, this.scale)
+    this.paint(x, y)
+    screen.setDrawScale(1, 1)
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Clock = class
+  constructor = function()
+    this.startTime = system.time() / 1000
+    this.currentTime = system.time() / 1000
+    this.elapsedTime = 0
+    this.deltaTime = 0
+    this.fps = system.fps
+  end
+  
+  tick = function()
+    local currentTime = system.time() / 1000
+    this.elapsedTime = currentTime - this.startTime
+    this.deltaTime = currentTime - this.currentTime
+    this.currentTime = currentTime
+    this.fps = system.fps
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Cursor = class
+  constructor = function()
+    this.pointing = false
+    this.tooltip = false
+    mouse.x = false
+    mouse.y = false
+  end
+  
+  update = function()
+    global.hideCursor()
+    this.pointing = false
+    this.tooltip = false
+  end
+  
+  draw = function()
+    local sprite = "cursor/" + if this.pointing then "pointing" else "idle" end
+    screen.drawSprite(sprite, mouse.x + 6, mouse.y - 6, 12, 12)
+    
+    if this.tooltip then
+      local width = screen.textWidth(this.tooltip[0], 6) + 8
+      local x = mouse.x + (width / 2) + 6
+      local y = mouse.y + 8
+      
+      screen.setLineWidth(1)
+      screen.fillRect(x, y, width, 16, this.tooltip[1][1])
+      screen.drawRect(x, y, width, 16, this.tooltip[1][0])
+      screen.drawText(this.tooltip[0], x, y, 6, this.tooltip[1][0])
+    end
+  end
+
+  hover = function(x, y, width, height, triggersClick = true)
+    local verdict = (
+      mouse.x >= x - (width / 2) and
+      mouse.x <= x + (width / 2) and
+      mouse.y >= y - (height / 2) and
+      mouse.y <= y + (height / 2)
+    )
+    
+    if verdict and triggersClick then this.pointing = true end
+    return verdict
+  end
+  
+  click = function(x, y, width, height)
+    this.hover(x, y, width, height) and mouse.release
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.setupDebug = function(active)
+  global.debug.active = active
+  global.debug.active_drawing = active
+  global.debug.text_font_size = 4
+end
+
+global.updateDebug = function()
+  if not global.debug.active then return end
+  global.debug.update()
+  
+  global.debug.print("")
+  global.debug.print("global.clock.fps", global.clock.fps)
+  global.debug.print("global.clock.deltaTime", global.clock.deltaTime, 3)
+  global.debug.print("")
+  global.debug.print("mouse.x", mouse.x, 3)
+  global.debug.print("mouse.y", mouse.y, 3)
+  global.debug.print("")
+  
+  local scene = global.sceneManager.scene.name
+  global.debug.print("global.sceneManager.scene.name", scene)
+  
+  if scene == global.sceneManager.GAME then
+    local dungeon = global.sceneManager.scene.dungeon
+    local player = global.sceneManager.scene.player
+    
+    global.debug.print("")
+    global.debug.print("...dungeon.columns", dungeon.columns)
+    global.debug.print("...dungeon.rows", dungeon.rows)
+    global.debug.print("")
+    global.debug.print("...player.x", player.x)
+    global.debug.print("...player.y", player.y)
+    global.debug.print("...player.vx", player.vx)
+    global.debug.print("...player.vy", player.vy)
+    global.debug.print("...player.column", floor(player.x / 16))
+    global.debug.print("...player.row", floor(player.y / 16))
+    global.debug.print('...player.balance', player.balance)
+    global.debug.print("")
+  end
+end
+
+global.drawDebug = function()
+  if not global.debug.active then return end
+  global.debug.draw()
+  screen.setFont("font")
+end
+
+
+end()
+
+
+
+function()
+
+random.integerRange = function(a, b) floor((random.next() * (b - a)) + a) end
+random.floatRange = function(a, b) (random.next() * (b - a)) + a end
+random.choice = function(a) a[random.nextInt(a.length)] end
+random.boolean = function() random.nextInt(2) end
+random.sign = function() random.choice([-1, 1]) end
+random.shuffle = function(c)
+  c.sortList(function(a, b) random.next() - 0.5 end)
+end
+
+end()
+
+
+
+function()
+
+global.Transition = class
+  constructor = function()
+    this.transitioning = false
+    this.alpha = 0
+  end
+  
+  update = function()
+  end
+  
+  draw = function()
+    screen.setAlpha(this.alpha)
+    screen.setTranslation(0, 0)
+    screen.fillRect(0, 0, screen.width, screen.height, 1)
+    screen.setAlpha(1)
+  end
+  
+  requestTransition = function(transitionAction, completionAction, duration)
+    if this.transitioning then return end
+    this.transitioning = true
+    
+    local transitionInTween = global.tweenService.createTween(
+      this, "alpha", 0, 1, duration / 2, global.Easing.sineInOut
+    )
+    
+    transitionInTween.completionHandler = function()
+      transitionAction()
+      
+      local transitionOutTween = global.tweenService.createTween(
+        global.transition, "alpha", 1, 0, duration / 2, global.Easing.sineInOut
+      )
+      
+      transitionOutTween.completionHandler = function()
+        global.transition.transitioning = false
+        completionAction()
+      end
+    end
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Tween = class
+  constructor = function(p, a, s, f, d, e)
+    this.parent = p
+    this.attribute = a
+    this.start = s
+    this.finish = f
+    this.duration = d
+    this.easing = e
+    
+    this.current = 0
+    this.progress = 0
+    this.completionHandler = function() end
+  end
+  
+  tick = function()
+    this.progress += global.clock.deltaTime / this.duration
+    this.progress = min(this.progress, 1)
+    
+    local value = this.easing(this.progress)
+    this.current = this.start + ((this.finish - this.start) * value)
+    this.parent[this.attribute] = this.current
+    
+    return not (this.progress == 1)
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.Easing = object end
+
+global.Easing.linear = function(t) t end
+  
+global.Easing.quadIn = function(t) return t * t end
+global.Easing.quadOut = function(t) return t * (2 - t) end
+global.Easing.quadInOut = function(t)
+  if t < 0.5 then
+    return 2 * t * t
+  else
+    return -1 + (4 - 2 * t) * t
+  end
+end
+
+global.Easing.cubeIn = function(t) return t * t * t end
+global.Easing.cubeOut = function(t)
+  local f = (t - 1)
+  return f * f * f + 1
+end
+global.Easing.cubeInOut = function(t)
+  if t < 0.5 then
+    return 4 * t * t * t
+  else
+    local f = (2 * t - 2)
+    return 0.5 * f * f * f + 1
+  end
+end
+
+global.Easing.quartIn = function(t) return t * t * t * t end
+global.Easing.quartOut = function(t)
+  local f = (t - 1)
+  return 1 - f * f * f * f
+end
+global.Easing.quartInOut = function(t)
+  if t < 0.5 then
+    return 8 * t * t * t * t
+  else
+    local f = (t - 1)
+    return 1 - 8 * f * f * f * f
+  end
+end
+
+global.Easing.quintIn = function(t) return t * t * t * t * t end
+global.Easing.quintOut = function(t)
+  local f = (t - 1)
+  return f * f * f * f * f + 1
+end
+global.Easing.quintInOut = function(t)
+  if t < 0.5 then
+    return 16 * t * t * t * t * t
+  else
+    local f = (2 * t - 2)
+    return 0.5 * f * f * f * f * f + 1
+  end
+end
+
+global.Easing.sineIn = function(t) 1 - cos((t * PI) / 2) end
+global.Easing.sineOut = function(t) sin((t * PI) / 2) end
+global.Easing.sineInOut = function(t) -0.5 * (cos(t * PI) - 1) end
+
+end()
+
+
+
+function()
+
+global.TweenService = class
+  constructor = function()
+    this.tweens = []
+  end
+  
+  tick = function()
+    for tween in this.tweens
+      if not tween.tick() then
+        tween.completionHandler()
+        this.removeTween(tween)
+      end
+    end
+  end
+  
+  addTween = function(tween)
+    this.tweens.push(tween)
+    return tween
+  end
+  
+  removeTween = function(tween)
+    if this.tweens.contains(tween) then
+      this.tweens.removeElement(tween)
+    end
+    
+    return tween
+  end
+  
+  clearTweens = function()
+    this.tweens = []
+  end
+  
+  createTween = function(p, a, s, f, d, e)
+    local newTween = new global.Tween(p, a, s, f, d, e)
+    return this.addTween(newTween)
+  end
+end
+
+
+end()
+
+
+
+function()
+
+// No image storage anymore sry :(
+screen.drawSpriteWithColor = function(sprite, x, y, width, height, color)
+  local image = new Image(width, height, true)
+  
+  image.drawSprite(sprite, 0, 0, width, height)
+  image.setBlending('source-in')
+  image.fillRect(0, 0, width, height, color)
+  
+  screen.drawImage(image, x, y, width, height)
+  
+  return image
+end
+
+
+end()
+
+
+
+function()
+
+Glow = class
+  constructor = function(quality=200) //Bigger number = less pixelated
+    this.imageSize = quality
+    this.storedColor = object end
+  end
+  addColor = function(color)
+    storedColor[color] = new Image(imageSize,imageSize,true)
+    storedColor[color].setRadialGradient(0,0,imageSize/2,color,'transparent')
+    storedColor[color].fillRect(0,0,imageSize,imageSize)
+    return storedColor[color]
+  end
+  draw = function(x,y,size,color,opacity=1)
+    local drawColor = if storedColor[color] then storedColor[color] else addColor(color) end
+    screen.setAlpha(opacity)
+    screen.drawImage(drawColor,x,y,size,size)
+    screen.setAlpha(1)
+  end
+end
+
+
+end()
+
+
+
+function()
+
+// They are positionned based on their top left grid cell index
+global.Room = class
+  constructor = function(minimum, maximum)
+    this.width = random.nextInt(maximum - minimum) + minimum
+    this.height = random.nextInt(maximum - minimum) + minimum
+    this.column = 0
+    this.row = 0
+  end
+  
+  // Shuffles the room's position
+  shufflePosition = function(columns, rows)
+    this.column = random.nextInt(columns - this.width)
+    this.row = random.nextInt(rows - this.height)
+  end
+end
+
+global.Dungeon = class
+  WALL = "Wall"
+  ROOM = "Room"
+  TUNNEL = "Tunnel"
+  FURNITURE = "Furniture"
+  START = "Start"
+  FINISH = "Finish"
+  
+  constructor = function(columns, rows, minimum, maximum, density)
+    this.columns = columns
+    this.rows = rows
+    
+    this.rooms = []
+    this.tilemap = this.createTilemap(columns - 2, rows - 2)
+    
+    // Randomly create rooms and tunnels until reaching the specified density
+    while true
+      local newRoom = new global.Room(minimum, maximum)
+      
+      // Find a spot that is available for the new room
+      local attempts = 0
+      while true
+        newRoom.shufflePosition(columns - 2, rows - 2)
+        
+        if this.canPlaceRoom(newRoom) then break
+        elsif attempts > density then break
+        else attempts += 1 end
+      end
+      
+      // Exit if can't find a spot within the given density placement attempts
+      if attempts > density then break
+      else
+        this.rooms.push(newRoom)
+        this.addRoom(newRoom)
+      end
+      
+      // Connect the room to the previous one using tunnels
+      if this.rooms.length > 1 then
+        local previousRoom = this.rooms[this.rooms.length - 2]
+        this.createTunnel(newRoom, previousRoom)
+      end
+    end
+    
+    // Make sure there are at least two rooms
+    if this.rooms.length < 2 then
+      this = new global.Dungeon(columns, rows, minimum, maximum, density)
+    end
+    
+    // Add the rooms again to cover overlapping tunnels
+    for room in this.rooms this.addRoom(room) end
+    
+    // Add a border of walls around the rooms and tunnels
+    this.addBorder()
+    
+    // Shift the positions of the rooms because of the added border
+    for room in this.rooms
+      room.column += 1
+      room.row += 1
+    end
+    
+    // Create the start and end positions
+    this.startRoom = false
+    this.finishRoom = false
+    
+    while true
+      this.startRoom = random.choice(this.rooms)
+      this.finishRoom = random.choice(this.rooms)
+      if not (this.startRoom == this.finishRoom) then break end
+    end
+    
+    this.start = [
+      random.integerRange(
+        this.startRoom.column, this.startRoom.column + this.startRoom.width
+      ),
+      random.integerRange(
+        this.startRoom.row, this.startRoom.row + this.startRoom.height
+      )
+    ]
+    
+    this.finish = [
+      random.integerRange(
+        this.finishRoom.column, this.finishRoom.column + this.finishRoom.width
+      ),
+      random.integerRange(
+        this.finishRoom.row, this.finishRoom.row + this.finishRoom.height
+      )
+    ]
+    
+    this.tilemap[this.start[1]][this.start[0]] = global.Dungeon.START
+    this.tilemap[this.finish[1]][this.finish[0]] = global.Dungeon.FINISH
+  end
+  
+  // Creates a tilemap filled with walls
+  createTilemap = function(columns, rows)
+    local tilemap = []
+    
+    for row = 0 to rows - 1
+      tilemap.push([])
+      
+      for column = 0 to columns - 1
+        tilemap[row].push(global.Dungeon.WALL)
+      end
+    end
+    
+    return tilemap
+  end
+  
+  // Checks if a specific tile index is out of the dungeon's tilemap's bounds
+  out = function(column, row)
+    return (
+      row < 0 or column < 0 or
+      row >= this.tilemap.length or
+      column >= this.tilemap[0].length
+    )
+  end
+  
+  // Adds a new room into the dungeon
+  addRoom = function(room)
+    for roomRow = room.row to room.row + room.height - 1
+      for roomColumn = room.column to room.column + room.width - 1
+        this.tilemap[roomRow][roomColumn] = global.Dungeon.ROOM
+      end
+    end
+  end
+  
+  // Checks if a room can be placed at a specific position in the dungeon
+  canPlaceRoom = function(room)
+    for roomRow = room.row - 1 to room.row + room.height + 1
+      for roomColumn = room.column - 1 to room.column + room.width + 1
+        if this.out(roomColumn, roomRow) then continue end
+        if not (this.tilemap[roomRow][roomColumn] == global.Dungeon.WALL) then
+          return false
+        end
+      end
+    end
+    
+    return true
+  end
+  
+  // Creates a new tunnel horizontally
+  createTunnelHorizontally = function(start, finish, row)
+    for column = min(start, finish) to max(start, finish)
+      this.tilemap[row][column] = global.Dungeon.TUNNEL
+    end
+  end
+  
+  // Creates a new tunnel vertically
+  createTunnelVertically = function(start, finish, column)
+    for row = min(start, finish) to max(start, finish)
+      this.tilemap[row][column] = global.Dungeon.TUNNEL
+    end
+  end
+  
+  // Creates a tunnel between two rooms
+  createTunnel = function(firstRoom, secondRoom)
+    if random.boolean() then
+      // Create horizontal tunnel first
+      local startColumn = random.integerRange(
+        firstRoom.column, firstRoom.column + firstRoom.width - 1
+      )
+      
+      local endColumn = random.integerRange(
+        secondRoom.column, secondRoom.column + secondRoom.width - 1
+      )
+      
+      local startRow = random.integerRange(
+        firstRoom.row, firstRoom.row + firstRoom.height - 1
+      )
+      
+      this.createTunnelHorizontally(startColumn, endColumn, startRow)
+      
+      // Create vertical tunnel second
+      local middleRow = random.integerRange(
+        secondRoom.row, secondRoom.row + secondRoom.height - 1
+      )
+      
+      this.createTunnelVertically(startRow, middleRow, endColumn)
+    else
+      // Create vertical tunnel first
+      local startRow = random.integerRange(
+        firstRoom.row, firstRoom.row + firstRoom.height - 1
+      )
+      
+      local endRow = random.integerRange(
+        secondRoom.row, secondRoom.row + secondRoom.height - 1
+      )
+      
+      local startColumn = random.integerRange(
+        firstRoom.column, firstRoom.column + firstRoom.width - 1
+      )
+      
+      this.createTunnelVertically(startRow, endRow, startColumn)
+      
+      // Create horizontal tunnel second
+      local middleColumn = random.integerRange(
+        secondRoom.column, secondRoom.column + secondRoom.width - 1
+      )
+      
+      this.createTunnelHorizontally(startColumn, middleColumn, endRow)
+    end
+  end
+  
+  // Adds a row and column of walls on each side to make sure no rooms or
+  // corridors are touching the edge of the dungeon tilemap.
+  addBorder = function()
+    for row in this.tilemap
+      row.insert(global.Dungeon.WALL)
+      row.push(global.Dungeon.WALL)
+    end
+    
+    local createRow = function()
+      local row = []
+      for index = 0 to this.tilemap[0].length - 1
+        row.push(global.Dungeon.WALL)
+      end
+      
+      return row
+    end
+    
+    this.tilemap.insert(createRow())
+    this.tilemap.push(createRow())
+  end
+end
+
+
+end()
+
+
+
+function()
+
+// A class that represents a surface used for casting shadows
+global.Surface = class
+  constructor = function(x1, y1, x2, y2)
+    this.x1 = x1
+    this.y1 = y1
+    this.x2 = x2
+    this.y2 = y2
+  end
+end
+
+// An object that controls the shadows
+global.Light = class
+  constructor = function(x, y, angle, angleRange)
+    this.x = x
+    this.y = y
+    this.angle = angle
+    this.angleRange = angleRange
+    this.angleRangeMultiplier = 1
+  end
+end
+
+
+end()
+
+
+
+function()
+
+// Does the math of rendering the shadows onto a view (image or screen)
+global.renderShadows = function(view, light, surfaces, color)
+  if not light.angleRange then
+    screen.clear(color)
+    return
+  end
+  
+  local distance = screen.width * screen.height * -1
+  screen.setColor(color)
+  
+  // Loop over each surface and cast shadows for each one of them
+  for surface in surfaces
+    local angle1 = atan2(light.y - surface.y1, light.x - surface.x1)
+    local vertex1 = [cos(angle1) * distance, sin(angle1) * distance]
+      
+    local angle2 = atan2(light.y - surface.y2, light.x - surface.x2)
+    local vertex2 = [cos(angle2) * distance, sin(angle2) * distance]
+      
+    // The path, flattened for passing through the 'fillPolygon' function
+    local shadowQuad = [
+      surface.x1, surface.y1,
+      surface.x2, surface.y2,
+      vertex2[0], vertex2[1],
+      vertex1[0], vertex1[1]
+    ]
+    
+    screen.fillPolygon(shadowQuad)
+  end
+  
+  local angleRange = light.angleRange * light.angleRangeMultiplier
+  angleRange = min(max(angleRange, 0), 360)
+  
+  if angleRange < 360 then
+    // Draw triangles from the start to the end
+    local distance = screen.width + screen.height
+    local startAngle = light.angle + (angleRange / 2)
+    local trianglesAngle = (360 - angleRange) / 3
+    for index = 0 to 2
+      local triangleStartAngle = startAngle + (index * trianglesAngle) - 1
+      local triangleEndAngle = triangleStartAngle + trianglesAngle + 1
+      screen.fillPolygon([
+        light.x, light.y,
+        light.x + (cosd(triangleStartAngle) * distance),
+        light.y + (sind(triangleStartAngle) * distance),
+        light.x + (cosd(triangleEndAngle) * distance), 
+        light.y + (sind(triangleEndAngle) * distance)
+      ])
+    end
+  end
+end
+
+// Shortcut for shadow rendering using the global 'screen' object
+screen.drawShadows = function(light, surfaces, color)
+  global.renderShadows(screen, light, surfaces, color)
+end
+
+
+end()
+
+
+
+function()
+/*
+        Debug Tools v0.7
+      
+      
+      
+    Quick usage reference:
+        
+        update = function()
+          debug.update()  // call this before everything
+          
+          debug.print("foo", foo)
+        end
+        
+        draw = function()
+          debug.print("bar", bar)
+          
+          debug.bm("map_drawing", function()
+            draw_map()
+          end)
+          
+          debug.draw()  // call this after everything
+        end
+*/
+
+
+
+// This array makes it easier to try out different fonts while the game 
+// is running. 
+__fonts = [
+  "AESystematic"        /* 0 */,  "Alkhemikal"    /* 1 */,  "AlphaBeta"        /* 2 */,
+  "Arpegius"            /* 3 */,  "Awesome"       /* 4 */,  "BitCell"          /* 5 */,
+  "Blocktopia"          /* 6 */,  "Comicoro"      /* 7 */,  "Commodore64"      /* 8 */,
+  "DigitalDisco"        /* 9 */,  "Edunline"      /* 10 */, "EnchantedSword"   /* 11 */,
+  "EnterCommand"        /* 12 */, "Euxoi"         /* 13 */, "FixedBold"        /* 14 */,
+  "GenericMobileSystem" /* 15 */, "GrapeSoda"     /* 16 */, "JupiterCrash"     /* 17 */,
+  "Kapel"               /* 18 */, "KiwiSoda"      /* 19 */, "Litebulb8bit"     /* 20 */,
+  "LycheeSoda"          /* 21 */, "MisterPixel"   /* 22 */, "ModernDos"        /* 23 */,
+  "NokiaCellPhone"      /* 24 */, "PearSoda"      /* 25 */, "PixAntiqua"       /* 26 */,
+  "PixChicago"          /* 27 */, "PixelArial"    /* 28 */, "PixelOperator"    /* 29 */,
+  "Pixellari"           /* 30 */, "Pixolde"       /* 31 */, "PlanetaryContact" /* 32 */,
+  "PressStart2P"        /* 33 */, "RainyHearts"   /* 34 */, "RetroGaming"      /* 35 */,
+  "Revolute"            /* 36 */, "Romulus"       /* 37 */, "Scriptorium"      /* 38 */,
+  "Squarewave"          /* 39 */, "Thixel"        /* 40 */, "Unbalanced"       /* 41 */,
+  "UpheavalPro"         /* 42 */, "VeniceClassic" /* 43 */, "ZXSpectrum"       /* 44 */,
+  "Zepto"               /* 45 */,
+  
+  /* 
+      monospaced fonts 
+        AESystematic      Commodore64       ModernDos       
+        PressStart2P      ZXSpectrum
+    
+      monospaced-ish
+        Edunline         JupiterCrash
+  */
+  
+]
+
+
+debug = object
+  active = false
+  active_drawing = false
+  
+  // -------------------------------------
+  //   user settings
+  // -------------------------------------
+  key1 = '\\'
+  key2 = '~'
+  
+  text_font = __fonts[12] // [7]
+  
+  text_font_default    = "BitCell"
+  text_font_size       = 12
+  text_line_spacing    = 0
+  text_outlined        = true
+  text_outline_width   = 3
+  text_background      = true
+  text_col_separation  = 10
+  
+  panel_margin_left    = 4
+  panel_margin_right   = 4
+  panel_margin_top     = 0
+  panel_margin_bottom  = 2
+  panel_use_colors     = true
+  
+  panel_key_color      = "rgb(223,223,223)"
+  panel_string_color   = "rgb(255,255,198)"
+  panel_number_color   = "rgb(255,198,255)"
+  panel_object_color   = "rgb(198,217,255)"
+  panel_back_color     = "rgba(43,33,33,0.66)"
+  panel_frame_color    = "rgba(105,93,93,0.66)"
+  text_outline_color   = "rgb(0,0,0)"
+  shape_outline_color  = "rgb(0,0,0)"
+  
+  shape_font           = "BitCell"
+  shape_dash           = [4, 6]
+  shape_line_width     = 1
+  shape_outline_width  = 4
+  
+  display_as_table     = true
+  float_precision      = 2
+  time_in_secs         = false     // secs or millisecs
+  render_target        = screen
+  manual_input         = false
+  
+  bm_smoothing         = 15          // lower = more responsive | higher = less twichy
+  bm_con_upd_interval  = 1.0  // console update interval in seconds
+  
+  
+  // -------------------------------------
+  //   internal stuff
+  // -------------------------------------
+  _lines = []
+  _longest_line = 0
+  _longest_key  = 0
+  _longest_val  = 0
+  _longest_single_key  = 0
+  _bm_cache = object end
+  _draw_commands = object
+    line   = []
+    rline  = []
+    rect   = []
+    frect  = []
+    point  = []
+    fpoint = []
+    text   = []
+  end
+  
+  _t1 = system.time()
+  _dt = 0
+  _update_dt = function()
+    local t2 = system.time()
+    this._dt = (t2-this._t1)/1000
+    this._t1 = t2
+  end
+end
+
+
+debug._reset = function()
+  this._lines = []
+	this._longest_line = 0
+	this._longest_key  = 0
+	this._longest_val  = 0
+	this._longest_single_key = 0
+end
+
+
+debug._reset_drawing = function()
+  for kind in this._draw_commands
+	  this._draw_commands[kind] = []
+	end
+end
+
+
+debug.toggle = function()
+  this.active = not this.active
+end
+
+
+debug.toggle_drawing = function()
+  this.active_drawing = not this.active_drawing
+end
+debug.toggleDrawing = debug.toggle_drawing
+
+
+debug.update = function()
+  debug._update_dt()
+  
+  if this.active then
+    this._reset()
+  end
+  
+  if this.active_drawing then
+    this._reset_drawing()
+  end
+  
+  if not manual_input then 
+    if keyboard.press[this.key1] or keyboard.press[this.key2] then 
+      if keyboard["CONTROL"] then 
+        this.toggle_drawing()
+      else
+        this.toggle()
+      end
+    end
+  end
+end
+
+
+debug.commit_deferred = function()
+  this._process_draw_commands()
+end
+debug.commitDeferred = debug.commit_deferred
+
+
+debug.draw = function()
+  this._process_print_commands()
+end
+
+
+debug._draw_text = function(text, x, y, color)
+  if this.text_outlined then 
+    screen.setLineWidth(this.text_outline_width)
+    screen.drawTextOutline(text, x, y, this.text_font_size, this.text_outline_color)
+  end
+  screen.drawText(text, x, y, this.text_font_size, this.panel_use_colors and color or this.panel_key_color)
+end
+
+
+debug._parse_line_part = function(part, precision, is_key=false)
+  if this.___fmt___.is_float(part) then
+    return debug.__fmt("%" + floor(precision) + "f", [part])
+  end
+  if is_key and not this.display_as_table then 
+    return debug.__fmt("%s:", [part])
+  end
+  return debug.__fmt("%s", [part])
+end
+
+
+debug._draw_panel = function(fs)
+  if not this.text_background then return end
+  local rx = -screen.width/2
+	local ry = screen.height/2
+  local rh = this._lines.length*(fs+this.text_line_spacing)+this.panel_margin_bottom+this.panel_margin_top
+	local margins = this.panel_margin_left + this.panel_margin_right
+	local rw = 0
+  if this._longest_line+margins < this._longest_single_key then 
+    rw = this._longest_single_key
+    
+  else
+	  rw = this._longest_line
+	 // rw = this._longest_key + this._longest_val
+    rw += this.text_col_separation
+  end
+  // rw = this._longest_val
+	
+	rw += margins
+
+	screen.setLineWidth(1)
+	screen.setLineDash()
+	screen.fillRect(rx, ry, rw, rh, this.panel_back_color)
+	screen.drawRect(rx, ry, rw, rh, this.panel_frame_color)
+end
+
+
+debug._process_print_commands = function()
+  if not this.active then return end
+  screen.setDrawAnchor(-1, 1)
+  screen.setFont(this.text_font)
+  
+	local lines = this._lines
+	local fs = this.text_font_size
+	
+	local x = -screen.width/2+this.panel_margin_left
+
+	for line in lines
+    line.key_parsed = this._parse_line_part(line.key, line.precision, line.key != "" and line.val.type != 0 )
+
+    local kw = screen.textWidth(line.key_parsed, fs)
+    local vw = 0
+    local lw = 0
+    local lskw = 0
+    
+    if line.val.type != 0 then
+      line.val_parsed = this._parse_line_part(line.val, line.precision)
+      vw = screen.textWidth(line.val_parsed, fs) // +this.text_col_separation
+        
+    else
+      lskw = kw
+      kw = 0
+      
+    end
+    lw = kw + vw
+    
+    if lskw > this._longest_single_key then  this._longest_single_key = lskw end
+    if kw > this._longest_key then  this._longest_key  = kw end
+    if vw > this._longest_val then  this._longest_val  = vw end
+    if lw > this._longest_line then this._longest_line = lw end
+    
+    // local kstr = kw > 0 and fmt("%s (%d)", [line.key_parsed, kw]).align('l', 20) or ' '.align('l', 20)
+    // local vstr = vw > 0 and fmt("%s (%d)", [line.val_parsed, vw]).align('l', 20) or ' '.align('l', 20)
+    // local lstr = fmt("sum: %d", [lw]).align('l', 20)
+    // global.printf("%s| %s| %s", [kstr, vstr, lstr])
+  end
+  // global.print("------------------")
+  
+  if this.display_as_table then 
+    // if this._longest_key + this._longest_val > this._longest_single_key then
+      this._longest_line = this._longest_key + this._longest_val
+  end
+  
+  local val_x = x + this._longest_key + this.text_col_separation
+  
+  // global.print(this._longest_key)
+  // global.print(this._longest_val)
+  // global.print(this._longest_line)
+  // global.print("------------------")
+  
+	this._draw_panel(fs)
+
+	for i=0 to lines.length-1 by 1
+	  local line = this._lines[i]
+    local y = screen.height/2 - i*(fs+this.text_line_spacing) - this.panel_margin_top
+    
+    if not this.display_as_table then 
+      val_x = line.key_parsed == "" and x or (x + screen.textWidth(line.key_parsed, fs)+this.text_col_separation)
+    else
+      val_x = x + this._longest_key + this.text_col_separation
+    end
+    
+    if line.key_parsed != "" then 
+      this._draw_text(line.key_parsed, x, y, this.panel_key_color)
+    end
+    
+    if line.val_parsed.type != 0 then
+      local color = this.panel_string_color
+      if    line.val.type == "number" then color = this.panel_number_color
+      elsif line.val.type == "object" then color = this.panel_object_color
+      end
+      this._draw_text(line.val_parsed, val_x, y, color)
+    end
+  end
+  
+  screen.setFont(this.text_font_default)
+	screen.setDrawAnchor()
+	screen.setLineWidth()
+end
+
+
+_NOARG_ = object end
+debug.print = function(key, val=_NOARG_, precision=_NOARG_)
+  if not this.active then return end
+  
+  local line = object end
+  
+  if val == _NOARG_ then // 1 arg given
+    precision = this.float_precision
+  else   // 2 or 3 args given
+    if val.type == "number" and this.___fmt___.is_float(key) then 
+      precision = val
+      val = _NOARG_
+    elsif precision == _NOARG_ then
+      precision = this.float_precision
+    end
+  end
+  
+  if val != _NOARG_ then 
+    line.key = key 
+    line.val = val
+    line.precision = precision
+  else
+    line.key = key
+    line.precision = precision
+  end
+
+  this._lines.push(line)
+end
+
+
+debug._check_cache = function(name)
+  if not this._bm_cache[name] then 
+    this._bm_cache[name] = object
+      time_sum = 0
+      history = []
+      timer = this.bm_con_upd_interval
+    end
+  end
+  return this._bm_cache[name]
+end
+
+
+
+// benchmarks and prints results on screen 
+// optionally also prints to the console periodically
+
+// debug.bmc(string, function)
+debug.bmc = function(name, func)
+  this.bm(name, func, true)
+end
+
+
+// debug.bm(string, function)
+debug.bm = function(name, func, __con_prt=false)
+  if not this.active and not __con_prt then 
+    func()
+    return 0
+  end
+  
+	local t1 = system.time()
+	func()
+	local t2 = (system.time() - t1)
+	if time_in_secs then
+	  t2 /= 1000
+	end
+  
+  local cache = this._check_cache(name)
+  
+  if this.bm_smoothing > 1 then 
+    cache.time_sum += t2
+    if cache.history.length > this.bm_smoothing then 
+      cache.time_sum -= cache.history.removeAt(0)
+    end
+    cache.history.push(t2)
+    t2 = cache.time_sum/cache.history.length
+  end
+  
+  local times_str = this.__fmt((time_in_secs and "%4f s" or "%d ms"), [t2])
+
+	if this.active and not __con_prt then 
+	  this.print(name, times_str)
+	end
+	
+	if __con_prt then
+    local str = this.__fmt("%s: " + times_str, [name])
+    
+    cache.timer -= this._dt
+    if cache.timer <= 0 then 
+      global.print(str)
+      cache.timer = this.bm_con_upd_interval
+    end  
+  end
+  return t2
+end
+
+
+
+/*******************************************************************************
+
+      Internal Drawing API
+
+*******************************************************************************/
+debug._process_draw_commands = function()
+  if not this.active_drawing then return end
+  
+  // lines
+  for c in this._draw_commands.line
+    this.line(c[0], c[1], c[2], c[3], c[4], c[5], c[6], c[7])
+  end
+  
+  for c in this._draw_commands.rline
+    this.line(c[0], c[1], c[2], c[3], c[4], c[5], c[6], c[7])
+  end
+  
+  for c in this._draw_commands.rect
+    this.rect(c[0], c[1], c[2], c[3], c[4], c[5], c[6], c[7], c[8])
+  end
+
+  for c in this._draw_commands.frect
+    this.frect(c[0], c[1], c[2], c[3], c[4], c[5], c[6])
+  end
+  
+  for c in this._draw_commands.point
+    this.point(c[0], c[1], c[2], c[3], c[4], c[5], c[6])
+  end
+  
+  for c in this._draw_commands.fpoint
+    this.fpoint(c[0], c[1], c[2], c[3], c[4])
+  end
+  
+  for c in this._draw_commands.text
+    this.text(c[0], c[1], c[2], c[3], c[4], c[5], c[6])
+  end
+end
+
+
+debug._add_draw_command = function(kind, params)
+  if not this.active_drawing then return end
+  this._draw_commands[kind].push(params)    
+end
+
+  
+
+
+
+/*******************************************************************************
+
+
+      Public Drawing API
+
+
+*******************************************************************************
+
+/*******************************************************************************
+      Deferred Drawing API
+*******************************************************************************/
+debug.dline = function(x1, y1, x2, y2, color, thickness=0, outline=false, dash=false)
+  this._add_draw_command("line", [x1, y1, x2, y2, color, thickness, outline, dash])    
+end
+
+debug.drline = function(x, y, rx, ry, color, thickness=0, outline=false, dash=false)
+  this._add_draw_command("rline", [x, y, x+rx, y+ry, color, thickness, outline, dash])    
+end
+
+debug.drect = function(x, y, w, h, color, thickness=0, radius=0, outline=false, dash=false)
+  this._add_draw_command("rect", [x, y, w, h, color, thickness, radius, outline, dash])
+end
+
+debug.dfrect = function(x, y, w, h, color, radius=0, outline=false)
+  this._add_draw_command("frect", [x, y, w, h, color, radius, outline])
+end
+
+debug.dpoint = function(x, y, radius, color, thickness=0, outline=false, dash=false)
+  this._add_draw_command("point", [x, y, radius, color, thickness, outline, dash])
+end
+
+debug.dfpoint = function(x, y, radius, color, outline=false)
+  this._add_draw_command("fpoint", [x, y, radius, color, outline])
+end
+
+debug.dtext = function(text, x, y, size, color, outline=false, font=0)
+  this._add_draw_command("text", [text, x, y, size, color, outline, font])
+end
+
+
+
+/*******************************************************************************      
+      Immediate Drawing API
+*******************************************************************************/
+debug.line = function(x1, y1, x2, y2, color, thickness=0, outline=false, dash=false)
+  if not this.active_drawing then return end
+  
+  thickness = thickness or this.shape_line_width
+  if dash then this.render_target.setLineDash(dash.type == "number" and this.shape_dash or dash) end
+  
+  if outline then 
+    this.render_target.setLineWidth(thickness+this.shape_outline_width)  
+    this.render_target.drawLine(x1, y1, x2, y2, this.shape_outline_color)
+  end  
+  
+  this.render_target.setLineWidth(thickness)
+  this.render_target.drawLine(x1, y1, x2, y2, color)
+  
+  this.render_target.setLineWidth()
+  if dash then this.render_target.setLineDash() end
+end
+
+
+debug.rline = function(x, y, rx, ry, color, thickness=0, outline=false, dash=false)
+  if not this.active_drawing then return end
+  
+  thickness = thickness or this.shape_line_width
+  if dash then this.render_target.setLineDash(dash.type == "number" and this.shape_dash or dash) end
+  
+  local x2 = x+rx
+  local y2 = y+ry
+  
+  if outline then 
+    this.render_target.setLineWidth(thickness+this.shape_outline_width)  
+    this.render_target.drawLine(x, y, x2, y2, this.shape_outline_color)
+  end  
+  
+  this.render_target.setLineWidth(thickness)
+  this.render_target.drawLine(x, y, x2, y2, color)
+  
+  this.render_target.setLineWidth()
+  if dash then this.render_target.setLineDash() end
+end
+
+
+debug.vec = function(px, py, dx, dy, color, thickness=0, outline=false, dash=false)
+  // this is an ongoing experiment, disregard
+  
+  local x2 = px+dx 
+  local y2 = py+dy
+  
+  this.line(px, py, x2, y2, color, thickness, outline, dash)
+  this.fpoint(px, py, thickness*2, color, outline)
+  
+end
+
+
+debug.rect = function(x, y, w, h, color, thickness=0, radius=0, outline=false, dash=false)
+  if not this.active_drawing then return end
+  
+  thickness = thickness or this.shape_line_width
+
+  if dash then this.render_target.setLineDash(dash.type == "number" and this.shape_dash or dash) end
+  if outline then 
+    this.render_target.setLineWidth(thickness+this.shape_outline_width)  
+    this.render_target.drawRoundRect(x, y, w, h, radius, this.shape_outline_color)
+  end
+  this.render_target.setLineWidth(thickness)
+  this.render_target.drawRoundRect(x, y, w, h, radius, color)
+  
+  this.render_target.setLineWidth()
+  if dash then this.render_target.setLineDash() end
+end
+
+
+debug.frect = function(x, y, w, h, color, radius=0, outline=false)
+  if not this.active_drawing then return end
+  if outline then 
+    this.render_target.setLineWidth(this.shape_outline_width/2)  
+    this.render_target.drawRoundRect(x, y, w+this.shape_outline_width/2, h+this.shape_outline_width/2, radius, this.shape_outline_color)
+    this.render_target.setLineWidth()
+  end
+  this.render_target.fillRoundRect(x, y, w, h, radius, color)
+end
+
+
+debug.point = function(x, y, radius, color, thickness=0, outline=false, dash=false)
+  if not this.active_drawing then return end
+
+  if dash then this.render_target.setLineDash(dash.type == "number" and this.shape_dash or dash) end
+  if outline then 
+    this.render_target.setLineWidth(thickness+this.shape_outline_width)  
+    this.render_target.drawRound(x, y, radius*2, radius*2, this.shape_outline_color)  
+  end
+  this.render_target.setLineWidth(thickness or this.shape_line_width)
+  this.render_target.drawRound(x, y, radius*2, radius*2, color)
+
+  this.render_target.setLineWidth()
+  if dash then this.render_target.setLineDash() end
+end
+
+
+debug.fpoint = function(x, y, radius, color, outline=false)
+  if not this.active_drawing then return end
+  
+  if outline then 
+    this.render_target.setLineWidth(this.shape_outline_width/2)
+    this.render_target.drawRound(x, y, radius*2+this.shape_outline_width/2, radius*2+this.shape_outline_width/2, this.shape_outline_color)  
+    this.render_target.setLineWidth()
+  end
+  this.render_target.fillRound(x, y, radius*2, radius*2, color)
+end
+
+
+
+debug.text = function(text, x, y, size, color, outline=false, font=0)
+  if not this.active_drawing then return end
+  
+  local rtarget = this.render_target
+  
+  rtarget.setFont(font or this.shape_font)
+  
+  if outline then 
+    rtarget.setLineWidth(this.shape_outline_width)
+    rtarget.drawTextOutline(text, x, y, size, this.shape_outline_color)
+    rtarget.setLineWidth()
+  end
+  
+  rtarget.drawText(text, x, y, size, color)
+
+  if font then rtarget.setFont(this.text_font_default) end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    
+    
+    Disregard everything below. It's a partial copy of my String format 
+    library (version 0.9). The debugger just uses it for (my) convenience. 
+    
+    
+*/
+
+debug.___fmt___ = object
+  // helper lookup tables
+  // TODO: test if using table is faster than using strings for LUTs
+  VALID = ['s', 'd', 'f', 'o', 't', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+  DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+  
+  // used to replace escaped or invalid '%'s, to mark where they are
+  // because 'indexOf' always finds the first occurrence
+  TEMP = "__(@^€!$~@]__"  // (just an unlikely pattern to exist in any other string)
+  
+  // truncate floats
+  ftrunc = function(val, num_decimals)
+    return round(val*10^num_decimals)/10^num_decimals
+  end
+  
+  is_float = function(num)
+    return num.type == "number" and num % 1 != 0
+  end
+  // parse objects, recursively, and expand their properties
+  // 'obj.__str' should be an instance function that returns 
+  // a string representing the object
+  parse_obj = function(obj, level=0)
+    // if obj.__str then return obj.__str() end
+    // and obj.__str.type == "function" then return obj.__str() end
+  
+    local indent = ""
+    local fields_str = ""
+    
+    for k in obj
+      local v = obj[k]
+      
+      indent = "  "
+      for i=0 to level-1 by 1 
+        indent += "  " 
+      end
+      
+      if v.type == "object" and k != "class" then 
+        v = this.parse_obj(v, level+1) 
+      end
+      
+      fields_str += indent + k + " = " + v + "\n"
+    end
+    
+    indent = ""
+    for i=0 to level-1 by 1 
+      indent += "  " 
+    end
+    
+    local out_str = "object\n" + fields_str + indent + "end"
+    
+    return level == 0
+       and indent + out_str
+        or out_str
+  end
+end
+
+debug.__fmt = function(str, args)
+  if args.type != "list" or args.length == 0 then return str end
+  local index = str.indexOf('%')
+  local i = 0
+
+  // local j = 0  // temp safety
+  while index != -1 //and j < 100
+    // j += 1
+    local ch = str.substring(index+1, min(index+2, str.length))
+    
+    // if '%' is escaped, mark it and continue
+    if str.substring(index-1, index, str.length) == '\\' then
+      str = str.substring(0, index-1) + str.substring(index, str.length)
+      str = str.replace('%', debug.___fmt___.TEMP)
+      index = str.indexOf('%')
+      continue
+    end
+    
+    if debug.___fmt___.VALID.contains(ch) then
+      local arg = args[i]
+      
+      // not a float or no precision specified
+      if not debug.___fmt___.DIGITS.contains(ch) then
+        if    ch == 'd' then
+          arg = if arg.type == "number" then floor(arg) else "NAN" end
+        
+        elsif ch == 'f' then
+          arg = if arg.type == "number" then arg else "NAN" end
+        
+        elsif ch == 'o'and arg.type == "object" then
+          arg = debug.___fmt___.parse_obj(arg)
+        
+        elsif ch == 't' then
+          arg = arg.__type or arg.type
+        else
+          if arg.__str then arg = arg.__str() end
+        end
+        
+        str = str.replace("%" + ch, arg)
+      
+      // it's a float with precision
+      else
+        if arg.type != "number" then
+          str = str.replace("%" + ch, "NAN")
+        else
+          local tmp = str.substring(index+1, str.length)
+          local ending = tmp.indexOf('f')
+          
+          if ending < 0 then
+            str = str.replace('%', debug.___fmt___.TEMP)
+            index = str.indexOf('%')
+            continue
+          end
+          tmp = tmp.substring(0, ending+1)
+          
+          local prec = Number.parse(tmp.substring(0, ending))
+          str = str.replace('%'+tmp, debug.___fmt___.ftrunc(arg, prec))
+        end
+      end
+      
+      index = str.indexOf('%')
+      i += 1
+    else
+      str = str.replace('%', debug.___fmt___.TEMP)
+      index = str.indexOf('%')
+    end
+    // print(j + " | " + str)
+  end
+  
+  
+  // j = 0  // temp safety
+  while true// and j < 100
+    // j += 1
+    local idx = str.indexOf(debug.___fmt___.TEMP)
+    if idx < 0 then break end
+    str = str.replace(debug.___fmt___.TEMP, '%')
+  end
+  
+  return str
+end
+end()
+
+
+
+function()
+
+global.SceneManager = class
+  INTRODUCTION = "Introduction"
+  MAIN_MENU = "Main Menu"
+  INSTRUCTIONS = "Instructions"
+  GAME = "Game"
+  GAME_OVER = "Game Over"
+  
+  constructor = function()
+    this.scene = false
+  end
+  
+  update = function()
+    if this.scene then this.scene.update() end
+  end
+  
+  draw = function()
+    if this.scene then this.scene.draw() end
+  end
+  
+  setScene = function(name = global.SceneManager.INTRODUCTION)
+    if this.scene then if this.scene.name == name then return end end
+    
+    if name == global.SceneManager.INTRODUCTION then
+      this.scene = new global.IntroductionScene(name)
+    elsif name == global.SceneManager.MAIN_MENU then
+      this.scene = new global.MainMenuScene(name)
+    elsif name == global.SceneManager.INSTRUCTIONS then
+      this.scene = new global.InstructionsScene(name)
+    elsif name == global.SceneManager.GAME then
+      this.scene = new global.GameScene(name)
+    elsif name == global.SceneManager.GAME_OVER then
+      this.scene = new global.GameOverScene(name)
+    end
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.GameOverScene = class
+  constructor = function(name)
+    this.name = name
+    
+    audio.cancelBeeps()
+    audio.playMusic("menu", 0.5, true)
+    
+    this.angle = 0
+    this.time = 0
+    this.lift = 20
+    this.sx = 1
+    this.sy = 1
+    
+    this.glow = new global.Glow(2048)
+    this.backToMainMenuButton = new global.Button(
+      0, -20, 160, 20, function(x, y)
+        screen.setLineWidth(1)
+        screen.fillRect(x, y, 160, 20, "#8d9199")
+        screen.drawRect(x, y, 160, 20, "#2a2d38")
+        screen.drawText("Back to Main Menu", x, y, 12, "2a2d38")
+      end, function()
+        local transition = function()
+          global.sceneManager.setScene(global.SceneManager.MAIN_MENU)
+        end
+        
+        global.transition.requestTransition(transition, function() end, 1)
+      end
+    )
+  end
+  
+  update = function()
+    this.backToMainMenuButton.update()
+    this.time += global.clock.deltaTime
+    this.angle = 2 * cos(this.time / 2)
+    this.lift = 20 + (4 * sin(this.time * 1.5))
+    this.sx = 1 + (0.05 * cos(this.time))
+    this.sy = 1 + (0.05 * sin(this.time))
+  end
+  
+  draw = function()
+    screen.setDrawRotation(this.angle)
+    screen.setDrawScale(this.sx * 6, this.sy * 1.5)
+    this.glow.draw(0, this.lift, 64, "white", 0.5)
+    
+    screen.setDrawScale(this.sx, this.sy)
+    screen.drawSprite("game_over", 0, 20, 392 / 2, 118 / 2)
+    screen.setDrawScale(1, 1)
+    screen.setDrawRotation(0)
+    
+    this.backToMainMenuButton.draw()
+    
+    local scoreText = "You died on dungeon #" + global.lastScore + "."
+    screen.drawText(scoreText, 0, -40, 8, 999)
+    
+    local highScoreText = "Your highscore is " + global.highScore + "."
+    screen.drawText(highScoreText, 0, -54, 8, 999)
+    if global.highScore > global.lastHighScore then
+      screen.drawText("You got a new highscore!", 0, -70, 8, 999)
+      local previous = "Your previous highscore was: " + global.lastHighScore
+      screen.drawText(previous, 0, -82, 6, 999)
+    end
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.GameScene = class
+  constructor = function(name)
+    this.name = name
+    
+    audio.cancelBeeps()
+    audio.playMusic("ost", 0.1, true)
+    
+    this.timer = new global.Timer()
+    this.camera = new global.Camera()
+    this.player = new global.Player(this)
+    
+    this.levelNumber = 0
+    this.dungeonSize = 30
+    this.newLevel()
+    
+    local lantern = new global.Lantern(this, this.player)
+    this.player.inventory.slots.set(0, lantern)
+    
+    local wand = new global.Weapon(this, this.player, global.Weapon.WAND)
+    this.player.inventory.slots.set(1, wand)
+  end
+  
+  update = function()
+    this.timer.tick()
+    this.camera.update()
+    
+    this.startStairs.update()
+    this.finishStairs.update()
+    this.player.update()
+    
+    for projectile in this.projectiles projectile.update() end
+    for effect in this.effects effect.update() end
+    for emitter in this.emitters emitter.update() end
+    
+    local culledEntities = this.getCulledComponents(this.entities)
+    for entity in culledEntities entity.update() end
+    for item in this.getCulledComponents(this.furniture) item.update() end
+    for coin in this.getCulledComponents(this.coins) coin.update() end
+    for item in this.getCulledComponents(this.ingredients) item.update() end
+    for coin in this.coins coin.update() end
+    for ingredient in this.ingredients ingredient.update() end
+    
+    global.updatePhysics(culledEntities + this.player)
+  end
+  
+  draw = function()
+    this.camera.translate()
+    
+    local ground = this.dungeon.layers.ground
+    screen.drawImage(ground,
+      ground.width / 2,
+      ground.height / 2,
+      ground.width,
+      ground.height
+    )
+    
+    this.startStairs.draw()
+    this.finishStairs.draw()
+    
+    local culledEntities = this.getCulledComponents(this.entities)
+    local culledFurniture = this.getCulledComponents(this.furniture)
+    local culledCoins = this.getCulledComponents(this.coins)
+    local culledIngredients = this.getCulledComponents(this.ingredients)
+    
+    screen.setAlpha(0.6)
+    for item in culledFurniture
+      local y = item.y - (item.height / 2)
+      local size = if item.width == 16 then "medium" else "large" end
+      screen.drawSprite("shadows/" + size, item.x, y, item.width, 4)
+    end
+    
+    for entity in culledEntities + this.player
+      local y = entity.y - (entity.height / 2)
+      screen.drawSprite("shadows/medium", entity.x, y, 16, 4)
+    end
+    
+    for coin in culledCoins
+      local y = coin.y - (coin.height / 2)
+      screen.drawSprite("shadows/small", coin.x, y, 8, 4)
+    end
+    
+    for ingredient in culledIngredients
+      local y = ingredient.y - (ingredient.height / 2)
+      local size = if ingredient.width == 8 then "small" else "medium" end
+      screen.drawSprite("shadows/" + size, ingredient.x, y, ingredient.width, 4)
+    end
+    
+    screen.setAlpha(1)
+    for item in culledFurniture item.draw() end
+    for coin in culledCoins coin.draw() end
+    for ingredient in culledIngredients ingredient.draw() end
+    
+    local walls = this.dungeon.layers.walls
+    screen.drawImage(walls,
+      walls.width / 2,
+      walls.height / 2,
+      walls.width,
+      walls.height
+    )
+    
+    for entity in culledEntities entity.draw() end
+    for entity in culledEntities entity.bar.draw() end
+    for projectile in this.projectiles projectile.draw() end
+    
+    this.player.drawShadows()
+    
+    for emitter in this.emitters emitter.draw(this.camera.x, this.camera.y) end
+    this.player.drawBody()
+    
+    for effect in this.effects effect.draw() end
+    for item in culledFurniture
+      if item.canInteract(this.player) then item.interaction.draw() end
+    end
+    
+    if this.finishStairs.canInteract(this.player) then
+      this.finishStairs.interaction.draw()
+    end
+    
+    this.camera.transpose()
+    this.player.drawStats()
+    this.player.drawInventory()
+  end
+  
+  newLevel = function()
+    this.levelNumber += 1
+    
+    this.entities = []
+    this.projectiles = []
+    this.furniture = []
+    this.coins = []
+    this.ingredients = []
+    this.effects = []
+    this.emitters = []
+    
+    local size = this.dungeonSize
+    local maximum = floor(size / 5)
+    local density = round(pow(size, 2) / 30)
+    this.dungeon = new global.Dungeon(size, size, 7, maximum, density)
+    this.dungeon.layers = global.getLayers(this.dungeon)
+    this.dungeon.surfaces = global.getSurfaces(this.dungeon)
+    
+    global.furnish(this)
+    this.dungeon.colliderMap = global.getColliderMap(this.dungeon)
+    
+    local startFlip = random.sign()
+    local startColumn = this.dungeon.start[0] + startFlip
+    if not this.dungeon.colliderMap[this.dungeon.start[1]][startColumn] then
+      startFlip = -startFlip
+    end
+    
+    this.startStairs = new global.Stairs(this, this.dungeon.start, startFlip)
+    this.startStairs.x = (this.dungeon.start[0] + 0.5) * 16
+    this.startStairs.y = (this.dungeon.start[1] + 0.5) * 16
+    this.startStairs.interaction = false
+    
+    this.player.x = (this.dungeon.start[0] + 0.5) * 16
+    this.player.y = (this.dungeon.start[1] + 1) * 16
+    this.player.flip = this.startStairs.flip
+    this.camera.snap(player.x, player.y)
+    this.player.updateHitbox()
+    
+    local finishFlip = random.sign()
+    local finishColumn = this.dungeon.start[0] + finishFlip
+    if not this.dungeon.colliderMap[this.dungeon.start[1]][finishColumn] then
+      finishFlip = -finishFlip
+    end
+    
+    this.finishStairs = new global.Stairs(this, this.dungeon.finish, finishFlip)
+    this.finishStairs.x = (this.dungeon.finish[0] + 0.5) * 16
+    this.finishStairs.y = (this.dungeon.finish[1] + 0.5) * 16
+    this.finishStairs.interaction.x = this.finishStairs.x
+    this.finishStairs.interaction.y = this.finishStairs.y + 8
+    this.finishStairs.action = function() this.game.player.lightsOut() end
+    
+    this.dungeonSize += 5
+  end
+  
+  getCulledComponents = function(components)
+    local culledComponents = []
+    
+    local x = this.player.x
+    local y = this.player.y
+    for component in components
+      if sqrt(pow(x - component.x, 2) + pow(y - component.y, 2)) <= 400 then
+        culledComponents.push(component)
+      end
+    end
+    
+    return culledComponents
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.InstructionsScene = class
+  constructor = function(name)
+    this.name = name
+    this.slide = 0
+    this.displaySlide = 0
+    this.speed = 0.1
+    this.slides = [this.drawDescriptionSlide, this.drawControlsSlide]
+    
+    this.backToMainMenuButton = new global.Button(
+      0, -80, 160, 20, function(x, y)
+        screen.setLineWidth(1)
+        screen.fillRect(x, y, 160, 20, "#8d9199")
+        screen.drawRect(x, y, 160, 20, "#2a2d38")
+        screen.drawText("Back to Main Menu", x, y, 12, "2a2d38")
+      end, function()
+        local transition = function()
+          global.sceneManager.setScene(global.SceneManager.MAIN_MENU)
+        end
+        
+        global.transition.requestTransition(transition, function() end, 1)
+      end
+    )
+    
+    this.slideLeftButton = new global.Button(
+      -160, 0, 10, 20, function(x, y)
+        screen.setLineWidth(1)
+        screen.fillRect(x, y, 10, 20, "#8d9199")
+        screen.drawRect(x, y, 10, 20, "#2a2d38")
+        screen.drawText("<", x, y, 12, "2a2d38")
+      end, function() global.sceneManager.scene.slideBy(-1) end
+    )
+    
+    this.slideRightButton = new global.Button(
+      160, 0, 10, 20, function(x, y)
+        screen.setLineWidth(1)
+        screen.fillRect(x, y, 10, 20, "#8d9199")
+        screen.drawRect(x, y, 10, 20, "#2a2d38")
+        screen.drawText(">", x, y, 12, "2a2d38")
+      end, function() global.sceneManager.scene.slideBy(1) end
+    )
+  end
+  
+  update = function()
+    this.backToMainMenuButton.update()
+    this.slideLeftButton.update()
+    this.slideRightButton.update()
+    this.displaySlide += (this.slide - this.displaySlide) * this.speed
+  end
+  
+  draw = function()
+    this.backToMainMenuButton.draw()
+    
+    if this.slide then this.slideLeftButton.draw() end
+    if not (this.slide == this.slides.length - 1) then
+      this.slideRightButton.draw()
+    end
+    
+    for index = 0 to this.slides.length - 1
+      local translation = (this.displaySlide - index) * -356
+      screen.setTranslation(translation, 0)
+      this.slides[index]()
+    end
+    
+    screen.setTranslation(0, 0)
+  end
+  
+  drawDescriptionSlide = function()
+    screen.drawText("Description", 0, 80, 16, 999)
+    
+    local lines = [
+      "GloomCraft is a roguelike/roguelite game about" +
+      "exploring dungeons and fighting monsters for",
+      "ressources. The main goal of the game is to travel" +
+      "through as many dungeons as possible in one run."
+      "The further you go, the bigger the dungeons get.", "",
+      "This game has been made in 14 days for the Pirate" +
+      "Software Game Jam #15. All of the assets",
+      "(code, sprites, sounds, music, images, font) used in"+
+      "this game have been made by the game", "developer."
+    ]
+    
+    screen.setDrawAnchor(-1, 0)
+    local height = 50
+    for line in lines
+      screen.drawText(line, -144, height, 6, 999)
+      height -= 10
+    end
+    
+    screen.setDrawAnchor(0, 0)
+  end
+  
+  drawControlsSlide = function()
+    screen.drawText("Controls", 0, 80, 16, 999)
+    
+    local lines = [
+      "Basic Movement: Arrow keys or WASD keys to move" +
+      "(or ZSQD on the AZERTY keyboard)",
+      "Rolling: Space, Left Shift, or Right Shift." +
+      "Rolling allows you to travel fast in one direction. You are",
+      "invincible while rolling.", "",
+      "Fighting: Move your mouse to aim. Left click to shoot.",
+      "Potions: Left click to drink, right click to throw away.", "",
+      "Inventory: Use the digit keys or click" +
+      "on the corresponding slot to select and equipment.",
+      "Pouch: Material gathered from the game will go into the pouch.",
+      "Press 'Z' to show or hide the pouch."
+    ]
+    
+    screen.setDrawAnchor(-1, 0)
+    local height = 50
+    for line in lines
+      screen.drawText(line, -144, height, 6, 999)
+      height -= 10
+    end
+    
+    screen.setDrawAnchor(0, 0)
+  end
+  
+  slideBy = function(amount)
+    this.slide = min(max(this.slide + amount, 0), this.slides.length - 1)
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.IntroductionScene = class
+  constructor = function(name)
+    this.name = name
+    
+    this.alpha = 0
+    
+    local fadeIn = global.tweenService.createTween(
+      this, "alpha", 0, 1, 1, global.Easing.sineInOut
+    )
+    
+    fadeIn.completionHandler = function()
+      global.sceneManager.scene.alpha = 1
+      sleep 1 second
+      
+      local fadeOut = global.tweenService.createTween(
+        global.sceneManager.scene, "alpha", 1, 0, 3, global.Easing.sineInOut  
+      )
+      
+      fadeOut.completionHandler = function()
+        local transition = function()
+          audio.playMusic("menu", 0.5, true)
+          global.sceneManager.setScene(global.SceneManager.MAIN_MENU)
+        end
+      
+        global.transition.requestTransition(transition, function() end, 1)
+      end
+    end
+  end
+  
+  update = function()
+  end
+  
+  draw = function()
+    screen.setAlpha(this.alpha)
+    screen.drawSprite("pixelpuff", 0, 30, 128, 128)
+    screen.drawText("PlasmaPuffs", 0, -44, 16, 999)
+    screen.drawText("Productions", 0, -64, 16, 999)
+    screen.setAlpha(1)
+  end
+end
+
+
+end()
+
+
+
+function()
+
+global.MainMenuScene = class
+  constructor = function(name)
+    this.name = name
+    
+    this.light = new global.Light(0, 0, 0, 360)
+    this.glow = new global.Glow(2048)
+    
+    this.dungeon = new global.Dungeon(30, 30, 3, 4, 100)
+    this.dungeon.layers = global.getLayers(this.dungeon)
+    this.dungeon.surfaces = global.getSurfaces(this.dungeon)
+    
+    this.angle = 0
+    this.time = 0
+    this.lift = 20
+    this.sx = 1
+    this.sy = 1
+    
+    this.playButton = new global.Button(
+      0, -36, 100, 20, function(x, y)
+        screen.setLineWidth(1)
+        screen.fillRect(x, y, 100, 20, "#8d9199")
+        screen.drawRect(x, y, 100, 20, "#2a2d38")
+        screen.drawText("Play", x, y, 12, "2a2d38")
+      end, function()
+        local transition = function()
+          global.sceneManager.setScene(global.SceneManager.GAME)
+        end
+        
+        global.transition.requestTransition(transition, function() end, 1)
+      end
+    )
+    
+    this.instructionsButton = new global.Button(
+      0, -60, 100, 20, function(x, y)
+        screen.setLineWidth(1)
+        screen.fillRect(x, y, 100, 20, "#8d9199")
+        screen.drawRect(x, y, 100, 20, "#2a2d38")
+        screen.drawText("Instructions", x, y, 12, "2a2d38")
+      end, function()
+        local transition = function()
+          global.sceneManager.setScene(global.SceneManager.INSTRUCTIONS)
+        end
+        
+        global.transition.requestTransition(transition, function() end, 1)
+      end
+    )
+  end
+  
+  update = function()
+    this.playButton.update()
+    this.instructionsButton.update()
+    this.time += global.clock.deltaTime
+    this.angle = 2 * cos(this.time / 2)
+    this.lift = 20 + (4 * sin(this.time * 1.5))
+    this.sx = 1 + (0.05 * cos(this.time))
+    this.sy = 1 + (0.05 * sin(this.time))
+  end
+  
+  draw = function()
+    local tx = this.dungeon.columns * -8
+    local ty = this.dungeon.rows * -8
+    screen.setTranslation(tx, ty)
+    
+    local ground = this.dungeon.layers.ground
+    screen.drawImage(ground, ground.width / 2, ground.height / 2, ground.width, ground.height)
+    
+    local walls = this.dungeon.layers.walls
+    screen.drawImage(walls, walls.width / 2, walls.height / 2, walls.width, walls.height)
+    
+    this.light.x = mouse.x - tx
+    this.light.y = mouse.y - ty
+    screen.drawShadows(this.light, this.dungeon.surfaces, 1)
+    screen.setTranslation(0, 0)
+    
+    screen.fillRect(0, 0, screen.width, screen.height, "rgba(0, 0, 0, 0.4)")
+    
+    screen.setDrawRotation(this.angle)
+    screen.setDrawScale(this.sx * 6, this.sy * 1.5)
+    this.glow.draw(0, this.lift, 64, "white", 0.5)
+    
+    screen.setDrawScale(this.sx, this.sy)
+    screen.drawSprite("title", 0, this.lift, 490 / 2, 135 / 2)
+    screen.setDrawScale(1, 1)
+    screen.setDrawRotation(0)
+    
+    this.playButton.draw()
+    this.instructionsButton.draw()
+    
+    screen.drawText("Your Highscore: " + global.highScore, 0, -80, 8, 999)
+  end
+end
+
+
+end()
+
+
+</script></html>
