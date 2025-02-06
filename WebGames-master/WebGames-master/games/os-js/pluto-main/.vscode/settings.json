@@ -1,0 +1,36 @@
+{
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.ignoreFiles": [
+    ".vscode/**",
+    "**/*.scss",
+    "**/*.sass",
+    "**/*.ts",
+    "**/*.md",
+    "**/*.svg"
+  ],
+  "cSpell.words": [
+    "Baro",
+    "colspan",
+    "FTGSF",
+    "KFWS",
+    "Ktat",
+    "localforage",
+    "lucide",
+    "NOAA",
+    "pkgs",
+    "Procs",
+    "shrt",
+    "titlebar",
+    "yxxx",
+    "Zeon"
+  ],
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/objects",
+    ".vscode",
+    ".vscode-insiders",
+    "style.css"
+  ]
+}
