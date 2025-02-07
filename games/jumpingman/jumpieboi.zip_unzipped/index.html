@@ -1,0 +1,768 @@
+<!DOCTYPE html><html><head><title>Jumpie Boi</title><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui=1"><meta charset="UTF-8"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="description" content=""><link rel="manifest" href="manifest.json"><link rel="icon" type="image/png" href="icon64.png"><link rel="apple-touch-icon" sizes="180x180" href="icon180.png"><link rel="icon" type="image/png" sizes="32x32" href="icon32.png"><link rel="icon" type="image/png" sizes="16x16" href="icon16.png"><style>html,body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  overflow:hidden;
+  font-family: Verdana;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#canvaswrapper {
+  text-align: center ;
+}
+</style><style>@font-face { font-family: "BitCell" ; src: url("fonts/BitCell.ttf") format("truetype"); }</style><script>window.fonts = ["BitCell"]</script></head><body class="noselect custom-cursor" oncontextmenu="return false;"><div id="canvaswrapper"></div><script type="text/javascript">var resources = {"images":[{"file":"icon.png","version":18,"size":358,"properties":{"frames":1,"fps":5}},{"file":"left.png","version":2,"size":154,"properties":{"frames":1,"fps":5}},{"file":"particle-deadly.png","version":2,"size":129,"properties":{"frames":1,"fps":5}},{"file":"particle-dust.png","version":2,"size":155,"properties":{"frames":1,"fps":5}},{"file":"particle-gold.png","version":2,"size":127,"properties":{"frames":1,"fps":5}},{"file":"particle-ice.png","version":2,"size":128,"properties":{"frames":1,"fps":5}},{"file":"particle-normal.png","version":2,"size":128,"properties":{"frames":1,"fps":5}},{"file":"particle-slime.png","version":2,"size":129,"properties":{"frames":1,"fps":5}},{"file":"platform-deadly.png","version":2,"size":178,"properties":{"frames":1,"fps":5}},{"file":"platform-gold.png","version":2,"size":186,"properties":{"frames":1,"fps":5}},{"file":"platform-ice.png","version":2,"size":215,"properties":{"frames":1,"fps":5}},{"file":"platform-normal.png","version":2,"size":186,"properties":{"frames":1,"fps":5}},{"file":"platform-slime.png","version":2,"size":162,"properties":{"frames":1,"fps":5}},{"file":"player-idle-dumb.png","version":2,"size":216,"properties":{"frames":1,"fps":5}},{"file":"player-idle-fire.png","version":2,"size":195,"properties":{"frames":1,"fps":5}},{"file":"player-idle-gold.png","version":2,"size":201,"properties":{"frames":1,"fps":5}},{"file":"player-idle-ice.png","version":2,"size":220,"properties":{"frames":1,"fps":5}},{"file":"player-idle-ninja.png","version":2,"size":207,"properties":{"frames":1,"fps":5}},{"file":"player-idle-normal.png","version":2,"size":179,"properties":{"frames":1,"fps":5}},{"file":"player-idle-plant.png","version":2,"size":214,"properties":{"frames":1,"fps":5}},{"file":"player-idle-slime.png","version":2,"size":206,"properties":{"frames":1,"fps":5}},{"file":"player-idle-unnormal.png","version":2,"size":178,"properties":{"frames":1,"fps":5}},{"file":"player-idle-waman.png","version":2,"size":219,"properties":{"frames":1,"fps":5}},{"file":"player-jump-dumb.png","version":2,"size":207,"properties":{"frames":1,"fps":5}},{"file":"player-jump-fire.png","version":2,"size":181,"properties":{"frames":1,"fps":5}},{"file":"player-jump-gold.png","version":2,"size":194,"properties":{"frames":1,"fps":5}},{"file":"player-jump-ice.png","version":2,"size":208,"properties":{"frames":1,"fps":5}},{"file":"player-jump-ninja.png","version":2,"size":198,"properties":{"frames":1,"fps":5}},{"file":"player-jump-normal.png","version":2,"size":170,"properties":{"frames":1,"fps":5}},{"file":"player-jump-plant.png","version":2,"size":206,"properties":{"frames":1,"fps":5}},{"file":"player-jump-slime.png","version":2,"size":200,"properties":{"frames":1,"fps":5}},{"file":"player-jump-unnormal.png","version":2,"size":171,"properties":{"frames":1,"fps":5}},{"file":"player-jump-waman.png","version":2,"size":212,"properties":{"frames":1,"fps":5}},{"file":"right.png","version":2,"size":157,"properties":{"frames":1,"fps":5}},{"file":"selection10.png","version":2,"size":3787,"properties":{"frames":1,"fps":5}}],"assets":[],"maps":{},"sounds":[{"file":"explosion.wav","version":1,"size":14477,"properties":{}}],"music":[]};
+var graphics = "M1";
+
+</script><script type="text/javascript">var orientation = 'portrait' ;
+var aspect = '16x9' ;
+var ms_libs = [] ;
+window.skip_service_worker = true;
+window.exported_project = true;
+window.ms_use_server = false ;
+</script><script src="compiler.js"></script><script src="parser.js"></script><script src="processor.js"></script><script src="program.js"></script><script src="routine.js"></script><script src="runner.js"></script><script src="token.js"></script><script src="tokenizer.js"></script><script src="transpiler.js"></script><script src="microengine.js"></script></body><script type="text/javascript">//
+//
+// The game is started with the code below.
+// Once you have received the "started" signal (see below),
+// you can do the following:
+// 1) Inject functions or objects into the global context of the microStudio engine, example:
+//
+//   window.player.setGlobal("special_callback",function(x) { console.info(x) }) ;
+//   // Your microScript code can now call the "special_callback" function
+//
+// 2) Call microScript global functions from your JavaScript code, example:
+//
+//   window.player.call("call_me_from_javascript",[10,1000]) ;
+//   // arguments to the function call are provided as an array
+//
+// 3) Run a microScript code snippet from your JavaScript code, example:
+//
+//   window.player.exec("player.position_x = 50",function(result) { console.log(result) ; }) ;
+//
+
+window.addEventListener("load",function() {
+  window.player = new Player(function(event) {
+    if (event.name == "started") {
+      // signal that the game is started
+    }
+    else if (event.name == "log") {
+      // console.info(event.data) ;
+    }
+  }) ;
+  document.body.focus() ;
+}) ;
+
+</script><script id="code" type="text/x-microscript">
+
+
+function()
+init = function()
+  
+  player = new player()
+  scene = 'menu'
+  startGame()
+  highscore = storage.get('highscore')
+  
+  startButton = new button('Start Game',0,-50,15,function()
+    setScene('game')
+    startGame()
+  end,'SPACE')
+  
+  goMenuButton = new button('Go To Menu',0,-50,15,function()
+    setScene('menu')
+  end,'SPACE')
+  
+  howPlayButton = new button('How to play',0,-80,10,function()
+    setScene('howplay')
+  end,'H')
+  
+  quitButton = new button('Quit',85,165,10,function()
+    if scene == 'game' then
+      setScene('lose')
+      if global.score > global.highscore then
+        global.highscore = global.score
+        storage.set('highscore',global.highscore)
+      end
+    elsif scene == 'howplay' then
+      setScene('menu')
+    end
+  end,'Q')
+  
+  skinSelect = new skinSelect()
+  
+end
+
+startGame = function()
+  gametick = 0
+  pSpeed = 3.5
+  score = 0
+  
+  player.reset()
+  platforms = []
+  particles = []
+end
+
+update = function()
+  
+  gametick += 1
+  
+  if scene == 'menu' then
+    
+    if skinSelect.canPlay then
+      startButton.update()
+    end
+    howPlayButton.update()
+    skinSelect.update()
+    
+  elsif  scene == 'game' then
+    
+    player.update()
+  
+    for p in platforms
+      p.update()
+    end
+    
+    for p in particles
+      p.update()
+    end
+    
+    if gametick%45==0 then
+      spawnPlatforms()
+    end
+    
+    quitButton.update()
+    
+  elsif  scene == 'lose' then
+    
+    goMenuButton.update()
+    
+  elsif scene == 'howplay' then
+    
+    quitButton.update()
+    
+  end
+  
+end
+
+draw = function()
+  
+  screen.clear('#101010')
+  
+  if scene == 'menu' then
+    
+    drawText('Jumpie Boi',0,75,25)
+    skinSelect.draw()
+    if skinSelect.canPlay then
+      startButton.draw()
+    end
+    howPlayButton.draw()
+    
+  elsif  scene == 'game' then
+  
+    screen.drawText(score,0,100,25,'#202020')  
+    screen.setRotation(player.xv*-.75)
+      player.draw()
+      for p in platforms
+        p.draw()
+      end
+      for p in particles
+        p.draw()
+      end
+    screen.setRotation()
+    quitButton.draw()
+    
+  elsif  scene == 'lose' then
+    
+    drawText('You Ded',0,50,15,'white')
+    drawText('Score: '+score,-50,15,15,'white',-1)
+    drawText('Highscore: '+highscore,-50,0,15,'white',-1)
+    goMenuButton.draw()
+  
+  elsif scene == 'howplay' then
+    
+    drawText('<Watch out for these>',0,100,15)
+    local tx = -50
+    local ty = 75
+    for p in platformTypes
+      screen.drawSprite('platform/'+p.name,tx,ty,37.5,12)
+      drawText(p.help,tx + 30,ty,10,'white',-1)
+      ty -= 20
+    end
+    
+    quitButton.draw()
+    
+  end
+  
+  drawLava()
+  screen.drawText('FPS:'+system.fps,-83,-170,10,"rgb(255,198,85)")
+  
+  if scene == 'howplay' then
+    drawTutorial()
+  end
+  
+  
+end
+
+spawnPlatforms = function()
+  local spawnX = screen.width/2
+  local spawnY = [
+    rand(-75,-100),
+    rand(-50,-25),
+    rand(25,50)
+  ]
+  for i=0 to 2
+    platforms.push(new platform(spawnX+rand(25,150),spawnY[i]))
+  end
+end
+
+setScene = function(newScene)
+  scene = newScene
+end
+
+drawLava = function()
+  
+  screen.setLineWidth(15)
+  screen.drawRect(0,-175,215,100,"black")
+  screen.setLineWidth(10)
+  screen.drawRect(0,-175,215,100,"rgb(255,208,113)")
+  screen.fillRect(0,-175,215,100,'orange')
+  screen.setLineWidth(1)
+  
+end
+
+drawTutorial = function()
+  drawText('<Controls>',0,-55,15)
+  screen.setLineWidth(1)
+  screen.setAlpha(.15)
+  screen.setColor('yellow')
+  screen.fillRect(0,-125,200,100)
+  screen.setAlpha(1)
+  screen.drawRect(-50,-125,100,100)
+  screen.drawRect(50,-125,100,100)
+  screen.setColor("rgb(0,0,0)")
+  screen.drawText('touch here or press A',-50,-125,10)
+  screen.drawText('to move LEFT',-50,-135,10)
+  screen.drawText('touch here or press D',50,-125,10)
+  screen.drawText('to move RIGHT',50,-135,10)
+  screen.setLineWidth()
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+end()
+
+
+
+function()
+particle = class
+  destroy = function()
+    particles.removeElement(this)
+  end
+  draw = function()
+    screen.setAlpha(opacity)
+    screen.drawSprite(sprite,x,y,width,height)
+    screen.setAlpha(1)
+  end
+end
+
+
+dust = class extends particle
+  constructor = function()
+    this.sprite = 'particle/dust'
+    this.x = player.x
+    this.y = player.y
+    this.width = 15
+    this.height = 13.5
+    this.opacity = 1
+    this.xv = rand(-3,3)
+    this.yv = rand(1,3)
+  end
+  update = function()
+    
+    x += xv
+    y += yv
+    opacity -= .1
+    
+    if opacity <= .1 then
+      destroy()
+    end
+     
+  end
+end
+
+debri = class extends particle
+  constructor = function(name,x,y)
+    this.sprite = 'particle/' + name
+    this.x = x
+    this.y = y
+    this.width = 12
+    this.height = 12
+    this.opacity = 1
+    this.xv = rand(-3,3)
+    this.yv = rand(1,5)
+  end
+  update = function()
+    
+    x -= global.pSpeed + xv
+    y += yv
+    yv -= .15
+    
+    if x < -screen.width/2 then
+      destroy()
+    end
+    
+  end
+end
+
+
+spawnDust = function()
+  for i=1 to 3
+    particles.push(new dust())
+  end
+end
+
+spawnDebri = function(name,x,y)
+  for i=1 to 5
+    particles.push(new debri(name,x,y))
+  end
+end
+
+end()
+
+
+
+function()
+platform = class
+  constructor = function(x,y)
+  
+    local pt = platformTypes
+    this.pType = pt[0]
+    for i=1 to pt.length-1
+      if random.next() < .15 then
+        this.pType = pt[i]
+        break
+      end
+    end
+    
+    this.sprite = pType.name
+    this.x = x
+    this.y = y
+    this.width = 37.5
+    this.height = 12
+  end
+  update = function()
+    
+    x -= global.pSpeed
+    
+    if x < -screen.width/2 - 50 then
+      platforms.removeElement(this)
+    end
+    
+  end
+  
+  hit = function()
+    spawnDebri(sprite,x,y)
+    platforms.removeElement(this)
+    
+    local my_sound = audio.playSound("explosion")
+    my_sound.setVolume(0.25)
+  end
+  
+  draw = function()
+    screen.drawSprite('platform/'+sprite,x,y,width,height)
+  end
+end
+
+platformTypes = [
+  object
+    name = 'normal'
+    points = 1
+    jumpBoost = 5
+    help = 'A Normal Platform'
+  end
+  object
+    name = 'gold'
+    points = 5
+    jumpBoost = 5
+    help = 'Gives a ton of points'
+  end
+  object
+    name = 'slime'
+    points = 3
+    jumpBoost = 8
+    help = 'Makes you jump higher'
+  end
+  object
+    name = 'ice'
+    points = 3
+    jumpBoost = 3
+    help = 'Makes you jump lower'
+  end
+  object
+    name = 'deadly'
+    points = 0
+    jumpBoost = 5
+    help = 'Removes your Life'
+  end
+]
+end()
+
+
+
+function()
+player = class
+  constructor = function()
+    this.skin = 'normal'
+    this.state = 'idle'
+    this.width = 18
+    this.height = 16.5
+    reset()
+  end
+  
+  reset = function()
+    this.trail = []
+    this.x = 0
+    this.y = -50
+    this.xv = 0
+    this.yv = 8
+    this.isAlive = true
+    this.rotation = 0
+  end
+  update = function()
+    
+    if isAlive then
+      alive()
+    else
+      dead()
+    end
+    
+    trail.push([x,y])
+    if trail.length > 10 then
+      trail.removeAt(0)
+    end
+    
+  end
+  
+  alive = function()
+    local key = keyboard
+    local speed = .5
+    
+    
+    local controls = (key.D or key.RIGHT or pressed(50,-125,100,100)) - (key.A or key.LEFT or pressed(-50,-125,100,100))
+    xv += controls * speed
+    yv -= .125
+    
+    x += xv
+    y += yv
+    
+    if abs(x)>screen.width/2 then
+      x = abs(x)/x * screen.width/2
+    end
+    
+    if y > screen.height/2 then
+      yv = 0
+      y = screen.height/2
+    end
+    
+    xv *= .9
+    
+    if y < -screen.height/2 then
+      isAlive = false
+    end
+    
+    for p in platforms
+      if collision(this,p) then
+        local pType = p.pType
+        yv = pType.jumpBoost
+        global.score += pType.points
+        spawnDust()
+        p.hit()
+        if pType.name == 'deadly' then
+          xv = rand(-3,3)
+          isAlive = false
+        end
+        break
+      end
+    end
+    
+    state = if yv > 0 then 'idle' else 'jump' end
+  end
+  
+  dead = function()
+    
+    y += yv
+    rotation += xv
+    yv -= .30
+    if y < -screen.height/2 - 50 then
+      setScene('lose')
+      if global.score > global.highscore then
+        global.highscore = global.score
+        storage.set('highscore',global.highscore)
+      end
+    end
+    
+  end
+  
+  draw = function()
+    
+    for i=1 to trail.length-1
+      local pos1 = trail[i-1]
+      local pos2 = trail[i]
+      local size = i * 1.5
+      screen.setLineWidth(size)
+      screen.drawLine(pos1[0],pos1[1],pos2[0],pos2[1],'#202020')
+    end
+    screen.setLineWidth(1)
+    
+    
+    local sprite = 'player/' + state + '/' + skin
+    screen.setDrawRotation(rotation)
+    screen.drawSprite(sprite,x,y,width,height)
+    screen.setDrawRotation()
+  end
+end
+
+
+
+
+end()
+
+
+
+function()
+skinSelect = class
+  constructor = function()
+    
+    this.skins = [
+      object
+        name = 'normal'
+        price = 0
+        desc = 'uninteresting piece of sh-'
+      end
+      object
+        name = 'ninja'
+        price = 50
+        desc = 'coolest thing I have ever seen'
+      end
+      object
+        name = 'slime'
+        price = 100
+        desc = 'you know what he gonna do'
+      end
+      object
+        name = 'gold'
+        price = 200
+        desc = 'he rich'
+      end
+      object
+        name = 'fire'
+        price = 300
+        desc = 'he is kinda fire though'
+      end
+      object
+        name = 'ice'
+        price = 300
+        desc = 'chillest dude ever'
+      end
+      object
+        name = 'waman'
+        price = 400
+        desc = 'awooga booga'
+      end
+      object
+        name = 'dumb'
+        price = 69
+        desc = 'he dum'
+      end
+      object
+        name = 'plant'
+        price = 400
+        desc = 'im recycling from now on'
+      end
+      object
+        name = 'unnormal'
+        price = 500
+        desc = 'he is like you'
+      end
+    ]
+    
+    this.selectIdx = 0
+    this.canPlay = true
+  end
+  update = function()
+    
+    if clicked(-25,0,20,20) or keyboard.press.A then
+      selectIdx = max(selectIdx-1,0)
+      player.skin = skins[selectIdx].name
+    end
+    
+    if clicked(25,0,20,20) or keyboard.press.D then
+      selectIdx = min(selectIdx+1,skins.length-1)
+      player.skin = skins[selectIdx].name
+    end
+    
+    canPlay = global.highscore >= skins[selectIdx].price
+    
+  end
+  draw = function()
+    local sel = skins[selectIdx]
+    local sprite =  'player/idle/'+ sel.name
+    screen.drawSprite('left',-25,0,15,18)
+    screen.drawSprite('right',25,0,15,18)
+    
+    drawText(sel.name,0,25,10) 
+    if not canPlay then
+      drawText('You need reach '+sel.price +' points',0,-25)  
+      drawText('to play this character',0,-40)  
+      screen.setAlpha(.25)
+    else
+      drawText(sel.desc,0,-25,10)  
+    end
+    
+    screen.drawSprite(sprite,0,0,18,16.5)
+    screen.setAlpha(1)
+    
+  end
+end
+
+end()
+
+
+
+function()
+collision = function(a,b)
+  return abs(a.x-b.x)<(a.width+b.width)/2
+  and    abs(a.y-b.y)<(a.height+b.height)/2
+end
+
+clicked = function(x,y,width,height)
+  if touch.press then
+    for t in touch.touches
+      if abs(t.x-x)<width/2 and abs(t.y-y)<height/2 then
+        return true
+      end
+    end
+  end
+  return false
+end
+
+pressed = function(x,y,width,height)
+  for t in touch.touches
+    if abs(t.x-x)<width/2 and abs(t.y-y)<height/2 then
+      return true
+    end
+  end
+  return false
+end
+
+randElement = function(arr)
+  return arr[random.nextInt(arr.length)]
+end
+
+rand = function(a,b)
+  return random.next() * (b-a) + a
+end
+
+drawText = function(text='Test',x=0,y=0,size=10,color='white',align=0)
+  screen.setDrawAnchor(align)
+  screen.setLineWidth(4)
+  screen.drawTextOutline(text,x,y,size,'black')
+  screen.drawText(text,x,y,size,color)
+  screen.setDrawAnchor()
+  screen.setLineWidth(1)
+end
+end()
+
+
+
+function()
+button = class
+  constructor = function(text,x,y,textSize,onClick,keyPress='')
+    this.text = text
+    this.x = x
+    this.y = y
+    this.oy = y
+    this.width = screen.textWidth(text,textSize) * 1.25
+    this.height = textSize * 1.25
+    this.textSize = textSize
+    this.onClick = onClick
+    this.click = false
+    this.keyPress = keyPress
+  end
+  
+  update = function()
+    
+    if mouse.press then
+      if abs(mouse.x-x)<width/2 and abs(mouse.y-y)<height/2 then
+        isClick()
+      end
+    elsif mouse.release and click then
+      isRelease()
+    elsif keyboard.press[keyPress] and keyPress != '' then
+      isClick()
+    elsif keyboard.release[keyPress] and click then
+      isRelease()
+    end
+    
+  end
+  
+  isClick = function()
+    click = true
+    y = oy - 3
+  end
+  
+  isRelease  = function()
+    click = false
+    onClick()
+    y = oy
+  end
+  
+  draw = function()
+    screen.setLineWidth(5)
+    screen.drawRect(x,y,width,height,'black')
+    screen.fillRect(x,y,width,height,'white')
+    screen.drawText(text,x,y,textSize,'black')
+    screen.setLineWidth()
+  end
+end
+
+
+
+
+
+
+
+
+
+end()
+
+
+</script></html>
