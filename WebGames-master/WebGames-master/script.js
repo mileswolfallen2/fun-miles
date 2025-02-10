@@ -125,16 +125,6 @@ const mainContentData = [
     link: "games/henreystikman/Stealing_the_Diamond.html",
   },
   {
-    name: "fnf not stabel we will work on it",
-    image: "assets/fnf.png",
-    link: "games/FNF-Week7-Html5-Test-main/index.html",
-  },
-  {
-    name: "Tetris",
-    image: "assets/tetres.png",
-    link: "games2/game/tetris/index.html",
-  },
-  {
     name: "Basketball Legends 2020",
     image: "assets/2020.avif",
     link: "games/Basketball-Legends-2020-gh-pages/Basketball-Legends-2020-gh-pages/index.html",
@@ -150,11 +140,6 @@ const mainContentData = [
     link: "games/FNAF/FNAF/index.html",
   },
   {
-    name: "Super Scratch Bros",
-    image: "assets/Super-Scratch-Bros-Beta.jpeg",
-    link: "/WebGames-master/WebGames-master/games/SuperScratchBros41.html",
-  },
-  {
     name: "gun-mayhem",
     image: "assets/gamemntze-gun-mayhem-original-29173-img.png",
     link: "games/gun-mayhem-main/gun-mayhem-main/index.html",
@@ -168,11 +153,6 @@ const mainContentData = [
     name: "Kirby's Dreamland 3 Maker",
     image: "assets/images3.jpeg",
     link: "games/Kirby's-Dreamland-3-Maker.html",
-  },
-  {
-    name: "supersmashflash",
-    image: "assets/supersmashflash.jpeg",
-    link: "games/flasharchive-main/flasharchive-main/html/supersmashflash.html",
   },
   {
     name: "drift-hunters",
@@ -383,11 +363,6 @@ const mainContentData = [
     name: "stickman hook",
     image: "/WebGames-master/WebGames-master/games2/assets/stickman-hook.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/stickman-hook/index.html",
-  },
-  {
-    name: "superhot",
-    image: "/WebGames-master/WebGames-master/games2/assets/super-hot.jpg",
-    link: "/WebGames-master/WebGames-master/games2/game/superhot/index.html",
   },
   {
     name: "subway surfers",
