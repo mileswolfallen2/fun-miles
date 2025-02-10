@@ -528,6 +528,11 @@ const mainContentData = [
     image: "/image-robert-added/Tube.png",
     link: "/WebGames-master/WebGames-master/tube-jumpers-main/tube-jumpers-main/index.html",
   },
+  {
+    name: "pokemon gold",
+    image: "/WebGames-master/WebGames-master/assets/pokemongold.webp",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon-GoldVersion.html",
+  },
 ];
 
 mainContentData.forEach(item => {
