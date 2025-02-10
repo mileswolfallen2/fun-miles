@@ -478,22 +478,6 @@ const mainContentData = [
     image: "/WebGames-master/WebGames-master/games2/assets/cubefield.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/cubefield/index.html",
   },
-];
-
-  {
-    name: "Awesome Tank 2",
-    image: "/WebGames-master/WebGames-master/games2/assets/at2.jpg",
-    link: "/WebGames-master/WebGames-master/games2/game/awesome-tanks-2/index.html",
-  },
-  {
-    name: "Stickman Hook",
-    image: "/WebGames-master/WebGames-master/games2/assets/stickman-hook.jpg",
-    link: "/WebGames-master/WebGames-master/games2/game/stickman-hook/index.html",
-  },  {
-    name: "Stick Merge",
-    image: "/WebGames-master/WebGames-master/games2/assets/stick-merge.png",
-    link: "/WebGames-master/WebGames-master/games2/game/stick-merge/index.html",
-  },
   {
     name: "House Of Hazards",
     image: "/WebGames-master/WebGames-master/games/HouseOfHazards-main/screenshots/0609b0ba2889859b21cf47ca205818fe.avif",
