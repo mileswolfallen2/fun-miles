@@ -179,11 +179,7 @@ const mainContentData = [
     image: "assets/512x512bb.jpg",
     link: "games/drift-hunters-main/index.html",
   },
-  {
-    name: "dit life",
-    image: "assets/unnamed_480.webp",
-    link: "games/ditlifytest/index.html",
-  }, {
+ {
     name: "Deth run 3d",
     image: "assets/Dethrun3d.jpeg",
     link: "games/3d-gam.zip_unzipped/1-main/index.html",
@@ -257,16 +253,6 @@ const mainContentData = [
     name: "idle-breakout",
     image: "games2/assets/idle-breakout.jpg",
     link: "games2/game/idle-breakout/index.html",
-  },
-  {
-    name: "getaway-shootout",
-    image: "games2/assets/getaway-shootout.jpg",
-    link: "games2/game/getaway-shootout/index.html",
-  },
-  {
-    name: "jetpack-joyride",
-    image: "games2/assets/jetpack-joyride.jpg",
-    link: "games2/game/jetpack-joyride/index.html",
   },
   {
     name: "just-fall",
