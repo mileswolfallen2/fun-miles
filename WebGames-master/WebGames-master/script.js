@@ -185,11 +185,6 @@ const mainContentData = [
     link: "games/3d-gam.zip_unzipped/1-main/index.html",
   },
   {
-    name: "Pokemon - Red Version",
-    image: "assets/pokemon-red.jpeg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon-Red-Version.html",
-  },
-  {
     name: "Chrono-Trigger",
     image: "assets/Chrono-Trigger.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Chrono-Trigger.html",
@@ -208,11 +203,6 @@ const mainContentData = [
     name: "nes gd",
     image: "assets/gd-nes.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/gd.html",
-  },
-  {
-    name: "Legend-of-Zelda-The--A-Link-to-the-Past",
-    image: "assets/thelegindofzelda.jpg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Legend-of-Zelda-The--A-Link-to-the-Past.html",
   },
   {
     name: "earthbound",
@@ -290,26 +280,6 @@ const mainContentData = [
     link: "/Doom-In-Docker-master/Doom-In-Docker-master/doom/public/index.html",
   },
   {
-    name: "doodle-jump ",
-    image: "games2/assets/doodle.jpg",
-    link: "games/flasharchive-main/flasharchive-main/html/doodlejump.html",
-  },
-  {
-    name: "pokemon f red",
-    image: "assets/pokemonfred.jpeg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon_FireRedVersion.html",
-  },
-  {
-    name: "Legend of Zelda - Time Lost",
-    image: "assets/LegendofZeldaTimeLost.jpeg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/index.html",
-  },
-  {
-    name: "youshey 64",
-    image: "assets/yoshey64.jpeg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/youshey.html",
-  },
-  {
     name: "paper moaro",
     image: "assets/papermoaro.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/papermaro.html",
@@ -330,16 +300,6 @@ const mainContentData = [
     link: "/WebGames-master/WebGames-master/games2/game/pacman/index.html",
   },
   {
-    name: "10-minutes-till-dawn",
-    image: "/WebGames-master/WebGames-master/games/10-minutes-till-dawn/icon.png",
-    link: "/WebGames-master/WebGames-master/games/10-minutes-till-dawn/index.html",
-  },
-  {
-    name: "pokemon emerald",
-    image: "/WebGames-master/WebGames-master/games2/assets/pok-emerald.jpg",
-    link: "/WebGames-master/WebGames-master/games2/game/pokemon/emerald/index.html",
-  },
-  {
     name: "backrooms",
     image: "/WebGames-master/WebGames-master/games2/game/backrooms/Backrooms-Games.webp",
     link: "/WebGames-master/WebGames-master/games2/game/backrooms/index.html",
@@ -358,16 +318,6 @@ const mainContentData = [
     name: "worlds-hardest-game",
     image: "/WebGames-master/WebGames-master/games2/assets/worlds-hardest-game.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/worlds-hardest-game/index.html",
-  },
-  {
-    name: "pokemon sapphire",
-    image: "/WebGames-master/WebGames-master/assets/61p+1+PYSML.jpg",
-    link: "/WebGames-master/WebGames-master/pokemon-netplay/pokemon/sapphire/index.html",
-  },
-  {
-    name: "Gladihoppers",
-    image: "/WebGames-master/WebGames-master/assets/glad.jpeg",
-    link: "/WebGames-master/WebGames-master/games/Gladihoppers-gh-pages/index.html",
   },
   {
     name: "Phoenix Wright Ace Attorney",
@@ -443,11 +393,6 @@ const mainContentData = [
     name: "subway surfers",
     image: "/WebGames-master/WebGames-master/games2/assets/subway-surfer.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/subway-surfers/index.html",
-  },
-  {
-    name: "block blast",
-    image: "/WebGames-master/WebGames-master/assets/blockblast.jpeg",
-    link: "/WebGames-master/WebGames-master/games/block-blast-main/index.html",
   },
   {
     name: "stick merge",
