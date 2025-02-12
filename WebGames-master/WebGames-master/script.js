@@ -674,6 +674,11 @@ const mainContentData = [
     image: "assets/Super-Scratch-Bros-Beta.jpeg",
     link: "/henry stick man.html",
   },
+  {
+    name: "Roof Top Snipers",
+    image: "assets/Super-Scratch-Bros-Beta.jpeg",
+    link: "/WebGames-master/WebGames-master/games2/game/rooftop-snipers/index.html",
+  },
 ];
 
 mainContentData.forEach(item => {
