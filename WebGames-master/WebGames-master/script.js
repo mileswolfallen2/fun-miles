@@ -340,9 +340,9 @@ const mainContentData = [
     link: "/WebGames-master/WebGames-master/games2/game/vex7/index.html",
   },
   {
-    name: "n-gon",
+    name: "N-Gon",
     image: "/WebGames-master/WebGames-master/assets/n-gon.png",
-    link: "/WebGames-master/WebGames-master/n-gon-master/index.html",
+    link: "/n-gon-master/n-gon-master/index.html",
   },
   {
     name: "chess",
@@ -428,11 +428,6 @@ const mainContentData = [
     name: "Tube Jumpers",
     image: "/image-robert-added/Tube.png",
     link: "/WebGames-master/WebGames-master/tube-jumpers-main/tube-jumpers-main/index.html",
-  },
-  {
-    name: "pokemon gold",
-    image: "/WebGames-master/WebGames-master/assets/pokemongold.webp",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon-GoldVersion.html",
   },
   {
     name: "Phoenix Wright Ace Attorney",
