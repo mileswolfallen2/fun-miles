@@ -65,12 +65,12 @@ const mainContentData = [
     link: "/WebGames-master/WebGames-master/index.html",
   },
   {
-    name: "Pokemon - Red Version",
+    name: "Pokemon Red",
     image: "WebGames-master/WebGames-master/assets/pokemon-red.jpeg",
     link: "/webretro-master/webretro-master/embed/Pokemon-Red-Version.html",
   },
   {
-    name: "pokemon f red",
+    name: "Pokemon Fire Red",
     image: "WebGames-master/WebGames-master/assets/pokemonfred.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon_FireRedVersion.html",
   },
@@ -86,8 +86,13 @@ const mainContentData = [
   },
   {
     name: "Pokemon Pearl",
-    image: "/WebGames-master/WebGames-master/assets/61p+1+PYSML.jpg",
-    link: "/WebGames-master/WebGames-master/pokemon-netplay/pokemon/sapphire/index.html",
+    image: "/image-robert-added/peral.png",
+    link: "/Pokemon-Pearl-main/Pokemon-Pearl-main/index.html",
+  },
+  {
+    name: "Pokemon Gold",
+    image: "/WebGames-master/WebGames-master/assets/pokemongold.webp",
+    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Pokemon-GoldVersion.html",
   },
   {
     name: "Cat",
