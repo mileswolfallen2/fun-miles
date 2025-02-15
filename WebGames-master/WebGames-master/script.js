@@ -226,13 +226,13 @@ const mainContentData = [
   },
   {
     name: "just-fall",
-    image: "games2/assets/just-fall.jpg",
-    link: "games2/game/just-fall/index.html",
+    image: "/games2/assets/just-fall.jpg",
+    link: "/games2/game/just-fall/index.html",
   },
   {
     name: "monkey-mart",
-    image: "games2/assets/monkey-mart.png",
-    link: "games2/game/monkey-mart/index.html",
+    image: "/games2/assets/monkey-mart.png",
+    link: "/monkey mart/index.html",
   },
   {
     name: "moto-x3m",
