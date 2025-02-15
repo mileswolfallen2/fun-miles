@@ -89,6 +89,11 @@ const mainContentData = [
     image: "/image-robert-added/peral.png",
     link: "/Pokemon-Pearl-main/Pokemon-Pearl-main/index.html",
   },
+    {
+    name: "Pokemon Diamond",
+    image: "/image-robert-added/daimond.png",
+    link: "/Pokemon-Diamond-main/Pokemon-Diamond-main/index.html",
+  },
   {
     name: "Pokemon Gold",
     image: "/WebGames-master/WebGames-master/assets/pokemongold.webp",
@@ -99,6 +104,7 @@ const mainContentData = [
     image: "/image-robert-added/pokefun.png",
     link: "/cat.html",
   },
+  Pokemon-Diamond-main/Pokemon-Diamond-main/index.html
 ];
 mainContentData.forEach(item => {
   let newDiv = `
