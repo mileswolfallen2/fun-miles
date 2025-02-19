@@ -437,7 +437,7 @@ const mainContentData = [
     {
     name: "Pokemon Games",
     image:"/image-robert-added/poke.png",
-    link:"/pokemonindex.html",
+    link:"./pokemonindex.html",
   },
     {
     name: "FNAF",
