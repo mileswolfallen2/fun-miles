@@ -1,19 +1,21 @@
-<html>
-<meta charset="UTF-8">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6951907799659255" cross-origin='anonymous'></script>
-  <script defer src="https://chirpy.dev/bootstrapper.js" data-chirpy-domain="fun-miles-4jub.onrender.com"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="assets/page_icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&amp;family=Press+Start+2P&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="/WebGames-master/WebGames-master/main.css">
-  <script defer src="script2.js"></script>
-  <title>Fun-Miles</title>
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6951907799659255" cross-origin='anonymous'></script>
+    <script defer src="https://chirpy.dev/bootstrapper.js" data-chirpy-domain="fun-miles-4jub.onrender.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/page_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&amp;family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="/WebGames-master/WebGames-master/main.css">
+    <script defer src="script2.js"></script>
+    <title>Fun-Miles</title>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping GIF Loading Animation</title>
     <style>
         body {
             margin: 0;
@@ -40,7 +42,7 @@
             padding: 20px;
         }
 
-        .loader object {
+        .loader img {
             width: 100px; /* Adjust size as needed */
             height: auto; /* Maintain aspect ratio */
         }
@@ -48,11 +50,9 @@
 </head>
 <body>
     <div id="loader" class="loader">
-        <!-- Replace 'your-animation.svg' with the path to your SVG file -->
-        <object data="/loding.svg" type="image/svg+xml" alt="Loading Animation"></object>
+        <img src="./loding.webp" alt="Loading..."> <!-- Replace with your GIF path -->
     </div>
-   
-      <nav class="nav-bar">
+    <nav class="nav-bar">
         <h1>fun-miles</h1>
         <div class="nav-elem">
           <noscript>
@@ -76,7 +76,6 @@
       <div class="main-content" style="overflow-y:scroll;">
         <!-- data is coming from JavaScript (script.js) -->
       </div>
-    </div>
     <script>
         window.addEventListener('load', function() {
             const loader = document.getElementById('loader');
@@ -93,5 +92,4 @@
         });
     </script>
 </body>
-  </html>
-  
+</html>
