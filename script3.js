@@ -57,7 +57,6 @@ const toggleSideBar = () => {
   }
 };
 
-// Rendering the main content dynamically
 const mainContentData = [
   {
     name: "Back",
@@ -104,7 +103,6 @@ const mainContentData = [
     image: "/image-robert-added/pokefun.png",
     link: "/cat.html",
   },
-  Pokemon-Diamond-main/Pokemon-Diamond-main/index.html
 ];
 mainContentData.forEach(item => {
   let newDiv = `
