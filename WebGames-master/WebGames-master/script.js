@@ -115,14 +115,14 @@ const mainContentData = [
     link: "games/Learn-To-Fly-2-main/Learn-To-Fly-2-main/index.html",
   },
   {
-    name: "slope",
+    name: "Slope",
     image: "assets/slope.jpeg",
     link: "games/Slope-Game-main/Slope-Game-main/index.html",
   },
   {
-    name: "Stealing the Diamond",
+    name: "Henry Stick Man Collection",
     image: "assets/stealing-the-dimend.jpeg",
-    link: "games/henreystikman/Stealing_the_Diamond.html",
+    link: "/henry_stick_man.html",
   },
   {
     name: "Basketball Legends 2020",
@@ -130,7 +130,7 @@ const mainContentData = [
     link: "games/Basketball-Legends-2020-gh-pages/Basketball-Legends-2020-gh-pages/index.html",
   },
   {
-    name: "tanuki sunset",
+    name: "Tanuki Sunset",
     image: "assets/taunki.jpeg",
     link: "games/tanuki-sunset-master/index.html",
   },
@@ -298,11 +298,6 @@ const mainContentData = [
     name: "worlds-hardest-game",
     image: "/WebGames-master/WebGames-master/games2/assets/worlds-hardest-game.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/worlds-hardest-game/index.html",
-  },
-  {
-    name: "Phoenix Wright Ace Attorney",
-    image: "/WebGames-master/WebGames-master/assets/phoenix-wright-ace-attorney.avif",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/wit.html",
   },
   {
     name: "thumb fighter",
