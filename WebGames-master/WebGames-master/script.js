@@ -95,19 +95,9 @@ const mainContentData = [
     link: "games/HexGL-master/HexGL-master/index.html",
   },
   {
-    name: "cut the rope",
-    image: "assets/cut-the-rope.jpeg",
-    link: "games/CutTheRope-master/CutTheRope-master/index.html",
-  },
-  {
     name: "Tunnel-Rush",
     image: "assets/tunelrush.jpeg",
     link: "games/zTunnel-Rush.html",
-  },
-  {
-    name: "DuckLife4",
-    image: "assets/duck-lifde-4.jpeg",
-    link: "games/DuckLife4-main/DuckLife4-main/index.html",
   },
   {
     name: "Learn To Fly 2",
@@ -140,11 +130,6 @@ const mainContentData = [
     link: "/Fanf.html",
   },
   {
-    name: "Gun Mayhem",
-    image: "assets/gamemntze-gun-mayhem-original-29173-img.png",
-    link: "games/gun-mayhem-main/gun-mayhem-main/index.html",
-  },
-  {
     name: "The Shadow Reform",
     image: "assets/kaertt.png",
     link: "games/The-Shadow-Reform.html",
@@ -153,11 +138,6 @@ const mainContentData = [
     name: "Kirby's Dreamland 3 Maker",
     image: "assets/images3.jpeg",
     link: "games/Kirby's-Dreamland-3-Maker.html",
-  },
- {
-    name: "Deth run 3d",
-    image: "assets/Dethrun3d.jpeg",
-    link: "games/3d-gam.zip_unzipped/1-main/index.html",
   },
   {
     name: "Mario Kart 64",
@@ -530,11 +510,6 @@ const mainContentData = [
     link: "games/DuckLife4-main/DuckLife4-main/index.html",
   },
     {
-    name: "Learn To Fly 2",
-    image: "assets/learn-to-fly-2.jpeg",
-    link: "games/Learn-To-Fly-2-main/Learn-To-Fly-2-main/index.html",
-  },
-    {
     name: "Cut The Rope",
     image: "assets/cut-the-rope.jpeg",
     link: "games/CutTheRope-master/CutTheRope-master/index.html",
@@ -543,11 +518,6 @@ const mainContentData = [
     name: "Stealing The Diamond",
     image: "assets/stealing-the-dimend.jpeg",
     link: "games/henreystikman/Stealing_the_Diamond.html",
-  },
-    {
-    name: "Slope",
-    image: "assets/slope.jpeg",
-    link: "games/Slope-Game-main/Slope-Game-main/index.html",
   },
     {
     name: "Worlds Hardest Game",
