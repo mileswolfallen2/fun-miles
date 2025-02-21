@@ -137,7 +137,7 @@ const mainContentData = [
   {
     name: "fnaf",
     image: "assets/anan.jpeg",
-    link: "games/FNAF/FNAF/index.html",
+    link: "/Fanf.html",
   },
   {
     name: "gun-mayhem",
