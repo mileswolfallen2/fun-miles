@@ -85,7 +85,7 @@ const mainContentData = [
     link: "https://hangmangame02.netlify.app/",
   },
   {
-    name: "Snow-Rider3D",
+    name: "Snow Rider",
     image: "assets/snnowriders3d.jpeg",
     link: "games/Snow-Rider3D-main/Snow-Rider3D-main/index.html",
   },
@@ -135,12 +135,12 @@ const mainContentData = [
     link: "games/tanuki-sunset-master/index.html",
   },
   {
-    name: "fnaf",
+    name: "Fanf Collection",
     image: "assets/anan.jpeg",
     link: "/Fanf.html",
   },
   {
-    name: "gun-mayhem",
+    name: "Gun Mayhem",
     image: "assets/gamemntze-gun-mayhem-original-29173-img.png",
     link: "games/gun-mayhem-main/gun-mayhem-main/index.html",
   },
@@ -154,20 +154,10 @@ const mainContentData = [
     image: "assets/images3.jpeg",
     link: "games/Kirby's-Dreamland-3-Maker.html",
   },
-  {
-    name: "drift-hunters",
-    image: "assets/512x512bb.jpg",
-    link: "games/drift-hunters-main/index.html",
-  },
  {
     name: "Deth run 3d",
     image: "assets/Dethrun3d.jpeg",
     link: "games/3d-gam.zip_unzipped/1-main/index.html",
-  },
-  {
-    name: "Chrono-Trigger",
-    image: "assets/Chrono-Trigger.jpeg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Chrono-Trigger.html",
   },
   {
     name: "Mario Kart 64",
@@ -188,11 +178,6 @@ const mainContentData = [
     name: "earthbound",
     image: "assets/earthbound.png",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/EarthBound.html",
-  },
-  {
-    name: "temple-run",
-    image: "games2/assets/temple-run.png",
-    link: "games2/game/temple-run/index.html",
   },
   {
     name: "drift-boss",
@@ -233,21 +218,6 @@ const mainContentData = [
     name: "monkey-mart",
     image: "/games2/assets/monkey-mart.png",
     link: "/monkey mart/index.html",
-  },
-  {
-    name: "moto-x3m",
-    image: "games2/assets/moto-x3m.jpg",
-    link: "games2/game/moto-x3m/index.html",
-  },
-  {
-    name: "moto-x3m-spooky-land",
-    image: "games2/assets/moto-spooky.jpg",
-    link: "games2/game/moto-x3m-spooky-land/index.html",
-  },
-  {
-    name: "motox3m2",
-    image: "games2/assets/motox3m2.jpg",
-    link: "games2/game/motox3m2/index.html",
   },
   {
     name: "Drill Dozer",
@@ -433,11 +403,6 @@ const mainContentData = [
     name: "Pokemon Games",
     image:"/image-robert-added/poke.png",
     link:"/pokemonindex.html",
-  },
-    {
-    name: "FNAF",
-    image: "assets/anan.jpeg",
-    link: "games/FNAF/FNAF/index.html",
   },
     {
     name: "Tetris",
@@ -658,11 +623,6 @@ const mainContentData = [
     name: "Super Scratch Bros",
     image: "assets/Super-Scratch-Bros-Beta.jpeg",
     link: "/WebGames-master/WebGames-master/games/SuperScratchBros41.html",
-  },
-    {
-    name: "Henry Stick Man Collectsin",
-    image: "assets/Super-Scratch-Bros-Beta.jpeg",
-    link: "/henry stick man.html",
   },
   {
     name: "Roof Top Snipers",
