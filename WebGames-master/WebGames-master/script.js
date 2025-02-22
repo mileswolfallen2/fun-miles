@@ -125,7 +125,7 @@ const mainContentData = [
     link: "games/tanuki-sunset-master/index.html",
   },
   {
-    name: "Fanf Collection",
+    name: "Fnaf Collection",
     image: "assets/anan.jpeg",
     link: "/Fanf.html",
   },
@@ -238,11 +238,6 @@ const mainContentData = [
     name: "car game",
     image: "/WebGames-master/WebGames-master/games2/game/cars-simulator/splash.png",
     link: "/WebGames-master/WebGames-master/games2/game/cars-simulator/index.html",
-  },
-  {
-    name: "a-dance-of-fire-and-ice",
-    image: "/WebGames-master/WebGames-master/games2/game/a-dance-of-fire-and-ice/splash.png",
-    link: "/WebGames-master/WebGames-master/games2/game/a-dance-of-fire-and-ice/index.html",
   },
   {
     name: "worlds-hardest-game",
