@@ -191,12 +191,12 @@ const mainContentData = [
   },
   {
     name: "just-fall",
-    image: "/games2/assets/just-fall.jpg",
+    image: "/WebGames-master/WebGames-master/games2/assets/just-fall.jpg",
     link: "/games2/game/just-fall/index.html",
   },
   {
     name: "monkey-mart",
-    image: "/games2/assets/monkey-mart.png",
+    image: "/WebGames-master/WebGames-master/games2/assets/monkey-mart.png",
     link: "/monkey mart/index.html",
   },
   {
