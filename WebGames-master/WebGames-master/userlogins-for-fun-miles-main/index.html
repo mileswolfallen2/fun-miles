@@ -3,32 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Userbase Login/Signup</title>
+    <title>Userbase Note Management</title>
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="https://sdk.userbase.com/2/userbase.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Userbase Login/Signup</h1>
+        <h1>Userbase Note Management</h1>
         <div id="form-container">
             <form id="signup-form">
                 <h2>Sign Up</h2>
-                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="text" id="signup-username" placeholder="Username (Email)" required>
                 <input type="password" id="signup-password" placeholder="Password" required>
                 <button type="submit">Sign Up</button>
             </form>
             <form id="login-form">
                 <h2>Login</h2>
-                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="text" id="login-username" placeholder="Username (Email)" required>
                 <input type="password" id="login-password" placeholder="Password" required>
                 <button type="submit">Login</button>
             </form>
         </div>
-        <div id="notes-container" style="display: none;">
-            <h2>Your Notes</h2>
-            <textarea id="note-input" placeholder="Write your note here..."></textarea>
+        <div id="note-management">
+            <h2>Note Management</h2>
+            <input type="text" id="note-input" placeholder="Write your note here..." />
             <button id="save-note">Save Note</button>
-            <div id="saved-notes"></div>
+            <button id="load-notes">Load Notes</button>
+            <button id="get-user-metadata">Get User Metadata</button>
+            <ul id="notes-list" style="margin-top: 20px;"></ul>
         </div>
     </div>
     <script src="app.js"></script>

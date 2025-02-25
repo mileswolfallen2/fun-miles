@@ -22,9 +22,8 @@ form {
     margin-bottom: 20px;
 }
 
-input[type="email"],
-input[type="password"],
-textarea {
+input[type="text"],
+input[type="password"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -45,27 +44,17 @@ button:hover {
     background-color: #4cae4c;
 }
 
-#saved-notes {
-    margin-top: 20px;
+#notes-list {
+    list-style-type: none;
+    padding: 0;
 }
 
-.note {
+.note-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #e9ecef;
     padding: 10px;
     margin: 5px 0;
     border-radius: 4px;
-}
-
-.delete-note {
-    margin-left: 10px;
-    padding: 5px 10px;
-    background-color: #d9534f;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.delete-note:hover {
-    background-color: #c9302c;
 }
