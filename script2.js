@@ -78,7 +78,12 @@ const mainContentData = [
     name: "Contact Us",
     image: "/",
     link: "/Contact.html",
-  }
+  },
+  {
+    name: "login",
+    image: "/images.png",
+    link: "/WebGames-master/WebGames-master/userlogins-for-fun-miles-main/index.html",
+  },
 ];
 mainContentData.forEach(item => {
   let newDiv = `
