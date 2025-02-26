@@ -80,6 +80,11 @@ const mainContentData = [
     link: "/Contact.html",
   },
   {
+    name: "Update Log",
+    image: "/image-robert-added/uplog.png",
+    link: "/Uplog.html",
+  },
+  {
     name: "save to cloud",
     image: "/WebGames-master/WebGames-master/assets/save-to-cloud-2.png",
     link: "/WebGames-master/WebGames-master/userlogins-for-fun-miles-main/index.html",
