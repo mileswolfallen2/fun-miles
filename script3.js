@@ -85,12 +85,12 @@ const mainContentData = [
   },
   {
     name: "Pokemon Pearl",
-    image: "/image-robert-added/peral.png",
+    image: "/image-robert-added/peral.webp",
     link: "/Pokemon-Pearl-main/Pokemon-Pearl-main/index.html",
   },
     {
     name: "Pokemon Diamond",
-    image: "/image-robert-added/daimond.png",
+    image: "/image-robert-added/daimond.webp",
     link: "/Pokemon-Diamond-main/Pokemon-Diamond-main/index.html",
   },
   {
@@ -100,7 +100,7 @@ const mainContentData = [
   },
   {
     name: "Cat",
-    image: "/image-robert-added/pokefun.png",
+    image: "/image-robert-added/pokefun.webp",
     link: "/cat.html",
   },
 ];

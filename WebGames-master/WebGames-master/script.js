@@ -301,7 +301,7 @@ const mainContentData = [
   },
   {
     name: "2048",
-    image: "/image-robert-added/2048.png",
+    image: "/image-robert-added/2048.webp",
     link: "/dao-2048-main/dao-2048-main/index.html",
   },
   {
@@ -316,7 +316,7 @@ const mainContentData = [
   },
   {
     name: "Dino Game",
-    image: "/image-robert-added/Dino.png",
+    image: "/image-robert-added/Dino.webp",
     link: "/dino.html",
   },
   {
@@ -336,7 +336,7 @@ const mainContentData = [
   },
   {
     name: "Achievement Unlocked Not Here Yet",
-    image: "/image-robert-added/achievementunlocked.png",
+    image: "/image-robert-added/achievementunlocked.webp",
     link: "/",
   },
   {
@@ -351,7 +351,7 @@ const mainContentData = [
   },
     {
     name: "Pokemon Games",
-    image:"/image-robert-added/poke.png",
+    image:"/image-robert-added/poke.webp",
     link:"/pokemonindex.html",
   },
     {

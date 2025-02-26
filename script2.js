@@ -76,7 +76,7 @@ const mainContentData = [
   },
   {
     name: "Contact Us",
-    image: "/",
+    image: "/image-robert-added/Contact.webp",
     link: "/Contact.html",
   },
   {
