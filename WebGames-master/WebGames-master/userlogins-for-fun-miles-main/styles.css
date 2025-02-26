@@ -58,3 +58,15 @@ button:hover {
     margin: 5px 0;
     border-radius: 4px;
 }
+
+.note-item button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.note-item button:hover {
+    background-color: #c9302c;
+}

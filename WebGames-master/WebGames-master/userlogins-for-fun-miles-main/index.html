@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>acawnts</title>
+    <title>Notes Management</title>
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="https://sdk.userbase.com/2/userbase.js"></script>
 </head>
-<body>
+<body onload="checkUserLoggedIn()">
     <div class="container">
-        <h1>Userbase Note Management</h1>
+        <h1>Notes Management</h1>
         <div id="form-container">
             <form id="signup-form">
                 <h2>Sign Up</h2>
@@ -23,6 +23,14 @@
                 <input type="password" id="login-password" placeholder="Password" required>
                 <button type="submit">Login</button>
             </form>
+        </div>
+        <div id="note-management" style="display: none;">
+            <h2>cookies-save</h2>
+            <div id="cookies-container">
+                <p id="cookies-display"></p>
+                <button id="save-cookies-cloud">Save Cookies to Cloud</button>
+                <button id="load-cookies-cloud">Load Cookies from Cloud</button>
+            </div>
         </div>
     </div>
     <script src="app.js"></script>
