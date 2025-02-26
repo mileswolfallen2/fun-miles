@@ -87,7 +87,7 @@ const mainContentData = [
   {
     name: "save to cloud",
     image: "/WebGames-master/WebGames-master/assets/save-to-cloud-2.png",
-    link: "/WebGames-master/WebGames-master/userlogins-for-fun-miles-main/userlogins-for-fun-miles-main/index.html",
+    link: "/WebGames-master/WebGames-master/userlogins-for-fun-miles-main/index.html",
   },
 ];
 mainContentData.forEach(item => {
