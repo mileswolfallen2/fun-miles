@@ -21,9 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function goToHomePage() {
-  window.location.href = "index.html"; // Replace with the actual homepage URL if different
-}
+
 const text = document.querySelector('input.password.visible');
 const pass = document.querySelector('input.password.hidden');
 const handle = document.querySelector('img.handle');

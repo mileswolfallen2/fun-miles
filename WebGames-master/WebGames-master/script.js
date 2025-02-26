@@ -150,11 +150,6 @@ const mainContentData = [
     link: "stuftochanch/isaac.html",
   },
   {
-    name: "nes gd",
-    image: "assets/gd-nes.jpeg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/gd.html",
-  },
-  {
     name: "earthbound",
     image: "assets/earthbound.png",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/EarthBound.html",
@@ -200,21 +195,6 @@ const mainContentData = [
     link: "/monkey mart/index.html",
   },
   {
-    name: "Drill Dozer",
-    image: "assets/Drill-Dozer.jpeg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/DrillDozer(USA).html",
-  },
-  {
-    name: "doom",
-    image: "assets/doom.jpeg",
-    link: "/Doom-In-Docker-master/Doom-In-Docker-master/doom/public/index.html",
-  },
-  {
-    name: "paper moaro",
-    image: "assets/papermoaro.jpeg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/papermaro.html",
-  },
-  {
     name: "FZeroX",
     image: "assets/F_ZOERX.jpeg",
     link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/FZeroX.html",
@@ -223,11 +203,6 @@ const mainContentData = [
     name: "GD",
     image: "/WebGames-master/WebGames-master/games2/assets/geometry.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/geometry-dash-remastered/index.html",
-  },
-  {
-    name: "pacman",
-    image: "/WebGames-master/WebGames-master/games2/assets/pacman.jpg",
-    link: "/WebGames-master/WebGames-master/games2/game/pacman/index.html",
   },
   {
     name: "backrooms",
@@ -508,11 +483,6 @@ const mainContentData = [
     name: "Cut The Rope",
     image: "assets/cut-the-rope.jpeg",
     link: "games/CutTheRope-master/CutTheRope-master/index.html",
-  },
-    {
-    name: "Stealing The Diamond",
-    image: "assets/stealing-the-dimend.jpeg",
-    link: "games/henreystikman/Stealing_the_Diamond.html",
   },
     {
     name: "Worlds Hardest Game",
