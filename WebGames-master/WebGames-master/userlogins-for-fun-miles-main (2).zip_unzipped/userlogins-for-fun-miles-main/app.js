@@ -1,9 +1,8 @@
-//Userbase
+// Initialize Userbase
 userbase.init({ appId: '7cd8e25b-723d-4af7-8bdf-ef558bd0dfcc' }); // Replace with your Userbase app ID
 
 let currentUser; // Variable to hold the current user object
 let isDatabaseOpen = false; // Flag to check if the database is open
-
 
 document.getElementById('signup-form').addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -13,13 +12,11 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
     try {
         const user = await userbase.signUp({ username: username, password });
         alert('Signup successful!');
-        await logout(); // Log out the user immediately after signup
     } catch (error) {
         console.error('Signup error:', error);
         alert('Signup failed: ' + error.message);
     }
 });
-
 
 document.getElementById('login-form').addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -182,50 +179,34 @@ document.getElementById('save-cookies-cloud').addEventListener('click', async ()
                     });
                 }
             }
-        }
-    );
+        });
     } catch (error) {
         console.error('Error saving cookies to cloud:', error);
         alert('Failed to save cookies to cloud: ' + error.message);
     }
 });
 
-async function loadCookiesFromCloud() {
+// Function to load cookies from the cloud
+document.getElementById('load-cookies-cloud').addEventListener('click', async () => {
+    if (!isDatabaseOpen) {
+        alert('Database is not open. Please try again later.');
+        return;
+    }
+
     try {
-        // Ensure the database is open
-        if (!isDatabaseOpen) {
-            await openUserbaseDatabase();
-        }
-
-        // Fetch cookies from the cloud
-        const items = await userbase.getDatabaseItems({ databaseName: 'notes-database' });
-        let cookiesFromCloud = '';
-        items.forEach(item => {
-            cookiesFromCloud += item.item.text;
+        await userbase.openDatabase({
+            databaseName: 'notes-database',
+            changeHandler: function (items) {
+                const cookies = items.map(item => item.item.text).join('\n');
+                document.cookie = cookies.split('\n').map(cookie => encodeURIComponent(cookie.trim())).join('; ');
+                alert('Cookies loaded from cloud successfully!');
+            }
         });
-
-        // Replace the current cookies with the loaded ones
-        document.cookie.split(";").forEach((cookie) => {
-            document.cookie = cookie.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
-        });
-
-        const cookies = cookiesFromCloud.split('\n');
-        cookies.forEach(cookie => {
-            document.cookie = cookie.trim();
-        });
-
-        // Display the cookies in the text box
-        document.getElementById('cookies-input').value = cookiesFromCloud;
-
-        // Alert the user that the cookies have been loaded and replaced
-        alert('Cookies loaded from cloud and replaced!');
     } catch (error) {
         console.error('Error loading cookies from cloud:', error);
         alert('Failed to load cookies from cloud: ' + error.message);
     }
-}
-// Add event listener to the "Load Cookies from Cloud" button
-document.getElementById('load-cookies-cloud').addEventListener('click', loadCookiesFromCloud);
+});
 
 // Function to display cookies
 function displayCookies() {
