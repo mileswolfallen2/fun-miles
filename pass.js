@@ -1,3 +1,25 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const textInput = document.getElementById('text_input');
+  const hiddenInput = document.querySelector('.password.hidden');
+  const handle = document.querySelector('.handle');
+  const correctPassword = "Credits"; // Replace with the actual correct password
+
+  handle.addEventListener('click', () => {
+    if (textInput.type === 'text') {
+      textInput.type = 'password';
+      hiddenInput.type = 'text';
+    } else {
+      textInput.type = 'text';
+      hiddenInput.type = 'password';
+    }
+  });
+
+  textInput.addEventListener('input', () => {
+    if (textInput.value === correctPassword) {
+      window.location.href = "credits.html"; // Replace with the actual file to navigate to
+    }
+  });
+});
 const text = document.querySelector('input.password.visible');
 const pass = document.querySelector('input.password.hidden');
 const handle = document.querySelector('img.handle');
