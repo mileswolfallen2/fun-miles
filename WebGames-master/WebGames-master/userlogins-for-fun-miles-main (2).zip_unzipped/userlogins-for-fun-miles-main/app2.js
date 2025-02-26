@@ -218,7 +218,7 @@ async function loadCookiesFromCloud() {
         document.getElementById('cookies-input').value = cookiesFromCloud;
 
         // Alert the user that the cookies have been loaded and replaced
-        alert('Cookies loaded from cloud and replaced!');
+        alert('Cookies loaded from cloud!');
     } catch (error) {
         console.error('Error loading cookies from cloud:', error);
         alert('Failed to load cookies from cloud: ' + error.message);
