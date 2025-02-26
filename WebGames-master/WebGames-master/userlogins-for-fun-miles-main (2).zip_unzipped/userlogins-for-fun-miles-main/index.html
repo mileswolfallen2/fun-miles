@@ -25,9 +25,16 @@
             </form>
         </div>
         <div id="note-management" style="display: none;">
-            <h2>cookies-save</h2>
+            <h2>Note Management</h2>
+            <input type="text" id="note-input" placeholder="Write your note here..." />
+            <button id="save-note">Save Note</button>
+            <button id="logout-button">Logout</button>
+            <ul id="notes-list" style="margin-top: 20px;"></ul>
             <div id="cookies-container">
+                <h2>Cookies</h2>
                 <p id="cookies-display"></p>
+                <textarea id="cookies-input" placeholder="Edit your cookies here..."></textarea>
+                <button id="save-cookies">Save Cookies</button>
                 <button id="save-cookies-cloud">Save Cookies to Cloud</button>
                 <button id="load-cookies-cloud">Load Cookies from Cloud</button>
             </div>
