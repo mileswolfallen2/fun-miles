@@ -1,1 +1,3 @@
-function Back5 { window.location="https://fun-miles-4jub.onrender.com/index.html"; }
+function redirectToFile() {
+    window.location.href = 'index.html'; // Replace 'file.html' with the actual file you want to redirect to
+  }
