@@ -1,1 +1,1 @@
-function goBack { window.location="https://fun-miles-4jub.onrender.com/index.html"; }
+function Back5 { window.location="https://fun-miles-4jub.onrender.com/index.html"; }
