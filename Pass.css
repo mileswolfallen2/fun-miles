@@ -81,7 +81,7 @@ body img.handle {
   transform-origin: 50% calc(50% + 80px);
   cursor: grab;
 }
-div buttonback {
+button {
   color: blue;
   text-decoration-color: black;
 }
