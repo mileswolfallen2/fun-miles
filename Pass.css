@@ -15,7 +15,6 @@ body {
   background-color: #50bdc7;
   overflow: hidden;
 }
-
 body:before {
   z-index: -1;
   content: "";
@@ -29,21 +28,17 @@ body:before {
   transform: rotate(-23deg);
   opacity: 0.7;
 }
-
 body.grabbing {
   cursor: grabbing;
 }
-
 body.grabbing * {
   cursor: grabbing !important;
 }
-
 body .password_label {
   position: absolute;
   font-size: 25px;
   transform: translateY(-70px);
 }
-
 body .password {
   font-size: 20px;
   outline: none;
@@ -51,13 +46,11 @@ body .password {
   height: 80px;
   border: 1px solid #686868;
 }
-
 body .password.visible {
   letter-spacing: 12px;
   padding: 20px 7px 20px 35px;
   color: black;
 }
-
 body .password.hidden {
   padding: 20px;
   font-size: 50px;
@@ -69,45 +62,35 @@ body .password.hidden {
   background-image: url("https://raw.githubusercontent.com/Nik439/Images/master/cpc-hide-reveal/glass.svg");
   transform-origin: 50% 100%;
 }
-
 body .password.hidden.slide {
   transform: rotateX(180deg);
 }
-
 body img {
   position: absolute;
   user-select: none;
 }
-
 body img.left {
   transform: translate(-100px, 40px);
 }
-
 body img.right {
   transform: translate(100px, 40px);
 }
-
 body img.handle {
   transform: translateY(-40px);
   z-index: 3;
   transform-origin: 50% calc(50% + 80px);
   cursor: grab;
 }
-div buttonback {
+button.buttonback {
+  position: absolute;
+  top: 10px;
+  left: 10px;
   color: blue;
-  font-size: 16px;
+  text-align: left;
+  vertical-align: text-top;
+  background-color: black;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  text-align: center;
-  vertical-align: text-top;
-  border-radius: 5px;
-}
-
-button.buttonback:hover {
-  background-color: #333;
-}
-
-button.buttonback:active {
-  background-color: #555;
+  font-size: 16px;
 }
