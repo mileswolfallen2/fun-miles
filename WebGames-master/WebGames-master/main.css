@@ -19,9 +19,12 @@ p.one {
   -webkit-box-shadow: 0 0 10px #777777;
   box-shadow: inset 0 0 10px #777777;
   -moz-box-align: center;
-  text-align: left;
-  padding: 20px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+  padding: 20px;
+}
+
+head.two {
+    text-align: left;
 }
