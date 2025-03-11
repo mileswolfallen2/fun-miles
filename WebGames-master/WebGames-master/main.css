@@ -9,12 +9,13 @@
 }
 
 html {
-  background-image: url("/image-robert-added/bgc4n1.gif");
+  background-image: url("/image-robert-added/215837.gif");
   background-attachment: scroll;
   background-size: cover;
+  z-index: 2;
 }
 
-p.one {
+div.one {
   -moz-box-shadow: 0 0 10px #777777;
   -webkit-box-shadow: 0 0 10px #777777;
   box-shadow: inset 0 0 10px #777777;
@@ -23,8 +24,11 @@ p.one {
   -moz-border-radius: 10px;
   border-radius: 10px;
   padding: 20px;
+  text-align: left;
+  position: absolute;
+  z-index: 1;
 }
 
-head.two {
-    text-align: left;
+a:hover {
+  background-color: aquamarine;
 }
