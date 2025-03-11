@@ -8,3 +8,20 @@
   background-image: url("image-robert-added/bgc4n1.gif");
 }
 
+html {
+  background-image: url("/image-robert-added/bgc4n1.gif");
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+p.one {
+  -moz-box-shadow: 0 0 10px #777777;
+  -webkit-box-shadow: 0 0 10px #777777;
+  box-shadow: inset 0 0 10px #777777;
+  -moz-box-align: center;
+  text-align: left;
+  padding: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
