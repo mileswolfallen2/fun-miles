@@ -1,16 +1,46 @@
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="/WebGames-master/WebGames-master/main.css">
-        </head>
-        <body>
-            <div class="one">
-                <div class="two"></div>
-                <a href="/WebGames-master/WebGames-master/tic-tac-toe/index.html"><img src="./assets/tic-tac-toe.png" alt="tic-tac-toe" width="150" height="150"></a>
-                <a href="/WebGames-master/WebGames-master/BubbleGame/index.html"><img src="/WebGames-master/WebGames-master/assets/the_bubble_game.png" alt="The Bubble Game" width="150" height="150"></a>
-                <a herf="/Robertgame/index.html">Game</a>
-            </div>
-        </body>
-        </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/WebGames-master/WebGames-master/main.css">
+    <script>
+        function filterGames() {
+            const searchInput = document.getElementById('searchBar').value.toLowerCase();
+            const games = document.querySelectorAll('.game');
+
+            games.forEach(game => {
+                const altText = game.querySelector('img').alt.toLowerCase();
+                if (altText.includes(searchInput)) {
+                    game.style.display = '';
+                } else {
+                    game.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</head>
+<center>
+<body>
+    <input type="text" id="searchBar" onkeyup="filterGames()" placeholder="Search for games...">
+    <div class="one">
+        <div class="two"></div>
+        <div class="game">
+            <a href="/WebGames-master/WebGames-master/tic-tac-toe/index.html"><img src="./assets/tic-tac-toe.png" alt="tic-tac-toe" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="/WebGames-master/WebGames-master/BubbleGame/index.html"><img src="/WebGames-master/WebGames-master/assets/the_bubble_game.png" alt="The Bubble Game" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="./DevQuiz/index.html"><img src="./assets/dev_quiz.png" alt="dev_quiz" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+    </div>
+</body>
+</center>
+</html>
+<noscript>
+    test area
+</noscript>
