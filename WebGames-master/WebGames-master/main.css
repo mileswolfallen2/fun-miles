@@ -24,11 +24,9 @@ div.one {
   -moz-border-radius: 10px;
   border-radius: 10px;
   padding: 20px;
-  text-align: left;
   position: absolute;
-  z-index: 1;
 }
 
 a:hover {
-  background-color: aquamarine;
+  border-bottom: 8px solid aquamarine;
 }

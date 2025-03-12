@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/WebGames-master/WebGames-master/main.css">
+    <style>
+        .one {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .game {
+            flex: 1 1 150px;
+            text-align: center;
+        }
+    </style>
     <script>
         function filterGames() {
             const searchInput = document.getElementById('searchBar').value.toLowerCase();
@@ -22,7 +33,7 @@
 </head>
 <center>
 <body>
-    <input type="text" id="searchBar" onkeyup="filterGames()" placeholder="Search for games...">
+    <input type="text" id="searchBar" onkeyup="filterGames()" placeholder="Search For Games...">
     <div class="one">
         <div class="two"></div>
         <div class="game">
