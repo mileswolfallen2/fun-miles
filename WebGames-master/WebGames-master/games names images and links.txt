@@ -60,162 +60,12 @@ const toggleSideBar = () => {
 // Rendering the main content dynamically
 const mainContentData = [
   {
-    name: "Back",
-    image: "/WebGames-master/WebGames-master/assets/home.png",
-    link: "/index.html",
-  },
-  {
-    name: "Tic-Tac-Toe",
-    image: "assets/tic-tac-toe.png",
-    link: "tic-tac-toe/index.html",
-  },
-  {
-    name: "The Bubble Game",
-    image: "assets/the_bubble_game.png",
-    link: "BubbleGame/index.html",
-  },
-  {
-    name: "Dev Quiz",
-    image: "assets/dev_quiz.png",
-    link: "DevQuiz/index.html",
-  },
-  {
-    name: "HangMan",
-    image: "assets/hangman.png",
-    link: "https://hangmangame02.netlify.app/",
-  },
-  {
-    name: "Snow Rider",
-    image: "assets/snnowriders3d.jpeg",
-    link: "games/Snow-Rider3D-main/Snow-Rider3D-main/index.html",
-  },
-  {
-    name: "HexGL",
-    image: "assets/HexGL256.png",
-    link: "games/HexGL-master/HexGL-master/index.html",
-  },
-  {
-    name: "Tunnel-Rush",
-    image: "assets/tunelrush.jpeg",
-    link: "games/zTunnel-Rush.html",
-  },
-  {
-    name: "Learn To Fly 2",
-    image: "assets/learn-to-fly-2.jpeg",
-    link: "games/Learn-To-Fly-2-main/Learn-To-Fly-2-main/index.html",
-  },
-  {
-    name: "Slope",
-    image: "assets/slope.jpeg",
-    link: "games/Slope-Game-main/Slope-Game-main/index.html",
-  },
-  {
-    name: "Henry Stick Man Collection",
-    image: "assets/stealing-the-dimend.jpeg",
-    link: "/henry_stick_man.html",
-  },
-  {
-    name: "Basketball Legends 2020",
-    image: "assets/2020.avif",
-    link: "games/Basketball-Legends-2020-gh-pages/Basketball-Legends-2020-gh-pages/index.html",
-  },
-  {
-    name: "Tanuki Sunset",
-    image: "assets/taunki.jpeg",
-    link: "games/tanuki-sunset-master/index.html",
-  },
-  {
-    name: "Fnaf Collection",
-    image: "assets/anan.jpeg",
-    link: "/Fanf.html",
-  },
-  {
-    name: "The Shadow Reform",
-    image: "assets/kaertt.png",
-    link: "games/The-Shadow-Reform.html",
-  },
-  {
-    name: "Kirby's Dreamland 3 Maker",
-    image: "assets/images3.jpeg",
-    link: "games/Kirby's-Dreamland-3-Maker.html",
-  },
-  {
-    name: "Mario Kart 64",
-    image: "assets/mareoc64.jpeg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/Mario-Kart-64.html",
-  },
-  {
-    name: "isaac rath or the lam",
-    image: "assets/isik.jpeg",
-    link: "stuftochanch/isaac.html",
-  },
-  {
-    name: "earthbound",
-    image: "assets/earthbound.png",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/EarthBound.html",
-  },
-  {
-    name: "drift-boss",
-    image: "games2/assets/drift-boss.jpg",
-    link: "games2/game/drift-boss/index.html",
-  },
-  {
-    name: "drift-hunters",
-    image: "games2/assets/drifthunters.jpg",
-    link: "games2/game/drift-hunters/index.html",
-  },
-  {
-    name: "new cookie-clicker",
-    image: "games2/assets/cookie-clicker.png",
-    link: "games2/game/cookie-clicker/index.html",
-  },
-  {
-    name: "retro-bowl",
-    image: "games2/assets/retro-bowl.jpg",
-    link: "games2/game/retro-bowl/index.html",
-  },
-  {
-    name: "tiny-fishing",
-    image: "games2/game/tiny-fishing/thumb.png",
-    link: "games2/game/tiny-fishing/indx.html",
-  },
-  {
-    name: "idle-breakout",
-    image: "games2/assets/idle-breakout.jpg",
-    link: "games2/game/idle-breakout/index.html",
-  },
-  {
-    name: "just-fall",
-    image: "/WebGames-master/WebGames-master/games2/assets/just-fall.jpg",
-    link: "/games2/game/just-fall/index.html",
-  },
-  {
-    name: "monkey-mart",
-    image: "/WebGames-master/WebGames-master/games2/assets/monkey-mart.png",
-    link: "/monkey mart/index.html",
-  },
-  {
-    name: "FZeroX",
-    image: "assets/F_ZOERX.jpeg",
-    link: "/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/FZeroX.html",
-  },
-  {
-    name: "GD",
-    image: "/WebGames-master/WebGames-master/games2/assets/geometry.jpg",
-    link: "/WebGames-master/WebGames-master/games2/game/geometry-dash-remastered/index.html",
-  },
-  {
-    name: "backrooms",
-    image: "/WebGames-master/WebGames-master/games2/game/backrooms/Backrooms-Games.webp",
-    link: "/WebGames-master/WebGames-master/games2/game/backrooms/index.html",
-  },
-  {
     name: "car game",
     image: "/WebGames-master/WebGames-master/games2/game/cars-simulator/splash.png",
     link: "/WebGames-master/WebGames-master/games2/game/cars-simulator/index.html",
   },
   {
-    name: "worlds-hardest-game",
+    name: "worlds hardest game",
     image: "/WebGames-master/WebGames-master/games2/assets/worlds-hardest-game.jpg",
     link: "/WebGames-master/WebGames-master/games2/game/worlds-hardest-game/index.html",
   },
@@ -265,7 +115,7 @@ const mainContentData = [
     link: "/WebGames-master/WebGames-master/games2/game/chess/index.html",
   },
  {
-    name: "Cluster-rush",
+    name: "Cluster rush",
     image: "/WebGames-master/WebGames-master/games2/assets/cluster-rush.png",
     link: "/WebGames-master/WebGames-master/games2/game/cluster-rush/index.html",
   },
