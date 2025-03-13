@@ -13,6 +13,7 @@ html {
   background-attachment: scroll;
   background-size: cover;
   z-index: 2;
+  text-align: center;
 }
 
 div.one {
@@ -55,4 +56,13 @@ button:hover {
 
 img {
   border-radius: 50%;
+}
+
+.no-results img {
+  border-radius: 0; /* Remove round shape */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }

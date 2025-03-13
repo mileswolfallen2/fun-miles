@@ -15,20 +15,37 @@
             flex: 1 1 150px;
             text-align: center;
         }
+        .no-results {
+            display: none;
+            text-align: center;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
     <script>
         function filterGames() {
             const searchInput = document.getElementById('searchBar').value.toLowerCase();
-            const games = document.querySelectorAll('a.game');
+            const games = document.querySelectorAll('.game');
+            let hasResults = false;
 
             games.forEach(game => {
-                const altText = game.querySelector('img').alt.toLowerCase();
-                if (altText.includes(searchInput)) {
-                    game.parentElement.style.display = '';
-                } else {
-                    game.parentElement.style.display = 'none';
+                const img = game.querySelector('img');
+                if (img) {
+                    const altText = img.alt.toLowerCase();
+                    if (altText.includes(searchInput)) {
+                        game.style.display = '';
+                        hasResults = true;
+                    } else {
+                        game.style.display = 'none';
+                    }
                 }
             });
+
+            const noResultsElement = document.getElementById('noResults');
+            const oneContainer = document.querySelector('.one');
+            noResultsElement.style.display = hasResults ? 'none' : 'flex';
+            oneContainer.style.display = hasResults ? 'flex' : 'none';
         }
     </script>
 </head>
@@ -38,6 +55,9 @@
     <input type="text" id="searchBar" onkeyup="filterGames()" placeholder="Search For Games...">
     <p></p>
     <p> </p>
+    <div id="noResults" class="no-results">
+        <img src="/image-robert-added/res.webp" alt="No Results Found" width="564" height="157">
+    </div>
     <div class="one">
         <div class="game">
             <a href="/WebGames-master/WebGames-master/tic-tac-toe/index.html"><img src="./assets/tic-tac-toe.png" alt="tic-tac-toe" width="150" height="150"></a>
@@ -49,38 +69,92 @@
             <a href="./DevQuiz/index.html"><img src="./assets/dev_quiz.png" alt="dev quiz" width="150" height="150"></a>
         </div>
         <div class="game">
-            
+            <a href="https://hangmangame02.netlify.app/"><img src="assets/hangman.png" alt="hangman" width="150" height="150"></a>
         </div>
         <div class="game">
-            
+            <a href="games/Snow-Rider3D-main/Snow-Rider3D-main/index.html"><img src="assets/snnowriders3d.jpeg" alt="snow rider" width="150" height="150"></a>
         </div>
         <div class="game">
-            
+            <a href="games/Snow-Rider3D-main/Snow-Rider3D-main/index.html"><img src="assets/snnowriders3d.jpeg" alt="snow rider" width="150" height="150"></a>
         </div>
-        
-        <a href="https://hangmangame02.netlify.app/"><img src="assets/hangman.png" alt="hangman" width="150" height="150"></a>
-        <a href="games/Snow-Rider3D-main/Snow-Rider3D-main/index.html"><img src="assets/snnowriders3d.jpeg" alt="snow rider" width="150" height="150"></a>
-        <a href="games/HexGL-master/HexGL-master/index.html"><img src="assets/HexGL256.png" alt="hex gl" width="150" height="150"></a>
-        <a href="games/zTunnel-Rush.html"><img src="assets/tunelrush.jpeg" alt="tunnel rush" width="150" height="150"></a>
-        <a href="games/Learn-To-Fly-2-main/Learn-To-Fly-2-main/index.html"><img src="assets/learn-to-fly-2.jpeg" alt="learn to fly 2" width="150" height="150"></a>
-        <a href="games/Slope-Game-main/Slope-Game-main/index.html"><img src="assets/slope.jpeg" alt="slope" width="150" height="150"></a>
-        <a href="/henry_stick_man.html"><img src="assets/stealing-the-dimend.jpeg" alt="henry stick man" width="150" height="150"></a>
-        <a href="games/Basketball-Legends-2020-gh-pages/Basketball-Legends-2020-gh-pages/index.html"><img src="assets/2020.avif" alt="Basketball Legends" width="150" height="150"></a>
-        <a href="games/tanuki-sunset-master/index.html"><img src="assets/taunki.jpeg" alt="tanuki sunset" width="150" height="150"></a>
-        <a href="/Fanf.html"><img src="assets/anan.jpeg" alt="Fnaf Collection" width="150" height="150"></a>
-        <a href="games/The-Shadow-Reform.html"><img src="assets/kaertt.png" alt="The Shadow Reform" width="150" height="150"></a>
-        <a href="games/Kirby's-Dreamland-3-Maker.html"><img src="assets/images3.jpeg" alt="Kirby's Dreamland 3 Maker" width="150" height="150"></a>
-        <a href="/wedrowemdlemtest/webretro-master/webretro-master/embed/Mario-Kart-64.html"><img src="assets/mareoc64.jpeg" alt="Mario Kart 64" width="150" height="150"></a>
-        <a href="stuftochanch/isaac.html"><img src="assets/isik.jpeg" alt="isaac rath or the lam" width="150" height="150"></a>
-        <a href="/wedrowemdlemtest/webretro-master/webretro-master/embed/EarthBound.html"><img src="assets/earthbound.png" alt="earth bound" width="150" height="150"></a>
-        <a href="games2/game/drift-boss/index.html"><img src="games2/assets/drift-boss.jpg" alt="drift boss" width="150" height="150"></a>
-        <a href=""><img src="" alt="" width="150" height="150"></a>
-        <a href=""><img src="" alt="" width="150" height="150"></a>
-        <a href=""><img src="" alt="" width="150" height="150"></a>
-        <a href=""><img src="" alt="" width="150" height="150"></a>
-        <a href=""><img src="" alt="" width="150" height="150"></a>
-        <a href=""><img src="" alt="" width="150" height="150"></a>
-        <a herf=""><img src="" alt="" width="150" height="150"></a>
+        <div class="game">
+            <a href="games/HexGL-master/HexGL-master/index.html"><img src="assets/HexGL256.png" alt="hex gl" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games/zTunnel-Rush.html"><img src="assets/tunelrush.jpeg" alt="tunnel rush" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games/Learn-To-Fly-2-main/Learn-To-Fly-2-main/index.html"><img src="assets/learn-to-fly-2.jpeg" alt="learn to fly 2" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games/Slope-Game-main/Slope-Game-main/index.html"><img src="assets/slope.jpeg" alt="slope" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="/henry_stick_man.html"><img src="assets/stealing-the-dimend.jpeg" alt="henry stick man" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games/Basketball-Legends-2020-gh-pages/Basketball-Legends-2020-gh-pages/index.html"><img src="assets/2020.avif" alt="Basketball Legends" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games/tanuki-sunset-master/index.html"><img src="assets/taunki.jpeg" alt="tanuki sunset" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="/Fanf.html"><img src="assets/anan.jpeg" alt="Fnaf Collection" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games/The-Shadow-Reform.html"><img src="assets/kaertt.png" alt="The Shadow Reform" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games/Kirby's-Dreamland-3-Maker.html"><img src="assets/images3.jpeg" alt="Kirby's Dreamland 3 Maker" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="/wedrowemdlemtest/webretro-master/webretro-master/embed/Mario-Kart-64.html"><img src="assets/mareoc64.jpeg" alt="Mario Kart 64" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="stuftochanch/isaac.html"><img src="assets/isik.jpeg" alt="isaac rath or the lam" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="/wedrowemdlemtest/webretro-master/webretro-master/embed/EarthBound.html"><img src="assets/earthbound.png" alt="earth bound" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games2/game/drift-boss/index.html"><img src="games2/assets/drift-boss.jpg" alt="drift boss" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
     </div>
     </body>
 </center>
@@ -106,3 +180,4 @@
 </script>
 </body>
 </html>
+<script src="/game.js"></script>
