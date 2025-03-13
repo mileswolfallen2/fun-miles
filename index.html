@@ -10,48 +10,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&amp;family=Press+Start+2P&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="/WebGames-master/WebGames-master/main.css">
-    <script defer src="script2.js"></script>
+    <link rel="stylesheet" href="index.css">
     <title>Fun-Miles</title>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Looping GIF Loading Animation</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .loader {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999; /* Ensure it covers everything */
-            transition: transform 0.5s ease; /* Smooth transition for leaving */
-        }
-
-        .content {
-            display: none; /* Hide content initially */
-            text-align: center;
-            padding: 20px;
-        }
-
-        .loader img {
-            width: 150px; /* Adjust size as needed */
-            height: auto; /* Maintain aspect ratio */
-        }
-    </style>
+    <title>Fun-miles for now</title>
 </head>
 <body>
     <div id="loader" class="loader">
-        <img src="./loding.webp" alt="Loading..." loop=infinite /> <!-- Replace with your GIF path -->
+        <img src="./loding.webp" alt="Loading..." loop="99" /> <!-- Replace with your GIF path -->
     </div>
     <nav class="nav-bar">
         <h1>fun-miles</h1>
@@ -61,63 +29,30 @@
           </noscript>
           <button><a class="a-text nav-item" href="https://github.com/mileswolfallen2/fun-miles">contribute&nbsp;</a></button>
           <button><a class="a-text nav-item" href="https://github.com/mileswolfallen2/fun-miles/blob/main/README.md">About&nbsp;</a></button>
-          <p class="nav-item"><button onclick="onToggleDarkMode()">Dark Mode<i id="dark-mode-icon" class="fa-solid fa-moon"></i></button></p>
+          <p class="nav-item"><button id="dark-mode-sidebar" onclick="onToggleDarkMode()">Dark Mode<i id="sidebar-dark-mode-icon" class="fa-solid fa-moon"></i></button></p>
         </div>
-        <div class="side-bar-menu" id="side-bar-menu">
-          <div class="side-bar-link">
-            <a class="nav-item" href="https://github.com/sarmadhamdani02/webGames" target="_blank">Contribute</a>
-            <a class="nav-item" href="https://github.com/sarmadhamdani02/webGames#readme">About</a>
-            <button id="dark-mode-sidebar" onclick="onToggleDarkMode()"></button>
-            <p class="nav-item"><button id="dark-mode-sidebar" onclick="onToggleDarkMode()">Dark Mode<i id="sidebar-dark-mode-icon" class="fa-solid fa-moon"></i></button></p>
-          </div>
-        </div>
-        <button class="side-bar-button" id="toggleSideBar" onclick="toggleSideBar()"></button>
+        <button class="side-bar-button" id="toggleSideBar" onclick="toggleSideBar()">☰</button>
       </nav>
       
-      <div class="main-content" style="overflow-y:scroll;">
-        <!-- data is coming from JavaScript (script.js) -->
+      <div class="side-bar-menu" id="side-bar-menu">
+        <button class="side-bar-close-button" onclick="toggleSideBar()">✖</button>
+        <div class="side-bar-link">
+          <a class="nav-item" href="https://github.com/sarmadhamdani02/webGames" target="_blank">Contribute</a>
+          <a class="nav-item" href="https://github.com/sarmadhamdani02/webGames#readme">About</a>
+          <a class="nav-item" href="/pass.html">Credits</a>
+          <a class="nav-item" href="/WebGames-master/WebGames-master/index.html">Games</a>
+          <a class="nav-item" href=""></a>
+          <a class="nav-item" href=""></a>
+          <a class="nav-item" href=""></a>
+          <a class="nav-item" href=""></a>
+          <a class="nav-item" href=""></a>
       </div>
-    <script>
-        window.addEventListener('load', function() {
-            const loader = document.getElementById('loader');
-            const content = document.querySelector('.content');
-            
-            // Move the loader off the screen
-            loader.style.transform = 'translateY(-100%)'; // Move up off the screen
-
-            // Show the content after a delay to allow the animation to complete
-            setTimeout(() => {
-                loader.style.display = 'none'; 
-                content.style.display = 'block'; 
-            }, 500); // Adjust delay to match the transition duration
-        });
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .version {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            background-color: #f1f1f1;
-            padding: 5px 10px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body>
-    <div class="version" id="versionDisplay"></div>
-    
-    <script>
-        document.getElementById('versionDisplay').textContent = 'Version 2.44.0';
-    </script>
+      
+      <div class="main-content" style="overflow-y:scroll;">
+            <!-- main content here miles -->
+             <a href="/WebGames-master/WebGames-master/index.html"><img src="/images1.png" alt="deez nuts" width="150" height="150"</a>
+      </div>
+      <div class="version" id="versionDisplay"></div>
+    <script src="index.js"></script>
 </body>
 </html>

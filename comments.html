@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commenting System</title>
+    <style>
+        .comment-section {
+            margin-top: 20px;
+        }
+        .comment {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="comment-section">
+        <h2>Comments</h2>
+        <div id="comments"></div>
+        <form id="commentForm">
+            <textarea id="commentText" placeholder="Write a comment..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('commentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const commentText = document.getElementById('commentText').value;
+            if (commentText) {
+                const comment = document.createElement('div');
+                comment.className = 'comment';
+                comment.textContent = commentText;
+                document.getElementById('comments').appendChild(comment);
+                document.getElementById('commentText').value = '';
+            }
+        });
+    </script>
+</body>
+</html>

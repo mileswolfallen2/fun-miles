@@ -1,94 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6951907799659255" cross-origin='anonymous'></script>
-    <script defer src="https://chirpy.dev/bootstrapper.js" data-chirpy-domain="fun-miles-4jub.onrender.com"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/page_icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&amp;family=Press+Start+2P&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="/WebGames-master/WebGames-master/main.css">
-    <script defer src="/WebGames-master/WebGames-master/script.js"></script>
-    <title>Fun-Miles</title>
+    <p></p>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .loader {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999; /* Ensure it covers everything */
-            transition: transform 0.5s ease; /* Smooth transition for leaving */
-        }
-
-        .content {
-            display: none; /* Hide content initially */
-            text-align: center;
-            padding: 20px;
-        }
-
-        .loader img {
-            width: 150px; /* Adjust size as needed */
-            height: auto; /* Maintain aspect ratio */
-        }
-    </style>
-</head>
-<body>
-    <div id="loader" class="loader">
-        <img src="/loding.webp" alt="Loading..." loop="infinite" /> <!-- Replace with your GIF path -->
-    </div>
-    <nav class="nav-bar">
-        <h1>fun-miles</h1>
-        <div class="nav-elem">
-          <noscript>
-            <p>JavaScript is off; turn it on or go here <a href="/games.html">hi</a></p>
-          </noscript>
-          <button><a class="a-text nav-item" href="https://github.com/mileswolfallen2/fun-miles">contribute&nbsp;</a></button>
-          <button><a class="a-text nav-item" href="https://github.com/mileswolfallen2/fun-miles/blob/main/README.md">About&nbsp;</a></button>
-          <p class="nav-item"><button onclick="onToggleDarkMode()">Dark Mode<i id="dark-mode-icon" class="fa-solid fa-moon"></i></button></p>
-        </div>
-        <div class="side-bar-menu" id="side-bar-menu">
-          <div class="side-bar-link">
-            <a class="nav-item" href="https://github.com/sarmadhamdani02/webGames" target="_blank">Contribute</a>
-            <a class="nav-item" href="https://github.com/sarmadhamdani02/webGames#readme">About</a>
-            <button id="dark-mode-sidebar" onclick="onToggleDarkMode()"></button>
-            <p class="nav-item"><button id="dark-mode-sidebar" onclick="onToggleDarkMode()">Dark Mode<i id="sidebar-dark-mode-icon" class="fa-solid fa-moon"></i></button></p>
-          </div>
-        </div>
-        <button class="side-bar-button" id="toggleSideBar" onclick="toggleSideBar()"></button>
-      </nav>
-      
-      <div class="main-content" style="overflow-y:scroll;">
-        <!-- data is coming from JavaScript (script.js) -->
-      </div>
+    <link rel="stylesheet" href="/WebGames-master/WebGames-master/main.css">
     <script>
-        window.addEventListener('load', function() {
-            const loader = document.getElementById('loader');
-            const content = document.querySelector('.content');
-            
-            // Move the loader off the screen
-            loader.style.transform = 'translateY(-100%)'; // Move up off the screen
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
 
-            // Show the content after a delay to allow the animation to complete
-            setTimeout(() => {
-                loader.style.display = 'none'; 
-                content.style.display = 'block'; 
-            }, 500); // Adjust delay to match the transition duration
+        function getCookie(name) {
+            const cname = name + "=";
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(cname) == 0) {
+                    return c.substring(cname.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function filterGames() {
+            const searchInput = document.getElementById('searchBar').value.toLowerCase();
+            setCookie('searchInput', searchInput, 7);
+            const games = document.querySelectorAll('.game');
+            let hasResults = false;
+
+            games.forEach(game => {
+                const img = game.querySelector('img');
+                if (img) {
+                    const altText = img.alt.toLowerCase();
+                    if (altText.includes(searchInput)) {
+                        game.style.display = '';
+                        hasResults = true;
+                    } else {
+                        game.style.display = 'none';
+                    }
+                }
+            });
+
+            const noResultsElement = document.getElementById('noResults');
+            const oneContainer = document.querySelector('.one');
+            noResultsElement.style.display = hasResults ? 'none' : 'flex';
+            oneContainer.style.display = hasResults ? 'flex' : 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const savedSearchInput = getCookie('searchInput');
+            if (savedSearchInput) {
+                document.getElementById('searchBar').value = savedSearchInput;
+                filterGames();
+            }
         });
     </script>
+</head>
+<center>
+<body>
+    <button onclick="window.location.href = '/index.html';">Back</button>
+    <input type="text" id="searchBar" onkeyup="filterGames()" placeholder="Search For Games...">
+    <p></p>
+    <p> </p>
+    <div id="noResults" class="no-results">
+        <img src="/image-robert-added/res.webp" alt="No Results Found" width="564" height="157">
+    </div>
+    <div class="one">
+        <div class="game">
+            <a href="/WebGames-master/WebGames-master/tic-tac-toe/index.html"><img src="./assets/tic-tac-toe.png" alt="tic-tac-toe" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="/WebGames-master/WebGames-master/BubbleGame/index.html"><img src="/WebGames-master/WebGames-master/assets/the_bubble_game.png" alt="The Bubble Game" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="./DevQuiz/index.html"><img src="./assets/dev_quiz.png" alt="dev quiz" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="https://hangmangame02.netlify.app/"><img src="assets/hangman.png" alt="hangman" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games/Snow-Rider3D-main/Snow-Rider3D-main/index.html"><img src="assets/snnowriders3d.jpeg" alt="snow rider" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games/HexGL-master/HexGL-master/index.html"><img src="assets/HexGL256.png" alt="hex gl" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games/zTunnel-Rush.html"><img src="assets/tunelrush.jpeg" alt="tunnel rush" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games/Learn-To-Fly-2-main/Learn-To-Fly-2-main/index.html"><img src="assets/learn-to-fly-2.jpeg" alt="learn to fly 2" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games/Slope-Game-main/Slope-Game-main/index.html"><img src="assets/slope.jpeg" alt="slope" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="/henry_stick_man.html"><img src="assets/stealing-the-dimend.jpeg" alt="henry stick man" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games/Basketball-Legends-2020-gh-pages/Basketball-Legends-2020-gh-pages/index.html"><img src="assets/2020.avif" alt="Basketball Legends" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games/tanuki-sunset-master/index.html"><img src="assets/taunki.jpeg" alt="tanuki sunset" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="/Fanf.html"><img src="assets/anan.jpeg" alt="Fnaf Collection" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games/The-Shadow-Reform.html"><img src="assets/kaertt.png" alt="The Shadow Reform" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games/Kirby's-Dreamland-3-Maker.html"><img src="assets/images3.jpeg" alt="Kirby's Dreamland 3 Maker" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="/wedrowemdlemtest/webretro-master/webretro-master/embed/Mario-Kart-64.html"><img src="assets/mareoc64.jpeg" alt="Mario Kart 64" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="stuftochanch/isaac.html"><img src="assets/isik.jpeg" alt="isaac rath or the lam" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="/wedrowemdlemtest/webretro-master/webretro-master/embed/EarthBound.html"><img src="assets/earthbound.png" alt="earth bound" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games2/game/drift-boss/index.html"><img src="games2/assets/drift-boss.jpg" alt="drift boss" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games2/game/cookie-clicker/index.html"><img src="games2/assets/cookie-clicker.png" alt="cookie clicker" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games2/game/retro-bowl/index.html"><img src="games2/assets/retro-bowl.jpg" alt="retro bowl" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games2/game/tiny-fishing/index.html"><img src="games2/game/tiny-fishing/thumb.png" alt="tiny fishing" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="games2/game/idle-breakout/index.html"><img src="games2/assets/idle-breakout.jpg" alt="idle breakout" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="/games2/game/just-fall/index.html"><img src="/WebGames-master/WebGames-master/games2/assets/just-fall.jpg" alt="just fall" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="/monkey mart/index.html"><img src="/WebGames-master/WebGames-master/games2/assets/monkey-mart.png" alt="monkey mart" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="/wedrowemdlemtest/webretro-master/webretro-master/embed/n64test/FZeroX.html"><img src="assets/F_ZOERX.jpeg" alt="F-ZeroX" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="/WebGames-master/WebGames-master/games2/game/geometry-dash-remastered/index.html"><img src="/WebGames-master/WebGames-master/games2/assets/geometry.jpg" alt="Geometry Dash" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href="/WebGames-master/WebGames-master/games2/game/backrooms/index.html"><img src="/WebGames-master/WebGames-master/games2/game/backrooms/Backrooms-Games.webp" alt="backrooms" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+        <div class="game">
+            <a href=""><img src="" alt="" width="150" height="150"></a>
+        </div>
+    </div>
+    </body>
+</center>
+</head>
+<body>
+<div class="version" id="versionDisplay"></div>
+
+<script>
+    document.getElementById('versionDisplay').textContent = 'Version 2.44.0';
+</script>
 </body>
 </html>
+<script src="/game.js"></script>
